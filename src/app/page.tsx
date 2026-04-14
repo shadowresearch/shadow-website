@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { DashboardMockup } from "./_components/mockups/DashboardMockup";
 import {
   ClientSpaceMockup,
   SOPExecutionMockup,
@@ -94,7 +93,15 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-28 md:py-36 px-6">
+      <section className="relative overflow-hidden">
+        {/* Gradient blobs */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-muted-foreground/10 blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-muted-foreground/8 blur-3xl" />
+          <div className="absolute top-1/3 left-1/3 w-[300px] h-[300px] rounded-full bg-muted-foreground/5 blur-3xl" />
+        </div>
+        {/* Glass overlay */}
+        <div className="backdrop-blur-2xl bg-background/40 py-28 md:py-36 px-6">
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-3 py-1 mb-8">
             <span className="text-xs font-mono text-muted-foreground">
@@ -127,9 +134,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="mt-16 w-full">
-            <DashboardMockup />
-          </div>
+        </div>
         </div>
       </section>
 
@@ -227,9 +232,6 @@ export default function Home() {
             {steps.map((step) => (
               <div key={step.number} className="flex flex-col gap-4">
                 <div className="mb-2">
-                  {step.mockup === "client-space" && <ClientSpaceMockup />}
-                  {step.mockup === "sop-execution" && <SOPExecutionMockup />}
-                  {step.mockup === "autonomous-agent" && <AutonomousAgentMockup />}
                 </div>
                 <span className="font-mono text-4xl font-light text-border">
                   {step.number}

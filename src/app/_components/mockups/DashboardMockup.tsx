@@ -39,9 +39,9 @@ const SELECTED_ROW = 2;
 const SELECTED_COL = 44;
 
 const SELECTED_ACTIVITIES = [
-  { title: "Whop Positioning Document", agents: [{ name: "Positioning SOP", color: "#977BA1" }], author: "JG", client: "Whop", time: "18m" },
-  { title: "White Space Analysis: Whop's Creator Economy", agents: [{ name: "Research", color: "#7489A3" }, { name: "Positioning SOP", color: "#977BA1" }], author: "JG", client: "Whop", time: "24m" },
-  { title: "2026 Awards & Events Target List", agents: [{ name: "Awards SOP", color: "#977BA1" }], author: "NB", client: "Whop", time: "12m" },
+  { title: "Whop Positioning Document", mode: "Collaborative", client: "Whop", time: "18m" },
+  { title: "White Space Analysis: Whop's Creator Economy", mode: "Collaborative", client: "Whop", time: "24m" },
+  { title: "2026 Awards & Events Target List", mode: "Autonomous", client: "Whop", time: "12m" },
 ];
 
 function opacityHex(intensity: number): string {
@@ -71,10 +71,7 @@ export function DashboardMockup() {
   const monthLabels = getMonthLabels();
 
   return (
-    <div
-      className="rounded-2xl border border-border bg-card shadow-lg overflow-hidden"
-      style={{ transform: "perspective(1200px) rotateY(-1deg)" }}
-    >
+    <div className="overflow-hidden text-left rounded-lg border border-border shadow-md">
       {/* Top — layer cards + summary */}
       <div className="px-6 pt-6 pb-0">
         <div className="flex gap-3 items-stretch">
@@ -172,7 +169,7 @@ export function DashboardMockup() {
             {/* Column headers */}
             <div className="grid items-center px-2 py-1 text-muted-foreground" style={{ gridTemplateColumns: "1fr 120px 90px 60px", fontSize: 9 }}>
               <span>Activity</span>
-              <span>Authors</span>
+              <span>Mode</span>
               <span>Client</span>
               <span className="text-right">Time taken</span>
             </div>
@@ -184,23 +181,7 @@ export function DashboardMockup() {
                 style={{ gridTemplateColumns: "1fr 120px 90px 60px" }}
               >
                 <span className="text-foreground truncate" style={{ fontSize: 10 }}>{activity.title}</span>
-                <div className="flex items-center -space-x-1">
-                  {activity.agents.map((agent) => (
-                    <span
-                      key={agent.name}
-                      className="shrink-0 rounded-md flex items-center justify-center text-white font-medium ring-1 ring-card"
-                      style={{ width: 18, height: 18, fontSize: 8, backgroundColor: agent.color }}
-                    >
-                      S
-                    </span>
-                  ))}
-                  <span
-                    className="shrink-0 rounded-md flex items-center justify-center font-medium ring-1 ring-card bg-border text-foreground z-10"
-                    style={{ width: 18, height: 18, fontSize: 8 }}
-                  >
-                    {activity.author}
-                  </span>
-                </div>
+                <span className="text-muted-foreground" style={{ fontSize: 10 }}>{activity.mode}</span>
                 <span className="text-muted-foreground truncate" style={{ fontSize: 10 }}>{activity.client}</span>
                 <span className="text-muted-foreground tabular-nums text-right" style={{ fontSize: 10 }}>{activity.time}</span>
               </div>
