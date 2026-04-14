@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CapabilitySection } from "../_components/CapabilitySection";
 import { CTASection } from "../_components/CTASection";
+import { NewsIntelMockup } from "../_components/mockups/NewsIntelMockup";
 
 export const metadata: Metadata = {
   title: "Research & Intelligence: Shadow",
@@ -33,6 +34,10 @@ export default function ResearchPage() {
             >
               Book a demo
             </a>
+          </div>
+
+          <div className="mt-14 w-full">
+            <NewsIntelMockup />
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CapabilitySection } from "../_components/CapabilitySection";
 import { CTASection } from "../_components/CTASection";
+import { ContentChatMockup } from "../_components/mockups/ContentChatMockup";
 
 export const metadata: Metadata = {
   title: "Content & Strategy: Shadow",
@@ -32,6 +33,10 @@ export default function ContentPage() {
             >
               Book a demo
             </a>
+          </div>
+
+          <div className="mt-14 w-full">
+            <ContentChatMockup />
           </div>
         </div>
       </section>

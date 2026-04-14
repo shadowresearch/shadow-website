@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { DashboardMockup } from "./_components/mockups/DashboardMockup";
+import {
+  ClientSpaceMockup,
+  SOPExecutionMockup,
+  AutonomousAgentMockup,
+} from "./_components/mockups/HowItWorksMockups";
 
 export const metadata: Metadata = {
   title: "Shadow: The AI Operating System",
@@ -53,18 +59,21 @@ const steps = [
     title: "Client spaces",
     description:
       "Every client gets a dedicated workspace — their brand voice, SOPs, contacts, past coverage, and strategic context all in one place.",
+    mockup: "client-space",
   },
   {
     number: "02",
     title: "SOPs as memory",
     description:
       "Standard operating procedures are encoded as living documents. Shadow reads them before every task, ensuring every output is on-brand.",
+    mockup: "sop-execution",
   },
   {
     number: "03",
     title: "Autonomous agents",
     description:
       "Shadow runs continuously in the background — surfacing news, scanning competitors, generating content, and flagging opportunities without being asked.",
+    mockup: "autonomous-agent",
   },
 ];
 
@@ -116,6 +125,10 @@ export default function Home() {
             >
               Learn more
             </a>
+          </div>
+
+          <div className="mt-16 w-full px-4">
+            <DashboardMockup />
           </div>
         </div>
       </section>
@@ -213,6 +226,11 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step) => (
               <div key={step.number} className="flex flex-col gap-4">
+                <div className="mb-2">
+                  {step.mockup === "client-space" && <ClientSpaceMockup />}
+                  {step.mockup === "sop-execution" && <SOPExecutionMockup />}
+                  {step.mockup === "autonomous-agent" && <AutonomousAgentMockup />}
+                </div>
                 <span className="font-mono text-4xl font-light text-border">
                   {step.number}
                 </span>

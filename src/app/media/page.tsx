@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CapabilitySection } from "../_components/CapabilitySection";
 import { CTASection } from "../_components/CTASection";
+import { MediaListMockup } from "../_components/mockups/MediaListMockup";
 
 export const metadata: Metadata = {
   title: "Media & Outreach: Shadow",
@@ -32,6 +33,10 @@ export default function MediaPage() {
             >
               Book a demo
             </a>
+          </div>
+
+          <div className="mt-14 w-full">
+            <MediaListMockup />
           </div>
         </div>
       </section>

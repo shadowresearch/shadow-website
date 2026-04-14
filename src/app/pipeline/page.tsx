@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CapabilitySection } from "../_components/CapabilitySection";
 import { CTASection } from "../_components/CTASection";
+import { PipelineMockup } from "../_components/mockups/PipelineMockup";
 
 export const metadata: Metadata = {
   title: "Pipeline & Operations: Shadow",
@@ -60,6 +61,10 @@ export default function PipelinePage() {
             >
               Book a demo
             </a>
+          </div>
+
+          <div className="mt-14 w-full">
+            <PipelineMockup />
           </div>
         </div>
       </section>
