@@ -22,21 +22,21 @@ const GRID_ROWS = [
 // Pre-defined activity pattern — which cells are lit and at what intensity
 // Each row maps to GRID_ROWS, values are 0 (empty), 1 (light), 2 (medium), 3 (full)
 const ACTIVITY_DATA = [
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,3,1,0,3,0,0,1,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,0,2,0,3,0,0,2,0,1,3,0,0,1],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,1,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,3,1,0,3,0,0,1,0,0,0,1,0,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,0,2,0,3,0,0,2,0,1,3,0,0,1,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,1,0,0,0,0,0,0,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
 ];
 
 const CELL = 14;
 const GAP = 3;
-const COLS = 40;
+const COLS = 55;
 
-// Selected cell — Services row (index 2), column 30 (intensity 3)
+// Selected cell — Services row (index 2), column 44 (intensity 3)
 const SELECTED_ROW = 2;
-const SELECTED_COL = 30;
+const SELECTED_COL = 44;
 
 const SELECTED_ACTIVITIES = [
   { title: "Whop Positioning Document", agents: [{ name: "Positioning SOP", color: "#977BA1" }], author: "JG", client: "Whop", time: "18m" },
@@ -117,12 +117,12 @@ export function DashboardMockup() {
       <div className="px-6 pt-6 pb-6">
         <div className="rounded-xl bg-muted/30 p-5">
           {/* Month labels */}
-          <div className="flex mb-1">
-            <div className="flex" style={{ gap: GAP }}>
+          <div className="flex mb-1" style={{ marginRight: 90 + 8 }}>
+            <div className="flex flex-1" style={{ gap: GAP }}>
               {Array.from({ length: COLS }).map((_, i) => {
                 const ml = monthLabels.find((m) => m.index === i);
                 return (
-                  <div key={i} style={{ width: CELL }} className="shrink-0">
+                  <div key={i} className="flex-1 min-w-0">
                     {ml && (
                       <span className="text-xs text-muted-foreground whitespace-nowrap" style={{ fontSize: 9 }}>{ml.label}</span>
                     )}
@@ -140,15 +140,14 @@ export function DashboardMockup() {
               style={{ height: CELL + GAP }}
             >
               {/* Cells */}
-              <div className="flex" style={{ gap: GAP }}>
+              <div className="flex flex-1" style={{ gap: GAP }}>
                 {ACTIVITY_DATA[rowIdx].map((intensity, colIdx) => {
                   const isSelected = rowIdx === SELECTED_ROW && colIdx === SELECTED_COL;
                   return (
                     <div
                       key={colIdx}
-                      className={`shrink-0 rounded-[2px] ${intensity === 0 ? "bg-muted/30" : ""} ${isSelected ? "ring-2 ring-foreground ring-offset-1 ring-offset-card" : ""}`}
+                      className={`flex-1 min-w-0 rounded-[2px] ${intensity === 0 ? "bg-muted/30" : ""} ${isSelected ? "ring-2 ring-foreground ring-offset-1 ring-offset-card" : ""}`}
                       style={{
-                        width: CELL,
                         height: CELL,
                         ...(intensity > 0 ? { backgroundColor: `${row.color}${opacityHex(intensity)}` } : {}),
                       }}
