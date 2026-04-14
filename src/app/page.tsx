@@ -181,78 +181,75 @@ export default function Home() {
       </section>
 
       {/* Product depth — six layers */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-xs font-mono text-primary uppercase tracking-widest">
-              Product
-            </span>
-            <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
-              Six operational layers. One AI.
-            </h2>
-            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Shadow isn&apos;t a feature. It&apos;s a complete operating layer that runs
-              across research, strategy, content, media, pipeline, and autonomous
-              execution.
-            </p>
-          </div>
+      <section>
+        <div className="text-center py-16 px-6">
+          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+            Product
+          </span>
+          <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
+            Six operational layers. One AI.
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            Shadow isn&apos;t a feature. It&apos;s a complete operating layer that runs
+            across research, strategy, content, media, pipeline, and autonomous
+            execution.
+          </p>
+        </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {layers.map((layer) => (
-              <Link
-                key={layer.title}
-                href={layer.href}
-                className="group bg-card border border-border rounded-xl p-6 hover:border-primary/40 hover:shadow-md transition-all"
-              >
-                <h3 className="font-heading font-semibold text-base text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {layer.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {layer.description}
-                </p>
-              </Link>
-            ))}
-          </div>
+        <div>
+          {[layers.slice(0, 3), layers.slice(3, 6)].map((row, rowIdx) => (
+            <div key={rowIdx} className="grid grid-cols-3 border-b border-border">
+              {row.map((layer, colIdx) => (
+                <Link
+                  key={layer.title}
+                  href={layer.href}
+                  className={`group p-6 hover:bg-card transition-colors ${colIdx < 2 ? "border-r border-border" : ""}`}
+                >
+                  <h3 className="font-heading font-semibold text-base text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {layer.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {layer.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
       {/* How it works */}
-      <section id="how-it-works" className="py-24 px-6 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-xs font-mono text-primary uppercase tracking-widest">
-              How it works
-            </span>
-            <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
-              Built for the way agencies actually work
-            </h2>
-          </div>
+      <section id="how-it-works">
+        <div className="text-center py-16 px-6">
+          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+            How it works
+          </span>
+          <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
+            Built for the way agencies actually work
+          </h2>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step) => (
-              <div key={step.number} className="flex flex-col gap-4">
-                <div className="mb-2">
-                </div>
-                <span className="font-mono text-4xl font-light text-border">
-                  {step.number}
-                </span>
-                <h3 className="font-heading font-semibold text-lg text-foreground">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-3 border-y border-border">
+          {steps.map((step, i) => (
+            <div key={step.number} className={`flex flex-col gap-4 p-6 ${i < 2 ? "border-r border-border" : ""}`}>
+              <span className="font-mono text-4xl font-light text-border">
+                {step.number}
+              </span>
+              <h3 className="font-heading font-semibold text-lg text-foreground">
+                {step.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Architecture — replace the stack */}
-      <section className="py-24 px-6 border-t border-border">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
+      <section className="border-t border-border">
+        <div className="grid md:grid-cols-2">
+            <div className="p-8 border-r border-border">
               <span className="text-xs font-mono text-primary uppercase tracking-widest">
                 Consolidation
               </span>
@@ -275,22 +272,25 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="grid grid-cols-2 gap-2">
-              {replacedTools.map((tool) => (
-                <div
-                  key={tool}
-                  className="bg-card border border-border rounded-lg px-4 py-3 text-sm text-muted-foreground line-through decoration-muted-foreground/40"
-                >
-                  {tool}
+            <div>
+              {[replacedTools.slice(0, 2), replacedTools.slice(2, 4), replacedTools.slice(4, 6), replacedTools.slice(6, 8), replacedTools.slice(8, 10)].map((row, rowIdx) => (
+                <div key={rowIdx} className={`grid grid-cols-2 ${rowIdx < 4 ? "border-b border-border" : ""}`}>
+                  {row.map((tool, colIdx) => (
+                    <div
+                      key={tool}
+                      className={`px-4 py-3 text-sm text-muted-foreground line-through decoration-muted-foreground/40 ${colIdx === 0 ? "border-r border-border" : ""}`}
+                    >
+                      {tool}
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
       {/* Closing CTA */}
-      <section className="py-24 px-6 bg-muted/30">
+      <section className="py-24 px-6 border-t border-border">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight max-w-3xl mx-auto">
             Your team does the strategy. Shadow does everything else.

@@ -27,41 +27,39 @@ export function CapabilitySection({
   };
 
   return (
-    <section className="py-20 border-b border-border last:border-0">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className={`grid md:grid-cols-2 gap-16 items-start ${reversed ? "md:[&>*:first-child]:order-2" : ""}`}>
-          <div className="flex flex-col gap-4">
-            {label && (
-              <span className={`text-xs font-mono uppercase tracking-widest ${accentColors[accent]}`}>
-                {label}
-              </span>
-            )}
-            <h2 className="font-heading text-3xl font-semibold text-foreground leading-tight">
-              {heading}
-            </h2>
-            <p className="text-base text-muted-foreground leading-relaxed">
-              {body}
-            </p>
-          </div>
-
-          {details && details.length > 0 && (
-            <div className="flex flex-col gap-4">
-              {details.map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-card rounded-xl p-5 border border-border"
-                >
-                  <h3 className="font-heading font-semibold text-sm text-foreground mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+    <section className="border-b border-border last:border-0">
+      <div className={`grid md:grid-cols-2 ${reversed ? "md:[&>*:first-child]:order-2" : ""}`}>
+        <div className={`flex flex-col gap-4 p-8 ${!reversed ? "md:border-r border-border" : ""} ${reversed ? "md:border-l border-border" : ""}`}>
+          {label && (
+            <span className={`text-xs font-mono uppercase tracking-widest ${accentColors[accent]}`}>
+              {label}
+            </span>
           )}
+          <h2 className="font-heading text-3xl font-semibold text-foreground leading-tight">
+            {heading}
+          </h2>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            {body}
+          </p>
         </div>
+
+        {details && details.length > 0 && (
+          <div className="flex flex-col">
+            {details.map((item, i) => (
+              <div
+                key={item.title}
+                className={`p-6 ${i < details.length - 1 ? "border-b border-border" : ""}`}
+              >
+                <h3 className="font-heading font-semibold text-sm text-foreground mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
