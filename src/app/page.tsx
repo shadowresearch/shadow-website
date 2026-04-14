@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -120,31 +121,35 @@ export default function Home() {
       </section>
 
       {/* Trust bar */}
-      <section className="py-8 border-y border-border bg-card">
+      <section className="py-10 border-y border-border bg-card">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-center text-xs font-mono text-muted-foreground uppercase tracking-widest mb-5">
-            Trusted by agencies serving
+          <p className="text-center text-xs font-mono text-muted-foreground uppercase tracking-widest mb-8">
+            Powering campaigns for
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            {["Outcast (Next 15)", "Haymaker"].map((agency) => (
-              <span
-                key={agency}
-                className="text-sm font-heading font-semibold text-foreground"
-              >
-                {agency}
-              </span>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {[
+              { name: "Amazon", file: "amazon-1.svg", height: 20 },
+              { name: "OpenAI", file: "openai-1.svg", height: 20 },
+              { name: "TikTok", file: "tiktok-1.svg", height: 20 },
+              { name: "Roblox", file: "roblox-1.svg", height: 20 },
+              { name: "Meta", file: "meta-1.svg", height: 20 },
+              { name: "Lyft", file: "lyft-1.svg", height: 20 },
+              { name: "HubSpot", file: "hubspot-1.svg", height: 20 },
+              { name: "Etsy", file: "etsy-1.svg", height: 20 },
+              { name: "SoftBank", file: "softbank-1.svg", height: 20 },
+              { name: "Harness", file: "harness-1.svg", height: 20 },
+              { name: "Lovable", file: "lovable-1.svg", height: 20 },
+            ].map((logo) => (
+              <Image
+                key={logo.name}
+                src={`/logos/${logo.file}`}
+                alt={logo.name}
+                width={0}
+                height={logo.height}
+                className="h-5 w-auto opacity-60 hover:opacity-100 transition-opacity"
+                style={{ height: logo.height, width: "auto" }}
+              />
             ))}
-            <span className="text-muted-foreground/40 hidden sm:block">—</span>
-            {["Amazon", "OpenAI", "Roblox", "TikTok", "Netflix", "HBO"].map(
-              (brand) => (
-                <span
-                  key={brand}
-                  className="text-sm text-muted-foreground"
-                >
-                  {brand}
-                </span>
-              )
-            )}
           </div>
         </div>
       </section>
