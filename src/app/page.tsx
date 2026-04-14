@@ -127,7 +127,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="mt-16 w-full px-4">
+          <div className="mt-16 w-full">
             <DashboardMockup />
           </div>
         </div>
