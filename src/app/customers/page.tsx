@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTASection } from "../_components/CTASection";
+import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
   title: "Customers: Shadow",
@@ -45,6 +46,7 @@ export default function CustomersPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
+      <GlassSection>
       <section className="py-28 md:py-36 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto text-center">
           <span className="text-xs font-mono text-primary uppercase tracking-widest">
@@ -60,6 +62,7 @@ export default function CustomersPage() {
           </p>
         </div>
       </section>
+      </GlassSection>
 
       {/* Agency cards */}
       <section className="py-20 px-6 border-b border-border">

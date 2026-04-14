@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CapabilitySection } from "../_components/CapabilitySection";
 import { CTASection } from "../_components/CTASection";
+import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
   title: "Pipeline & Operations: Shadow",
@@ -40,6 +41,7 @@ export default function PipelinePage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
+      <GlassSection>
       <section className="py-28 md:py-36 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto">
           <span className="text-xs font-mono text-primary uppercase tracking-widest">
@@ -66,6 +68,7 @@ export default function PipelinePage() {
           </div>
         </div>
       </section>
+      </GlassSection>
 
       {/* Client Management */}
       <CapabilitySection

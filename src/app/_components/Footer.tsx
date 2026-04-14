@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GlassSection } from "./GlassSection";
 
 export function Footer() {
   return (
+    <GlassSection>
     <footer className="border-t border-border bg-background">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
@@ -51,5 +53,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    </GlassSection>
   );
 }

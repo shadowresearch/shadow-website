@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
   title: "Contact: Shadow",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="flex flex-col">
+      <GlassSection>
       <section className="py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           {/* Left — copy */}
@@ -116,6 +118,7 @@ export default function ContactPage() {
           </form>
         </div>
       </section>
+      </GlassSection>
     </div>
   );
 }

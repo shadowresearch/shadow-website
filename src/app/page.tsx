@@ -55,44 +55,44 @@ const layers = [
 const steps = [
   {
     number: "01",
-    title: "Client spaces",
+    title: "Client-first",
     description:
-      "Every client gets a dedicated workspace — their brand voice, SOPs, contacts, past coverage, and strategic context all in one place.",
+      "Every client gets a dedicated workspace. Their brand voice, positioning, competitors, coverage, and strategic context all in one place.",
     mockup: "client-space",
   },
   {
     number: "02",
-    title: "SOPs as memory",
+    title: "Methodology-led",
     description:
-      "Standard operating procedures are encoded as living documents. Shadow reads them before every task, ensuring every output is on-brand.",
+      "Standard operating procedures are encoded into your agents for every workflow. Shadow follows your methodology and style so every output is on-brand.",
     mockup: "sop-execution",
   },
   {
     number: "03",
-    title: "Autonomous agents",
+    title: "Proactive & Continuous",
     description:
-      "Shadow runs continuously in the background — surfacing news, scanning competitors, generating content, and flagging opportunities without being asked.",
+      "Shadow runs continuously in the background. Surfacing news, scanning competitors, generating content, and flagging opportunities without being asked.",
     mockup: "autonomous-agent",
   },
 ];
 
-const replacedTools: { name: string; logo?: string; h?: number }[] = [
-  { name: "Google Alerts" },
-  { name: "Prezly" },
-  { name: "Custom scripts" },
-  { name: "Google Sheets", logo: "/logos/google-sheets.svg", h: 18 },
-  { name: "Notion", logo: "/logos/notion.svg", h: 16 },
-  { name: "Slack bots", logo: "/logos/slack.svg", h: 16 },
-  { name: "Semrush" },
-  { name: "Coverage books" },
-  { name: "Ahrefs" },
-  { name: "Brandwatch" },
-  { name: "Cision", logo: "/logos/cision.svg", h: 14 },
-  { name: "HubSpot", logo: "/logos/hubspot-1.svg", h: 16 },
-  { name: "Prowly" },
-  { name: "Muck Rack" },
-  { name: "Meltwater" },
-  { name: "ChatGPT", logo: "/logos/chatgpt.svg", h: 16 },
+const replacedTools = [
+  "Google Alerts",
+  "Prezly",
+  "Custom scripts",
+  "Google Sheets",
+  "Notion",
+  "Slack bots",
+  "Semrush",
+  "Coverage books",
+  "Ahrefs",
+  "Brandwatch",
+  "Cision",
+  "HubSpot",
+  "Prowly",
+  "Muck Rack",
+  "Meltwater",
+  "ChatGPT",
 ];
 
 export default function Home() {
@@ -100,21 +100,14 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Gradient blobs */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-muted-foreground/10 blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-muted-foreground/8 blur-3xl" />
-          <div className="absolute top-1/3 left-1/3 w-[300px] h-[300px] rounded-full bg-muted-foreground/5 blur-3xl" />
-        </div>
+        {/* Background image */}
+        <div
+          className="absolute inset-0 -z-10 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-bg.png')" }}
+        />
         {/* Glass overlay */}
-        <div className="backdrop-blur-2xl bg-background/40 py-28 md:py-36 px-6">
+        <div className="backdrop-blur-3xl bg-background/50 py-28 md:py-36 px-6">
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-3 py-1 mb-8">
-            <span className="text-xs font-mono text-muted-foreground">
-              Now serving Outcast, Haymaker &amp; more
-            </span>
-          </div>
-
           <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-foreground leading-tight tracking-tight max-w-4xl">
             The operating system for communications
           </h1>
@@ -231,7 +224,7 @@ export default function Home() {
             How it works
           </span>
           <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
-            Built for the way agencies actually work
+            Built for the way comms teams actually work
           </h2>
         </div>
 
@@ -281,7 +274,7 @@ export default function Home() {
             <div className="flex flex-col justify-end relative">
               {/* Tool cells — fading in from top */}
               {(() => {
-                const rows: typeof replacedTools[] = [];
+                const rows: string[][] = [];
                 for (let i = 0; i < replacedTools.length; i += 2) {
                   rows.push(replacedTools.slice(i, i + 2));
                 }
@@ -297,23 +290,10 @@ export default function Home() {
                   >
                     {row.map((tool, colIdx) => (
                       <div
-                        key={tool.name}
-                        className={`px-4 py-3 flex items-center gap-2.5 ${colIdx === 0 ? "border-r border-border" : ""}`}
+                        key={tool}
+                        className={`px-4 py-3 text-sm font-semibold text-muted-foreground line-through decoration-2 decoration-muted-foreground/60 ${colIdx === 0 ? "border-r border-border" : ""}`}
                       >
-                        {tool.logo ? (
-                          <Image
-                            src={tool.logo}
-                            alt={tool.name}
-                            width={80}
-                            height={tool.h ?? 16}
-                            className="w-auto grayscale opacity-60"
-                            style={{ height: tool.h ?? 16 }}
-                          />
-                        ) : (
-                          <span className="text-sm text-muted-foreground line-through decoration-muted-foreground/40">
-                            {tool.name}
-                          </span>
-                        )}
+                        {tool}
                       </div>
                     ))}
                   </div>
