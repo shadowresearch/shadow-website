@@ -128,42 +128,34 @@ export default function Home() {
         {/* Logo grid — 5 columns, 2+ rows with cell borders */}
         {[
           [
-            { name: "HubSpot", file: "hubspot-1.svg" },
-            { name: "Amazon", file: "amazon-1.svg" },
-            { name: "Lovable", file: "lovable-1.svg" },
-            { name: "Roblox", file: "roblox-1.svg" },
-            { name: "Etsy", file: "etsy-1.svg" },
+            { name: "HubSpot", file: "hubspot-1.svg", h: 24 },
+            { name: "Amazon", file: "amazon-1.svg", h: 44 },
+            { name: "Lovable", file: "lovable-1.svg", h: 40 },
+            { name: "Roblox", file: "roblox-1.svg", h: 34 },
+            { name: "Etsy", file: "etsy-1.svg", h: 24 },
           ],
           [
-            { name: "SoftBank", file: "softbank-1.svg" },
-            { name: "TikTok", file: "tiktok-1.svg" },
-            { name: "OpenAI", file: "openai-1.svg" },
-            { name: "Netflix", file: "netflix-1.svg" },
-            { name: "Harness", file: "harness-1.svg" },
-          ],
-          [
-            { name: "Meta", file: "meta-1.svg" },
-            { name: "Lyft", file: "lyft-1.svg" },
-            null,
-            null,
-            null,
+            { name: "SoftBank", file: "softbank-1.svg", h: 24 },
+            { name: "TikTok", file: "tiktok-1.svg", h: 34 },
+            { name: "OpenAI", file: "openai-1.svg", h: 40 },
+            { name: "Netflix", file: "netflix-1.svg", h: 24 },
+            { name: "Harness", file: "harness-1.svg", h: 24 },
           ],
         ].map((row, rowIdx) => (
           <div key={rowIdx} className="grid grid-cols-5 border-b border-border">
             {row.map((logo, colIdx) => (
               <div
-                key={logo?.name ?? `empty-${colIdx}`}
+                key={logo.name}
                 className={`flex items-center justify-center py-5 ${colIdx < 4 ? "border-r border-border" : ""}`}
               >
-                {logo && (
-                  <Image
-                    src={`/logos/${logo.file}`}
-                    alt={logo.name}
-                    width={120}
-                    height={24}
-                    className="h-6 w-auto grayscale opacity-50"
-                  />
-                )}
+                <Image
+                  src={`/logos/${logo.file}`}
+                  alt={logo.name}
+                  width={120}
+                  height={logo.h}
+                  className="w-auto grayscale opacity-50"
+                  style={{ height: logo.h }}
+                />
               </div>
             ))}
           </div>
