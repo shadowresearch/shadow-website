@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Nav } from "./_components/Nav";
 import { Footer } from "./_components/Footer";
+import { SiteRail } from "./_components/SiteRail";
 
 const delight = localFont({
   src: [
@@ -70,7 +71,9 @@ export default function RootLayout({
         className={`${delight.variable} ${geistMono.variable} ${raleway.variable} ${baskervville.variable} antialiased`}
       >
         <Nav />
-        <main>{children}</main>
+        <SiteRail>
+          <main>{children}</main>
+        </SiteRail>
         <Footer />
       </body>
     </html>
