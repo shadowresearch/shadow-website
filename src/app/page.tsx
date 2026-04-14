@@ -1,49 +1,287 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Shadow: The AI Operating System",
+  description:
+    "Shadow is the AI operating system for communications — automating research, content creation, media tracking, and campaign workflows for modern PR agencies.",
+};
+
+const layers = [
+  {
+    title: "Research & Intelligence",
+    description:
+      "200K+ news sources, journalist profiles, keyword intelligence, GEO audits, and competitive monitoring — all continuously updated.",
+    href: "/research",
+  },
+  {
+    title: "Strategy & Positioning",
+    description:
+      "Master messaging frameworks, narrative arcs, and GTM strategies grounded in real market data and competitive context.",
+    href: "/content",
+  },
+  {
+    title: "Content Production",
+    description:
+      "Press releases, pitches, website copy, awards submissions, and executive thought leadership — governed by client SOPs.",
+    href: "/content",
+  },
+  {
+    title: "Media & Outreach",
+    description:
+      "230K+ journalist profiles with beat matching, outlet intelligence, coverage tracking, and story clustering.",
+    href: "/media",
+  },
+  {
+    title: "Pipeline & Operations",
+    description:
+      "Client onboarding, proposals, agreements, invoicing, and the full inbound pipeline — managed end-to-end.",
+    href: "/pipeline",
+  },
+  {
+    title: "Autonomous Workflows",
+    description:
+      "40+ pre-built agent workflows: daily media digests, weekly market scans, coverage reports, content slates, and inbound triage.",
+    href: "/pipeline",
+  },
+];
+
+const steps = [
+  {
+    number: "01",
+    title: "Client spaces",
+    description:
+      "Every client gets a dedicated workspace — their brand voice, SOPs, contacts, past coverage, and strategic context all in one place.",
+  },
+  {
+    number: "02",
+    title: "SOPs as memory",
+    description:
+      "Standard operating procedures are encoded as living documents. Shadow reads them before every task, ensuring every output is on-brand.",
+  },
+  {
+    number: "03",
+    title: "Autonomous agents",
+    description:
+      "Shadow runs continuously in the background — surfacing news, scanning competitors, generating content, and flagging opportunities without being asked.",
+  },
+];
+
+const replacedTools = [
+  "Cision",
+  "Meltwater",
+  "Semrush",
+  "Ahrefs",
+  "ChatGPT",
+  "HubSpot",
+  "Notion",
+  "Slack bots",
+  "Custom scripts",
+  "Google Sheets",
+];
+
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Nav */}
-      <nav className="px-8 py-6 flex items-center justify-between max-w-6xl mx-auto w-full">
-        <span className="text-lg font-heading font-semibold tracking-tight text-foreground">
-          Shadow
-        </span>
-        <a
-          href="https://app.shadow.inc"
-          className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-        >
-          Sign in
-        </a>
-      </nav>
-
+    <div className="flex flex-col">
       {/* Hero */}
-      <main className="flex-1 flex flex-col items-center justify-center px-8 text-center">
-        <h1 className="font-serif text-4xl sm:text-6xl tracking-tight text-foreground max-w-3xl leading-tight">
-          AI infrastructure for PR
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-          Shadow is the operating system that powers modern PR agencies — automating research, content creation, media tracking, and communications workflows with AI agents.
-        </p>
-        <div className="mt-10 flex gap-4">
-          <a
-            href="https://app.shadow.inc"
-            className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-          >
-            Get started
-          </a>
-          <a
-            href="#learn-more"
-            className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
-          >
-            Learn more
-          </a>
-        </div>
-      </main>
+      <section className="py-28 md:py-36 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-3 py-1 mb-8">
+            <span className="text-xs font-mono text-muted-foreground">
+              Now serving Outcast, Haymaker &amp; more
+            </span>
+          </div>
 
-      {/* Footer */}
-      <footer className="px-8 py-8 text-center">
-        <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Shadow Inc. All rights reserved.
-        </p>
-      </footer>
+          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-foreground leading-tight tracking-tight max-w-4xl">
+            The operating system for communications
+          </h1>
+
+          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            Shadow is the AI infrastructure that powers modern PR agencies —
+            six operational layers working together so your team can focus on
+            relationships, not repetition.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://cal.com/shadow-inc/demo"
+              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              Book a demo
+            </a>
+            <a
+              href="#how-it-works"
+              className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="py-8 border-y border-border bg-card">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-center text-xs font-mono text-muted-foreground uppercase tracking-widest mb-5">
+            Trusted by agencies serving
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+            {["Outcast (Next 15)", "Haymaker"].map((agency) => (
+              <span
+                key={agency}
+                className="text-sm font-heading font-semibold text-foreground"
+              >
+                {agency}
+              </span>
+            ))}
+            <span className="text-muted-foreground/40 hidden sm:block">—</span>
+            {["Amazon", "OpenAI", "Roblox", "TikTok", "Netflix", "HBO"].map(
+              (brand) => (
+                <span
+                  key={brand}
+                  className="text-sm text-muted-foreground"
+                >
+                  {brand}
+                </span>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Product depth — six layers */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-xs font-mono text-primary uppercase tracking-widest">
+              Product
+            </span>
+            <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
+              Six operational layers. One AI.
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
+              Shadow isn&apos;t a feature. It&apos;s a complete operating layer that runs
+              across research, strategy, content, media, pipeline, and autonomous
+              execution.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {layers.map((layer) => (
+              <Link
+                key={layer.title}
+                href={layer.href}
+                className="group bg-card border border-border rounded-xl p-6 hover:border-primary/40 hover:shadow-md transition-all"
+              >
+                <h3 className="font-heading font-semibold text-base text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {layer.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {layer.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section id="how-it-works" className="py-24 px-6 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-xs font-mono text-primary uppercase tracking-widest">
+              How it works
+            </span>
+            <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
+              Built for the way agencies actually work
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {steps.map((step) => (
+              <div key={step.number} className="flex flex-col gap-4">
+                <span className="font-mono text-4xl font-light text-border">
+                  {step.number}
+                </span>
+                <h3 className="font-heading font-semibold text-lg text-foreground">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture — replace the stack */}
+      <section className="py-24 px-6 border-t border-border">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-xs font-mono text-primary uppercase tracking-widest">
+                Consolidation
+              </span>
+              <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
+                Replace the stack.
+                <br />
+                Not another tool in it.
+              </h2>
+              <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+                The average PR agency runs on 8–12 disconnected tools. Shadow
+                replaces the research platforms, the content tools, the media
+                databases, and the operations spreadsheets — unified under one
+                AI that knows every client, every campaign, and every SOP.
+              </p>
+              <a
+                href="https://cal.com/shadow-inc/demo"
+                className="mt-8 inline-flex rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                See Shadow in action
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2">
+              {replacedTools.map((tool) => (
+                <div
+                  key={tool}
+                  className="bg-card border border-border rounded-lg px-4 py-3 text-sm text-muted-foreground line-through decoration-muted-foreground/40"
+                >
+                  {tool}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="py-24 px-6 bg-muted/30">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight max-w-3xl mx-auto">
+            Your team does the strategy. Shadow does everything else.
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            From the first brief to the final report — Shadow handles the
+            research, the drafts, the monitoring, and the admin.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://cal.com/shadow-inc/demo"
+              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              Book a demo
+            </a>
+            <a
+              href="/customers"
+              className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            >
+              See who runs on Shadow
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
