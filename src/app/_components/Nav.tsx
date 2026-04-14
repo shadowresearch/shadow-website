@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/", label: "Home" },
+  { href: "/research", label: "Research" },
+  { href: "/media", label: "Media" },
+  { href: "/content", label: "Content" },
+  { href: "/pipeline", label: "Pipeline" },
+  { href: "/customers", label: "Customers" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
 ];
@@ -11,9 +15,8 @@ export function Nav() {
   return (
     <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
       <div className="max-w-[1320px] mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <Image src="/logo.svg" alt="Shadow" width={18} height={30} />
-          <span className="text-base font-heading font-semibold text-foreground">Shadow</span>
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Image src="/logo.svg" alt="Shadow" width={20} height={34} />
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
@@ -30,9 +33,9 @@ export function Nav() {
 
         <a
           href="https://cal.com/shadow-inc/demo"
-          className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-muted transition-colors shrink-0"
+          className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shrink-0"
         >
-          Get started
+          Book a demo
         </a>
       </div>
     </nav>

@@ -85,26 +85,34 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-28 md:py-40 px-10 md:px-16">
-        <div className="max-w-3xl">
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-foreground leading-tight tracking-tight">
-            The PR operating system.
+      <section className="py-28 md:py-36 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-3 py-1 mb-8">
+            <span className="text-xs font-mono text-muted-foreground">
+              Now serving Outcast, Haymaker &amp; more
+            </span>
+          </div>
+
+          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-foreground leading-tight tracking-tight max-w-4xl">
+            The operating system for communications
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            One platform replacing fragmented tool stacks with connected infrastructure. Pipeline, intelligence, strategy, execution, and reporting working together across every client.
+            Shadow is the AI infrastructure that powers modern PR agencies —
+            six operational layers working together so your team can focus on
+            relationships, not repetition.
           </p>
 
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <a
               href="https://cal.com/shadow-inc/demo"
-              className="rounded-lg border border-foreground bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:bg-foreground/90 transition-colors"
+              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
             >
-              Get started
+              Book a demo
             </a>
             <a
               href="#how-it-works"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2.5"
+              className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
             >
               Learn more
             </a>
