@@ -41,40 +41,46 @@ export default function ResourcesPage() {
       </section>
 
       {/* Resources by category */}
-      <section className="py-20 px-6 border-b border-border">
-        <div className="max-w-6xl mx-auto flex flex-col gap-20">
-          {resourceCategories.map((category) => {
-            const categoryResources = getResourcesByCategory(category);
-            if (categoryResources.length === 0) return null;
-            return (
-              <div key={category}>
-                <h2 className="font-heading font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-8">
-                  {category}
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {categoryResources.map((resource) => (
-                    <Link
-                      key={resource.slug}
-                      href={`/resources/${resource.slug}`}
-                      className="group flex flex-col gap-2 bg-card border border-border rounded-xl px-5 py-5 hover:border-primary/40 hover:shadow-sm transition-all"
-                    >
-                      <h3 className="font-heading font-semibold text-base text-foreground leading-snug group-hover:text-primary transition-colors">
-                        {resource.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
-                        {resource.description}
-                      </p>
-                      <span className="mt-auto pt-3 text-xs text-primary font-medium group-hover:underline">
-                        Read &rarr;
-                      </span>
-                    </Link>
-                  ))}
-                </div>
+      {resourceCategories.map((category) => {
+        const categoryResources = getResourcesByCategory(category);
+        if (categoryResources.length === 0) return null;
+        // Build rows of 3
+        const rows: typeof categoryResources[] = [];
+        for (let i = 0; i < categoryResources.length; i += 3) {
+          rows.push(categoryResources.slice(i, i + 3));
+        }
+        return (
+          <section key={category}>
+            <div className="px-8 py-6 border-b border-border">
+              <h2 className="font-heading font-semibold text-xs uppercase tracking-widest text-muted-foreground">
+                {category}
+              </h2>
+            </div>
+            {rows.map((row, rowIdx) => (
+              <div key={rowIdx} className="grid grid-cols-3 border-b border-border">
+                {row.map((resource, colIdx) => (
+                  <Link
+                    key={resource.slug}
+                    href={`/resources/${resource.slug}`}
+                    className={`group flex flex-col gap-2 px-6 py-6 hover:bg-card transition-colors ${colIdx < 2 ? "border-r border-border" : ""}`}
+                  >
+                    <h3 className="font-heading font-semibold text-sm text-foreground leading-snug group-hover:text-primary transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
+                      {resource.description}
+                    </p>
+                  </Link>
+                ))}
+                {/* Fill empty cells in last row */}
+                {row.length < 3 && Array.from({ length: 3 - row.length }).map((_, i) => (
+                  <div key={`empty-${i}`} className={`${row.length + i < 2 ? "border-r border-border" : ""}`} />
+                ))}
               </div>
-            );
-          })}
-        </div>
-      </section>
+            ))}
+          </section>
+        );
+      })}
 
       <CTASection
         heading="See Shadow in action"

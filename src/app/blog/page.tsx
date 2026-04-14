@@ -88,36 +88,32 @@ export default function BlogPage() {
       </section>
 
       {/* Posts */}
-      <section className="py-20 px-6 border-b border-border">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col divide-y divide-border">
-            {posts.map((post) => (
-              <article key={post.href} className="py-10 first:pt-0 last:pb-0">
-                <Link href={post.href} className="group block">
-                  {post.series && (
-                    <span className="inline-flex items-center text-xs font-mono text-primary bg-primary/10 border border-primary/20 rounded-full px-3 py-1 mb-4">
-                      {post.series}
-                    </span>
-                  )}
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground leading-tight group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                    {post.excerpt}
-                  </p>
-                  <div className="mt-4 flex items-center gap-4">
-                    <span className="text-xs text-muted-foreground font-mono">
-                      {post.date}
-                    </span>
-                    <span className="text-xs text-primary font-medium group-hover:underline">
-                      Read &rarr;
-                    </span>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
+      <section>
+        {posts.map((post) => (
+          <article key={post.href} className="border-b border-border">
+            <Link href={post.href} className="group block px-8 py-10">
+              {post.series && (
+                <span className="inline-flex items-center text-xs font-mono text-primary bg-primary/10 border border-primary/20 rounded-full px-3 py-1 mb-4">
+                  {post.series}
+                </span>
+              )}
+              <h2 className="font-serif text-2xl md:text-3xl text-foreground leading-tight group-hover:text-primary transition-colors">
+                {post.title}
+              </h2>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                {post.excerpt}
+              </p>
+              <div className="mt-4 flex items-center gap-4">
+                <span className="text-xs text-muted-foreground font-mono">
+                  {post.date}
+                </span>
+                <span className="text-xs text-primary font-medium group-hover:underline">
+                  Read &rarr;
+                </span>
+              </div>
+            </Link>
+          </article>
+        ))}
       </section>
 
       <CTASection

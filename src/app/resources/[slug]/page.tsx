@@ -58,30 +58,27 @@ export default async function ResourceSlugPage({ params }: PageProps) {
 
       {/* Related resources */}
       {related.length > 0 && (
-        <section className="px-6 pb-20 border-t border-border pt-16">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-8">
+        <section>
+          <div className="px-8 py-6 border-y border-border">
+            <h2 className="font-heading font-semibold text-xs uppercase tracking-widest text-muted-foreground">
               More in {resource.category}
             </h2>
-            <div className="flex flex-col gap-4">
-              {related.map((r) => (
-                <Link
-                  key={r.slug}
-                  href={`/resources/${r.slug}`}
-                  className="group flex flex-col gap-1 bg-card border border-border rounded-xl px-5 py-4 hover:border-primary/40 hover:shadow-sm transition-all"
-                >
-                  <h3 className="font-heading font-semibold text-base text-foreground group-hover:text-primary transition-colors">
-                    {r.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {r.description}
-                  </p>
-                  <span className="mt-2 text-xs text-primary font-medium group-hover:underline">
-                    Read &rarr;
-                  </span>
-                </Link>
-              ))}
-            </div>
+          </div>
+          <div className="grid border-b border-border" style={{ gridTemplateColumns: `repeat(${related.length}, 1fr)` }}>
+            {related.map((r, i) => (
+              <Link
+                key={r.slug}
+                href={`/resources/${r.slug}`}
+                className={`group flex flex-col gap-1 px-6 py-6 hover:bg-card transition-colors ${i < related.length - 1 ? "border-r border-border" : ""}`}
+              >
+                <h3 className="font-heading font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
+                  {r.title}
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {r.description}
+                </p>
+              </Link>
+            ))}
           </div>
         </section>
       )}

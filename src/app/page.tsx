@@ -76,17 +76,23 @@ const steps = [
   },
 ];
 
-const replacedTools = [
-  "Cision",
-  "Meltwater",
-  "Semrush",
-  "Ahrefs",
-  "ChatGPT",
-  "HubSpot",
-  "Notion",
-  "Slack bots",
-  "Custom scripts",
-  "Google Sheets",
+const replacedTools: { name: string; logo?: string; h?: number }[] = [
+  { name: "Google Alerts" },
+  { name: "Prezly" },
+  { name: "Custom scripts" },
+  { name: "Google Sheets", logo: "/logos/google-sheets.svg", h: 18 },
+  { name: "Notion", logo: "/logos/notion.svg", h: 16 },
+  { name: "Slack bots", logo: "/logos/slack.svg", h: 16 },
+  { name: "Semrush" },
+  { name: "Coverage books" },
+  { name: "Ahrefs" },
+  { name: "Brandwatch" },
+  { name: "Cision", logo: "/logos/cision.svg", h: 14 },
+  { name: "HubSpot", logo: "/logos/hubspot-1.svg", h: 16 },
+  { name: "Prowly" },
+  { name: "Muck Rack" },
+  { name: "Meltwater" },
+  { name: "ChatGPT", logo: "/logos/chatgpt.svg", h: 16 },
 ];
 
 export default function Home() {
@@ -198,7 +204,7 @@ export default function Home() {
 
         <div>
           {[layers.slice(0, 3), layers.slice(3, 6)].map((row, rowIdx) => (
-            <div key={rowIdx} className="grid grid-cols-3 border-b border-border">
+            <div key={rowIdx} className={`grid grid-cols-3 border-b border-border ${rowIdx === 0 ? "border-t" : ""}`}>
               {row.map((layer, colIdx) => (
                 <Link
                   key={layer.title}
@@ -272,19 +278,49 @@ export default function Home() {
               </a>
             </div>
 
-            <div>
-              {[replacedTools.slice(0, 2), replacedTools.slice(2, 4), replacedTools.slice(4, 6), replacedTools.slice(6, 8), replacedTools.slice(8, 10)].map((row, rowIdx) => (
-                <div key={rowIdx} className={`grid grid-cols-2 ${rowIdx < 4 ? "border-b border-border" : ""}`}>
-                  {row.map((tool, colIdx) => (
-                    <div
-                      key={tool}
-                      className={`px-4 py-3 text-sm text-muted-foreground line-through decoration-muted-foreground/40 ${colIdx === 0 ? "border-r border-border" : ""}`}
-                    >
-                      {tool}
-                    </div>
-                  ))}
-                </div>
-              ))}
+            <div className="flex flex-col justify-end relative">
+              {/* Tool cells — fading in from top */}
+              {(() => {
+                const rows: typeof replacedTools[] = [];
+                for (let i = 0; i < replacedTools.length; i += 2) {
+                  rows.push(replacedTools.slice(i, i + 2));
+                }
+                const totalRows = rows.length;
+                return rows.map((row, rowIdx) => (
+                  <div
+                    key={rowIdx}
+                    className={`grid grid-cols-2 ${rowIdx < totalRows - 1 ? "border-b border-border" : ""}`}
+                    style={{
+                      opacity: 0.15 + (rowIdx / totalRows) * 0.85,
+                      filter: `blur(${Math.max(0, (1 - rowIdx / totalRows) * 2.5)}px)`,
+                    }}
+                  >
+                    {row.map((tool, colIdx) => (
+                      <div
+                        key={tool.name}
+                        className={`px-4 py-3 flex items-center gap-2.5 ${colIdx === 0 ? "border-r border-border" : ""}`}
+                      >
+                        {tool.logo ? (
+                          <Image
+                            src={tool.logo}
+                            alt={tool.name}
+                            width={80}
+                            height={tool.h ?? 16}
+                            className="w-auto grayscale opacity-60"
+                            style={{ height: tool.h ?? 16 }}
+                          />
+                        ) : (
+                          <span className="text-sm text-muted-foreground line-through decoration-muted-foreground/40">
+                            {tool.name}
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ));
+              })()}
+              {/* Fade gradient overlay at top */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background to-transparent pointer-events-none" />
             </div>
         </div>
       </section>
