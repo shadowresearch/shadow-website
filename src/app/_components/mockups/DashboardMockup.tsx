@@ -34,6 +34,16 @@ const CELL = 14;
 const GAP = 3;
 const COLS = 40;
 
+// Selected cell — Services row (index 2), column 30 (intensity 3)
+const SELECTED_ROW = 2;
+const SELECTED_COL = 30;
+
+const SELECTED_ACTIVITIES = [
+  { title: "Whop Positioning Document", agents: [{ name: "Positioning SOP", color: "#977BA1" }], author: "JG", client: "Whop", time: "18m" },
+  { title: "White Space Analysis: Whop's Creator Economy", agents: [{ name: "Research", color: "#7489A3" }, { name: "Positioning SOP", color: "#977BA1" }], author: "JG", client: "Whop", time: "24m" },
+  { title: "2026 Awards & Events Target List", agents: [{ name: "Awards SOP", color: "#977BA1" }], author: "NB", client: "Whop", time: "12m" },
+];
+
 function opacityHex(intensity: number): string {
   if (intensity >= 3) return "FF";
   if (intensity >= 2) return "99";
@@ -131,17 +141,20 @@ export function DashboardMockup() {
             >
               {/* Cells */}
               <div className="flex" style={{ gap: GAP }}>
-                {ACTIVITY_DATA[rowIdx].map((intensity, colIdx) => (
-                  <div
-                    key={colIdx}
-                    className={`shrink-0 rounded-[2px] ${intensity === 0 ? "bg-muted/30" : ""}`}
-                    style={{
-                      width: CELL,
-                      height: CELL,
-                      ...(intensity > 0 ? { backgroundColor: `${row.color}${opacityHex(intensity)}` } : {}),
-                    }}
-                  />
-                ))}
+                {ACTIVITY_DATA[rowIdx].map((intensity, colIdx) => {
+                  const isSelected = rowIdx === SELECTED_ROW && colIdx === SELECTED_COL;
+                  return (
+                    <div
+                      key={colIdx}
+                      className={`shrink-0 rounded-[2px] ${intensity === 0 ? "bg-muted/30" : ""} ${isSelected ? "ring-2 ring-foreground ring-offset-1 ring-offset-card" : ""}`}
+                      style={{
+                        width: CELL,
+                        height: CELL,
+                        ...(intensity > 0 ? { backgroundColor: `${row.color}${opacityHex(intensity)}` } : {}),
+                      }}
+                    />
+                  );
+                })}
               </div>
 
               {/* Row label on right */}
@@ -154,6 +167,46 @@ export function DashboardMockup() {
               </div>
             </div>
           ))}
+
+          {/* Expanded activities list */}
+          <div className="mt-6">
+            {/* Column headers */}
+            <div className="grid items-center px-2 py-1 text-muted-foreground" style={{ gridTemplateColumns: "1fr 120px 90px 60px", fontSize: 9 }}>
+              <span>Activity</span>
+              <span>Authors</span>
+              <span>Client</span>
+              <span className="text-right">Time taken</span>
+            </div>
+            {/* Rows */}
+            {SELECTED_ACTIVITIES.map((activity) => (
+              <div
+                key={activity.title}
+                className="grid items-center px-2 py-1.5 rounded-md"
+                style={{ gridTemplateColumns: "1fr 120px 90px 60px" }}
+              >
+                <span className="text-foreground truncate" style={{ fontSize: 10 }}>{activity.title}</span>
+                <div className="flex items-center -space-x-1">
+                  {activity.agents.map((agent) => (
+                    <span
+                      key={agent.name}
+                      className="shrink-0 rounded-md flex items-center justify-center text-white font-medium ring-1 ring-card"
+                      style={{ width: 18, height: 18, fontSize: 8, backgroundColor: agent.color }}
+                    >
+                      S
+                    </span>
+                  ))}
+                  <span
+                    className="shrink-0 rounded-md flex items-center justify-center font-medium ring-1 ring-card bg-border text-foreground z-10"
+                    style={{ width: 18, height: 18, fontSize: 8 }}
+                  >
+                    {activity.author}
+                  </span>
+                </div>
+                <span className="text-muted-foreground truncate" style={{ fontSize: 10 }}>{activity.client}</span>
+                <span className="text-muted-foreground tabular-nums text-right" style={{ fontSize: 10 }}>{activity.time}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
