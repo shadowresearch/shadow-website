@@ -28,7 +28,7 @@ export default function ResearchPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
-              href="https://cal.com/shadow-inc/demo"
+              href="/contact"
               className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Book a demo

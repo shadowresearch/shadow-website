@@ -34,7 +34,7 @@ export function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               <span className="font-medium text-foreground text-xs tracking-wide uppercase">Contact</span>
-              <a href="https://cal.com/shadow-inc/demo" className="text-muted-foreground hover:text-foreground transition-colors">Book a demo</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Book a demo</a>
               <a href="mailto:hello@shadow.inc" className="text-muted-foreground hover:text-foreground transition-colors">hello@shadow.inc</a>
             </div>
           </div>

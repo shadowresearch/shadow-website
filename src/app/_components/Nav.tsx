@@ -32,7 +32,7 @@ export function Nav() {
         </div>
 
         <a
-          href="https://cal.com/shadow-inc/demo"
+          href="/contact"
           className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shrink-0"
         >
           Book a demo

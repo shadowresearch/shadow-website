@@ -105,7 +105,7 @@ export default function Home() {
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <a
-              href="https://cal.com/shadow-inc/demo"
+              href="/contact"
               className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Book a demo
@@ -248,7 +248,7 @@ export default function Home() {
                 AI that knows every client, every campaign, and every SOP.
               </p>
               <a
-                href="https://cal.com/shadow-inc/demo"
+                href="/contact"
                 className="mt-8 inline-flex rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 See Shadow in action
@@ -281,7 +281,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://cal.com/shadow-inc/demo"
+              href="/contact"
               className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Book a demo

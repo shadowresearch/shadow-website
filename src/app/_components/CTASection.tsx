@@ -11,7 +11,7 @@ export function CTASection({
   heading = "Ready to run on Shadow?",
   body = "Join the communications teams already using Shadow to do more with less.",
   primaryLabel = "Book a demo",
-  primaryHref = "https://cal.com/shadow-inc/demo",
+  primaryHref = "/contact",
   secondaryLabel = "Learn more",
   secondaryHref = "/about",
 }: CTASectionProps) {
