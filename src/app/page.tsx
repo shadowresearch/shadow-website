@@ -128,26 +128,26 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
             {[
-              { name: "Amazon", file: "amazon-1.svg", height: 20 },
-              { name: "OpenAI", file: "openai-1.svg", height: 20 },
-              { name: "TikTok", file: "tiktok-1.svg", height: 20 },
-              { name: "Roblox", file: "roblox-1.svg", height: 20 },
-              { name: "Meta", file: "meta-1.svg", height: 20 },
-              { name: "Lyft", file: "lyft-1.svg", height: 20 },
-              { name: "HubSpot", file: "hubspot-1.svg", height: 20 },
-              { name: "Etsy", file: "etsy-1.svg", height: 20 },
-              { name: "SoftBank", file: "softbank-1.svg", height: 20 },
-              { name: "Harness", file: "harness-1.svg", height: 20 },
-              { name: "Lovable", file: "lovable-1.svg", height: 20 },
+              { name: "Amazon", file: "amazon-1.svg" },
+              { name: "OpenAI", file: "openai-1.svg" },
+              { name: "TikTok", file: "tiktok-1.svg" },
+              { name: "Netflix", file: "netflix-1.svg" },
+              { name: "Roblox", file: "roblox-1.svg" },
+              { name: "Meta", file: "meta-1.svg" },
+              { name: "Lyft", file: "lyft-1.svg" },
+              { name: "HubSpot", file: "hubspot-1.svg" },
+              { name: "Etsy", file: "etsy-1.svg" },
+              { name: "SoftBank", file: "softbank-1.svg" },
+              { name: "Harness", file: "harness-1.svg" },
+              { name: "Lovable", file: "lovable-1.svg" },
             ].map((logo) => (
               <Image
                 key={logo.name}
                 src={`/logos/${logo.file}`}
                 alt={logo.name}
-                width={0}
-                height={logo.height}
-                className="h-5 w-auto opacity-60 hover:opacity-100 transition-opacity"
-                style={{ height: logo.height, width: "auto" }}
+                width={120}
+                height={24}
+                className="h-6 w-auto grayscale opacity-40 hover:opacity-70 hover:grayscale-0 transition-all duration-normal"
               />
             ))}
           </div>
