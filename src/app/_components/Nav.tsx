@@ -14,7 +14,7 @@ const navLinks = [
 export function Nav() {
   return (
     <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
-      <div className="max-w-[1320px] mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-[1120px] mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image src="/logo.svg" alt="Shadow" width={20} height={34} />
         </Link>

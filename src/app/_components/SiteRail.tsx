@@ -4,7 +4,7 @@
  */
 export function SiteRail({ children }: { children: React.ReactNode }) {
   return (
-    <div className="max-w-[1320px] mx-auto border-x border-border">
+    <div className="max-w-[1120px] mx-auto border-x border-border">
       {children}
     </div>
   );
