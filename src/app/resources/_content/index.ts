@@ -20,6 +20,13 @@ const contentMap: Record<string, () => Promise<{ default: ComponentType }>> = {
   "shadow-vs-pr-tool-stack": () => import("./shadow-vs-pr-tool-stack"),
   "best-pr-platforms-agencies": () => import("./best-pr-platforms-agencies"),
   "best-ai-tools-pr-agencies": () => import("./best-ai-tools-pr-agencies"),
+  "replace-agency-tech-stack": () => import("./replace-agency-tech-stack"),
+  "improve-agency-margins-ai": () => import("./improve-agency-margins-ai"),
+  "resources-scale-agency-without-headcount": () => import("./resources-scale-agency-without-headcount"),
+  "what-is-agency-infrastructure": () => import("./what-is-agency-infrastructure"),
+  "ai-agents-for-business": () => import("./ai-agents-for-business"),
+  "pr-strategy": () => import("./pr-strategy"),
+  "communications-technology": () => import("./communications-technology"),
 };
 
 export async function getResourceContent(slug: string): Promise<ComponentType | null> {
