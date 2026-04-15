@@ -9,13 +9,21 @@ import {
 } from "./_data/resources";
 
 export const metadata: Metadata = {
-  title: "Resources — Shadow",
+  title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
   description:
-    "Guides, frameworks, and analysis for communications teams.",
+    "Comprehensive guides on PR operating systems, AI workflow automation, media monitoring, competitive intelligence, reporting, and more for communications teams.",
   openGraph: {
-    title: "Resources — Shadow",
+    title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
     description:
-      "Guides, frameworks, and analysis for communications teams.",
+      "Comprehensive guides on PR operating systems, AI workflow automation, media monitoring, competitive intelligence, reporting, and more for communications teams.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
+    description:
+      "Comprehensive guides on PR operating systems, AI workflow automation, media monitoring, competitive intelligence, reporting, and more for communications teams.",
   },
 };
 
@@ -24,9 +32,9 @@ export default function ResourcesPage() {
     <div className="flex flex-col">
       {/* Hero */}
       <GlassSection>
-      <section className="py-28 md:py-36 px-6 border-b border-border">
+      <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
         <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+          <span className="text-xs font-sans text-primary tracking-widest">
             Resources
           </span>
           <h1 className="mt-4 font-serif text-5xl md:text-6xl text-foreground leading-tight max-w-3xl">
@@ -60,12 +68,12 @@ export default function ResourcesPage() {
               </h2>
             </div>
             {rows.map((row, rowIdx) => (
-              <div key={rowIdx} className="grid grid-cols-3 border-b border-border">
+              <div key={rowIdx} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-b border-border">
                 {row.map((resource, colIdx) => (
                   <Link
                     key={resource.slug}
                     href={`/resources/${resource.slug}`}
-                    className={`group flex flex-col gap-2 px-6 py-6 hover:bg-card transition-colors ${colIdx < 2 ? "border-r border-border" : ""}`}
+                    className={`group flex flex-col gap-2 px-6 py-6 hover:bg-muted/20 transition-colors ${colIdx < 2 ? "border-r border-border" : ""}`}
                   >
                     <h3 className="font-heading font-semibold text-sm text-foreground leading-snug group-hover:text-primary transition-colors">
                       {resource.title}

@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ClientSpaceMockup,
-  SOPExecutionMockup,
-  AutonomousAgentMockup,
-} from "./_components/mockups/HowItWorksMockups";
 
 export const metadata: Metadata = {
-  title: "Shadow: The AI Operating System",
+  title: "Shadow | The Operating System for Communications Teams",
   description:
-    "Shadow is the AI operating system for communications — automating research, content creation, media tracking, and campaign workflows for modern PR agencies.",
+    "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
+  openGraph: {
+    title: "Shadow | The Operating System for Communications Teams",
+    description:
+      "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shadow | The Operating System for Communications Teams",
+    description:
+      "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
+  },
 };
 
 const layers = [
@@ -23,7 +31,7 @@ const layers = [
   {
     title: "Strategy & Positioning",
     description:
-      "Master messaging frameworks, narrative arcs, and GTM strategies grounded in real market data and competitive context.",
+      "Master messaging frameworks, strategic positioning, and GTM strategies grounded in real market data and competitive context.",
     href: "/content",
   },
   {
@@ -45,9 +53,9 @@ const layers = [
     href: "/pipeline",
   },
   {
-    title: "Autonomous Workflows",
+    title: "Autonomous agents",
     description:
-      "40+ pre-built agent workflows: daily media digests, weekly market scans, coverage reports, content slates, and inbound triage.",
+      "Pre-built comms agents ready to go. Inbound triage, daily media digests, weekly market scans, coverage reports, intelligence dossiers, and more.",
     href: "/pipeline",
   },
 ];
@@ -98,36 +106,59 @@ const replacedTools = [
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Shadow",
+            description: "The AI operating system for PR and communications teams.",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://shadow.inc",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 -z-10 bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
-        />
+        {/* Background smoke */}
+        <div className="absolute inset-0 -z-10 flex justify-center items-center pointer-events-none">
+          <img
+            src="/smoke.svg"
+            alt=""
+            className="w-auto max-w-none opacity-40"
+            style={{ transform: "translateX(25%) scale(1.1)" }}
+          />
+        </div>
         {/* Glass overlay */}
-        <div className="backdrop-blur-3xl bg-background/50 py-28 md:py-36 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+        <div className="backdrop-blur-xl bg-background/50 py-28 md:py-36 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto flex flex-col md:items-center md:text-center">
           <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-foreground leading-tight tracking-tight max-w-4xl">
             The operating system for communications
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Shadow is the AI infrastructure that powers modern PR agencies —
-            six operational layers working together so your team can focus on
-            relationships, not repetition.
+            Shadow is the AI infrastructure that powers modern leading teams.
+            Six operational layers working together so your team can focus on
+            outcomes and relationships, not repetition.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="mt-10 flex flex-row gap-3">
             <a
               href="/contact"
-              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-1.5 text-xs font-semibold text-background transition-all"
             >
               Book a demo
             </a>
             <a
               href="#how-it-works"
-              className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+              className="inline-flex items-center justify-center rounded-md border border-border px-4 py-1.5 text-xs font-medium text-foreground hover:bg-muted/20 transition-colors"
             >
               Learn more
             </a>
@@ -139,54 +170,47 @@ export default function Home() {
 
       {/* Trust bar */}
       <section className="border-t border-border">
-        <p className="text-center text-xs text-muted-foreground py-3 border-b border-border">
+        <p className="text-center text-sm text-muted-foreground py-4 border-b border-border">
           Trusted by the teams that brought you
         </p>
-        {/* Logo grid — 5 columns, 2+ rows with cell borders */}
-        {[
-          [
-            { name: "HubSpot", file: "hubspot-1.svg", h: 24 },
-            { name: "Amazon", file: "amazon-1.svg", h: 44 },
-            { name: "Lovable", file: "lovable-1.svg", h: 40 },
-            { name: "Roblox", file: "roblox-1.svg", h: 34 },
-            { name: "Etsy", file: "etsy-1.svg", h: 24 },
-          ],
-          [
-            { name: "SoftBank", file: "softbank-1.svg", h: 24 },
-            { name: "TikTok", file: "tiktok-1.svg", h: 34 },
-            { name: "OpenAI", file: "openai-1.svg", h: 40 },
-            { name: "Netflix", file: "netflix-1.svg", h: 24 },
-            { name: "Harness", file: "harness-1.svg", h: 24 },
-          ],
-        ].map((row, rowIdx) => (
-          <div key={rowIdx} className="grid grid-cols-5 border-b border-border">
-            {row.map((logo, colIdx) => (
-              <div
-                key={logo.name}
-                className={`flex items-center justify-center py-5 ${colIdx < 4 ? "border-r border-border" : ""}`}
-              >
-                <Image
-                  src={`/logos/${logo.file}`}
-                  alt={logo.name}
-                  width={120}
-                  height={logo.h}
-                  className="w-auto grayscale opacity-50"
-                  style={{ height: logo.h }}
-                />
-              </div>
-            ))}
-          </div>
-        ))}
+        {/* Logo grid — 5 columns, 2 rows with cell borders */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+          {[
+            { name: "HubSpot", file: "hubspot-1.svg" },
+            { name: "Amazon", file: "amazon-1.svg" },
+            { name: "Lovable", file: "lovable-1.svg" },
+            { name: "Roblox", file: "roblox-1.svg" },
+            { name: "Etsy", file: "etsy-1.svg" },
+            { name: "SoftBank", file: "softbank-1.svg" },
+            { name: "Airbnb", file: "airbnb-1.svg" },
+            { name: "OpenAI", file: "openai-1.svg" },
+            { name: "Netflix", file: "netflix-1.svg" },
+            { name: "Harness", file: "harness-1.svg" },
+          ].map((logo) => (
+            <div
+              key={logo.name}
+              className="flex items-center justify-center py-6 px-4 border-b border-r border-border"
+            >
+              <Image
+                src={`/logos/${logo.file}`}
+                alt={logo.name}
+                width={120}
+                height={28}
+                className={`w-auto h-auto object-contain grayscale opacity-50 ${logo.name === "Roblox" ? "max-h-7 max-w-24" : "max-h-5 max-w-20"}`}
+              />
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Product depth — six layers */}
       <section>
-        <div className="text-center py-16 px-6">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+        <div className="text-center px-6 md:px-16 py-16">
+          <span className="text-xs font-sans text-primary tracking-widest">
             Product
           </span>
           <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
-            Six operational layers. One AI.
+            Six operational layers. One system.
           </h2>
           <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Shadow isn&apos;t a feature. It&apos;s a complete operating layer that runs
@@ -197,12 +221,12 @@ export default function Home() {
 
         <div>
           {[layers.slice(0, 3), layers.slice(3, 6)].map((row, rowIdx) => (
-            <div key={rowIdx} className={`grid grid-cols-3 border-b border-border ${rowIdx === 0 ? "border-t" : ""}`}>
-              {row.map((layer, colIdx) => (
+            <div key={rowIdx} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+              {row.map((layer) => (
                 <Link
                   key={layer.title}
                   href={layer.href}
-                  className={`group p-6 hover:bg-card transition-colors ${colIdx < 2 ? "border-r border-border" : ""}`}
+                  className="group p-6 hover:bg-muted/20 transition-colors"
                 >
                   <h3 className="font-heading font-semibold text-base text-foreground mb-2 group-hover:text-primary transition-colors">
                     {layer.title}
@@ -218,9 +242,9 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section id="how-it-works">
-        <div className="text-center py-16 px-6">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+      <section id="how-it-works" className="border-t border-border">
+        <div className="text-center px-6 md:px-16 py-16">
+          <span className="text-xs font-sans text-primary tracking-widest">
             How it works
           </span>
           <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
@@ -228,9 +252,9 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-3 border-y border-border">
-          {steps.map((step, i) => (
-            <div key={step.number} className={`flex flex-col gap-4 p-6 ${i < 2 ? "border-r border-border" : ""}`}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {steps.map((step) => (
+            <div key={step.number} className="flex flex-col gap-4 p-6 bg-muted/20 rounded-lg">
               <span className="font-mono text-4xl font-light text-border">
                 {step.number}
               </span>
@@ -249,7 +273,7 @@ export default function Home() {
       <section className="border-t border-border">
         <div className="grid md:grid-cols-2">
             <div className="p-8 border-r border-border">
-              <span className="text-xs font-mono text-primary uppercase tracking-widest">
+              <span className="text-xs font-sans text-primary tracking-widest">
                 Consolidation
               </span>
               <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
@@ -261,11 +285,11 @@ export default function Home() {
                 The average PR agency runs on 8–12 disconnected tools. Shadow
                 replaces the research platforms, the content tools, the media
                 databases, and the operations spreadsheets — unified under one
-                AI that knows every client, every campaign, and every SOP.
+                system that has context on every client and every campaign.
               </p>
               <a
                 href="/contact"
-                className="mt-8 inline-flex rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="mt-8 inline-flex inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
               >
                 See Shadow in action
               </a>
@@ -309,7 +333,7 @@ export default function Home() {
       <section className="py-24 px-6 border-t border-border">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight max-w-3xl mx-auto">
-            Your team does the strategy. Shadow does everything else.
+            Your team sets the direction. Shadow does the work.
           </h2>
           <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
             From the first brief to the final report — Shadow handles the
@@ -318,13 +342,13 @@ export default function Home() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
             >
               Book a demo
             </a>
             <a
-              href="/customers"
-              className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+              href="/case-studies"
+              className="inline-flex items-center justify-center rounded-md border border-border px-4 py-1.5 text-xs font-medium text-foreground hover:bg-muted/20 transition-colors"
             >
               See who runs on Shadow
             </a>

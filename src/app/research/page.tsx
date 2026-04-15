@@ -4,9 +4,22 @@ import { CTASection } from "../_components/CTASection";
 import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
-  title: "Research & Intelligence: Shadow",
+  title: "Research & Intelligence | Shadow",
   description:
-    "News intelligence, SEO data, keyword research, and GEO audits — Shadow monitors 200K+ sources continuously so your team never misses a story.",
+    "News intelligence, SEO data, keyword research, and GEO audits. 200,000+ sources. Structured, analyzable outputs.",
+  openGraph: {
+    title: "Research & Intelligence | Shadow",
+    description:
+      "News intelligence, SEO data, keyword research, and GEO audits. 200,000+ sources. Structured, analyzable outputs.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Research & Intelligence | Shadow",
+    description:
+      "News intelligence, SEO data, keyword research, and GEO audits. 200,000+ sources. Structured, analyzable outputs.",
+  },
 };
 
 export default function ResearchPage() {
@@ -14,9 +27,9 @@ export default function ResearchPage() {
     <div className="flex flex-col">
       {/* Hero */}
       <GlassSection>
-      <section className="py-28 md:py-36 px-6 border-b border-border">
+      <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
         <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+          <span className="text-xs font-sans text-primary tracking-widest">
             Research &amp; Intelligence
           </span>
           <h1 className="mt-4 font-serif text-5xl md:text-6xl text-foreground leading-tight max-w-3xl">
@@ -31,7 +44,7 @@ export default function ResearchPage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="/contact"
-              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
             >
               Book a demo
             </a>

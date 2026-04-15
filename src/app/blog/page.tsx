@@ -4,9 +4,22 @@ import { CTASection } from "../_components/CTASection";
 import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
-  title: "Blog — Shadow",
+  title: "Blog | Shadow",
   description:
-    "Vertical AI, communications intelligence, craft, and original research from the Shadow team.",
+    "Vertical AI, market intelligence, communications craft, and original research from the Shadow team.",
+  openGraph: {
+    title: "Blog | Shadow",
+    description:
+      "Vertical AI, market intelligence, communications craft, and original research from the Shadow team.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Shadow",
+    description:
+      "Vertical AI, market intelligence, communications craft, and original research from the Shadow team.",
+  },
 };
 
 const posts = [
@@ -73,9 +86,9 @@ export default function BlogPage() {
     <div className="flex flex-col">
       {/* Hero */}
       <GlassSection>
-      <section className="py-28 md:py-36 px-6 border-b border-border">
+      <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
         <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+          <span className="text-xs font-sans text-primary tracking-widest">
             Blog
           </span>
           <h1 className="mt-4 font-serif text-5xl md:text-6xl text-foreground leading-tight max-w-3xl">
@@ -94,26 +107,23 @@ export default function BlogPage() {
       <section>
         {posts.map((post) => (
           <article key={post.href} className="border-b border-border">
-            <Link href={post.href} className="group block px-8 py-10">
-              {post.series && (
-                <span className="inline-flex items-center text-xs font-mono text-primary bg-primary/10 border border-primary/20 rounded-full px-3 py-1 mb-4">
-                  {post.series}
-                </span>
-              )}
-              <h2 className="font-serif text-2xl md:text-3xl text-foreground leading-tight group-hover:text-primary transition-colors">
-                {post.title}
-              </h2>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                {post.excerpt}
-              </p>
-              <div className="mt-4 flex items-center gap-4">
-                <span className="text-xs text-muted-foreground font-mono">
+            <Link href={post.href} className="group flex items-start gap-6 px-8 py-10">
+              <div className="flex-1 min-w-0">
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground leading-tight group-hover:text-primary transition-colors">
+                  {post.title}
+                </h2>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  {post.excerpt}
+                </p>
+                <span className="mt-4 block text-xs text-muted-foreground font-mono">
                   {post.date}
                 </span>
-                <span className="text-xs text-primary font-medium group-hover:underline">
-                  Read &rarr;
-                </span>
               </div>
+              <span className="shrink-0 size-12 rounded-lg flex items-center justify-center text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-foreground transition-all">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 14.5L14.5 5.5M14.5 5.5H7.5M14.5 5.5V12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
             </Link>
           </article>
         ))}

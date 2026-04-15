@@ -2,16 +2,29 @@ import type { Metadata } from "next";
 import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
-  title: "Contact: Shadow",
+  title: "Contact | Shadow",
   description:
     "Book a demo or get in touch with the Shadow team. See how Shadow can power your communications workflows.",
+  openGraph: {
+    title: "Contact | Shadow",
+    description:
+      "Book a demo or get in touch with the Shadow team. See how Shadow can power your communications workflows.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact | Shadow",
+    description:
+      "Book a demo or get in touch with the Shadow team. See how Shadow can power your communications workflows.",
+  },
 };
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col">
       <GlassSection>
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-24 md:py-32 px-6 md:px-16">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           {/* Left — copy */}
           <div>
@@ -111,7 +124,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="w-full inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
             >
               Book a demo
             </button>

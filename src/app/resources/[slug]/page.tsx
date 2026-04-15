@@ -69,7 +69,7 @@ export default async function ResourceSlugPage({ params }: PageProps) {
               <Link
                 key={r.slug}
                 href={`/resources/${r.slug}`}
-                className={`group flex flex-col gap-1 px-6 py-6 hover:bg-card transition-colors ${i < related.length - 1 ? "border-r border-border" : ""}`}
+                className={`group flex flex-col gap-1 px-6 py-6 hover:bg-muted/20 transition-colors ${i < related.length - 1 ? "border-r border-border" : ""}`}
               >
                 <h3 className="font-heading font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
                   {r.title}

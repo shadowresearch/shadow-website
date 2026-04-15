@@ -50,9 +50,9 @@ const raleway = Raleway({
 
 
 export const metadata: Metadata = {
-  title: "Shadow — AI Infrastructure for PR",
+  title: "Shadow | The Operating System for Communications Teams",
   description:
-    "AI-powered operating system for PR agencies. Automates research, content creation, media tracking, and communications workflows.",
+    "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
 };
 
 export default function RootLayout({
@@ -65,6 +65,19 @@ export default function RootLayout({
       <body
         className={`${delight.variable} ${geistMono.variable} ${raleway.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Shadow",
+              url: "https://shadow.inc",
+              logo: "https://shadow.inc/logo.svg",
+              sameAs: ["https://www.linkedin.com/company/shadow-research"],
+            }),
+          }}
+        />
         <Nav />
         <SiteRail>
           <main>{children}</main>

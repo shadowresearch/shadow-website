@@ -3,32 +3,33 @@ import { CTASection } from "../_components/CTASection";
 import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
-  title: "About Shadow",
+  title: "About us | Shadow",
   description:
-    "Building the AI operating system for communications — who we are, why we're doing this, and who's backing us.",
+    "Shadow is building the AI operating system for PR and communications.",
+  openGraph: {
+    title: "About us | Shadow",
+    description:
+      "Shadow is building the AI operating system for PR and communications.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About us | Shadow",
+    description:
+      "Shadow is building the AI operating system for PR and communications.",
+  },
 };
 
-const team = [
-  {
-    name: "Jessen Gibbs",
-    title: "Co-founder & CEO",
-    bio: "Jessen spent years watching communications teams do incredible strategic work buried under research, admin, and repetitive production. He built Shadow to give those teams their time back — and their edge back.",
-  },
-  {
-    name: "Nico Bent",
-    title: "Co-founder & CTO",
-    bio: "Nico brings deep experience in AI systems and developer infrastructure. He architects Shadow's multi-agent orchestration layer — the engine that makes autonomous workflows reliable at scale.",
-  },
-];
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
       <GlassSection>
-      <section className="py-28 md:py-36 px-6 border-b border-border">
+      <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
         <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+          <span className="text-xs font-sans text-primary tracking-widest">
             About
           </span>
           <h1 className="mt-4 font-serif text-5xl md:text-6xl text-foreground leading-tight max-w-3xl">
@@ -47,7 +48,7 @@ export default function AboutPage() {
       <section className="py-20 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <span className="text-xs font-mono text-primary uppercase tracking-widest">
+            <span className="text-xs font-sans text-primary tracking-widest">
               Why we&apos;re building this
             </span>
             <h2 className="mt-3 font-heading text-3xl font-semibold text-foreground leading-tight">
@@ -79,68 +80,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 px-6 border-b border-border bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
-            Team
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-semibold text-foreground leading-tight mb-10">
-            The people building Shadow
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {team.map((person) => (
-              <div
-                key={person.name}
-                className="bg-card border border-border rounded-2xl p-8 flex flex-col gap-4"
-              >
-                <div className="w-14 h-14 rounded-full bg-muted border border-border flex items-center justify-center">
-                  <span className="font-heading font-semibold text-lg text-muted-foreground">
-                    {person.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-heading font-semibold text-lg text-foreground">
-                    {person.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{person.title}</p>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {person.bio}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Investors */}
-      <section className="py-16 px-6 border-b border-border">
-        <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
-            Backed by
-          </span>
-          <div className="mt-6 flex flex-wrap gap-6 items-center">
-            <div className="bg-card border border-border rounded-xl px-6 py-4">
-              <p className="font-heading font-semibold text-base text-foreground">
-                Front Row Ventures
-              </p>
-              <p className="text-xs text-muted-foreground mt-1">
-                Early-stage investor in vertical AI and developer tools
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact */}
       <section className="py-16 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+          <span className="text-xs font-sans text-primary tracking-widest">
             Contact
           </span>
           <h2 className="mt-3 font-heading text-2xl font-semibold text-foreground mb-4">

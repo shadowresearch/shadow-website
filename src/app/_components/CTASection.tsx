@@ -27,13 +27,13 @@ export function CTASection({
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={primaryHref}
-            className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
           >
             {primaryLabel}
           </a>
           <a
             href={secondaryHref}
-            className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            className="inline-flex items-center justify-center rounded-md border border-border px-4 py-1.5 text-xs font-medium text-foreground hover:bg-muted/20 transition-colors"
           >
             {secondaryLabel}
           </a>

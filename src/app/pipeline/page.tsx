@@ -4,12 +4,30 @@ import { CTASection } from "../_components/CTASection";
 import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
-  title: "Pipeline & Operations: Shadow",
+  title: "Pipeline & Operations | Shadow",
   description:
-    "Client pipeline, onboarding, proposals, invoicing, and 40+ autonomous workflows — Shadow runs the operational layer so your team can focus on clients.",
+    "Client pipeline management, onboarding, proposals, agreements, and invoicing. Every operational workflow in one platform.",
+  openGraph: {
+    title: "Pipeline & Operations | Shadow",
+    description:
+      "Client pipeline management, onboarding, proposals, agreements, and invoicing. Every operational workflow in one platform.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pipeline & Operations | Shadow",
+    description:
+      "Client pipeline management, onboarding, proposals, agreements, and invoicing. Every operational workflow in one platform.",
+  },
 };
 
-const workflows = [
+const agents = [
+  {
+    title: "Inbound Triage",
+    description:
+      "New media requests, journalist inquiries, and inbound opportunities are automatically categorized, prioritized, and surfaced to the right team member.",
+  },
   {
     title: "Daily Media Digests",
     description:
@@ -26,14 +44,14 @@ const workflows = [
       "Shadow tracks all earned coverage, formats it into a polished report, and sends it to clients on whatever cadence you set.",
   },
   {
-    title: "Inbound Triage",
+    title: "Intelligence Dossiers",
     description:
-      "New media requests, journalist inquiries, and inbound opportunities are automatically categorized, prioritized, and surfaced to the right team member.",
+      "Deep-dive research packages on companies, markets, or individuals — assembled automatically from news, filings, and public data.",
   },
   {
     title: "Content Slates",
     description:
-      "Shadow generates monthly content calendars — pitches, op-eds, social posts, and events — anchored to your client's strategic narrative and upcoming moments.",
+      "Monthly content calendars — pitches, op-eds, social posts, and events — anchored to your client's strategic narrative and upcoming moments.",
   },
 ];
 
@@ -42,9 +60,9 @@ export default function PipelinePage() {
     <div className="flex flex-col">
       {/* Hero */}
       <GlassSection>
-      <section className="py-28 md:py-36 px-6 border-b border-border">
+      <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
         <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+          <span className="text-xs font-sans text-primary tracking-widest">
             Pipeline &amp; Operations
           </span>
           <h1 className="mt-4 font-serif text-5xl md:text-6xl text-foreground leading-tight max-w-3xl">
@@ -58,7 +76,7 @@ export default function PipelinePage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="/contact"
-              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
             >
               Book a demo
             </a>
@@ -111,38 +129,38 @@ export default function PipelinePage() {
         accent="uv"
       />
 
-      {/* Autonomous Workflows */}
-      <section className="py-20 border-b border-border">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-12">
-            <span className="text-xs font-mono text-primary uppercase tracking-widest">
-              Autonomous Workflows
-            </span>
-            <h2 className="mt-3 font-heading text-3xl font-semibold text-foreground leading-tight">
-              40+ workflows running while you sleep
-            </h2>
-            <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-              Shadow runs a library of pre-built autonomous workflows — triggered
-              on schedules, events, or client stage transitions — so your agency
-              is always producing value, even when no one&apos;s at their desk.
-            </p>
-          </div>
+      {/* Autonomous Agents */}
+      <section className="border-b border-border">
+        <div className="px-6 md:px-16 py-16">
+          <span className="text-xs font-sans text-primary tracking-widest">
+            Autonomous Agents
+          </span>
+          <h2 className="mt-3 font-heading text-3xl font-semibold text-foreground leading-tight">
+            Pre-built comms agents ready to go
+          </h2>
+          <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
+            Shadow ships with a library of autonomous agents that run when you need them to.
+          </p>
+        </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {workflows.map((workflow) => (
+        <div className="px-6 md:px-16 pb-16">
+        {[agents.slice(0, 3), agents.slice(3, 6)].map((row, rowIdx) => (
+          <div key={rowIdx} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {row.map((agent) => (
               <div
-                key={workflow.title}
-                className="bg-card border border-border rounded-xl p-5"
+                key={agent.title}
+                className="py-8 pr-8"
               >
                 <h3 className="font-heading font-semibold text-sm text-foreground mb-2">
-                  {workflow.title}
+                  {agent.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {workflow.description}
+                  {agent.description}
                 </p>
               </div>
             ))}
           </div>
+        ))}
         </div>
       </section>
 
@@ -151,7 +169,7 @@ export default function PipelinePage() {
         body="We'll walk through the full client lifecycle — from pipeline to autonomous workflows — in a live demo."
         primaryLabel="Book a demo"
         secondaryLabel="Explore Customers"
-        secondaryHref="/customers"
+        secondaryHref="/case-studies"
       />
     </div>
   );

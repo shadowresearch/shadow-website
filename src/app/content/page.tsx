@@ -4,9 +4,22 @@ import { CTASection } from "../_components/CTASection";
 import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
-  title: "Content & Strategy: Shadow",
+  title: "Content & Strategy | Shadow",
   description:
-    "Messaging frameworks, press releases, website copy, and executive thought leadership — Shadow produces SOP-governed deliverables at scale.",
+    "Messaging frameworks, press releases, website copy, GEO content, award submissions, executive thought leadership.",
+  openGraph: {
+    title: "Content & Strategy | Shadow",
+    description:
+      "Messaging frameworks, press releases, website copy, GEO content, award submissions, executive thought leadership.",
+    type: "website",
+    siteName: "Shadow",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Content & Strategy | Shadow",
+    description:
+      "Messaging frameworks, press releases, website copy, GEO content, award submissions, executive thought leadership.",
+  },
 };
 
 export default function ContentPage() {
@@ -14,9 +27,9 @@ export default function ContentPage() {
     <div className="flex flex-col">
       {/* Hero */}
       <GlassSection>
-      <section className="py-28 md:py-36 px-6 border-b border-border">
+      <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
         <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-mono text-primary uppercase tracking-widest">
+          <span className="text-xs font-sans text-primary tracking-widest">
             Content &amp; Strategy
           </span>
           <h1 className="mt-4 font-serif text-5xl md:text-6xl text-foreground leading-tight max-w-3xl">
@@ -30,7 +43,7 @@ export default function ContentPage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="/contact"
-              className="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
             >
               Book a demo
             </a>
@@ -70,8 +83,8 @@ export default function ContentPage() {
       {/* Content Production */}
       <CapabilitySection
         label="Content Production"
-        heading="Every deliverable your agency produces — automated"
-        body="Shadow produces the full range of agency deliverables. Not generic drafts — outputs shaped by your client's SOPs, voice guidelines, and strategic context, ready for light editing rather than heavy rewriting."
+        heading="Every deliverable your team produces — automated"
+        body="Shadow produces the full range of comms deliverables. Not generic drafts — outputs shaped by your client's voice guidelines and strategic context, ready for light editing rather than heavy rewriting."
         details={[
           {
             title: "Press Materials",
@@ -99,7 +112,7 @@ export default function ContentPage() {
       />
 
       <CTASection
-        heading="See what Shadow produces for your clients"
+        heading="See what Shadow can do for your clients"
         body="Book a demo and we'll show you a live content workflow — from brief to deliverable — for a client in your space."
         primaryLabel="Book a demo"
         secondaryLabel="Explore Pipeline"

@@ -32,15 +32,6 @@ export function BlogPost({
   return (
     <article className="py-20 px-6">
       <div className="max-w-3xl mx-auto">
-        {/* Series badge */}
-        {series && (
-          <div className="mb-6">
-            <span className="inline-flex items-center gap-1.5 text-xs font-mono text-primary bg-primary/10 border border-primary/20 rounded-full px-3 py-1">
-              Part {series.part} of {series.total} &middot; {series.name}
-            </span>
-          </div>
-        )}
-
         {/* Title */}
         <h1 className="font-serif text-4xl md:text-5xl text-foreground leading-tight tracking-tight">
           {title}
