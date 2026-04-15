@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ResourcePage } from "../_components/ResourcePage";
 import { resources, getResourceBySlug, getResourcesByCategory } from "../_data/resources";
+import { getResourceContent } from "../_content";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -31,6 +32,8 @@ export default async function ResourceSlugPage({ params }: PageProps) {
   const resource = getResourceBySlug(slug);
   if (!resource) notFound();
 
+  const ContentComponent = await getResourceContent(slug);
+
   const related = getResourcesByCategory(resource.category)
     .filter((r) => r.slug !== resource.slug)
     .slice(0, 3);
@@ -51,9 +54,13 @@ export default async function ResourceSlugPage({ params }: PageProps) {
       </div>
 
       <ResourcePage title={resource.title} description={resource.description}>
-        <p className="text-muted-foreground italic">
-          This resource is being migrated. Full content coming soon.
-        </p>
+        {ContentComponent ? (
+          <ContentComponent />
+        ) : (
+          <p className="text-muted-foreground italic">
+            This resource is being migrated. Full content coming soon.
+          </p>
+        )}
       </ResourcePage>
 
       {/* Related resources */}
