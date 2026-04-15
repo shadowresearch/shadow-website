@@ -1,0 +1,9 @@
+/* TEAM */
+Founder & CEO: Jessen Gibbs
+Contact: jessen [at] shadow.inc
+Location: Montreal, Canada
+
+/* SITE */
+Built with: Next.js, Tailwind CSS, Vercel
+Standards: HTML5, CSS3, ES2024
+Last updated: 2026-04-14
