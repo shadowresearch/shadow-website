@@ -27,6 +27,13 @@ const contentMap: Record<string, () => Promise<{ default: ComponentType }>> = {
   "ai-agents-for-business": () => import("./ai-agents-for-business"),
   "pr-strategy": () => import("./pr-strategy"),
   "communications-technology": () => import("./communications-technology"),
+  "the-data-layer": () => import("./the-data-layer"),
+  "what-comes-next": () => import("./what-comes-next"),
+  "what-ai-actually-changes": () => import("./what-ai-actually-changes"),
+  "the-business-model-crisis": () => import("./the-business-model-crisis"),
+  "the-measurement-trap": () => import("./the-measurement-trap"),
+  "the-attention-shift": () => import("./the-attention-shift"),
+  "the-trust-shift": () => import("./the-trust-shift"),
 };
 
 export async function getResourceContent(slug: string): Promise<ComponentType | null> {
