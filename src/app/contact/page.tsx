@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GlassSection } from "../_components/GlassSection";
+import { ContactForm } from "./_components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Shadow",
@@ -53,85 +54,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right — form */}
-          <form
-            action="https://formspree.io/f/placeholder"
-            method="POST"
-            className="space-y-5"
-          >
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-foreground mb-1.5"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
-                placeholder="Your name"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="company"
-                className="block text-sm font-medium text-foreground mb-1.5"
-              >
-                Company
-              </label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                required
-                className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
-                placeholder="Your company"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-foreground mb-1.5"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
-                placeholder="you@company.com"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-foreground mb-1.5"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow resize-none"
-                placeholder="Tell us about your team and what you're looking for"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
-            >
-              Book a demo
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
       </GlassSection>
