@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ResourcePage } from "../_components/ResourcePage";
-import { resources, getResourceBySlug, getResourcesByCategory } from "../_data/resources";
+import { resources, getResourceBySlug } from "../_data/resources";
+import { resourceCrosslinks } from "../_data/crosslinks";
 import { getResourceContent } from "../_content";
 
 interface PageProps {
@@ -34,9 +35,10 @@ export default async function ResourceSlugPage({ params }: PageProps) {
 
   const ContentComponent = await getResourceContent(slug);
 
-  const related = getResourcesByCategory(resource.category)
-    .filter((r) => r.slug !== resource.slug)
-    .slice(0, 3);
+  const crosslinkedSlugs = resourceCrosslinks[resource.slug] ?? [];
+  const related = crosslinkedSlugs
+    .map((s) => getResourceBySlug(s))
+    .filter((r): r is NonNullable<typeof r> => r != null);
 
   return (
     <div className="flex flex-col">
@@ -68,15 +70,15 @@ export default async function ResourceSlugPage({ params }: PageProps) {
         <section>
           <div className="px-8 py-6 border-y border-border">
             <h2 className="font-heading font-semibold text-xs uppercase tracking-widest text-muted-foreground">
-              More in {resource.category}
+              Related Guides
             </h2>
           </div>
-          <div className="grid border-b border-border" style={{ gridTemplateColumns: `repeat(${related.length}, 1fr)` }}>
-            {related.map((r, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-b border-border">
+            {related.map((r) => (
               <Link
                 key={r.slug}
                 href={`/resources/${r.slug}`}
-                className={`group flex flex-col gap-1 px-6 py-6 hover:bg-muted/20 transition-colors ${i < related.length - 1 ? "border-r border-border" : ""}`}
+                className="group flex flex-col gap-1 px-6 py-6 hover:bg-muted/20 transition-colors border-r border-b border-border last:border-r-0 sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0"
               >
                 <h3 className="font-heading font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
                   {r.title}
