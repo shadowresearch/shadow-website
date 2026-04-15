@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
   description:
     "Comprehensive guides on PR operating systems, AI workflow automation, media monitoring, competitive intelligence, reporting, and more for communications teams.",
+  alternates: {
+    canonical: "/resources",
+  },
   openGraph: {
     title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
     description:

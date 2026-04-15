@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Research & Intelligence | Shadow",
   description:
     "News intelligence, SEO data, keyword research, and GEO audits. 200,000+ sources. Structured, analyzable outputs.",
+  alternates: {
+    canonical: "/research",
+  },
   openGraph: {
     title: "Research & Intelligence | Shadow",
     description:

@@ -50,9 +50,17 @@ const raleway = Raleway({
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shadow.inc"),
   title: "Shadow | The Operating System for Communications Teams",
   description:
     "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

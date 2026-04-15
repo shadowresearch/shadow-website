@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Pipeline & Operations | Shadow",
   description:
     "Client pipeline management, onboarding, proposals, agreements, and invoicing. Every operational workflow in one platform.",
+  alternates: {
+    canonical: "/pipeline",
+  },
   openGraph: {
     title: "Pipeline & Operations | Shadow",
     description:

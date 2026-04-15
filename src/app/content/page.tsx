@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Content & Strategy | Shadow",
   description:
     "Messaging frameworks, press releases, website copy, GEO content, award submissions, executive thought leadership.",
+  alternates: {
+    canonical: "/content",
+  },
   openGraph: {
     title: "Content & Strategy | Shadow",
     description:

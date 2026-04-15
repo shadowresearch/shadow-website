@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Case Studies | Shadow",
   description:
     "See how communications teams are using Shadow to transform the way they research, produce, and deliver their work.",
+  alternates: {
+    canonical: "/case-studies",
+  },
   openGraph: {
     title: "Case Studies | Shadow",
     description:

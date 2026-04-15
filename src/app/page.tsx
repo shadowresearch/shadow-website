@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Shadow | The Operating System for Communications Teams",
   description:
     "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Shadow | The Operating System for Communications Teams",
     description:

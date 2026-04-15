@@ -31,6 +31,26 @@ export function BlogPost({
 }: BlogPostProps) {
   return (
     <article className="py-20 px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: title,
+            author: {
+              "@type": "Person",
+              name: author,
+            },
+            datePublished: date,
+            publisher: {
+              "@type": "Organization",
+              name: "Shadow",
+              url: "https://shadow.inc",
+            },
+          }),
+        }}
+      />
       <div className="max-w-3xl mx-auto">
         {/* Title */}
         <h1 className="font-serif text-4xl md:text-5xl text-foreground leading-tight tracking-tight">

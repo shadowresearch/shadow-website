@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Contact | Shadow",
   description:
     "Book a demo or get in touch with the Shadow team. See how Shadow can power your communications workflows.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact | Shadow",
     description:

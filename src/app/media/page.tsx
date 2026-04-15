@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Media & Outreach | Shadow",
   description:
     "Media list curation, journalist intelligence, coverage tracking. 230,000+ journalist profiles. Source evaluation and beat analysis.",
+  alternates: {
+    canonical: "/media",
+  },
   openGraph: {
     title: "Media & Outreach | Shadow",
     description:

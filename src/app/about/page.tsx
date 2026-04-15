@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "About us | Shadow",
   description:
     "Shadow is building the AI operating system for PR and communications.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "About us | Shadow",
     description:
