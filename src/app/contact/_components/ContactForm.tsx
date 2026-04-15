@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const timestampRef = useRef(Date.now());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -19,6 +20,8 @@ export function ContactForm() {
       company: formData.get("company") as string,
       email: formData.get("email") as string,
       message: formData.get("message") as string,
+      _hp_field: formData.get("_hp_field") as string,
+      _timestamp: timestampRef.current,
     };
 
     try {
@@ -61,6 +64,10 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot — invisible to humans, bots fill it */}
+      <div className="absolute opacity-0 -z-10" aria-hidden="true" tabIndex={-1}>
+        <input type="text" name="_hp_field" autoComplete="off" tabIndex={-1} />
+      </div>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">
           Name
