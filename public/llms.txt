@@ -23,5 +23,5 @@ Shadow replaces fragmented tool stacks with one unified platform covering resear
 ## Company
 
 - Founded: 2024
-- Based in: Montreal, Canada
+- Locations: Vancouver, Canada · Toronto, Canada · London, United Kingdom · New York, United States · San Francisco, United States
 - Contact: hello@shadow.inc

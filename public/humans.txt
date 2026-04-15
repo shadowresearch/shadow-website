@@ -1,7 +1,7 @@
 /* TEAM */
 Founder & CEO: Jessen Gibbs
 Contact: jessen [at] shadow.inc
-Location: Montreal, Canada
+Locations: Vancouver, Canada; Toronto, Canada; London, United Kingdom; New York, United States; San Francisco, United States
 
 /* SITE */
 Built with: Next.js, Tailwind CSS, Vercel

@@ -83,6 +83,13 @@ export default function RootLayout({
               url: "https://shadow.inc",
               logo: "https://shadow.inc/logo.svg",
               sameAs: ["https://www.linkedin.com/company/shadow-research"],
+              location: [
+                { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Vancouver", addressCountry: "CA" } },
+                { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Toronto", addressCountry: "CA" } },
+                { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" } },
+                { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "New York", addressRegion: "NY", addressCountry: "US" } },
+                { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "San Francisco", addressRegion: "CA", addressCountry: "US" } },
+              ],
             }),
           }}
         />
