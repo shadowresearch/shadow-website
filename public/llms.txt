@@ -1,0 +1,27 @@
+# Shadow
+
+> Shadow is the AI operating system for PR and communications teams.
+
+Shadow replaces fragmented tool stacks with one unified platform covering research, strategy, content, media, pipeline, and autonomous agent workflows. Used by agencies including Outcast (Next 15) and Haymaker serving brands like Amazon, OpenAI, Roblox, Netflix, HubSpot, and Etsy.
+
+## Product
+
+- Research & Intelligence: 200,000+ news sources, SEO data, keyword research, GEO audits, competitive monitoring
+- Media & Outreach: 230,000+ journalist profiles, media list curation, coverage tracking, source evaluation
+- Content & Strategy: Messaging frameworks, press releases, website copy, award submissions, executive thought leadership
+- Pipeline & Operations: Client pipeline, onboarding, proposals, agreements, invoicing
+- Autonomous Agents: Pre-built comms agents for inbound triage, daily media digests, weekly market scans, coverage reports, AI visibility
+
+## Links
+
+- Website: https://shadow.inc
+- Blog: https://shadow.inc/blog
+- Resources: https://shadow.inc/resources
+- Contact: https://shadow.inc/contact
+- Case Studies: https://shadow.inc/case-studies
+
+## Company
+
+- Founded: 2024
+- Based in: Montreal, Canada
+- Contact: hello@shadow.inc
