@@ -52,9 +52,9 @@ const agents = [
       "Deep-dive research packages on companies, markets, or individuals — assembled automatically from news, filings, and public data.",
   },
   {
-    title: "Content Slates",
+    title: "AI Visibility",
     description:
-      "Monthly content calendars — pitches, op-eds, social posts, and events — anchored to your client's strategic narrative and upcoming moments.",
+      "Shadow audits how your clients appear across ChatGPT, Gemini, Perplexity, and Claude — then produces GEO-optimized content to improve citation rates and AI search visibility.",
   },
 ];
 
@@ -73,8 +73,8 @@ export default function PipelinePage() {
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             Shadow manages your client pipeline, onboarding, proposals, and
-            invoicing — and runs 40+ autonomous workflows in the background so
-            your team shows up to every client call with something to say.
+            invoicing — and runs autonomous agents in the background so
+            your team never has a cold start.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
