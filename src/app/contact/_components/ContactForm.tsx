@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [teamType, setTeamType] = useState("in-house");
   const timestampRef = useRef(Date.now());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -19,6 +20,7 @@ export function ContactForm() {
       name: formData.get("name") as string,
       company: formData.get("company") as string,
       email: formData.get("email") as string,
+      teamType: formData.get("teamType") as string,
       message: formData.get("message") as string,
       _hp_field: formData.get("_hp_field") as string,
       _timestamp: timestampRef.current,
@@ -111,6 +113,46 @@ export function ContactForm() {
           placeholder="you@company.com"
           disabled={status === "submitting"}
         />
+      </div>
+
+      <div>
+        <span className="block text-sm font-medium text-foreground mb-1.5">
+          Team type
+        </span>
+        <input type="hidden" name="teamType" value={teamType} />
+        <div className="relative inline-flex rounded-lg bg-muted/30 border border-border p-0.5">
+          <span
+            className="absolute top-0.5 bottom-0.5 rounded-md bg-foreground transition-all duration-200 ease-in-out"
+            style={{
+              width: "calc(50% - 2px)",
+              left: teamType === "in-house" ? "2px" : "calc(50%)",
+            }}
+          />
+          <button
+            type="button"
+            onClick={() => setTeamType("in-house")}
+            disabled={status === "submitting"}
+            className={`relative z-10 px-5 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+              teamType === "in-house"
+                ? "text-background"
+                : "text-muted-foreground"
+            }`}
+          >
+            In-house
+          </button>
+          <button
+            type="button"
+            onClick={() => setTeamType("agency")}
+            disabled={status === "submitting"}
+            className={`relative z-10 px-5 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+              teamType === "agency"
+                ? "text-background"
+                : "text-muted-foreground"
+            }`}
+          >
+            Agency
+          </button>
+        </div>
       </div>
 
       <div>

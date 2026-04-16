@@ -29,7 +29,7 @@ const layers = [
     title: "Research & Intelligence",
     description:
       "200K+ news sources, journalist profiles, keyword intelligence, GEO audits, and competitive monitoring — all continuously updated.",
-    href: "/research",
+    href: "/intelligence",
   },
   {
     title: "Strategy & Positioning",

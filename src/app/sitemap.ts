@@ -19,11 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Main pages
   const mainPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${baseUrl}/research`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/intelligence`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/media`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/content`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/pipeline`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/case-studies`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/pricing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/resources`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },

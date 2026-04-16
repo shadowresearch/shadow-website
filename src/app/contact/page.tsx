@@ -36,21 +36,14 @@ export default function ContactPage() {
               Book a demo
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-md">
-              See how Shadow runs the full communications workflow — research,
-              strategy, content, media, and pipeline — in one platform.
+              See how Shadow can elevate your communications functions and learn
+              more about what it&apos;s like to work with us.
             </p>
-            <div className="mt-10 space-y-4 text-sm text-muted-foreground">
-              <p>
-                <span className="text-foreground font-medium">Email</span>
-                <br />
-                hello@shadow.inc
-              </p>
-              <p>
-                <span className="text-foreground font-medium">Based in</span>
-                <br />
-                Montreal, Canada
-              </p>
-            </div>
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-md">
+              If there&apos;s a specific workflow or use case you&apos;d like us to
+              demo live on the call, leave the details in your message and
+              we&apos;ll prepare a custom walkthrough for your team.
+            </p>
           </div>
 
           {/* Right — form */}

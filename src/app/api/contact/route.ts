@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 // Simple in-memory rate limiter (per IP, resets on deploy)
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour
-const RATE_LIMIT_MAX = 5; // max 5 submissions per hour per IP
+const RATE_LIMIT_MAX = 2; // max 2 submissions per hour per IP
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, company, email, message, _hp_field, _timestamp } = body;
+    const { name, company, email, teamType, message, _hp_field, _timestamp } = body;
 
     // Honeypot check — if this hidden field has a value, it's a bot
     if (_hp_field) {
@@ -125,6 +125,7 @@ export async function POST(request: NextRequest) {
     const cleanName = sanitize(name);
     const cleanCompany = sanitize(company);
     const cleanEmail = sanitize(email);
+    const cleanTeamType = teamType ? sanitize(teamType) : "";
     const cleanMessage = message ? sanitize(message) : "";
 
     // Format form data into a structured message for Shadow
@@ -134,6 +135,7 @@ export async function POST(request: NextRequest) {
       `Name: ${cleanName}`,
       `Company: ${cleanCompany}`,
       `Email: ${cleanEmail}`,
+      cleanTeamType ? `Team type: ${cleanTeamType}` : "",
       cleanMessage ? `Message: ${cleanMessage}` : "",
     ]
       .filter(Boolean)

@@ -23,7 +23,7 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
             <div className="flex flex-col gap-3">
               <span className="font-medium text-foreground text-xs tracking-wide uppercase">Product</span>
-              <Link href="/research" className="text-muted-foreground hover:text-foreground transition-colors">Research</Link>
+              <Link href="/intelligence" className="text-muted-foreground hover:text-foreground transition-colors">Intelligence</Link>
               <Link href="/media" className="text-muted-foreground hover:text-foreground transition-colors">Media</Link>
               <Link href="/content" className="text-muted-foreground hover:text-foreground transition-colors">Content</Link>
               <Link href="/pipeline" className="text-muted-foreground hover:text-foreground transition-colors">Pipeline</Link>
