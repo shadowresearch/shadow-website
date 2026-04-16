@@ -154,7 +154,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Shadow is the AI infrastructure that powers leading teams.
+            Shadow is the AI infrastructure that powers leading communications teams.
             Six operational layers working together so your team can focus on
             outcomes and relationships, not repetition.
           </p>
