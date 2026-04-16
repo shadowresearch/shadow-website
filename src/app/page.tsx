@@ -148,15 +148,14 @@ export default function Home() {
         </div>
         {/* Glass overlay */}
         <div className="backdrop-blur-xl bg-background/50 py-28 md:py-36 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto flex flex-col md:items-center md:text-center">
+        <div className="max-w-6xl mx-auto flex flex-col">
           <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl text-foreground leading-tight tracking-tight max-w-4xl">
-            The operating system for communications
+            AI agents for PR and communications
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Shadow is the AI infrastructure that powers leading communications teams.
-            Six operational layers working together so your team can focus on
-            outcomes and relationships, not repetition.
+            Replace your tools stack with agents that research, write, pitch, track
+            coverage, and manage your pipeline across every client.
           </p>
 
           <div className="mt-10 flex flex-row gap-3">
