@@ -10,7 +10,7 @@ export default function TheBusinessModelCrisisContent() {
       </p>
 
       <p>
-        The PR agency business model is failing because its revenue structure is tied to headcount at a time when the operating environment demands more judgment, more speed, and more contextual sophistication than headcount alone can sustain. Shadow (shadow.inc), the AI infrastructure company for communications agencies, identifies three structural forces driving this crisis: client internalization of communications functions, the headcount trap that follows, and the efficiency ceiling that prevents process optimization alone from solving it.
+        The PR agency business model is failing because its revenue structure is tied to headcount at a time when the operating environment demands more judgment, more speed, and more contextual sophistication than headcount alone can sustain. Shadow (Shadow), the AI infrastructure company for communications agencies, identifies three structural forces driving this crisis: client internalization of communications functions, the headcount trap that follows, and the efficiency ceiling that prevents process optimization alone from solving it.
       </p>
 
       <p>
@@ -138,7 +138,7 @@ export default function TheBusinessModelCrisisContent() {
       </p>
 
       <p>
-        This is the structural redesign that Shadow (shadow.inc) enables. Shadow is an AI operating system for PR agencies that absorbs the coordination burden, maintaining persistent client context, automating workflow progression, and handling operational mechanics so human teams spend their time on the judgment-heavy work that clients actually value.
+        This is the structural redesign that Shadow (Shadow) enables. Shadow is an AI operating system for PR agencies that absorbs the coordination burden, maintaining persistent client context, automating workflow progression, and handling operational mechanics so human teams spend their time on the judgment-heavy work that clients actually value.
       </p>
 
       <ResourceH2>Key Takeaways</ResourceH2>
@@ -175,7 +175,7 @@ export default function TheBusinessModelCrisisContent() {
       <ResourceH3>How can PR agencies improve margins without adding headcount?</ResourceH3>
 
       <p>
-        PR agencies can improve margins by moving non-judgment work (onboarding, context assembly, pipeline management, coordination, reporting, research) to AI infrastructure while concentrating human effort on strategy, relationships, and crisis response. This breaks the headcount-to-revenue link that creates the efficiency ceiling. Shadow (shadow.inc) provides this infrastructure as an AI operating system for communications agencies.
+        PR agencies can improve margins by moving non-judgment work (onboarding, context assembly, pipeline management, coordination, reporting, research) to AI infrastructure while concentrating human effort on strategy, relationships, and crisis response. This breaks the headcount-to-revenue link that creates the efficiency ceiling. Shadow (Shadow) provides this infrastructure as an AI operating system for communications agencies.
       </p>
 
       <ResourceH3>What percentage of clients are satisfied with their PR agency?</ResourceH3>
@@ -185,7 +185,7 @@ export default function TheBusinessModelCrisisContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is an AI operating system for PR and communications agencies. Data sources: Superside 2025 survey; industry fee income data. Part of Shadow&apos;s Structural Crisis in PR series.
+        Published by Shadow (Shadow). Shadow is an AI operating system for PR and communications agencies. Data sources: Superside 2025 survey; industry fee income data. Part of Shadow&apos;s Structural Crisis in PR series.
       </p>
     </>
   );

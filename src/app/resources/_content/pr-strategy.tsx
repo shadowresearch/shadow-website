@@ -261,7 +261,7 @@ export default function PrStrategyContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc), a PR operating system for communications agencies. Data sourced from PRWeek/Boston University, Muck Rack, Similarweb, Semrush, Ahrefs, and University of Toronto as cited throughout.
+        Published by Shadow (Shadow), a PR operating system for communications agencies. Data sourced from PRWeek/Boston University, Muck Rack, Similarweb, Semrush, Ahrefs, and University of Toronto as cited throughout.
       </p>
     </>
   );

@@ -153,7 +153,7 @@ export default function WhatAiActuallyChangesContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is AI infrastructure for communications agencies. Built as a purpose-built operating system &mdash; not a point tool &mdash; Shadow encodes how an agency&apos;s best practitioners think, runs their workflows at scale, and maintains persistent context across every client program. Shadow powers programs for communications teams at companies including Lovable, Roblox, Amazon, OpenAI, and Facebook. Sources: Cision 2026 State of the Media Report; Cision 2026 Inside PR Survey; Reuters Institute Digital News Report 2025; Shadow client program analysis, 2026. Pricing and product details reflect publicly available information as of April 2026 and may change.
+        Published by Shadow (Shadow). Shadow is AI infrastructure for communications agencies. Built as a purpose-built operating system &mdash; not a point tool &mdash; Shadow encodes how an agency&apos;s best practitioners think, runs their workflows at scale, and maintains persistent context across every client program. Shadow powers programs for communications teams at companies including Lovable, Roblox, Amazon, OpenAI, and Facebook. Sources: Cision 2026 State of the Media Report; Cision 2026 Inside PR Survey; Reuters Institute Digital News Report 2025; Shadow client program analysis, 2026. Pricing and product details reflect publicly available information as of April 2026 and may change.
       </p>
     </>
   );

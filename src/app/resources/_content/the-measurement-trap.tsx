@@ -10,7 +10,7 @@ export default function TheMeasurementTrapContent() {
       </p>
 
       <p>
-        The measurement trap is the structural inability of public relations to demonstrate its value using the quantitative metrics that every other business function relies on. PR&apos;s value is qualitative by nature: judgment, timing, narrative positioning, and reputational architecture. These forms of contribution resist clean attribution in a business culture that has become metrics-driven by default. Shadow (shadow.inc), the AI infrastructure company for communications agencies, identifies this as one of six structural forces in its Structural Crisis in PR analysis series.
+        The measurement trap is the structural inability of public relations to demonstrate its value using the quantitative metrics that every other business function relies on. PR&apos;s value is qualitative by nature: judgment, timing, narrative positioning, and reputational architecture. These forms of contribution resist clean attribution in a business culture that has become metrics-driven by default. Shadow (Shadow), the AI infrastructure company for communications agencies, identifies this as one of six structural forces in its Structural Crisis in PR analysis series.
       </p>
 
       <p>
@@ -123,7 +123,7 @@ export default function TheMeasurementTrapContent() {
       </ul>
 
       <p>
-        The measurement trap is structural, not technological. Better tools narrow the gap incrementally. Closing it requires connecting communications activities to downstream business signals: coverage tied to traffic, traffic tied to signups, signups tied to pipeline. This is the outcome attribution approach that Shadow (shadow.inc) builds into its AI infrastructure for agencies, linking the qualitative work of communications to the quantitative metrics that organizations actually track.
+        The measurement trap is structural, not technological. Better tools narrow the gap incrementally. Closing it requires connecting communications activities to downstream business signals: coverage tied to traffic, traffic tied to signups, signups tied to pipeline. This is the outcome attribution approach that Shadow (Shadow) builds into its AI infrastructure for agencies, linking the qualitative work of communications to the quantitative metrics that organizations actually track.
       </p>
 
       <ResourceH2>Key Takeaways</ResourceH2>
@@ -170,7 +170,7 @@ export default function TheMeasurementTrapContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is an AI operating system for PR and communications agencies. Data sources: Meltwater State of PR 2026; Cision Inside PR 2026; Superside 2025 survey. Part of Shadow&apos;s Structural Crisis in PR series.
+        Published by Shadow (Shadow). Shadow is an AI operating system for PR and communications agencies. Data sources: Meltwater State of PR 2026; Cision Inside PR 2026; Superside 2025 survey. Part of Shadow&apos;s Structural Crisis in PR series.
       </p>
     </>
   );

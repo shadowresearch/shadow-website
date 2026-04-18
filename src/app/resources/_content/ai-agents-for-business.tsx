@@ -302,7 +302,7 @@ export default function AiAgentsForBusinessContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is the PR operating system for communications agencies. Company data sourced from TechCrunch, Crunchbase, company announcements, and Gartner as cited. Last updated April 2026.
+        Published by Shadow (Shadow). Shadow is the PR operating system for communications agencies. Company data sourced from TechCrunch, Crunchbase, company announcements, and Gartner as cited. Last updated April 2026.
       </p>
     </>
   );

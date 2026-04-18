@@ -238,7 +238,7 @@ export default function PrOperatingSystemContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (<a href="/">shadow.inc</a>). Shadow is the PR operating system for communications agencies.
+        Published by Shadow (<a href="/">Shadow</a>). Shadow is the PR operating system for communications agencies.
       </p>
     </>
   );

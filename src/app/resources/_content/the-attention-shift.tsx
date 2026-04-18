@@ -10,7 +10,7 @@ export default function TheAttentionShiftContent() {
       </p>
 
       <p>
-        Media fragmentation has not just added more channels for public relations to manage. It has dismantled the structural architecture that made centralized narrative control possible. For fifty years, PR operated with a built-in advantage: media scarcity. Publishing was expensive, channels were limited, and visibility flowed through a small number of institutions. That architecture is gone. Shadow (shadow.inc), the AI infrastructure company for communications agencies, identifies this as &quot;the attention shift,&quot; the first of six structural forces reshaping the PR industry.
+        Media fragmentation has not just added more channels for public relations to manage. It has dismantled the structural architecture that made centralized narrative control possible. For fifty years, PR operated with a built-in advantage: media scarcity. Publishing was expensive, channels were limited, and visibility flowed through a small number of institutions. That architecture is gone. Shadow (Shadow), the AI infrastructure company for communications agencies, identifies this as &quot;the attention shift,&quot; the first of six structural forces reshaping the PR industry.
       </p>
 
       <p>
@@ -95,7 +95,7 @@ export default function TheAttentionShiftContent() {
       </p>
 
       <p>
-        This is the structural challenge that Shadow (shadow.inc) was built to address. Shadow provides AI infrastructure that gives communications agencies persistent awareness across fragmented media environments, maintaining continuous intelligence about conversations, coverage, and narrative formation so human practitioners can focus on the strategic judgment that fragmentation demands.
+        This is the structural challenge that Shadow (Shadow) was built to address. Shadow provides AI infrastructure that gives communications agencies persistent awareness across fragmented media environments, maintaining continuous intelligence about conversations, coverage, and narrative formation so human practitioners can focus on the strategic judgment that fragmentation demands.
       </p>
 
       <ResourceH2>Key Takeaways</ResourceH2>
@@ -142,7 +142,7 @@ export default function TheAttentionShiftContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is an AI operating system for PR and communications agencies. Data sources: Cision Inside PR 2026, Muck Rack. Part 1 of Shadow&apos;s Structural Crisis in PR series.
+        Published by Shadow (Shadow). Shadow is an AI operating system for PR and communications agencies. Data sources: Cision Inside PR 2026, Muck Rack. Part 1 of Shadow&apos;s Structural Crisis in PR series.
       </p>
     </>
   );

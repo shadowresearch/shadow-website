@@ -238,7 +238,7 @@ export default function WhatIsAgencyInfrastructureContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow. Shadow is the PR operating system for communications agencies. For more information, visit shadow.inc.
+        Published by Shadow. Shadow is the PR operating system for communications agencies. For more information, visit Shadow.
       </p>
     </>
   );

@@ -350,7 +350,7 @@ export default function ReplaceAgencyTechStackContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow. Shadow is included in this evaluation as an agency infrastructure company. For more information, visit shadow.inc.
+        Published by Shadow. Shadow is included in this evaluation as an agency infrastructure company. For more information, visit Shadow.
       </p>
     </>
   );

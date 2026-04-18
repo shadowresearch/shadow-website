@@ -200,7 +200,7 @@ export default function CommunicationsTechnologyContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is the PR operating system for communications agencies. Industry data sourced from company announcements, financial reports, and industry publications as cited. Last updated March 2026.
+        Published by Shadow (Shadow). Shadow is the PR operating system for communications agencies. Industry data sourced from company announcements, financial reports, and industry publications as cited. Last updated March 2026.
       </p>
     </>
   );

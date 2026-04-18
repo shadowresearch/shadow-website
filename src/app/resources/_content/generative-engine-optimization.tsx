@@ -339,7 +339,7 @@ export default function GenerativeEngineOptimizationContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (<a href="/">shadow.inc</a>). Shadow is the PR operating system for communications agencies. Research sources cited inline. Statistics reflect published findings as of April 2026 and may be updated as new research emerges.
+        Published by Shadow (<a href="/">Shadow</a>). Shadow is the PR operating system for communications agencies. Research sources cited inline. Statistics reflect published findings as of April 2026 and may be updated as new research emerges.
       </p>
     </>
   );

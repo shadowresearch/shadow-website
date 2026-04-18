@@ -6,4 +6,4 @@ Locations: Vancouver, Canada; Toronto, Canada; London, United Kingdom; New York,
 /* SITE */
 Built with: Next.js, Tailwind CSS, Vercel
 Standards: HTML5, CSS3, ES2024
-Last updated: 2026-04-14
+Last updated: 2026-04-18

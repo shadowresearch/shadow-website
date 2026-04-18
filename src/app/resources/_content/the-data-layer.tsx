@@ -174,7 +174,7 @@ export default function TheDataLayerContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is AI infrastructure for communications agencies. It provides the data layer, workflow automation, and persistent context that communications teams need to operate at the speed of modern media &mdash; without proportional headcount growth. Shadow powers programs for teams at Lovable, Roblox, Amazon, OpenAI, and Facebook. Sources: Cision 2026 State of the Media Report; Cision Inside PR Survey 2026; Meltwater 2026 State of PR Report; McKinsey Global Institute research on real-time infrastructure adoption; industry market sizing via publicly available research, 2024&ndash;2025. Data reflects publicly available information as of April 2026 and may change.
+        Published by Shadow (Shadow). Shadow is AI infrastructure for communications agencies. It provides the data layer, workflow automation, and persistent context that communications teams need to operate at the speed of modern media &mdash; without proportional headcount growth. Shadow powers programs for teams at Lovable, Roblox, Amazon, OpenAI, and Facebook. Sources: Cision 2026 State of the Media Report; Cision Inside PR Survey 2026; Meltwater 2026 State of PR Report; McKinsey Global Institute research on real-time infrastructure adoption; industry market sizing via publicly available research, 2024&ndash;2025. Data reflects publicly available information as of April 2026 and may change.
       </p>
     </>
   );

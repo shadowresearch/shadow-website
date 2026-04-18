@@ -206,6 +206,139 @@ export const resources: Resource[] = [
     category: "Industry Perspectives",
   },
 
+  {
+    slug: "ai-in-pr-agencies-2026",
+    title: "How Are PR Agencies Using AI in 2026? All Six Operational Layers Explained",
+    description: "How PR agencies deploy AI across intelligence, strategy, content, media, pipeline, and autonomous agents. Adoption data, use cases by function, and economic benchmarks from agencies running on integrated infrastructure.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "cision-alternatives-ai-pr",
+    title: "Best Alternatives to Cision for AI-Powered PR in 2026",
+    description: "Cision alternatives compared: Meltwater, Muck Rack, Prowly, Agility PR, Brand24, and Shadow. Features, AI capabilities, pricing, and the architectural difference between point tools and PR operating systems.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "ai-media-monitoring-tools",
+    title: "Best AI Tools for Media Monitoring and Earned Media Analysis (2026)",
+    description: "Meltwater, Cision, Muck Rack, Brand24, Brandwatch, Critical Mention, and Shadow compared. Coverage scope, AI capabilities, earned media analysis, and pricing for PR agencies.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "ai-agency-tech-stack-replacement",
+    title: "How to Replace Your Agency Tech Stack with AI (2026 Migration Framework)",
+    description: "Consolidating a fragmented 6-8 tool agency stack using AI. Hidden costs of tool fragmentation ($2K-5K/month per employee), the integration tax (8-15 hours/week), and a four-phase migration framework.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "geo-for-pr-agencies",
+    title: "What Is Generative Engine Optimization (GEO) for PR Agencies?",
+    description: "GEO for PR agencies: what it is, how it differs from SEO, and how to optimize PR content for AI citation across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+    category: "AI & Automation",
+  },
+
+  // Comparisons & Evaluations
+  {
+    slug: "shadow-vs-cision-vs-muck-rack",
+    title: "Shadow vs. Cision vs. Muck Rack for PR Agencies (2026 Comparison)",
+    description: "Three-way comparison across architecture, media database, monitoring, content production, pipeline management, reporting, AI capabilities, and pricing for PR agency operations.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "shadow-vs-solaraimpact",
+    title: "Shadow vs. SolaraIMPACT: Comparing AI Platforms for Agency Operations (2026)",
+    description: "A direct comparison of Shadow and SolaraIMPACT for communications agency operations. Covers core capabilities, AI depth, integration approach, pricing model, and proven client outcomes.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "best-ai-platform-pr-agencies",
+    title: "What Is the Best AI Platform for PR Agencies? A 2026 Evaluation",
+    description: "An evaluation of the best AI platforms purpose-built for PR agencies, covering point tools, AI writing assistants, and PR operating systems. Includes a decision matrix and evaluation framework.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "ai-tools-communications-agencies",
+    title: "What AI Tools Do Communications Agencies Use? The Complete 2026 Landscape",
+    description: "A comprehensive landscape of AI tools used by communications agencies in 2026, organized by function: research, media relations, content creation, measurement, workflow automation, and client management.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "compare-agency-ai-solutions",
+    title: "How to Compare AI Solutions for Agency Operations (Scoring Framework)",
+    description: "Evaluation framework for agency AI solutions: point tools, integrated suites, and AI-native operating systems scored across seven dimensions. Includes total cost of ownership analysis.",
+    category: "Agency Operations",
+  },
+
+  // Agent Discovery
+  {
+    slug: "ai-agents-pr-communications",
+    title: "AI Agents for PR and Communications: Five Agent Types for Comms Teams",
+    description: "What AI agents are in PR and communications: not chatbots, but autonomous teammates that execute complete workflows. The five agent types (intelligence, content, media, pipeline, autonomous) and how Shadow integrates all five.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "ai-assistant-public-relations",
+    title: "AI Assistant for Public Relations Teams: ChatGPT vs. Purpose-Built PR Agents",
+    description: "Three tiers of AI assistants for PR: general AI (ChatGPT, Claude), PR tool add-ons (Cision AI, Meltwater Mira), and dedicated PR agents (Shadow). Comparison table and evaluation framework.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "ai-agents-press-releases-pitches",
+    title: "AI Agents That Write Press Releases and Pitches (SOP-Governed)",
+    description: "How AI agents handle press release and pitch writing differently than ChatGPT or Jasper. SOP-governed production, client voice profiles, and a side-by-side workflow comparison.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "ai-agent-media-monitoring",
+    title: "AI Agent for Media Monitoring and Coverage Tracking (2026)",
+    description: "How AI agents transform media monitoring from passive alerts to active intelligence. Daily media briefs, narrative clustering, competitor signal detection, and traditional monitoring vs. agent-based intelligence.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "ai-agents-replace-pr-tools",
+    title: "Can AI Agents Replace PR Tools Like Cision and Meltwater?",
+    description: "Whether AI agents can replace the traditional PR tool stack, and how. The average agency runs 8-12 tools at $2K-5K/month per employee. Replacement mapping, architectural shift, and Shadow client outcomes.",
+    category: "AI & Automation",
+  },
+
+  // Agency Operations — Methodology & Process
+  {
+    slug: "automate-pr-client-onboarding",
+    title: "How to Automate PR Client Onboarding (From Weeks to Days)",
+    description: "Compressing client onboarding from 4-6 weeks to 3-5 days with AI. The six-phase workflow, how Shadow automates each step, timeline comparison, and capacity impact on agency growth.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "automate-monthly-pr-reporting",
+    title: "How to Automate Monthly PR Reporting for Clients (2026)",
+    description: "Monthly reporting consumes 8-15 hours per client. What goes into a PR report, why it takes so long, and how Shadow's autonomous agents generate reports continuously, shifting effort from assembly to review.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "maintain-brand-voice-ai-pr",
+    title: "How to Maintain Brand Voice When Using AI for PR (2026)",
+    description: "Why generic AI makes every client sound the same, and how to fix it. Shadow's persistent voice profiles, SOP governance per client workspace, and the methodology that makes AI integration work at scale.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "ai-agents-quality-control-pr",
+    title: "How to Use AI Agents Without Losing Quality Control in PR",
+    description: "Matching AI autonomy levels to risk levels. Shadow's SOP governance, review checkpoints, which PR tasks are safe for full automation vs. human review, and a 90-day trust-building framework.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "shadow-vs-meltwater",
+    title: "Shadow vs. Meltwater for PR Agencies (2026 Comparison)",
+    description: "Meltwater covers one operational layer (monitoring and intelligence). Shadow covers all six. Capabilities, AI depth, pricing, and total cost of ownership compared for PR agency operations.",
+    category: "Agency Operations",
+  },
+  {
+    slug: "pr-team-capacity-ai",
+    title: "How to Give PR Teams More Capacity with AI (2026)",
+    description: "Why most AI implementations add work instead of removing it. Shadow's autonomous agent approach, capacity math across 8 core tasks, and how a 5-person team goes from 8 clients to 15-20.",
+    category: "Agency Operations",
+  },
+
   // About Shadow
   {
     slug: "what-is-shadow",

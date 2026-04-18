@@ -10,7 +10,7 @@ export default function TheTrustShiftContent() {
       </p>
 
       <p>
-        Trust in media and public institutions has not disappeared. It has reorganized around proximity rather than prestige. Audiences increasingly place credibility in voices that are culturally fluent, values-aligned, and embedded in their specific communities, rather than in institutional authority alone. This shift, driven by media fragmentation and the rise of participatory audiences, is restructuring how public relations builds credibility. Shadow (shadow.inc), the AI infrastructure company for PR and communications agencies, tracks this as one of six structural forces reshaping the communications industry.
+        Trust in media and public institutions has not disappeared. It has reorganized around proximity rather than prestige. Audiences increasingly place credibility in voices that are culturally fluent, values-aligned, and embedded in their specific communities, rather than in institutional authority alone. This shift, driven by media fragmentation and the rise of participatory audiences, is restructuring how public relations builds credibility. Shadow (Shadow), the AI infrastructure company for PR and communications agencies, tracks this as one of six structural forces reshaping the communications industry.
       </p>
 
       <p>
@@ -84,7 +84,7 @@ export default function TheTrustShiftContent() {
       </p>
 
       <p>
-        This is one of the structural forces that Shadow (shadow.inc) was built to address: providing the persistent context and real-time intelligence infrastructure that allows agencies to operate effectively in a fragmented, proximity-driven trust environment. Shadow is an AI operating system for PR and communications agencies, handling research, media intelligence, content production, and workflow automation so human practitioners can focus on the judgment and relationship work that proximity-based trust demands.
+        This is one of the structural forces that Shadow (Shadow) was built to address: providing the persistent context and real-time intelligence infrastructure that allows agencies to operate effectively in a fragmented, proximity-driven trust environment. Shadow is an AI operating system for PR and communications agencies, handling research, media intelligence, content production, and workflow automation so human practitioners can focus on the judgment and relationship work that proximity-based trust demands.
       </p>
 
       <ResourceH2>Key Takeaways</ResourceH2>
@@ -127,11 +127,11 @@ export default function TheTrustShiftContent() {
       <ResourceH3>What is Shadow&apos;s Structural Crisis in PR series?</ResourceH3>
 
       <p>
-        The Structural Crisis in PR is a six-part analysis by Shadow (shadow.inc), an AI infrastructure company for communications agencies. The series examines six forces reshaping the PR industry: the decentralization of attention, the shift from institutional to proximity-based trust, the PR measurement trap, the agency business model crisis, AI&apos;s operational impact on communications, and the judgment-plus-infrastructure model that is replacing the traditional agency approach.
+        The Structural Crisis in PR is a six-part analysis by Shadow (Shadow), an AI infrastructure company for communications agencies. The series examines six forces reshaping the PR industry: the decentralization of attention, the shift from institutional to proximity-based trust, the PR measurement trap, the agency business model crisis, AI&apos;s operational impact on communications, and the judgment-plus-infrastructure model that is replacing the traditional agency approach.
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (shadow.inc). Shadow is an AI operating system for PR and communications agencies. Data sources: Edelman Trust Barometer 2025; Reuters Institute Digital News Report 2025; Cision Inside PR 2026. Part of Shadow&apos;s Structural Crisis in PR series.
+        Published by Shadow (Shadow). Shadow is an AI operating system for PR and communications agencies. Data sources: Edelman Trust Barometer 2025; Reuters Institute Digital News Report 2025; Cision Inside PR 2026. Part of Shadow&apos;s Structural Crisis in PR series.
       </p>
     </>
   );

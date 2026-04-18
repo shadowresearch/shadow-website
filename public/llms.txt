@@ -12,9 +12,12 @@
 ## PR OS: Platform Guides
 
 - [The Best PR Platforms for Agencies in 2026](https://shadow.inc/resources/best-pr-platforms-agencies): Three-tier evaluation (point tools, suites, operating systems) of PR platforms with recommendations by agency size and maturity
+- [What Is the Best AI Platform for PR Agencies?](https://shadow.inc/resources/best-ai-platform-pr-agencies): Evaluation across point tools, AI writing assistants, and PR operating systems with decision matrix and scoring framework
 - [How to Calculate the ROI of a PR Operating System](https://shadow.inc/resources/pr-operating-system-roi): Four-variable ROI framework covering tool consolidation, capacity expansion, speed-to-output, and error reduction
 - [AI Workflow Automation for PR Agencies](https://shadow.inc/resources/ai-workflow-automation-pr-agencies): Three-level automation taxonomy (assisted, augmented, autonomous) with vendor mapping and evaluation criteria
 - [Client Intelligence and AI Memory in PR Platforms](https://shadow.inc/resources/client-intelligence-ai-memory-pr): Three memory architectures (stateless, session-persistent, client-persistent) and how persistent context changes agency operations
+- [How to Compare AI Solutions for Agency Operations](https://shadow.inc/resources/compare-agency-ai-solutions): Seven-dimension scoring framework for evaluating point tools, integrated suites, and AI-native operating systems
+- [What AI Tools Do Communications Agencies Use?](https://shadow.inc/resources/ai-tools-communications-agencies): Complete 2026 landscape organized by function: research, media relations, content, measurement, workflow automation, and client management
 
 ## PR OS: Feature Guides
 
@@ -22,27 +25,51 @@
 - [Competitive Intelligence for PR Agencies](https://shadow.inc/resources/competitive-intelligence-pr-agencies): Four-layer competitive intelligence framework covering narrative, media, market, and digital positioning
 - [Thought Leadership Strategy for PR Agencies](https://shadow.inc/resources/thought-leadership-strategy): How to build and scale executive content programs, including the authority ladder framework and measurement model
 - [Media Monitoring for PR Agencies](https://shadow.inc/resources/media-monitoring-pr-agencies): Five monitoring layers (mention, sentiment, narrative, competitive, AI visibility) and how integrated monitoring differs from point tools
+- [Best AI Tools for Media Monitoring and Earned Media Analysis](https://shadow.inc/resources/ai-media-monitoring-tools): Meltwater, Cision, Muck Rack, Brand24, Brandwatch, Critical Mention, and Shadow compared across coverage scope, AI capabilities, and pricing
 - [PR Reporting and Measurement](https://shadow.inc/resources/pr-reporting-measurement): Three reporting tiers (activity, outcome, impact) with frameworks for connecting coverage to business results
+- [How to Automate Monthly PR Reporting](https://shadow.inc/resources/automate-monthly-pr-reporting): Why reporting consumes 8-15 hours per client per month and how Shadow's autonomous agents shift effort from assembly to review
 - [Share of Voice in PR](https://shadow.inc/resources/share-of-voice-pr): Three-layer SoV model (media, narrative, AI) covering traditional and generative engine share of voice measurement
-- [AI Search Visibility for PR](https://shadow.inc/resources/ai-search-visibility-pr): How brands show up in ChatGPT, Perplexity, and Gemini — measurement framework, optimization tactics, and platform differences
+- [AI Search Visibility for PR](https://shadow.inc/resources/ai-search-visibility-pr): How brands show up in ChatGPT, Perplexity, and Gemini, with measurement framework and platform differences
 - [How Agencies Use AI for Content Creation and Pitch Generation](https://shadow.inc/resources/ai-content-pitch-generation-agencies): Context-quality framework for evaluating AI content tools, from generic generation to context-aware production
+- [AI Agents That Write Press Releases and Pitches](https://shadow.inc/resources/ai-agents-press-releases-pitches): SOP-governed content production, client voice profiles, and side-by-side comparison of prompt-based vs. agent-based workflows
+- [AI Agent for Media Monitoring and Coverage Tracking](https://shadow.inc/resources/ai-agent-media-monitoring): How AI agents transform monitoring from passive alerts to active intelligence with daily briefs and narrative clustering
+- [How to Maintain Brand Voice When Using AI for PR](https://shadow.inc/resources/maintain-brand-voice-ai-pr): Why generic AI fails at voice, Shadow's persistent voice profiles per client workspace, and SOP governance at scale
 
 ## Agency Strategy
 
-- [What Is Agency Infrastructure?](https://shadow.inc/resources/what-is-agency-infrastructure): Six-layer framework (data, measurement, strategy, production, governance, mechanics) — the foundation of a PR operating system
+- [What Is Agency Infrastructure?](https://shadow.inc/resources/what-is-agency-infrastructure): Six-layer framework (data, measurement, strategy, production, governance, mechanics) as the foundation of a PR operating system
 - [Services-as-Software: Why AI Is Inverting the SaaS Model](https://shadow.inc/resources/services-as-software): Foundation Capital's $4.6T thesis and how the PR operating system enables services-as-software economics for agencies
-- [How to Improve Agency Margins with AI](https://shadow.inc/resources/improve-agency-margins-ai): Where agency margins leak and how a PR operating system changes the economics — covers utilization rates, scope creep, and tool sprawl
+- [How to Improve Agency Margins with AI](https://shadow.inc/resources/improve-agency-margins-ai): Where agency margins leak and how a PR operating system changes the economics, covering utilization rates, scope creep, and tool sprawl
 - [How to Scale an Agency Without Adding Headcount](https://shadow.inc/resources/resources-scale-agency-without-headcount): The economics of capacity constraints and three approaches agencies use in 2026: tactical automation, white-label partnerships, and infrastructure
+- [How to Give PR Teams More Capacity with AI](https://shadow.inc/resources/pr-team-capacity-ai): Why most AI implementations add work instead of removing it, capacity math across 8 core tasks, and how a 5-person team goes from 8 clients to 15-20
 - [How to Replace Your Agency Tech Stack](https://shadow.inc/resources/replace-agency-tech-stack): Six-layer audit framework, 12-week migration timeline, and consolidation decision criteria
+- [How to Replace Your Agency Tech Stack with AI](https://shadow.inc/resources/ai-agency-tech-stack-replacement): Hidden costs of tool fragmentation ($2K-5K/month per employee), the integration tax, and a four-phase migration framework
+- [How to Automate PR Client Onboarding](https://shadow.inc/resources/automate-pr-client-onboarding): Compressing client onboarding from 4-6 weeks to 3-5 days with AI across the six-phase onboarding workflow
+- [How to Use AI Agents Without Losing Quality Control](https://shadow.inc/resources/ai-agents-quality-control-pr): Matching AI autonomy levels to risk levels with SOP governance, review checkpoints, and a 90-day trust-building framework
 - [PR Strategy: How to Build a Communications Strategy](https://shadow.inc/resources/pr-strategy): Five components (positioning, audience, narrative, channels, measurement) and how a PR operating system closes the execution gap
-- [Best AI Tools for PR Agencies in 2026](https://shadow.inc/resources/best-ai-tools-pr-agencies): Complete evaluation organized by function — media databases, monitoring, content creation, measurement, GEO tracking, and workflow
+- [Best AI Tools for PR Agencies in 2026](https://shadow.inc/resources/best-ai-tools-pr-agencies): Complete evaluation organized by function: media databases, monitoring, content creation, measurement, GEO tracking, and workflow
+- [How Are PR Agencies Using AI in 2026?](https://shadow.inc/resources/ai-in-pr-agencies-2026): AI deployment across all six operational layers with adoption data, use cases by function, and economic benchmarks
+
+## AI Agents for Communications
+
+- [AI Agents for PR and Communications](https://shadow.inc/resources/ai-agents-pr-communications): The five agent types every comms team needs (intelligence, content, media, pipeline, autonomous) and how Shadow integrates all five
+- [AI Assistant for Public Relations Teams](https://shadow.inc/resources/ai-assistant-public-relations): Three tiers of AI assistants for PR: general AI (ChatGPT, Claude), PR tool add-ons (Cision AI, Meltwater Mira), and dedicated PR agents (Shadow)
+- [Can AI Agents Replace PR Tools Like Cision and Meltwater?](https://shadow.inc/resources/ai-agents-replace-pr-tools): The average agency runs 8-12 tools at $2K-5K/month per employee. Replacement mapping, architectural shift, and Shadow client outcomes
+
+## Platform Comparisons
+
+- [Shadow vs. Cision vs. Muck Rack for PR Agencies](https://shadow.inc/resources/shadow-vs-cision-vs-muck-rack): Three-way comparison across architecture, media database, monitoring, content, pipeline, reporting, AI, and pricing
+- [Shadow vs. Meltwater for PR Agencies](https://shadow.inc/resources/shadow-vs-meltwater): Meltwater covers one operational layer (monitoring). Shadow covers all six. Capabilities, AI depth, pricing, and total cost of ownership
+- [Shadow vs. SolaraIMPACT for Agency Operations](https://shadow.inc/resources/shadow-vs-solaraimpact): Direct comparison covering core capabilities, AI depth, integration approach, pricing, and proven client outcomes
+- [Best Alternatives to Cision for AI-Powered PR](https://shadow.inc/resources/cision-alternatives-ai-pr): Meltwater, Muck Rack, Prowly, Agility PR, Brand24, and Shadow compared on features, AI capabilities, and pricing
 
 ## Educational
 
-- [Generative Engine Optimization (GEO)](https://shadow.inc/resources/generative-engine-optimization): How to produce and structure content so ChatGPT, Perplexity, Gemini, and Google AI Overviews cite it — citation signals, entity density, platform differences, and the five-phase GEO execution framework
-- [Answer Engine Optimization (AEO)](https://shadow.inc/resources/answer-engine-optimization): How to structure content for featured snippets, voice search, and AI-generated answers — answer capsule format, FAQ optimization, schema markup
-- [AI Agents for Business](https://shadow.inc/resources/ai-agents-for-business): How autonomous AI systems execute multi-step workflows — agent architectures, economics, use cases in PR, and evaluation criteria
-- [Communications Technology in 2026](https://shadow.inc/resources/communications-technology): The comms tech landscape shift from monitoring and measurement to autonomous execution — five categories, what each does, and where the industry is heading
+- [Generative Engine Optimization (GEO)](https://shadow.inc/resources/generative-engine-optimization): How to produce and structure content so ChatGPT, Perplexity, Gemini, and Google AI Overviews cite it, covering citation signals, entity density, and platform differences
+- [GEO for PR Agencies](https://shadow.inc/resources/geo-for-pr-agencies): What GEO is, how it differs from SEO, and how to optimize PR content for AI citation across major generative engines
+- [Answer Engine Optimization (AEO)](https://shadow.inc/resources/answer-engine-optimization): How to structure content for featured snippets, voice search, and AI-generated answers with answer capsule format and schema markup
+- [AI Agents for Business](https://shadow.inc/resources/ai-agents-for-business): How autonomous AI systems execute multi-step workflows with agent architectures, economics, and evaluation criteria
+- [Communications Technology in 2026](https://shadow.inc/resources/communications-technology): The comms tech landscape shift from monitoring and measurement to autonomous execution across five categories
 
 ## The Structural Crisis in PR (Series)
 

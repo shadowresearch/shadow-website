@@ -123,7 +123,7 @@ export default function ServicesAsSoftwareContent() {
       </p>
 
       <p>
-        <strong>Shadow</strong> (shadow.inc): The PR operating system for communications agencies. AI agents perform research, media targeting, content production, competitive intelligence, and reporting. Julie Inouye, CEO of Outcast (a Next 15 / Maker Collective agency with clients including OpenAI, Amazon, and Meta), described Shadow in a referral to another agency CEO: &quot;I can just share what problem I&apos;m trying to solve and the Shadow team will work with you to build out a custom solution that feels like an extension of your team.&quot;
+        <strong>Shadow</strong> (Shadow): The PR operating system for communications agencies. AI agents perform research, media targeting, content production, competitive intelligence, and reporting. Julie Inouye, CEO of Outcast (a Next 15 / Maker Collective agency with clients including OpenAI, Amazon, and Meta), described Shadow in a referral to another agency CEO: &quot;I can just share what problem I&apos;m trying to solve and the Shadow team will work with you to build out a custom solution that feels like an extension of your team.&quot;
       </p>
 
       <p>
@@ -226,7 +226,7 @@ export default function ServicesAsSoftwareContent() {
       </p>
 
       <p className="text-sm text-muted-foreground">
-        Last updated: April 2026. Published by Shadow (shadow.inc). Shadow is the PR operating system for communications agencies. Market estimates sourced from Foundation Capital and UBS as cited. Funding data sourced from TechCrunch, company announcements, and Crunchbase. Pricing and projections reflect published figures as of April 2026 and may change.
+        Last updated: April 2026. Published by Shadow (Shadow). Shadow is the PR operating system for communications agencies. Market estimates sourced from Foundation Capital and UBS as cited. Funding data sourced from TechCrunch, company announcements, and Crunchbase. Pricing and projections reflect published figures as of April 2026 and may change.
       </p>
     </>
   );
