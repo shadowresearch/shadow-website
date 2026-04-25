@@ -6,27 +6,43 @@ export function Footer() {
   return (
     <GlassSection>
     <footer className="border-t border-border bg-background">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-12">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           <div className="flex flex-col gap-3">
-            <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="Shadow" width={18} height={30} />
-              <span className="font-heading font-semibold text-sm tracking-wide text-foreground">
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image
+                src="/logo2.svg"
+                alt="Shadow"
+                width={22}
+                height={22}
+                className="h-[22px] w-auto"
+              />
+              <span className="font-exposure-bold text-xl leading-none tracking-tight text-foreground">
                 Shadow
               </span>
             </Link>
             <p className="text-xs text-muted-foreground max-w-xs leading-relaxed">
-              The AI operating system for communications. Built for agencies and the brands they serve.
+              Narrative intelligence and program execution powered by AI agents. Built for communications teams.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
             <div className="flex flex-col gap-3">
               <span className="font-medium text-foreground text-xs tracking-wide uppercase">Product</span>
-              <Link href="/intelligence" className="text-muted-foreground hover:text-foreground transition-colors">Intelligence</Link>
-              <Link href="/media" className="text-muted-foreground hover:text-foreground transition-colors">Media</Link>
-              <Link href="/content" className="text-muted-foreground hover:text-foreground transition-colors">Content</Link>
-              <Link href="/pipeline" className="text-muted-foreground hover:text-foreground transition-colors">Pipeline</Link>
+              <Link href="/narrative-intelligence" className="text-muted-foreground hover:text-foreground transition-colors">Narrative Intelligence</Link>
+              <Link href="/program-execution" className="text-muted-foreground hover:text-foreground transition-colors">Program Execution</Link>
+              <Link href="/ai-agents" className="text-muted-foreground hover:text-foreground transition-colors">AI Agents</Link>
+              <Link href="/operate" className="text-muted-foreground hover:text-foreground transition-colors">Operate</Link>
+              <Link href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
+            </div>
+            <div className="flex flex-col gap-3">
+              <span className="font-medium text-foreground text-xs tracking-wide uppercase">Agents</span>
+              <Link href="/researchers" className="text-muted-foreground hover:text-foreground transition-colors">Researchers</Link>
+              <Link href="/analysts" className="text-muted-foreground hover:text-foreground transition-colors">Analysts</Link>
+              <Link href="/strategists" className="text-muted-foreground hover:text-foreground transition-colors">Strategists</Link>
+              <Link href="/planners" className="text-muted-foreground hover:text-foreground transition-colors">Planners</Link>
+              <Link href="/writers" className="text-muted-foreground hover:text-foreground transition-colors">Writers</Link>
+              <Link href="/reporters" className="text-muted-foreground hover:text-foreground transition-colors">Reporters</Link>
             </div>
             <div className="flex flex-col gap-3">
               <span className="font-medium text-foreground text-xs tracking-wide uppercase">Company</span>

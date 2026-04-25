@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTASection } from "../_components/CTASection";
-import { GlassSection } from "../_components/GlassSection";
 
 export const metadata: Metadata = {
   title: "Blog | Shadow",
@@ -32,7 +30,7 @@ const posts = [
     date: "March 16, 2026",
     series: null,
     excerpt:
-      "Every communications engagement in the history of the discipline has started from the same place: someone's best guess. Not a bad guess, usually — but a guess nonetheless.",
+      "Every communications engagement in the history of the discipline has started from the same place: someone's best guess. Not a bad guess, usually, but a guess nonetheless.",
   },
   {
     title: "The Business Model Crisis: Why the PR Agency Model Is Breaking",
@@ -40,7 +38,7 @@ const posts = [
     date: "February 28, 2026",
     series: "Part 4 of 6 · The Structural Crisis in PR",
     excerpt:
-      "The PR agency business model has remained largely unchanged for decades. Clients pay a monthly retainer, agencies staff those retainers with account teams — and the cracks are showing.",
+      "The PR agency business model has remained largely unchanged for decades. Clients pay a monthly retainer, agencies staff those retainers with account teams, and the cracks are showing.",
   },
   {
     title: "What AI Actually Changes in Communications: Operations, Not Creativity",
@@ -48,7 +46,7 @@ const posts = [
     date: "February 28, 2026",
     series: "Part 5 of 6 · The Structural Crisis in PR",
     excerpt:
-      "91% of communications professionals use generative AI. But the industry's anxiety has been about the wrong things. AI is not replacing judgment — it's attacking the operational layer beneath it.",
+      "91% of communications professionals use generative AI. But the industry's anxiety has been about the wrong things. AI is not replacing judgment. It's attacking the operational layer beneath it.",
   },
   {
     title: "The Future of Communications Belongs to Judgment, Not Access",
@@ -64,7 +62,7 @@ const posts = [
     date: "January 15, 2026",
     series: "Part 1 of 6 · The Structural Crisis in PR",
     excerpt:
-      "71% of PR professionals cite fragmentation as their primary challenge — yet most agency workflows were built for a centralized media environment that no longer exists.",
+      "71% of PR professionals cite fragmentation as their primary challenge, yet most agency workflows were built for a centralized media environment that no longer exists.",
   },
   {
     title: "The Trust Shift: Why Credibility Now Follows Proximity, Not Prestige",
@@ -72,7 +70,7 @@ const posts = [
     date: "January 15, 2026",
     series: "Part 2 of 6 · The Structural Crisis in PR",
     excerpt:
-      "Trust in institutions has declined. In its place: contextual credibility — trust that flows from proximity, specificity, and demonstrated experience in a specific community.",
+      "Trust in institutions has declined. In its place: contextual credibility, trust that flows from proximity, specificity, and demonstrated experience in a specific community.",
   },
   {
     title: "The Measurement Trap: Why PR Can't Prove ROI in a Metrics-Driven Culture",
@@ -80,65 +78,84 @@ const posts = [
     date: "January 15, 2026",
     series: "Part 3 of 6 · The Structural Crisis in PR",
     excerpt:
-      "Only 32% of execs prioritize revenue or ROI from communications — yet PR teams face increasing pressure to demonstrate value in terms that don't fit what they actually do.",
+      "Only 32% of execs prioritize revenue or ROI from communications, yet PR teams face increasing pressure to demonstrate value in terms that don't fit what they actually do.",
   },
 ];
 
 export default function BlogPage() {
   return (
-    <div className="flex flex-col">
-      {/* Hero */}
-      <GlassSection>
-      <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
-        <div className="max-w-6xl mx-auto">
-          <span className="text-xs font-sans text-primary tracking-widest">
-            Blog
-          </span>
-          <h1 className="mt-4 font-serif text-5xl md:text-6xl text-foreground leading-tight max-w-3xl">
-            Writing from Shadow
+    <div className="flex flex-col bg-card">
+      {/* ━━━ Hero ━━━ */}
+      <section className="flex items-start relative">
+        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-16 pt-24">
+          <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-4xl">
+            Writing from Shadow.
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+          <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-xl">
             Vertical AI, communications intelligence, craft, and original
-            research — from the team building the operating system for modern
-            PR.
+            research from the team building the operating system for modern PR.
           </p>
         </div>
       </section>
-      </GlassSection>
 
-      {/* Posts */}
-      <section>
-        {posts.map((post) => (
-          <article key={post.href} className="border-b border-border">
-            <Link href={post.href} className="group flex items-start gap-6 px-8 py-10">
-              <div className="flex-1 min-w-0">
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground leading-tight group-hover:text-primary transition-colors">
-                  {post.title}
-                </h2>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                  {post.excerpt}
-                </p>
-                <span className="mt-4 block text-xs text-muted-foreground font-mono">
-                  {post.date}
-                </span>
-              </div>
-              <span className="shrink-0 size-12 rounded-lg flex items-center justify-center text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-foreground transition-all">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 14.5L14.5 5.5M14.5 5.5H7.5M14.5 5.5V12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-            </Link>
-          </article>
-        ))}
+      {/* ━━━ Posts ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+              {posts.map((post) => (
+                <li key={post.href}>
+                  <Link href={post.href} className="block group">
+                    <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                      {post.series ?? post.date}
+                    </p>
+                    <h2 className="mt-3 font-heading text-xl font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                    {post.series && (
+                      <p className="mt-4 text-xs font-mono text-muted-foreground">
+                        {post.date}
+                      </p>
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <CTASection
-        heading="Curious what Shadow can do for your team?"
-        body="The best way to understand Shadow is to see it work on your actual clients and categories."
-        primaryLabel="Book a demo"
-        secondaryLabel="Meet the team"
-        secondaryHref="/about"
-      />
+      {/* ━━━ CTA ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-2xl">
+              Curious what Shadow can do for your team?
+            </h2>
+            <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-md">
+              The best way to understand Shadow is to see it work on your actual
+              clients and categories.
+            </p>
+            <div className="mt-10 flex flex-row gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-[13px] font-medium text-background transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Book a demo
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Meet the team
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

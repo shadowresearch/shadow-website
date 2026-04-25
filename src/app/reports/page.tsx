@@ -41,60 +41,95 @@ const reports = [
 
 export default function ReportsPage() {
   return (
-    <div className="flex flex-col">
-      <div className="py-20 px-6">
-        <div className="max-w-3xl mx-auto">
-          <span className="text-xs font-sans text-primary tracking-widest">
-            Reports
-          </span>
-          <h1 className="mt-4 font-serif text-3xl md:text-4xl text-foreground leading-tight tracking-tight">
-            Intelligence reports, published monthly
+    <div className="flex flex-col bg-card">
+      {/* ━━━ Hero ━━━ */}
+      <section className="flex items-start relative">
+        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-16 pt-24">
+          <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-4xl">
+            Intelligence reports, published monthly.
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-xl">
             Each edition of Shadow&apos;s Narrative Cycle Intelligence series
-            tracks how media narratives evolve within a category and what
-            that means for companies trying to position themselves.
+            tracks how media narratives evolve within a category and what that
+            means for companies trying to position themselves.
           </p>
+        </div>
+      </section>
 
-          <div className="mt-10 mb-10 border-t border-border" />
-
-          <div className="flex flex-col gap-6">
-            {reports.map((report) => (
-              <Link
-                key={report.slug}
-                href={`/reports/${report.slug}`}
-                className="group block border-b border-border pb-8 transition-colors"
-              >
-                <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                  <span className="text-primary font-medium">
-                    {report.edition}
-                  </span>
-                  <span>&middot;</span>
-                  <span>{report.date}</span>
-                </div>
-                <h2 className="mt-2 font-serif text-2xl text-foreground group-hover:text-primary transition-colors">
-                  {report.title}
-                </h2>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                  {report.description}
-                </p>
-                <div className="mt-4 flex gap-6">
-                  {report.stats.map((stat) => (
-                    <div key={stat.label}>
-                      <div className="text-base font-semibold text-foreground">
-                        {stat.value}
+      {/* ━━━ Reports list ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <ul className="flex flex-col gap-12">
+              {reports.map((report) => (
+                <li key={report.slug}>
+                  <Link
+                    href={`/reports/${report.slug}`}
+                    className="block group"
+                  >
+                    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,360px)] gap-8 lg:gap-16 items-start">
+                      <div>
+                        <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                          <span className="text-primary">{report.edition}</span>
+                          <span className="mx-2">·</span>
+                          <span>{report.date}</span>
+                        </p>
+                        <h2 className="mt-3 font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight group-hover:text-primary transition-colors">
+                          {report.title}
+                        </h2>
+                        <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-lg">
+                          {report.description}
+                        </p>
                       </div>
-                      <div className="text-xs text-muted-foreground">
-                        {stat.label}
+                      <div className="grid grid-cols-3 gap-6">
+                        {report.stats.map((stat) => (
+                          <div key={stat.label}>
+                            <div className="font-serif text-[clamp(1.5rem,2.25vw,2rem)] text-foreground leading-none tabular-nums tracking-tight">
+                              {stat.value}
+                            </div>
+                            <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                              {stat.label}
+                            </p>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                </div>
-              </Link>
-            ))}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* ━━━ CTA ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-2xl">
+              Want this analysis for your category?
+            </h2>
+            <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-md">
+              Shadow runs Narrative Cycle Intelligence across any market. Book a
+              demo to see what the data looks like for your clients&apos; space.
+            </p>
+            <div className="mt-10 flex flex-row gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-[13px] font-medium text-background transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Book a demo
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Learn about Shadow
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

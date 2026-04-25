@@ -30,7 +30,7 @@ export function BlogPost({
   children,
 }: BlogPostProps) {
   return (
-    <article className="py-20 px-6">
+    <div className="flex flex-col bg-card">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -51,58 +51,73 @@ export function BlogPost({
           }),
         }}
       />
-      <div className="max-w-3xl mx-auto">
-        {/* Title */}
-        <h1 className="font-serif text-4xl md:text-5xl text-foreground leading-tight tracking-tight">
-          {title}
-        </h1>
 
-        {/* Subtitle */}
-        {subtitle && (
-          <p className="mt-4 text-xl text-muted-foreground leading-relaxed">
-            {subtitle}
+      {/* ━━━ Hero ━━━ */}
+      <section className="flex items-start relative">
+        <div className="relative z-10 w-full max-w-[960px] mx-auto px-8 md:px-16 pb-12 pt-24">
+          <nav className="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-wider mb-8">
+            <Link
+              href="/blog"
+              className="hover:text-foreground transition-colors"
+            >
+              Blog
+            </Link>
+            {series && (
+              <>
+                <span className="text-border">/</span>
+                <span className="text-foreground truncate">{series.name}</span>
+              </>
+            )}
+          </nav>
+          {series && (
+          )}
+          <h1 className="mt-5 font-serif font-medium text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.1] tracking-tight">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="mt-4 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-xl">
+              {subtitle}
+            </p>
+          )}
+          <p className="mt-6 text-xs font-mono text-muted-foreground uppercase tracking-wider">
+            <span>{author}</span>
+            <span className="mx-2">·</span>
+            <span>{date}</span>
           </p>
-        )}
-
-        {/* Author and date */}
-        <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-          <span>{author}</span>
-          <span className="text-border">&middot;</span>
-          <span>{date}</span>
         </div>
+      </section>
 
-        {/* Divider */}
-        <div className="mt-10 mb-10 border-t border-border" />
-
-        {/* Body */}
-        <div className="space-y-6 text-base leading-relaxed text-foreground">
-          {children}
-        </div>
-
-        {/* Related posts */}
-        {relatedPosts && relatedPosts.length > 0 && (
-          <div className="mt-20 pt-10 border-t border-border">
-            <h2 className="font-heading font-semibold text-lg text-foreground mb-6">
-              Other posts in this series
-            </h2>
-            <div className="flex flex-col gap-3">
-              {relatedPosts.map((post) => (
-                <Link
-                  key={post.href}
-                  href={post.href}
-                  className="flex items-center gap-3 text-sm text-primary underline hover:text-primary/80 transition-colors"
-                >
-                  <span className="text-xs font-mono text-muted-foreground shrink-0">
-                    Part {post.part}
-                  </span>
-                  <span>{post.title}</span>
-                </Link>
-              ))}
-            </div>
+      {/* ━━━ Body ━━━ */}
+      <article className="px-8 md:px-16 pb-16 md:pb-24">
+        <div className="max-w-[760px] mx-auto">
+          <div className="space-y-6 text-base leading-relaxed text-foreground">
+            {children}
           </div>
-        )}
-      </div>
-    </article>
+
+          {relatedPosts && relatedPosts.length > 0 && (
+            <div className="mt-20 pt-10 border-t border-border">
+              <h2 className="font-heading font-semibold text-lg text-foreground mb-6">
+                Other posts in this series
+              </h2>
+              <div className="flex flex-col gap-3">
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.href}
+                    href={post.href}
+                    className="flex items-center gap-3 text-sm text-primary underline hover:text-primary/80 transition-colors"
+                  >
+                    <span className="text-xs font-mono text-muted-foreground shrink-0">
+                      Part {post.part}
+                    </span>
+                    <span>{post.title}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </article>
+    </div>
   );
 }
 

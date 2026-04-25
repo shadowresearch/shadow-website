@@ -346,6 +346,72 @@ export const resources: Resource[] = [
     description: "Shadow is the PR operating system that gives independent agencies the same AI infrastructure holding companies build for their networks. One unified platform for operations, services, intelligence, monitoring, and reporting.",
     category: "About Shadow",
   },
+  {
+    slug: "narrative-intelligence",
+    title: "What Is Narrative Intelligence? Definition, Examples, and How It Works",
+    description: "Narrative intelligence is the practice of tracking how stories form, move, and resolve across media, search, social, and AI to identify which positions are available to own. A complete guide.",
+    category: "PR Strategy & Measurement",
+  },
+  {
+    slug: "narrative-graph",
+    title: "What Is a Narrative Graph? How Multi-Channel Data Reveals Positions to Own",
+    description: "A narrative graph is a real-time data architecture that blends media, search, social, and AI signals into a unified view of how narratives form, move, and resolve. Learn how it works and what it shows.",
+    category: "PR Strategy & Measurement",
+  },
+  {
+    slug: "identify-narrative-positions",
+    title: "How to Identify Narrative Positions Your Brand Can Own (With Framework)",
+    description: "A step-by-step framework for identifying which narrative positions are available, credible, and defensible for your brand. Includes the three-stage process, scoring criteria, and real examples.",
+    category: "PR Strategy & Measurement",
+  },
+  {
+    slug: "unified-narrative-intelligence",
+    title: "Unified Narrative Intelligence: One Graph for Media, Search, Social, and AI",
+    description: "Communications teams use 4-6 separate tools that share no data. Unified narrative intelligence replaces fragmented monitoring with a single graph that tracks how stories move across every channel.",
+    category: "PR Strategy & Measurement",
+  },
+  {
+    slug: "program-execution-ai-agents",
+    title: "Program Execution with AI Agents: From Intelligence to Action in Communications",
+    description: "Narrative intelligence is only valuable if you can act on it. Learn how AI agents translate positioning data into executable communications programs: proposals, media relations, content, and reporting.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "narrative-positioning-strategy",
+    title: "Narrative Positioning Strategy for Communications Teams: A Complete Guide",
+    description: "A narrative positioning strategy uses cross-channel data to identify which stories your brand should own and builds programs to claim them. Learn the framework, stages, and measurement approach.",
+    category: "PR Strategy & Measurement",
+  },
+  {
+    slug: "ai-platforms-communications-leaders",
+    title: "Best AI Platforms for Communications Leaders in 2026: A Strategic Evaluation",
+    description: "An evaluation of AI platforms built for heads of communications, agency CEOs, and comms leaders. Covers five platform categories, evaluation criteria, and what to prioritize based on team structure and goals.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "best-media-monitoring-tools",
+    title: "The 8 Best Media Monitoring Tools for Communications Teams in 2026",
+    description: "An evaluation of the best media monitoring tools in 2026, organized by what they track and who they serve. Covers Meltwater, Cision, Brandwatch, Brand24, TVEyes, Pulsar, Mention, and Shadow.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "best-ai-agents-communications",
+    title: "The 7 Best AI Agents for Communications Teams in 2026",
+    description: "An evaluation of the best AI agents for communications and PR teams. Covers agentic AI platforms, governed agent systems, and general-purpose agents, with criteria for choosing the right approach.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "best-market-intelligence-tools-communications",
+    title: "The 8 Best Market Intelligence Tools for Communications Teams in 2026",
+    description: "An evaluation of the best market intelligence tools for PR and communications teams. Covers competitive intelligence, media intelligence, search intelligence, AI visibility, and narrative intelligence platforms.",
+    category: "AI & Automation",
+  },
+  {
+    slug: "best-ai-pr-platforms",
+    title: "The 7 Best AI PR Platforms in 2026: A Strategic Evaluation",
+    description: "An evaluation of the best AI-powered PR platforms in 2026. Covers legacy platforms adding AI, AI-native tools, and narrative intelligence platforms, with a framework for choosing the right approach for your team.",
+    category: "AI & Automation",
+  },
 ];
 
 export const resourceCategories = [

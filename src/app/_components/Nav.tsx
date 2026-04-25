@@ -1,15 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const agentLinks = [
-  { href: "/intelligence", label: "Intelligence Agents" },
-  { href: "/media", label: "Media Agents" },
-  { href: "/content", label: "Content Agents" },
-  { href: "/pipeline", label: "Pipeline Agents" },
+const productLinks = [
+  { href: "/narrative-intelligence", label: "Narrative Intelligence" },
+  { href: "/program-execution", label: "Program Execution" },
+  { href: "/ai-agents", label: "AI Agents" },
+  { href: "/operate", label: "Operate" },
 ];
 
 const navLinks = [
@@ -22,78 +22,63 @@ const navLinks = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
-  const [agentsOpen, setAgentsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  const isAgentPage = agentLinks.some((l) => pathname === l.href);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
-      <div className="max-w-[1120px] mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Image src="/logo.svg" alt="Shadow" width={20} height={34} />
+    <nav className="sticky top-0 z-50 bg-card">
+      <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-4 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+          <Image
+            src="/logo2.svg"
+            alt="Shadow"
+            width={22}
+            height={22}
+            className="h-[22px] w-auto"
+          />
+          <span
+            aria-hidden={scrolled ? "true" : "false"}
+            className={`font-exposure-bold text-xl leading-none text-foreground tracking-tight overflow-hidden inline-block transition-all duration-300 ease-out ${
+              scrolled
+                ? "opacity-0 max-w-0 -ml-3"
+                : "opacity-100 max-w-[200px] ml-0"
+            }`}
+          >
+            Shadow
+          </span>
         </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-6">
-          {/* Agents dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setAgentsOpen(true)}
-            onMouseLeave={() => setAgentsOpen(false)}
-          >
-            <button
-              type="button"
-              className={`text-sm transition-colors flex items-center gap-1 ${
-                isAgentPage
+          {productLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`text-sm transition-colors ${
+                pathname === link.href
                   ? "text-foreground font-medium"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Agents
-              <svg
-                width="10"
-                height="6"
-                viewBox="0 0 10 6"
-                fill="none"
-                className={`transition-transform ${agentsOpen ? "rotate-180" : ""}`}
-              >
-                <path
-                  d="M1 1L5 5L9 1"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-
-            {agentsOpen && (
-              <div className="absolute top-full left-0 pt-2">
-                <div className="bg-background border border-border rounded-lg shadow-lg py-2 min-w-[200px]">
-                  {agentLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={`block px-4 py-2 text-sm transition-colors ${
-                        pathname === link.href
-                          ? "text-foreground font-medium bg-muted/30"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted/20"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
+              {link.label}
+            </Link>
+          ))}
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className={`text-sm transition-colors ${
+                pathname === link.href
+                  ? "text-foreground font-medium"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
               {link.label}
             </Link>
@@ -126,15 +111,12 @@ export function Nav() {
       {open && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="flex flex-col px-6 py-4">
-            <span className="py-2 text-xs font-medium text-muted-foreground tracking-wide uppercase">
-              Agents
-            </span>
-            {agentLinks.map((link) => (
+            {productLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`py-3 pl-3 text-sm border-b border-border transition-colors ${
+                className={`py-3 text-sm border-b border-border transition-colors ${
                   pathname === link.href ? "text-foreground font-medium" : "text-muted-foreground"
                 }`}
               >

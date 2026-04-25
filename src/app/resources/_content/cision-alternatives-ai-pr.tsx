@@ -51,6 +51,14 @@ export default function CisionAlternativesAiPrContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">Integrated media intelligence</td>
+              <td className="py-3 pr-4">200K+ news sources</td>
+              <td className="py-3 pr-4">Full-stack: intelligence, strategy, content, media, pipeline, agents</td>
+              <td className="py-3 pr-4">Automated narrative reports</td>
+              <td className="py-3 pr-4">Contact for pricing</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Cision (CisionOne)</td>
               <td className="py-3 pr-4">1.4M+ contacts</td>
               <td className="py-3 pr-4">Comprehensive</td>
@@ -97,14 +105,6 @@ export default function CisionAlternativesAiPrContent() {
               <td className="py-3 pr-4">Sentiment scoring, automated reporting</td>
               <td className="py-3 pr-4">Auto reports</td>
               <td className="py-3 pr-4">From $79/month</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">Integrated media intelligence</td>
-              <td className="py-3 pr-4">200K+ news sources</td>
-              <td className="py-3 pr-4">Full-stack: intelligence, strategy, content, media, pipeline, agents</td>
-              <td className="py-3 pr-4">Automated narrative reports</td>
-              <td className="py-3 pr-4">Contact for pricing</td>
             </tr>
           </tbody>
         </table>
@@ -231,6 +231,12 @@ export default function CisionAlternativesAiPrContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow PR OS</td>
+              <td className="py-3 pr-4">Shadow (single platform)</td>
+              <td className="py-3 pr-4">Contact for pricing</td>
+              <td className="py-3 pr-4">&lt;1 hr/month</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Cision-centered stack</td>
               <td className="py-3 pr-4">Cision + Meltwater + ChatGPT + CoverageBook + PM tool</td>
               <td className="py-3 pr-4">$65,000&ndash;$80,000+</td>
@@ -241,12 +247,6 @@ export default function CisionAlternativesAiPrContent() {
               <td className="py-3 pr-4">Prowly + Brand24 + ChatGPT + Grammarly + PM tool</td>
               <td className="py-3 pr-4">$15,000&ndash;$25,000</td>
               <td className="py-3 pr-4">10&ndash;20 hrs/week</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow PR OS</td>
-              <td className="py-3 pr-4">Shadow (single platform)</td>
-              <td className="py-3 pr-4">Contact for pricing</td>
-              <td className="py-3 pr-4">&lt;1 hr/month</td>
             </tr>
           </tbody>
         </table>
@@ -347,7 +347,7 @@ export default function CisionAlternativesAiPrContent() {
       <ResourceH3>How much does it cost to switch from Cision?</ResourceH3>
 
       <p>
-        Direct costs depend on the alternative chosen. Budget alternatives (Prowly + Brand24) cost $15,000&ndash;$25,000/year but increase coordination labor. Enterprise alternatives (Meltwater) may cost equal to or more than Cision. Shadow consolidates the entire tool stack into a single platform. Contact Shadow for pricing.
+        Direct costs depend on the alternative chosen. Budget alternatives (Prowly + Brand24) cost $15,000&ndash;$25,000/year but increase coordination labor. Enterprise alternatives (Meltwater) may cost equal to or more than Cision. Shadow consolidates the entire tool stack into a single platform and uses a pay-per-use pricing model.
       </p>
 
       <ResourceH3>Can I migrate my Cision data to an alternative platform?</ResourceH3>

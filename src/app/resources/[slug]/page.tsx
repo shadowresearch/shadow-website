@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const resource = getResourceBySlug(slug);
   if (!resource) return {};
   return {
-    title: `${resource.title} — Shadow`,
+    title: `${resource.title} | Shadow`,
     description: resource.description,
     openGraph: {
       title: resource.title,
@@ -41,18 +41,16 @@ export default async function ResourceSlugPage({ params }: PageProps) {
     .filter((r): r is NonNullable<typeof r> => r != null);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-card">
       {/* Breadcrumb */}
-      <div className="px-6 pt-10 pb-0">
-        <div className="max-w-3xl mx-auto">
-          <nav className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
-            <Link href="/resources" className="hover:text-foreground transition-colors">
-              Resources
-            </Link>
-            <span className="text-border">/</span>
-            <span className="text-foreground truncate">{resource.category}</span>
-          </nav>
-        </div>
+      <div className="w-full max-w-[960px] mx-auto px-8 md:px-16 pt-16">
+        <nav className="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-wider">
+          <Link href="/resources" className="hover:text-foreground transition-colors">
+            Resources
+          </Link>
+          <span className="text-border">/</span>
+          <span className="text-foreground truncate">{resource.category}</span>
+        </nav>
       </div>
 
       <ResourcePage title={resource.title} description={resource.description}>
@@ -67,27 +65,30 @@ export default async function ResourceSlugPage({ params }: PageProps) {
 
       {/* Related resources */}
       {related.length > 0 && (
-        <section>
-          <div className="px-8 py-6 border-y border-border">
-            <h2 className="font-heading font-semibold text-xs uppercase tracking-widest text-muted-foreground">
-              Related Guides
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-b border-border">
-            {related.map((r) => (
-              <Link
-                key={r.slug}
-                href={`/resources/${r.slug}`}
-                className="group flex flex-col gap-1 px-6 py-6 hover:bg-muted/20 transition-colors border-r border-b border-border last:border-r-0 sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0"
-              >
-                <h3 className="font-heading font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
-                  {r.title}
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {r.description}
-                </p>
-              </Link>
-            ))}
+        <section className="px-4 md:px-8 pb-12 md:pb-20">
+          <div className="rounded-3xl bg-card overflow-hidden">
+            <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+              <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                Related Guides
+              </p>
+              <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                {related.map((r) => (
+                  <li key={r.slug}>
+                    <Link
+                      href={`/resources/${r.slug}`}
+                      className="block group"
+                    >
+                      <h3 className="font-heading text-lg font-semibold text-foreground leading-snug group-hover:text-primary transition-colors">
+                        {r.title}
+                      </h3>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                        {r.description}
+                      </p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
       )}

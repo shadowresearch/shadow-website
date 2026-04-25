@@ -45,6 +45,13 @@ export default function AiMediaMonitoringToolsContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">200K+ news sources with journalist profiling and story clustering</td>
+              <td className="py-3 pr-4">Narrative intelligence, source evaluation, AI search visibility, strategy feedback loop</td>
+              <td className="py-3 pr-4">Agencies wanting monitoring connected to strategy and content</td>
+              <td className="py-3 pr-4">Contact for pricing</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Meltwater</td>
               <td className="py-3 pr-4">1B+ daily data points across news, social, broadcast, podcasts</td>
               <td className="py-3 pr-4">Mira AI assistant, NLP queries, auto-summaries, GenAI Lens</td>
@@ -85,13 +92,6 @@ export default function AiMediaMonitoringToolsContent() {
               <td className="py-3 pr-4">AI clip identification, auto-tagging, broadcast analytics</td>
               <td className="py-3 pr-4">Broadcast-heavy PR teams</td>
               <td className="py-3 pr-4">Enterprise pricing</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">200K+ news sources with journalist profiling and story clustering</td>
-              <td className="py-3 pr-4">Narrative intelligence, source evaluation, AI search visibility, strategy feedback loop</td>
-              <td className="py-3 pr-4">Agencies wanting monitoring connected to strategy and content</td>
-              <td className="py-3 pr-4">Contact for pricing</td>
             </tr>
           </tbody>
         </table>

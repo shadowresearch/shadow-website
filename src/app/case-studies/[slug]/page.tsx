@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { caseStudies, getCaseStudyBySlug } from "../_data";
-import { GlassSection } from "../../_components/GlassSection";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -42,89 +41,129 @@ export default async function CaseStudyPage({ params }: PageProps) {
   const otherStudies = caseStudies.filter((s) => s.slug !== cs.slug).slice(0, 3);
 
   return (
-    <div className="flex flex-col">
-      {/* Hero */}
-      <GlassSection>
-        <section className="py-28 md:py-36 px-6 md:px-16 border-b border-border">
-          <div className="max-w-3xl">
-            <span className="text-xs font-sans text-muted-foreground tracking-widest">
-              {cs.descriptor}
-            </span>
-            <h1 className="mt-4 font-serif text-4xl md:text-5xl text-foreground leading-tight">
-              {cs.headline}
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              {cs.summary}
-            </p>
-          </div>
-        </section>
-      </GlassSection>
-
-      {/* Stats */}
-      <section className="border-b border-border">
-        <div className="grid grid-cols-1 sm:grid-cols-3">
-          {cs.stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className={`px-6 md:px-16 py-12 ${i < cs.stats.length - 1 ? "sm:border-r border-b sm:border-b-0 border-border" : ""}`}
+    <div className="flex flex-col bg-card">
+      {/* ━━━ Hero ━━━ */}
+      <section className="flex items-start relative">
+        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-12 pt-24">
+          <nav className="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-wider mb-8">
+            <Link
+              href="/case-studies"
+              className="hover:text-foreground transition-colors"
             >
-              <span className="text-4xl font-heading font-semibold text-foreground tabular-nums">
-                {stat.value}
-              </span>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+              Case Studies
+            </Link>
+            <span className="text-border">/</span>
+            <span className="text-foreground">{cs.descriptor}</span>
+          </nav>
+          <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.1] tracking-tight max-w-3xl">
+            {cs.headline}
+          </h1>
+          <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-xl">
+            {cs.summary}
+          </p>
         </div>
       </section>
 
-      {/* Content placeholder */}
-      <section className="border-b border-border">
-        <div className="px-6 md:px-16 py-20">
-          <div className="max-w-2xl">
+      {/* ━━━ Stats ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-16">
+              {cs.stats.map((stat) => (
+                <div key={stat.label}>
+                  <div className="font-serif text-[clamp(2.5rem,4vw,4rem)] text-foreground leading-none tabular-nums tracking-tight">
+                    {stat.value}
+                  </div>
+                  <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ━━━ Content ━━━ */}
+      <article className="px-4 md:px-8 pb-16 md:pb-24">
+        <div className="max-w-[1360px] mx-auto px-8 md:px-16">
+          <div className="max-w-[760px]">
             <p className="text-base text-muted-foreground leading-relaxed">
-              We&apos;re putting the finishing touches on this case study. The full story — including process, deliverables, and results — is coming soon.
+              We&apos;re putting the finishing touches on this case study. The
+              full story, including process, deliverables, and results, is
+              coming soon.
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center justify-center rounded-md bg-foreground px-4 py-1.5 text-xs font-semibold text-background transition-all"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-[13px] font-medium text-background transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
             >
               Want to learn more? Book a demo
             </Link>
           </div>
         </div>
-      </section>
+      </article>
 
-      {/* Other case studies */}
+      {/* ━━━ More case studies ━━━ */}
       {otherStudies.length > 0 && (
-        <section className="border-b border-border">
-          <div className="px-6 md:px-16 py-6 border-b border-border">
-            <span className="text-xs font-sans text-muted-foreground tracking-widest">
-              More case studies
-            </span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3">
-            {otherStudies.map((study, i) => (
-              <Link
-                key={study.slug}
-                href={`/case-studies/${study.slug}`}
-                className={`group px-6 md:px-16 py-8 hover:bg-muted/20 transition-colors ${i < otherStudies.length - 1 ? "sm:border-r border-b sm:border-b-0 border-border" : ""}`}
-              >
-                <span className="text-xs font-sans text-muted-foreground tracking-widest">
-                  {study.descriptor}
-                </span>
-                <h3 className="mt-2 font-heading font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
-                  {study.team}
-                </h3>
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed line-clamp-2">
-                  {study.headline}
-                </p>
-              </Link>
-            ))}
+        <section className="px-4 md:px-8 pb-12 md:pb-20">
+          <div className="rounded-3xl bg-card overflow-hidden">
+            <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+              <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                More case studies
+              </p>
+              <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {otherStudies.map((study) => (
+                  <li key={study.slug}>
+                    <Link
+                      href={`/case-studies/${study.slug}`}
+                      className="block group"
+                    >
+                      <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                        {study.descriptor}
+                      </p>
+                      <h3 className="mt-3 font-heading text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {study.team}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                        {study.headline}
+                      </p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
       )}
+
+      {/* ━━━ CTA ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-2xl">
+              Your team could be next.
+            </h2>
+            <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-md">
+              Book a demo and see how Shadow would work for your team and your
+              clients.
+            </p>
+            <div className="mt-10 flex flex-row gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-[13px] font-medium text-background transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Book a demo
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                See all case studies
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

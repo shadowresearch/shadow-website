@@ -2,33 +2,111 @@
 
 import { useState } from "react";
 
+interface Tier {
+  name: string;
+  unit: string;
+  monthly?: number;
+  customPrice?: string;
+  pricingNote?: string;
+  description: string;
+  features: string[];
+  cta: { label: string; href: string };
+  emphasis?: boolean;
+  hideToggle?: boolean;
+  checkColor: string;
+}
+
+const TIERS: Tier[] = [
+  {
+    name: "In-house",
+    unit: "/ month",
+    monthly: 1000,
+    checkColor: "#7489A3",
+    description:
+      "For in-house communications teams running a single brand, with full access to every capability in Shadow.",
+    features: [
+      "One client workspace",
+      "Unlimited users",
+      "Full platform access",
+      "AI agents and automation",
+      "Custom market reports",
+      "Dedicated support",
+      "Managed services",
+    ],
+    cta: { label: "Get started", href: "/contact" },
+  },
+  {
+    name: "Agency",
+    unit: "/ client / month",
+    monthly: 500,
+    checkColor: "#CC764F",
+    description:
+      "For agencies managing multiple clients. Per-client pricing decreases as you scale.",
+    features: [
+      "Unlimited client workspaces",
+      "Unlimited users",
+      "Full platform access per client",
+      "Consolidated billing",
+      "Dedicated support",
+      "Fully managed",
+      "Custom solutions",
+    ],
+    cta: { label: "Get started", href: "/contact" },
+    emphasis: true,
+  },
+  {
+    name: "Custom market reports",
+    unit: "/ report",
+    customPrice: "$50",
+    pricingNote: "Pay as you go",
+    checkColor: "#977BA1",
+    description:
+      "Daily, weekly, monthly, and on-demand narrative landscapes, competitive maps, and category reports. Custom fit and delivered to any channel.",
+    features: [
+      "Custom scope per report",
+      "Narrative graph + agent analysis",
+      "Branded final deliverable",
+      "Source-cited methodology",
+    ],
+    cta: { label: "Talk to us", href: "/contact" },
+    hideToggle: true,
+  },
+];
+
+const ANNUAL_DISCOUNT = 0.15;
+
 function BillingToggle({
   annual,
-  onToggle,
-  label,
+  onChange,
 }: {
   annual: boolean;
-  onToggle: () => void;
-  label: string;
+  onChange: (annual: boolean) => void;
 }) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="text-sm text-muted-foreground">Monthly</span>
-      <button
-        type="button"
-        onClick={onToggle}
-        className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full transition-colors ${
-          annual ? "bg-primary" : "bg-border"
-        }`}
-        aria-label={`Toggle annual billing for ${label}`}
-      >
-        <span
-          className={`pointer-events-none inline-block size-4 mt-0.5 rounded-full bg-background shadow-sm transition-transform ${
-            annual ? "translate-x-[18px]" : "translate-x-0.5"
-          }`}
-        />
-      </button>
-      <span className="text-sm text-muted-foreground">Annual</span>
+    <div className="flex items-center gap-6">
+      {[
+        { value: false, label: "Monthly" },
+        { value: true, label: "Annual" },
+      ].map((option) => {
+        const active = annual === option.value;
+        return (
+          <button
+            key={option.label}
+            type="button"
+            onClick={() => onChange(option.value)}
+            className={`text-sm pb-1 border-b transition-colors ${
+              active
+                ? "text-foreground border-foreground"
+                : "text-muted-foreground border-transparent hover:text-foreground"
+            }`}
+          >
+            {option.label}
+          </button>
+        );
+      })}
+      <span className="text-[10px] font-mono text-muted-foreground/70 tracking-widest uppercase">
+        Save 15% annually
+      </span>
     </div>
   );
 }
@@ -37,138 +115,101 @@ export function PricingTiers() {
   const [annual, setAnnual] = useState(false);
 
   return (
-    <section className="border-b border-border">
-      <div className="grid md:grid-cols-2">
-        {/* In-house */}
-        <div className="flex flex-col gap-4 px-6 md:px-16 py-16 md:border-r border-b md:border-b-0 border-border">
-          <h2 className="font-heading text-3xl font-semibold text-foreground">
-            In-house
-          </h2>
-          <p className="text-muted-foreground">
-            <span className="text-2xl font-semibold text-foreground">
-              {annual ? "$650" : "$750"}
-            </span>
-            <span className="text-sm">
-              {annual ? "/month, billed annually" : "/month"}
-            </span>
-            {annual && (
-              <span className="text-sm text-primary font-medium">
-                {" "}&middot; Save 15%
-              </span>
-            )}
-          </p>
+    <div className="flex flex-col gap-10">
+      <BillingToggle annual={annual} onChange={setAnnual} />
 
-          <BillingToggle
-            annual={annual}
-            onToggle={() => setAnnual(!annual)}
-            label="In-house"
-          />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+        {TIERS.map((tier, idx) => {
+          const showAnnual = annual && !tier.hideToggle;
+          const monthlyPrice = tier.monthly ?? 0;
+          const numericPrice = showAnnual
+            ? Math.round(monthlyPrice * (1 - ANNUAL_DISCOUNT))
+            : monthlyPrice;
+          const priceLabel = tier.customPrice ?? `$${numericPrice}`;
+          return (
+            <div
+              key={tier.name}
+              className={`flex flex-col px-8 ${
+                idx > 0 ? "md:border-l md:border-border/60" : ""
+              }`}
+            >
+              <h3 className="font-heading text-base font-semibold text-foreground">
+                {tier.name}
+              </h3>
 
-          <p className="text-base text-muted-foreground leading-relaxed">
-            For in-house communications teams managing a single brand, with full
-            access to every capability in Shadow.
-          </p>
+              <div className="mt-5 flex items-baseline gap-1.5">
+                <span className="font-serif text-3xl md:text-4xl font-medium text-foreground tracking-tight tabular-nums">
+                  {priceLabel}
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  {tier.unit}
+                </span>
+              </div>
+              {tier.pricingNote && (
+                <p className="mt-1.5 text-[10px] font-mono text-muted-foreground/80 uppercase tracking-widest">
+                  {tier.pricingNote}
+                </p>
+              )}
+              {showAnnual && !tier.pricingNote && (
+                <p className="mt-1.5 text-[10px] font-mono text-muted-foreground/80 uppercase tracking-widest">
+                  Billed annually
+                </p>
+              )}
 
-          <ul className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              One client workspace
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Unlimited users
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Full platform access
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              AI agents and automation
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Dedicated support
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Managed services
-            </li>
-          </ul>
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                {tier.description}
+              </p>
 
-          <a
-            href="/contact"
-            className="mt-4 self-start inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background transition-all"
-          >
-            Get started
-          </a>
-        </div>
+              <ul className="mt-6 flex flex-col">
+                {tier.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center gap-2.5 py-2.5 border-b border-border/40 last:border-b-0"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="inline-flex items-center justify-center shrink-0"
+                      style={{ width: 12, height: 12, color: tier.checkColor }}
+                    >
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.5 6.3L5 8.5L9.5 3.5"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span className="text-[13px] text-foreground/85">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
-        {/* Agencies */}
-        <div className="flex flex-col gap-4 px-6 md:px-16 py-16">
-          <h2 className="font-heading text-3xl font-semibold text-foreground">
-            Agencies
-          </h2>
-          <p className="text-muted-foreground">
-            <span className="text-2xl font-semibold text-foreground">
-              {annual ? "$650" : "$750"}
-            </span>
-            <span className="text-sm">
-              {annual ? "/client/month, billed annually" : "/client/month"}
-            </span>
-            {annual && (
-              <span className="text-sm text-primary font-medium">
-                {" "}&middot; Save 15%
-              </span>
-            )}
-          </p>
-
-          <BillingToggle
-            annual={annual}
-            onToggle={() => setAnnual(!annual)}
-            label="Agencies"
-          />
-
-          <p className="text-base text-muted-foreground leading-relaxed">
-            For agencies managing multiple clients. Per-client pricing decreases
-            as you scale.
-          </p>
-
-          <ul className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Unlimited users
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Full platform access per client
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Consolidated billing
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Dedicated support
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Managed services
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1.5 size-1.5 rounded-full bg-current shrink-0" />
-              Custom solutions
-            </li>
-          </ul>
-
-          <a
-            href="/contact"
-            className="mt-4 self-start inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background transition-all"
-          >
-            Get started
-          </a>
-        </div>
+              <div className="mt-auto pt-8">
+                <a
+                  href={tier.cta.href}
+                  className={`w-full inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-[12px] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${
+                    tier.emphasis
+                      ? "bg-foreground text-background"
+                      : "border border-border text-foreground hover:bg-muted/40"
+                  }`}
+                >
+                  {tier.cta.label}
+                </a>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </section>
+    </div>
   );
 }

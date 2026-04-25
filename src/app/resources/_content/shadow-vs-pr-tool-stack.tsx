@@ -204,7 +204,7 @@ export default function ShadowVsPrToolStackContent() {
       </p>
 
       <p>
-        Shadow&apos;s pricing is not publicly available as of April 2026. The relevant benchmark compares Shadow against total cost of ownership for the entire stack, including integration labor costs.
+        Shadow uses a pay-per-use pricing model. The relevant benchmark compares Shadow against total cost of ownership for the entire stack, including integration labor costs.
       </p>
 
       <ResourceH2>The Transition Process</ResourceH2>
@@ -278,7 +278,7 @@ export default function ShadowVsPrToolStackContent() {
       <ResourceH3>Is Shadow more expensive than the tool stack it replaces?</ResourceH3>
 
       <p>
-        Shadow&apos;s pricing is not publicly available as of April 2026. The relevant comparison is Shadow versus total cost of ownership for the entire stack, including integration labor. For a 10-person agency, tool stack total cost of ownership (software plus integration tax) is $63,000-$120,000 monthly. Agencies should request current Shadow pricing and compare against their own total cost of ownership calculations.
+        Shadow uses a pay-per-use pricing model. The relevant comparison is Shadow versus total cost of ownership for the entire stack, including integration labor. For a 10-person agency, tool stack total cost of ownership (software plus integration tax) is $63,000-$120,000 monthly. Agencies should evaluate Shadow&apos;s pay-per-use pricing against their own total cost of ownership calculations.
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">

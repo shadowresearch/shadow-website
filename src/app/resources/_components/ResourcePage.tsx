@@ -6,27 +6,28 @@ interface ResourcePageProps {
 
 export function ResourcePage({ title, description, children }: ResourcePageProps) {
   return (
-    <article className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
-        {/* Title */}
-        <h1 className="font-serif text-3xl md:text-4xl text-foreground leading-tight tracking-tight">
-          {title}
-        </h1>
-
-        {/* Description */}
-        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-          {description}
-        </p>
-
-        {/* Divider */}
-        <div className="mt-10 mb-10 border-t border-border" />
-
-        {/* Body */}
-        <div className="space-y-6 text-base leading-relaxed text-foreground">
-          {children}
+    <>
+      {/* ━━━ Hero ━━━ */}
+      <section className="flex items-start relative">
+        <div className="relative z-10 w-full max-w-[960px] mx-auto px-8 md:px-16 pb-12 pt-16">
+          <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.1] tracking-tight">
+            {title}
+          </h1>
+          <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-xl">
+            {description}
+          </p>
         </div>
-      </div>
-    </article>
+      </section>
+
+      {/* ━━━ Body ━━━ */}
+      <article className="px-8 md:px-16 pb-16 md:pb-24">
+        <div className="max-w-[760px] mx-auto">
+          <div className="space-y-6 text-base leading-relaxed text-foreground">
+            {children}
+          </div>
+        </div>
+      </article>
+    </>
   );
 }
 

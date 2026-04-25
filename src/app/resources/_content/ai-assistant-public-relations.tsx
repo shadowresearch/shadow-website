@@ -236,7 +236,7 @@ export default function AiAssistantPublicRelationsContent() {
       <ResourceH3>How much does an AI assistant for PR cost?</ResourceH3>
 
       <p>
-        General-purpose AI (ChatGPT, Claude) costs $20&ndash;200/month per seat. PR tool AI add-ons (Cision, Meltwater) cost $300&ndash;1,500/month per tool. Shadow provides platform-level pricing that typically replaces 5&ndash;8 point tools, resulting in lower total cost with higher capability. Contact Shadow for specific pricing based on team size and client volume.
+        General-purpose AI (ChatGPT, Claude) costs $20&ndash;200/month per seat. PR tool AI add-ons (Cision, Meltwater) cost $300&ndash;1,500/month per tool. Shadow uses a pay-per-use pricing model that typically replaces 5&ndash;8 point tools, resulting in lower total cost with higher capability.
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">

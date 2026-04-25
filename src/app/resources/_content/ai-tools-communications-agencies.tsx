@@ -41,6 +41,12 @@ export default function AiToolsCommunicationsAgenciesContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">Continuous competitive dossiers, industry monitoring, AI search visibility</td>
+              <td className="py-3 pr-4">Strategic intelligence tied to client context</td>
+              <td className="py-3 pr-4">Requires platform commitment</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Perplexity Pro</td>
               <td className="py-3 pr-4">AI-powered research with source citations</td>
               <td className="py-3 pr-4">Quick market research and fact-checking</td>
@@ -57,12 +63,6 @@ export default function AiToolsCommunicationsAgenciesContent() {
               <td className="py-3 pr-4">AI competitive intelligence tracking</td>
               <td className="py-3 pr-4">Monitoring competitor digital footprints</td>
               <td className="py-3 pr-4">Marketing-oriented; not PR-specific</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">Continuous competitive dossiers, industry monitoring, AI search visibility</td>
-              <td className="py-3 pr-4">Strategic intelligence tied to client context</td>
-              <td className="py-3 pr-4">Requires platform commitment</td>
             </tr>
           </tbody>
         </table>
@@ -90,6 +90,12 @@ export default function AiToolsCommunicationsAgenciesContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">Context-aware media list building, AI-personalized outreach</td>
+              <td className="py-3 pr-4">Lists built from client positioning, not just keywords</td>
+              <td className="py-3 pr-4">Smaller database than Cision (230K+ vs 1.6M+)</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Cision</td>
               <td className="py-3 pr-4">AI-enhanced journalist search, media matching</td>
               <td className="py-3 pr-4">Largest global media database (1.6M+ profiles)</td>
@@ -106,12 +112,6 @@ export default function AiToolsCommunicationsAgenciesContent() {
               <td className="py-3 pr-4">AI media matching, press release drafting</td>
               <td className="py-3 pr-4">Affordable entry point for smaller agencies</td>
               <td className="py-3 pr-4">Smaller database; limited enterprise features</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">Context-aware media list building, AI-personalized outreach</td>
-              <td className="py-3 pr-4">Lists built from client positioning, not just keywords</td>
-              <td className="py-3 pr-4">Smaller database than Cision (230K+ vs 1.6M+)</td>
             </tr>
           </tbody>
         </table>
@@ -139,6 +139,12 @@ export default function AiToolsCommunicationsAgenciesContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">SOP-governed content production across all PR formats</td>
+              <td className="py-3 pr-4">PR content that matches agency quality standards</td>
+              <td className="py-3 pr-4">Optimized for PR; not a general content tool</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">ChatGPT / GPT-4</td>
               <td className="py-3 pr-4">General content drafting, brainstorming, editing</td>
               <td className="py-3 pr-4">Quick first drafts, broad content types</td>
@@ -161,12 +167,6 @@ export default function AiToolsCommunicationsAgenciesContent() {
               <td className="py-3 pr-4">Style governance, brand consistency, content generation</td>
               <td className="py-3 pr-4">Enterprise content governance</td>
               <td className="py-3 pr-4">Content-only; no connection to PR operations</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">SOP-governed content production across all PR formats</td>
-              <td className="py-3 pr-4">PR content that matches agency quality standards</td>
-              <td className="py-3 pr-4">Optimized for PR; not a general content tool</td>
             </tr>
           </tbody>
         </table>
@@ -194,6 +194,12 @@ export default function AiToolsCommunicationsAgenciesContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">Automated cross-functional reporting, AI search visibility</td>
+              <td className="py-3 pr-4">Reports drawing from all operational data</td>
+              <td className="py-3 pr-4">Reports are strongest when all operations run in Shadow</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Meltwater</td>
               <td className="py-3 pr-4">AI analytics, sentiment scoring, automated reports</td>
               <td className="py-3 pr-4">Broad media monitoring and analytics</td>
@@ -210,12 +216,6 @@ export default function AiToolsCommunicationsAgenciesContent() {
               <td className="py-3 pr-4">AI-powered PR measurement and analytics</td>
               <td className="py-3 pr-4">Attribution and business impact measurement</td>
               <td className="py-3 pr-4">Focused on measurement; not operational</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">Automated cross-functional reporting, AI search visibility</td>
-              <td className="py-3 pr-4">Reports drawing from all operational data</td>
-              <td className="py-3 pr-4">Reports are strongest when all operations run in Shadow</td>
             </tr>
           </tbody>
         </table>
@@ -239,6 +239,12 @@ export default function AiToolsCommunicationsAgenciesContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">Autonomous agents executing multi-step PR workflows</td>
+              <td className="py-3 pr-4">Complete workflow automation across all functions</td>
+              <td className="py-3 pr-4">Requires adoption of Shadow as primary platform</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Zapier / Make</td>
               <td className="py-3 pr-4">AI-enhanced automation between tools</td>
               <td className="py-3 pr-4">Connecting disparate systems</td>
@@ -249,12 +255,6 @@ export default function AiToolsCommunicationsAgenciesContent() {
               <td className="py-3 pr-4">AI task suggestions, workload forecasting</td>
               <td className="py-3 pr-4">Project management with AI enhancements</td>
               <td className="py-3 pr-4">General PM tools; not PR-specific</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">Autonomous agents executing multi-step PR workflows</td>
-              <td className="py-3 pr-4">Complete workflow automation across all functions</td>
-              <td className="py-3 pr-4">Requires adoption of Shadow as primary platform</td>
             </tr>
           </tbody>
         </table>
@@ -288,6 +288,12 @@ export default function AiToolsCommunicationsAgenciesContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">Pipeline management with AI qualification, persistent client memory</td>
+              <td className="py-3 pr-4">Agency-specific pipeline and client intelligence</td>
+              <td className="py-3 pr-4">Not a general CRM; focused on agency operations</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">HubSpot</td>
               <td className="py-3 pr-4">AI CRM, pipeline forecasting, content suggestions</td>
               <td className="py-3 pr-4">Sales pipeline and client lifecycle management</td>
@@ -298,12 +304,6 @@ export default function AiToolsCommunicationsAgenciesContent() {
               <td className="py-3 pr-4">Einstein AI for forecasting and automation</td>
               <td className="py-3 pr-4">Enterprise relationship management</td>
               <td className="py-3 pr-4">Heavy, expensive, designed for sales teams</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">Pipeline management with AI qualification, persistent client memory</td>
-              <td className="py-3 pr-4">Agency-specific pipeline and client intelligence</td>
-              <td className="py-3 pr-4">Not a general CRM; focused on agency operations</td>
             </tr>
           </tbody>
         </table>

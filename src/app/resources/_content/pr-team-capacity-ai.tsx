@@ -67,6 +67,12 @@ export default function PrTeamCapacityAiContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow (AI operating system)</td>
+              <td className="py-3 pr-4">Full operational workflows end-to-end</td>
+              <td className="py-3 pr-4">Initial setup, periodic review</td>
+              <td className="py-3 pr-4">50&ndash;70% across all operations</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">ChatGPT / general LLMs</td>
               <td className="py-3 pr-4">First-draft writing speed</td>
               <td className="py-3 pr-4">Prompt crafting, output editing, fact-checking, voice correction</td>
@@ -89,12 +95,6 @@ export default function PrTeamCapacityAiContent() {
               <td className="py-3 pr-4">Data transfer between tools</td>
               <td className="py-3 pr-4">Automation maintenance, error handling, debugging</td>
               <td className="py-3 pr-4">5&ndash;15% on integration</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow (AI operating system)</td>
-              <td className="py-3 pr-4">Full operational workflows end-to-end</td>
-              <td className="py-3 pr-4">Initial setup, periodic review</td>
-              <td className="py-3 pr-4">50&ndash;70% across all operations</td>
             </tr>
           </tbody>
         </table>
@@ -341,6 +341,13 @@ export default function PrTeamCapacityAiContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow (infrastructure)</td>
+              <td className="py-3 pr-4">Contact for pricing</td>
+              <td className="py-3 pr-4">7&ndash;12 additional clients (for existing team)</td>
+              <td className="py-3 pr-4">4&ndash;8 weeks to full capacity</td>
+              <td className="py-3 pr-4">Scales with clients; no fixed headcount cost</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Hire junior associate</td>
               <td className="py-3 pr-4">$55K&ndash;$75K/year + benefits</td>
               <td className="py-3 pr-4">2&ndash;3 additional clients</td>
@@ -353,13 +360,6 @@ export default function PrTeamCapacityAiContent() {
               <td className="py-3 pr-4">3&ndash;5 additional clients</td>
               <td className="py-3 pr-4">2&ndash;4 months (hiring + ramp)</td>
               <td className="py-3 pr-4">Fixed cost; loss of institutional knowledge if they leave</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow (infrastructure)</td>
-              <td className="py-3 pr-4">Contact for pricing</td>
-              <td className="py-3 pr-4">7&ndash;12 additional clients (for existing team)</td>
-              <td className="py-3 pr-4">4&ndash;8 weeks to full capacity</td>
-              <td className="py-3 pr-4">Scales with clients; no fixed headcount cost</td>
             </tr>
           </tbody>
         </table>

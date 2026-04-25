@@ -2,603 +2,498 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { AgentFeed } from "./_components/AgentFeed";
+import { EconomicsTable } from "./_components/EconomicsTable";
+import { ExpandingCallout } from "./_components/ExpandingCallout";
+import { ProgramFeed } from "./_components/ProgramFeed";
+import { ScrollRevealList } from "./_components/ScrollRevealList";
+import { ScrollRevealRowsHorizontal } from "./_components/ScrollRevealRowsHorizontal";
 
 export const metadata: Metadata = {
-  title: "Shadow | The Operating System for Communications Teams",
+  title:
+    "Shadow | Narrative Intelligence and Program Execution for Communications",
   description:
-    "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
-  alternates: {
-    canonical: "/",
-  },
+    "Shadow is a narrative intelligence platform built on real-time data across media, search, social, and AI. AI agents identify the positions you can own and help run the programs that take them.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Shadow | The Operating System for Communications Teams",
+    title:
+      "Shadow | Narrative Intelligence and Program Execution for Communications",
     description:
-      "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
+      "Shadow is a narrative intelligence platform built on real-time data across media, search, social, and AI. AI agents identify the positions you can own and help run the programs that take them.",
     type: "website",
     siteName: "Shadow",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shadow | The Operating System for Communications Teams",
+    title:
+      "Shadow | Narrative Intelligence and Program Execution for Communications",
     description:
-      "Shadow is the AI operating system for PR and communications teams. Research, strategy, content, media, and pipeline in one platform.",
+      "A narrative intelligence platform built on real-time data across media, search, social, and AI.",
   },
 };
 
-/* ── Data ──────────────────────────────────────────────────────────── */
-
-const layers = [
+const LAYER_CHIPS = [
   {
-    title: "Research & Intelligence",
-    description:
-      "200K+ news sources, journalist profiles, keyword intelligence, GEO audits, and competitive monitoring — all continuously updated.",
-    href: "/intelligence",
+    label: "Media",
+    color: "#977BA1",
+    body:
+      "Coverage volume, sentiment, share of voice, journalist activity, competitive positioning across 200,000+ sources.",
   },
   {
-    title: "Strategy & Positioning",
-    description:
-      "Master messaging frameworks, strategic positioning, and GTM strategies grounded in real market data and competitive context.",
-    href: "/content",
+    label: "Search",
+    color: "#7489A3",
+    body:
+      "Keyword demand, ranking positions, content gaps, commercial intent signals, competitor footprint.",
   },
   {
-    title: "Content Production",
-    description:
-      "Press releases, pitches, website copy, awards submissions, and executive thought leadership — governed by client SOPs.",
-    href: "/content",
+    label: "Social",
+    color: "#88A374",
+    body:
+      "Conversation patterns, audience signals, community sentiment, emerging narratives.",
   },
   {
-    title: "Media & Outreach",
-    description:
-      "230K+ journalist profiles with beat matching, outlet intelligence, coverage tracking, and story clustering.",
-    href: "/media",
-  },
-  {
-    title: "Pipeline & Operations",
-    description:
-      "Client onboarding, proposals, agreements, invoicing, and the full inbound pipeline — managed end-to-end.",
-    href: "/pipeline",
-  },
-  {
-    title: "Autonomous agents",
-    description:
-      "Pre-built comms agents ready to go. Inbound triage, daily media digests, weekly market scans, coverage reports, intelligence dossiers, and more.",
-    href: "/pipeline",
+    label: "AI",
+    color: "#CC764F",
+    body:
+      "LLM citations, AI search visibility, prompt-level brand presence across ChatGPT, Claude, Gemini, and Perplexity.",
   },
 ];
 
-const replacedTools = [
-  "Google Alerts",
-  "Prezly",
-  "Custom scripts",
-  "Google Sheets",
-  "Notion",
-  "Slack bots",
-  "Semrush",
-  "Coverage books",
-  "Ahrefs",
-  "Brandwatch",
-  "Cision",
-  "HubSpot",
-  "Prowly",
-  "Muck Rack",
-  "Meltwater",
-  "ChatGPT",
+const PROGRAM_MODES = [
+  "Proposals and strategic briefs",
+  "Media relations and press materials",
+  "SEO content and keyword strategy",
+  "GEO content and AI visibility",
+  "Social and owned content",
+  "Thought leadership and ghostwriting",
+  "Awards and events applications",
+  "Market reports and competitive analysis",
 ];
 
-/* ── Page ──────────────────────────────────────────────────────────── */
+const READING_AGENTS = [
+  {
+    name: "Researchers",
+    body:
+      "Scan media, search, social, and AI data continuously and surface signals before they become obvious.",
+  },
+  {
+    name: "Analysts",
+    body:
+      "Interpret patterns, track narrative cycles, score the positions, and map competitive movement.",
+  },
+];
+
+const WRITING_AGENTS = [
+  {
+    name: "Strategists",
+    body:
+      "Co-author positioning, work with you to build the frameworks, and help define the narrative territory you want to own.",
+  },
+  {
+    name: "Planners",
+    body:
+      "Structure programs, map timelines, allocate effort across channels and audiences.",
+  },
+  {
+    name: "Writers",
+    body:
+      "Produce the work: press materials, thought leadership, GEO content, proposals, briefs.",
+  },
+  {
+    name: "Reporters",
+    body:
+      "Track performance, compile measurement, prove impact, and surface what's working.",
+  },
+];
+
+const INTEGRATIONS = [
+  "Slack",
+  "Gmail and Outlook",
+  "Google Drive and OneDrive",
+  "LinkedIn",
+  "Google Analytics",
+  "Facebook",
+  "Custom integrations",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-card">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
+            "@id": "https://shadow.inc/#software",
             name: "Shadow",
-            description: "The AI operating system for PR and communications teams.",
+            alternateName: "Shadow Narrative Intelligence Platform",
+            description:
+              "Shadow is a narrative intelligence platform built on real-time data across media, search, social, and AI. AI agents identify the positions you can own and help run the programs that take them.",
             applicationCategory: "BusinessApplication",
+            applicationSubCategory: "Narrative Intelligence Platform",
             operatingSystem: "Web",
             url: "https://shadow.inc",
+            image: "https://shadow.inc/logo2.svg",
+            brand: {
+              "@type": "Brand",
+              name: "Shadow",
+              slogan:
+                "Narrative intelligence and program execution powered by AI agents.",
+            },
+            publisher: { "@id": "https://shadow.inc/#organization" },
             offers: {
               "@type": "Offer",
-              price: "0",
+              url: "https://shadow.inc/pricing",
               priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
             },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              ratingCount: "27",
-              bestRating: "5",
-              worstRating: "1",
+            audience: {
+              "@type": "Audience",
+              audienceType: "Communications teams and agencies",
             },
+            featureList: [
+              "Narrative graph across media, search, social, and AI",
+              "AI agents for research, analysis, strategy, planning, writing, and reporting",
+              "Program execution: proposals, media relations, SEO, GEO, thought leadership",
+              "Operate: intake, dossiers, staffing, and pipeline",
+            ],
           }),
         }}
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 flex justify-center items-center pointer-events-none">
-          <img
+      {/* ━━━ Hero ━━━ */}
+      <section className="flex items-start relative">
+        <div className="absolute inset-0 -z-0" aria-hidden="true">
+          <Image
             src="/smoke.svg"
             alt=""
-            className="w-auto max-w-none opacity-40"
-            style={{ transform: "translateX(25%) scale(1.1)" }}
+            fill
+            className="object-cover opacity-[0.06]"
+            priority
+            role="presentation"
           />
         </div>
-        <div className="backdrop-blur-xl bg-background/50 py-28 md:py-36 px-6 md:px-16">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:gap-16">
-            {/* Left — copy + CTAs */}
-            <div className="flex flex-col flex-1 min-w-0">
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] text-foreground leading-tight tracking-tight">
-                AI agents for PR and communications
-              </h1>
-
-              <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed max-w-md">
-                Replace your tools stack with agents that research, write, pitch, track
-                coverage, and manage your pipeline across every client.
-              </p>
-
-              <div className="mt-8 flex flex-row gap-3">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-1.5 text-xs font-semibold text-background transition-all"
+        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-16 pt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] gap-x-10 lg:gap-x-20 gap-y-8 lg:gap-y-10 items-end">
+            <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight">
+              <span className="block whitespace-nowrap">
+                <Link
+                  href="/narrative-intelligence"
+                  className="underline underline-offset-[0.18em] decoration-[0.08em] hover:decoration-primary transition-colors"
                 >
-                  Book a demo
-                </a>
-                <a
-                  href="#how-it-works"
-                  className="inline-flex items-center justify-center rounded-md border border-border px-4 py-1.5 text-xs font-medium text-foreground hover:bg-muted/20 transition-colors"
+                  Narrative intelligence
+                </Link>
+              </span>
+              <span className="block whitespace-nowrap">
+                and{" "}
+                <Link
+                  href="/program-execution"
+                  className="underline underline-offset-[0.18em] decoration-[0.08em] hover:decoration-primary transition-colors"
                 >
-                  Learn more
-                </a>
-              </div>
-            </div>
+                  program execution
+                </Link>
+              </span>
+              <span className="block whitespace-nowrap">
+                powered by{" "}
+                <Link
+                  href="/ai-agents"
+                  className="underline underline-offset-[0.18em] decoration-[0.08em] hover:decoration-primary transition-colors"
+                >
+                  AI agents
+                </Link>
+              </span>
+            </h1>
 
-            {/* Right — Agent activity stream */}
-            <div className="mt-12 md:mt-0 md:w-[380px] md:shrink-0">
-              <AgentFeed />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust bar */}
-      <section className="border-t border-border">
-        <p className="text-center text-sm text-muted-foreground py-4 border-b border-border">
-          Trusted by the teams that brought you
-        </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-          {[
-            { name: "HubSpot", file: "hubspot-1.svg" },
-            { name: "Amazon", file: "amazon-1.svg" },
-            { name: "Lovable", file: "lovable-1.svg" },
-            { name: "Roblox", file: "roblox-1.svg" },
-            { name: "Etsy", file: "etsy-1.svg" },
-            { name: "SoftBank", file: "softbank-1.svg" },
-            { name: "Airbnb", file: "airbnb-1.svg" },
-            { name: "OpenAI", file: "openai-1.svg" },
-            { name: "Netflix", file: "netflix-1.svg" },
-            { name: "Harness", file: "harness-1.svg" },
-          ].map((logo) => (
-            <div
-              key={logo.name}
-              className="flex items-center justify-center py-6 px-4 border-b border-r border-border"
-            >
-              <Image
-                src={`/logos/${logo.file}`}
-                alt={logo.name}
-                width={120}
-                height={28}
-                className={`w-auto h-auto object-contain grayscale opacity-50 ${logo.name === "Roblox" ? "max-h-7 max-w-24" : "max-h-5 max-w-20"}`}
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Product depth — six layers with vignettes */}
-      <section>
-        <div className="text-center px-6 md:px-16 py-16">
-          <span className="text-xs font-sans text-primary tracking-widest">
-            Product
-          </span>
-          <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
-            Six operational layers. One system.
-          </h2>
-          <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Shadow isn&apos;t a feature. It&apos;s a complete operating layer that runs
-            across research, strategy, content, media, pipeline, and autonomous
-            execution.
-          </p>
-        </div>
-
-        <div>
-          {[layers.slice(0, 3), layers.slice(3, 6)].map((row, rowIdx) => (
-            <div key={rowIdx} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {row.map((layer, colIdx) => {
-                const globalIdx = rowIdx * 3 + colIdx;
-                return (
-                  <Link
-                    key={layer.title}
-                    href={layer.href}
-                    className="group p-6 hover:bg-muted/20 transition-colors border-b border-r border-border"
-                  >
-                    <h3 className="font-heading font-semibold text-base text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {layer.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      {layer.description}
-                    </p>
-                    <LayerVignette index={globalIdx} />
-                  </Link>
-                );
-              })}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section id="how-it-works" className="border-t border-border">
-        <div className="text-center px-6 md:px-16 py-16">
-          <span className="text-xs font-sans text-primary tracking-widest">
-            How it works
-          </span>
-          <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
-            Built for the way comms teams actually work
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-border">
-          {/* Step 1: Client-first */}
-          <div className="flex flex-col p-8 border-b lg:border-b-0 lg:border-r border-border">
-            <span className="font-mono text-4xl font-light text-border">01</span>
-            <h3 className="font-heading font-semibold text-lg text-foreground mt-4">
-              Client-first
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mt-2 mb-6">
-              Every client gets a dedicated workspace. Their brand voice,
-              positioning, competitors, coverage, and strategic context all in
-              one place.
+            <p className="text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7]">
+              Shadow is a narrative intelligence platform built on real-time
+              data across media, search, social, and AI. AI agents identify the
+              positions you can own and help run the programs that take them.
             </p>
-            {/* Client workspace vignette */}
-            <div className="mt-auto rounded-lg border border-border bg-card/60 overflow-hidden">
-              <div className="px-3 py-2 border-b border-border/50">
-                <span className="text-[10px] font-medium text-muted-foreground">Workspaces</span>
-              </div>
+
+            {/* Logos */}
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
               {[
-                { name: "Lovable", cat: "Developer Tools", status: "Active", dot: "bg-green-500" },
-                { name: "OpenAI", cat: "AI / Foundation", status: "Active", dot: "bg-green-500" },
-                { name: "Whop", cat: "Creator Economy", status: "Active", dot: "bg-green-500" },
-                { name: "Nova Labs", cat: "Biotech", status: "Onboarding", dot: "bg-blue-500" },
-              ].map((c, i) => (
-                <div
-                  key={c.name}
-                  className={`flex items-center gap-2.5 px-3 py-2 ${i > 0 ? "border-t border-border/30" : ""} ${i === 0 ? "bg-muted/30" : ""}`}
-                >
-                  <div className="w-5 h-5 rounded bg-muted border border-border flex items-center justify-center shrink-0">
-                    <span className="text-[8px] font-bold text-muted-foreground">
-                      {c.name[0]}
-                    </span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <span className="text-[11px] font-medium text-foreground">{c.name}</span>
-                    <span className="text-[9px] text-muted-foreground ml-1.5">{c.cat}</span>
-                  </div>
-                  <div className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
-                </div>
+                { name: "HubSpot", file: "hubspot-1.svg" },
+                { name: "Amazon", file: "amazon-1.svg" },
+                { name: "Lovable", file: "lovable-1.svg" },
+                { name: "OpenAI", file: "openai-1.svg" },
+                { name: "Netflix", file: "netflix-1.svg" },
+                { name: "Airbnb", file: "airbnb-1.svg" },
+                { name: "Roblox", file: "roblox-1.svg" },
+                { name: "Etsy", file: "etsy-1.svg" },
+              ].map((logo) => (
+                <Image
+                  key={logo.name}
+                  src={`/logos/${logo.file}`}
+                  alt={logo.name}
+                  width={80}
+                  height={20}
+                  loading="lazy"
+                  className={`w-auto h-auto object-contain opacity-40 ${
+                    logo.name === "Roblox" ? "max-h-5 max-w-16" : "max-h-3.5 max-w-14"
+                  }`}
+                />
               ))}
             </div>
-          </div>
 
-          {/* Step 2: Methodology-led */}
-          <div className="flex flex-col p-8 border-b lg:border-b-0 lg:border-r border-border">
-            <span className="font-mono text-4xl font-light text-border">02</span>
-            <h3 className="font-heading font-semibold text-lg text-foreground mt-4">
-              Methodology-led
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mt-2 mb-6">
-              Standard operating procedures are encoded into your agents for
-              every workflow. Shadow follows your methodology and style so every
-              output is on-brand.
-            </p>
-            {/* SOP execution vignette */}
-            <div className="mt-auto rounded-lg border border-border bg-card/60 overflow-hidden">
-              <div className="px-3 py-2 border-b border-border/50 flex items-center gap-2">
-                <span className="text-[10px] font-mono text-muted-foreground bg-muted px-1.5 py-0.5 rounded border border-border">
-                  SOP: Press Release
-                </span>
+            {/* CTAs */}
+            <div className="flex flex-row gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-[13px] font-medium text-background transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                See how it works
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Talk to us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ━━━ Narrative Graph (dark; card → full-bleed on scroll) ━━━ */}
+      <section>
+        <ExpandingCallout>
+          <div className="relative max-w-[1360px] mx-auto px-6 md:px-10 py-12 md:py-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+              {/* Left: copy */}
+              <div className="lg:sticky lg:top-28">
+                <h2 className="font-serif text-[clamp(2rem,3.6vw,3.25rem)] text-background leading-[1.08] tracking-tight">
+                  The narrative graph.
+                </h2>
+                <p className="mt-6 text-base text-background/60 leading-relaxed max-w-md">
+                  Most platforms give you one view: media coverage, or search
+                  data, or social mentions, or AI citations. Shadow blends all
+                  four into a single, real-time narrative graph.
+                </p>
+                <p className="mt-4 text-base text-background/60 leading-relaxed max-w-md">
+                  The graph tracks how stories move across channels, which
+                  positions are forming, where competitors are gaining ground,
+                  and which narratives are about to break. It doesn&apos;t just
+                  monitor what happened. It shows what&apos;s available to own.
+                </p>
+                <Link
+                  href="/narrative-intelligence"
+                  className="mt-8 inline-flex items-center gap-2 text-sm text-background hover:text-background/75 transition-colors border-b border-background/30 hover:border-background/60 pb-1 w-fit"
+                >
+                  Explore Narrative Intelligence
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
-              <div className="px-3 py-2.5 flex flex-col gap-2">
-                {[
-                  { step: "Load client voice & messaging", done: true },
-                  { step: "Pull latest coverage context", done: true },
-                  { step: "Draft in AP style, 400–600 words", done: true },
-                  { step: "Include 2 approved exec quotes", active: true },
-                  { step: "Add boilerplate & media contact", done: false },
-                ].map((s, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center shrink-0 ${
-                      s.done
-                        ? "bg-foreground border-foreground"
-                        : s.active
-                          ? "border-primary bg-primary/10"
-                          : "border-border"
-                    }`}>
-                      {s.done && (
-                        <svg width="7" height="6" viewBox="0 0 7 6" fill="none">
-                          <path d="M1 3L2.5 4.5L6 1" stroke="var(--color-background)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      )}
-                      {s.active && (
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      )}
-                    </div>
-                    <span className={`text-[11px] ${
-                      s.done
-                        ? "text-muted-foreground"
-                        : s.active
-                          ? "text-foreground font-medium"
-                          : "text-muted-foreground/50"
-                    }`}>
-                      {s.step}
-                    </span>
+
+              {/* Right: layer chips */}
+              <div className="flex flex-col gap-6">
+                {LAYER_CHIPS.map((chip) => (
+                  <div
+                    key={chip.label}
+                    className="pl-6 py-2"
+                    style={{ borderLeft: `6px solid ${chip.color}` }}
+                  >
+                    <p className="font-heading text-lg font-semibold text-background">
+                      {chip.label}
+                    </p>
+                    <p className="mt-2 text-sm md:text-[15px] text-background/60 leading-relaxed">
+                      {chip.body}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
+        </ExpandingCallout>
+      </section>
 
-          {/* Step 3: Proactive & Continuous */}
-          <div className="flex flex-col p-8">
-            <span className="font-mono text-4xl font-light text-border">03</span>
-            <h3 className="font-heading font-semibold text-lg text-foreground mt-4">
-              Proactive & Continuous
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mt-2 mb-6">
-              Shadow runs continuously in the background. Surfacing news,
-              scanning competitors, generating content, and flagging
-              opportunities without being asked.
-            </p>
-            {/* Autonomous agent feed vignette */}
-            <div className="mt-auto rounded-lg border border-border bg-card/60 overflow-hidden">
-              <div className="px-3 py-2 border-b border-border/50 flex items-center justify-between">
-                <span className="text-[10px] font-medium text-muted-foreground">Agent Activity</span>
-                <span className="text-[9px] text-muted-foreground/50">Today</span>
-              </div>
-              {[
-                { time: "6:00 AM", action: "Daily media scan completed", detail: "12 relevant articles across 3 clients", color: "#7489A3" },
-                { time: "6:15 AM", action: "Coverage alert", detail: "TechCrunch mentioned Lovable in AI dev tools roundup", color: "#B27A53" },
-                { time: "7:30 AM", action: "Competitor signal", detail: "Rival raised Series B — briefing drafted", color: "#977BA1" },
-                { time: "8:00 AM", action: "Weekly report generated", detail: "Whop coverage summary ready for review", color: "#BF8440" },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className={`px-3 py-2 flex items-start gap-2.5 ${i > 0 ? "border-t border-border/30" : ""}`}
+      {/* ━━━ Program Execution ━━━ */}
+      <section className="px-4 md:px-8 pt-12 md:pt-24 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
+                  From position to program.
+                </h2>
+                <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-md">
+                  Narrative intelligence is only valuable if you can act on it.
+                  Shadow&apos;s program execution layer is where positioning
+                  becomes work: proposals drafted from live competitive data,
+                  media relations grounded in who&apos;s actually covering the
+                  conversation, SEO and GEO content written to the positions
+                  the graph identified, and thought leadership that speaks to
+                  what audiences are searching for right now.
+                </p>
+                <Link
+                  href="/program-execution"
+                  className="mt-8 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
                 >
-                  <span className="text-[9px] text-muted-foreground/50 tabular-nums pt-0.5 shrink-0 w-12">
-                    {item.time}
-                  </span>
-                  <div
-                    className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5"
-                    style={{ backgroundColor: item.color }}
-                  />
-                  <div className="flex-1 min-w-0">
-                    <span className="text-[11px] text-foreground">{item.action}</span>
-                    <p className="text-[10px] text-muted-foreground mt-0.5 leading-snug">
-                      {item.detail}
-                    </p>
-                  </div>
+                  Explore Program Execution
+                  <span aria-hidden="true">→</span>
+                </Link>
+                <div className="mt-12">
+                  <ProgramFeed />
                 </div>
-              ))}
+              </div>
+              <ScrollRevealList items={PROGRAM_MODES} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Architecture — replace the stack */}
-      <section className="border-t border-border">
-        <div className="grid md:grid-cols-2">
-            <div className="p-8 border-r border-border">
-              <span className="text-xs font-sans text-primary tracking-widest">
-                Consolidation
-              </span>
-              <h2 className="mt-3 font-serif text-4xl text-foreground leading-tight">
-                Replace the stack.
-                <br />
-                Not another tool in it.
-              </h2>
-              <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-                The average PR agency runs on 8–12 disconnected tools. Shadow
-                replaces the research platforms, the content tools, the media
-                databases, and the operations spreadsheets — unified under one
-                system that has context on every client and every campaign.
-              </p>
-              <a
-                href="/contact"
-                className="mt-8 inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
-              >
-                See Shadow in action
-              </a>
-            </div>
-
-            <div className="flex flex-col justify-end relative">
-              {(() => {
-                const rows: string[][] = [];
-                for (let i = 0; i < replacedTools.length; i += 2) {
-                  rows.push(replacedTools.slice(i, i + 2));
-                }
-                const totalRows = rows.length;
-                return rows.map((row, rowIdx) => (
+      {/* ━━━ AI Agents ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div className="lg:sticky lg:top-28">
+                <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
+                  Your always-on narrative team.
+                </h2>
+                <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-md">
+                  Shadow gives you a team of specialised AI agents, each with a
+                  defined role in the narrative craft. Some read from the
+                  world. Others write to it. Together, they form a persistent
+                  narrative team that operates as an extension of your team.
+                </p>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-md">
+                  Every agent is governed by your methodology, your voice, and
+                  your quality standards. They don&apos;t start from scratch.
+                  They start from how your best people think.
+                </p>
+                <Link
+                  href="/ai-agents"
+                  className="mt-8 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
+                >
+                  Explore AI Agents
+                  <span aria-hidden="true">→</span>
+                </Link>
+                <div className="mt-12">
+                  <AgentFeed />
+                </div>
+              </div>
+              <ScrollRevealRowsHorizontal
+                rows={[...READING_AGENTS, ...WRITING_AGENTS].map((agent) => (
                   <div
-                    key={rowIdx}
-                    className={`grid grid-cols-2 ${rowIdx < totalRows - 1 ? "border-b border-border" : ""}`}
-                    style={{
-                      opacity: 0.15 + (rowIdx / totalRows) * 0.85,
-                      filter: `blur(${Math.max(0, (1 - rowIdx / totalRows) * 2.5)}px)`,
-                    }}
+                    key={agent.name}
+                    className="grid grid-cols-[minmax(0,140px)_minmax(0,1fr)] gap-6 items-baseline border-b border-border py-5"
                   >
-                    {row.map((tool, colIdx) => (
-                      <div
-                        key={tool}
-                        className={`px-4 py-3 text-sm font-semibold text-muted-foreground line-through decoration-2 decoration-muted-foreground/60 ${colIdx === 0 ? "border-r border-border" : ""}`}
-                      >
-                        {tool}
-                      </div>
-                    ))}
+                    <span className="text-sm font-heading font-semibold text-foreground">
+                      {agent.name}
+                    </span>
+                    <span className="text-sm text-muted-foreground leading-relaxed">
+                      {agent.body}
+                    </span>
                   </div>
-                ));
-              })()}
-              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+                ))}
+              />
             </div>
+          </div>
         </div>
       </section>
 
-      {/* Closing CTA */}
-      <section className="py-24 px-6 border-t border-border">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight max-w-3xl mx-auto">
-            Your team sets the direction. Shadow does the work.
-          </h2>
-          <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            From the first brief to the final report — Shadow handles the
-            research, the drafts, the monitoring, and the admin.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-xs font-semibold text-background  transition-all"
-            >
-              Book a demo
-            </a>
-            <a
-              href="/case-studies"
-              className="inline-flex items-center justify-center rounded-md border border-border px-4 py-1.5 text-xs font-medium text-foreground hover:bg-muted/20 transition-colors"
-            >
-              See who runs on Shadow
-            </a>
+      {/* ━━━ Economics ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
+                  A structural change that unlocks new economics for communications teams.
+                </h2>
+                <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-md">
+                  When narrative intelligence runs continuously and program
+                  execution is handled by a dedicated agent team, the way
+                  communications teams work transforms. Not incrementally. Structurally.
+                </p>
+                <Link
+                  href="/operate"
+                  className="mt-8 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
+                >
+                  Explore Operate
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+              <EconomicsTable />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ━━━ Fully managed. Fully connected. ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
+                  Fully managed. Fully connected.
+                </h2>
+                <Link
+                  href="/pricing"
+                  className="mt-8 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
+                >
+                  Explore pricing
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+              <div className="flex flex-col gap-8">
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
+                  Shadow is not another platform your team has to learn. Every
+                  deployment comes with a dedicated Shadow team that handles
+                  setup, agent configuration, ongoing optimisation, and system
+                  maintenance. Your methodology and voice are governed by
+                  setup and enforced automatically from that point forward.
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
+                  Shadow connects to the tools your team already runs on.
+                  Agents read, write, and operate across your entire stack.
+                </p>
+                <ul className="flex flex-wrap gap-3">
+                  {INTEGRATIONS.map((integration) => (
+                    <li
+                      key={integration}
+                      className="border border-border rounded-full px-4 py-2 text-sm text-foreground"
+                    >
+                      {integration}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ━━━ Closing CTA ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-3xl">
+              Narrative intelligence changes what your team can see.
+            </h2>
+            <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-md">
+              When you see the full picture, you stop reacting and start
+              positioning. That&apos;s the difference.
+            </p>
+            <div className="mt-10 flex flex-row gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-[13px] font-medium text-background transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Get in touch
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                See who runs on Shadow
+              </Link>
+            </div>
           </div>
         </div>
       </section>
     </div>
   );
-}
-
-/* ── Layer vignettes ───────────────────────────────────────────────── */
-
-function LayerVignette({ index }: { index: number }) {
-  switch (index) {
-    case 0: // Research & Intelligence
-      return (
-        <div className="flex flex-col gap-1.5 mt-1">
-          {[
-            { source: "TechCrunch", title: "AI dev tools market heats up as startups raise..." },
-            { source: "Wired", title: "The companies racing to build AI-native..." },
-            { source: "Bloomberg", title: "Enterprise AI spending tops $180B in..." },
-          ].map((a) => (
-            <div key={a.source} className="flex items-center gap-2">
-              <span className="text-[9px] font-mono text-primary/70 bg-primary/5 px-1 py-0.5 rounded shrink-0">
-                {a.source}
-              </span>
-              <span className="text-[10px] text-muted-foreground/60 truncate">
-                {a.title}
-              </span>
-            </div>
-          ))}
-        </div>
-      );
-    case 1: // Strategy & Positioning
-      return (
-        <div className="flex flex-col gap-1 mt-1">
-          <div className="flex items-center gap-2">
-            <div className="h-px flex-1 bg-border" />
-            <span className="text-[9px] text-muted-foreground/50">Positioning</span>
-            <div className="h-px flex-1 bg-border" />
-          </div>
-          <div className="grid grid-cols-2 gap-1">
-            {["Category leader", "Differentiation", "Key narratives", "Proof points"].map((s) => (
-              <div key={s} className="text-[9px] text-muted-foreground/50 bg-muted/30 rounded px-1.5 py-1 text-center">
-                {s}
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    case 2: // Content Production
-      return (
-        <div className="flex flex-col gap-1.5 mt-1">
-          {[
-            { title: "Series B Press Release", status: "Draft", color: "text-amber-600" },
-            { title: "Q2 Thought Leadership", status: "Review", color: "text-blue-600" },
-            { title: "Awards Submission — TechCrunch", status: "Final", color: "text-green-600" },
-          ].map((d) => (
-            <div key={d.title} className="flex items-center justify-between gap-2">
-              <span className="text-[10px] text-muted-foreground/60 truncate">{d.title}</span>
-              <span className={`text-[8px] font-mono ${d.color} opacity-60 shrink-0`}>{d.status}</span>
-            </div>
-          ))}
-        </div>
-      );
-    case 3: // Media & Outreach
-      return (
-        <div className="flex flex-col gap-1.5 mt-1">
-          {[
-            { name: "K. Robison", outlet: "The Verge", beat: "Tech" },
-            { name: "C. Metz", outlet: "NYT", beat: "AI" },
-            { name: "D. Coldewey", outlet: "TC", beat: "Startups" },
-          ].map((j) => (
-            <div key={j.name} className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded-full bg-muted border border-border flex items-center justify-center shrink-0">
-                <span className="text-[7px] font-bold text-muted-foreground">{j.name[0]}</span>
-              </div>
-              <span className="text-[10px] text-muted-foreground/60">{j.name}</span>
-              <span className="text-[9px] text-muted-foreground/40">{j.outlet}</span>
-              <span className="text-[8px] font-mono text-primary/40 ml-auto">{j.beat}</span>
-            </div>
-          ))}
-        </div>
-      );
-    case 4: // Pipeline & Operations
-      return (
-        <div className="mt-1">
-          <div className="flex items-center gap-1">
-            {["Inbound", "Proposal", "Agreement", "Active"].map((stage, i) => (
-              <div key={stage} className="flex-1 flex flex-col items-center gap-1">
-                <div
-                  className={`w-full h-1 rounded-full ${i < 3 ? "bg-foreground/20" : "bg-primary/30"}`}
-                />
-                <span className="text-[8px] text-muted-foreground/40">{stage}</span>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center gap-1.5 mt-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500/50" />
-            <span className="text-[10px] text-muted-foreground/50">4 active &middot; 2 proposing &middot; 1 inbound</span>
-          </div>
-        </div>
-      );
-    case 5: // Autonomous agents
-      return (
-        <div className="flex flex-col gap-1 mt-1">
-          {[
-            { name: "Daily media digest", time: "6:00 AM", dot: "#7489A3" },
-            { name: "Competitor scan", time: "Weekly", dot: "#977BA1" },
-            { name: "Inbound triage", time: "Continuous", dot: "#BF8440" },
-          ].map((a) => (
-            <div key={a.name} className="flex items-center gap-2">
-              <div
-                className="w-1.5 h-1.5 rounded-full shrink-0"
-                style={{ backgroundColor: a.dot, opacity: 0.5 }}
-              />
-              <span className="text-[10px] text-muted-foreground/60">{a.name}</span>
-              <span className="text-[9px] text-muted-foreground/30 ml-auto tabular-nums">{a.time}</span>
-            </div>
-          ))}
-        </div>
-      );
-    default:
-      return null;
-  }
 }

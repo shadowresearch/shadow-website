@@ -323,7 +323,7 @@ export default function AiAgencyTechStackReplacementContent() {
             <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Software subtotal</td>
               <td className="py-3 pr-4">$77,400/year</td>
-              <td className="py-3 pr-4">Contact Shadow for pricing</td>
+              <td className="py-3 pr-4">Pay-per-use</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">Coordination labor (5 people &times; 10 hrs/week &times; $75/hr &times; 50 weeks)</td>

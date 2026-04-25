@@ -64,6 +64,13 @@ export default function MaintainBrandVoiceAiPrContent() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
+              <td className="py-3 pr-4 font-medium">Shadow</td>
+              <td className="py-3 pr-4">Persistent per workspace</td>
+              <td className="py-3 pr-4">Full client intelligence</td>
+              <td className="py-3 pr-4">SOP-enforced</td>
+              <td className="py-3 pr-4">Workspace-isolated</td>
+            </tr>
+            <tr className="border-b border-border">
               <td className="py-3 pr-4 font-medium">ChatGPT / Claude</td>
               <td className="py-3 pr-4">Session-based (resets)</td>
               <td className="py-3 pr-4">Prompt-only</td>
@@ -83,13 +90,6 @@ export default function MaintainBrandVoiceAiPrContent() {
               <td className="py-3 pr-4">Uploaded documents</td>
               <td className="py-3 pr-4">Limited</td>
               <td className="py-3 pr-4">Separate instances</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4 font-medium">Shadow</td>
-              <td className="py-3 pr-4">Persistent per workspace</td>
-              <td className="py-3 pr-4">Full client intelligence</td>
-              <td className="py-3 pr-4">SOP-enforced</td>
-              <td className="py-3 pr-4">Workspace-isolated</td>
             </tr>
           </tbody>
         </table>

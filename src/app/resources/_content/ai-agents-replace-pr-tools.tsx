@@ -309,7 +309,7 @@ export default function AiAgentsReplacePrToolsContent() {
       <ul className="list-disc pl-6 space-y-2">
         <li><strong>Revenue per employee:</strong> $350&ndash;500K, compared to the industry benchmark of $150&ndash;200K for agencies of similar size and service offering.</li>
         <li><strong>Net margins:</strong> 30&ndash;40%, compared to the industry typical of 10&ndash;15%. The margin improvement comes from capacity multiplication, not rate increases.</li>
-        <li><strong>Tool cost reduction:</strong> 50&ndash;70% reduction in total software spend. A 10-person agency typically moves from $8K&ndash;15K/month in combined tool costs to Shadow&apos;s platform pricing.</li>
+        <li><strong>Tool cost reduction:</strong> 50&ndash;70% reduction in total software spend. A 10-person agency typically moves from $8K&ndash;15K/month in combined tool costs to Shadow&apos;s pay-per-use pricing.</li>
         <li><strong>Client capacity:</strong> Teams handle 2&ndash;3x more clients per person. A five-person team that managed 10 clients now manages 20&ndash;25 at the same or higher service quality.</li>
         <li><strong>Reporting time:</strong> 90% reduction in report compilation. Monthly reports that took 4&ndash;8 hours per client are auto-generated and require 15&ndash;20 minutes of senior review.</li>
       </ul>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { GlassSection } from "../_components/GlassSection";
 import { ContactForm } from "./_components/ContactForm";
 
 export const metadata: Metadata = {
@@ -26,31 +25,24 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col">
-      <GlassSection>
-      <section className="py-24 md:py-32 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-          {/* Left — copy */}
-          <div>
-            <h1 className="font-serif text-4xl md:text-5xl text-foreground leading-tight tracking-tight">
-              Book a demo
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-md">
-              See how Shadow can elevate your communications functions and learn
-              more about what it&apos;s like to work with us.
-            </p>
-            <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-md">
-              If there&apos;s a specific workflow or use case you&apos;d like us to
-              demo live on the call, leave the details in your message and
-              we&apos;ll prepare a custom walkthrough for your team.
-            </p>
+    <div className="flex flex-col bg-card">
+      <section className="flex items-start relative">
+        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-24 pt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight">
+                Meet the team
+              </h1>
+              <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-md">
+                If there&apos;s a specific workflow or use case you&apos;d like
+                us to demo live on the call, leave the details in your message
+                and we&apos;ll prepare a custom walkthrough for your team.
+              </p>
+            </div>
+            <ContactForm />
           </div>
-
-          {/* Right — form */}
-          <ContactForm />
         </div>
       </section>
-      </GlassSection>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [teamType, setTeamType] = useState("in-house");
+  const [teamType, setTeamType] = useState("agency");
   const timestampRef = useRef(Date.now());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -79,7 +79,7 @@ export function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+          className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-foreground transition-colors"
           placeholder="Your name"
           disabled={status === "submitting"}
         />
@@ -94,7 +94,7 @@ export function ContactForm() {
           id="company"
           name="company"
           required
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+          className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-foreground transition-colors"
           placeholder="Your company"
           disabled={status === "submitting"}
         />
@@ -109,49 +109,39 @@ export function ContactForm() {
           id="email"
           name="email"
           required
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+          className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-foreground transition-colors"
           placeholder="you@company.com"
           disabled={status === "submitting"}
         />
       </div>
 
       <div>
-        <span className="block text-sm font-medium text-foreground mb-1.5">
+        <span className="block text-sm font-medium text-foreground mb-2">
           Team type
         </span>
         <input type="hidden" name="teamType" value={teamType} />
-        <div className="relative inline-flex rounded-lg bg-muted/30 border border-border p-0.5">
-          <span
-            className="absolute top-0.5 bottom-0.5 rounded-md bg-foreground transition-all duration-200 ease-in-out"
-            style={{
-              width: "calc(50% - 2px)",
-              left: teamType === "in-house" ? "2px" : "calc(50%)",
-            }}
-          />
-          <button
-            type="button"
-            onClick={() => setTeamType("in-house")}
-            disabled={status === "submitting"}
-            className={`relative z-10 px-5 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
-              teamType === "in-house"
-                ? "text-background"
-                : "text-muted-foreground"
-            }`}
-          >
-            In-house
-          </button>
-          <button
-            type="button"
-            onClick={() => setTeamType("agency")}
-            disabled={status === "submitting"}
-            className={`relative z-10 px-5 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
-              teamType === "agency"
-                ? "text-background"
-                : "text-muted-foreground"
-            }`}
-          >
-            Agency
-          </button>
+        <div className="flex items-center gap-6">
+          {[
+            { value: "agency", label: "Agency" },
+            { value: "in-house", label: "In-house" },
+          ].map((option) => {
+            const active = teamType === option.value;
+            return (
+              <button
+                key={option.value}
+                type="button"
+                onClick={() => setTeamType(option.value)}
+                disabled={status === "submitting"}
+                className={`text-sm pb-1 border-b transition-colors ${
+                  active
+                    ? "text-foreground border-foreground"
+                    : "text-muted-foreground border-transparent hover:text-foreground"
+                }`}
+              >
+                {option.label}
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -163,7 +153,7 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={4}
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring transition-shadow resize-none"
+          className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-foreground transition-colors resize-none"
           placeholder="Tell us about your team and what you're looking for"
           disabled={status === "submitting"}
         />

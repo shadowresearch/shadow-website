@@ -55,6 +55,17 @@ const contentMap: Record<string, () => Promise<{ default: ComponentType }>> = {
   "ai-agents-quality-control-pr": () => import("./ai-agents-quality-control-pr"),
   "shadow-vs-meltwater": () => import("./shadow-vs-meltwater"),
   "pr-team-capacity-ai": () => import("./pr-team-capacity-ai"),
+  "narrative-intelligence": () => import("./narrative-intelligence"),
+  "narrative-graph": () => import("./narrative-graph"),
+  "identify-narrative-positions": () => import("./identify-narrative-positions"),
+  "unified-narrative-intelligence": () => import("./unified-narrative-intelligence"),
+  "program-execution-ai-agents": () => import("./program-execution-ai-agents"),
+  "narrative-positioning-strategy": () => import("./narrative-positioning-strategy"),
+  "ai-platforms-communications-leaders": () => import("./ai-platforms-communications-leaders"),
+  "best-media-monitoring-tools": () => import("./best-media-monitoring-tools"),
+  "best-ai-agents-communications": () => import("./best-ai-agents-communications"),
+  "best-market-intelligence-tools-communications": () => import("./best-market-intelligence-tools-communications"),
+  "best-ai-pr-platforms": () => import("./best-ai-pr-platforms"),
 };
 
 export async function getResourceContent(slug: string): Promise<ComponentType | null> {
