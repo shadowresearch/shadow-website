@@ -39,13 +39,13 @@ export function Nav() {
           <Image
             src="/logo2.svg"
             alt="Shadow"
-            width={22}
-            height={22}
-            className="h-[22px] w-auto"
+            width={26}
+            height={26}
+            className="h-[26px] w-auto"
           />
           <span
             aria-hidden={scrolled ? "true" : "false"}
-            className={`font-heading font-bold text-xl leading-none text-foreground tracking-tight overflow-hidden inline-block transition-all duration-300 ease-out ${
+            className={`font-heading font-bold text-2xl leading-none text-foreground tracking-tight overflow-hidden inline-block transition-all duration-300 ease-out ${
               scrolled
                 ? "opacity-0 max-w-0 -ml-3"
                 : "opacity-100 max-w-[200px] ml-0"
