@@ -5,30 +5,6 @@ import "./globals.css";
 import { Nav } from "./_components/Nav";
 import { Footer } from "./_components/Footer";
 
-const exposure = localFont({
-  src: [
-    {
-      path: "../../public/fonts/exposure/ExposureTrial-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-exposure",
-  display: "swap",
-});
-
-const exposureBold = localFont({
-  src: [
-    {
-      path: "../../public/fonts/exposure/ExposureTrial-Bold.otf",
-      weight: "600",
-      style: "normal",
-    },
-  ],
-  variable: "--font-exposure-bold",
-  display: "swap",
-});
-
 const delight = localFont({
   src: [
     {
@@ -139,7 +115,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${delight.variable} ${exposure.variable} ${exposureBold.variable} ${geistMono.variable} ${raleway.variable} antialiased`}
+        className={`${delight.variable} ${geistMono.variable} ${raleway.variable} antialiased`}
       >
         <script
           type="application/ld+json"

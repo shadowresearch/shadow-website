@@ -45,7 +45,7 @@ export function Nav() {
           />
           <span
             aria-hidden={scrolled ? "true" : "false"}
-            className={`font-exposure-bold text-xl leading-none text-foreground tracking-tight overflow-hidden inline-block transition-all duration-300 ease-out ${
+            className={`font-heading font-bold text-xl leading-none text-foreground tracking-tight overflow-hidden inline-block transition-all duration-300 ease-out ${
               scrolled
                 ? "opacity-0 max-w-0 -ml-3"
                 : "opacity-100 max-w-[200px] ml-0"

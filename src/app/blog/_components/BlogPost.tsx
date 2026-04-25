@@ -69,8 +69,6 @@ export function BlogPost({
               </>
             )}
           </nav>
-          {series && (
-          )}
           <h1 className="mt-5 font-serif font-medium text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.1] tracking-tight">
             {title}
           </h1>

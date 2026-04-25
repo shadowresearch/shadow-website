@@ -17,7 +17,7 @@ export function Footer() {
                 height={22}
                 className="h-[22px] w-auto"
               />
-              <span className="font-exposure-bold text-xl leading-none tracking-tight text-foreground">
+              <span className="font-heading font-bold text-xl leading-none tracking-tight text-foreground">
                 Shadow
               </span>
             </Link>
