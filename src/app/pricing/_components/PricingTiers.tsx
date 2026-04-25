@@ -38,7 +38,7 @@ const TIERS: Tier[] = [
   {
     name: "Agency",
     unit: "/ client / month",
-    monthly: 500,
+    monthly: 750,
     checkColor: "#CC764F",
     description:
       "For agencies managing multiple clients. Per-client pricing decreases as you scale.",
