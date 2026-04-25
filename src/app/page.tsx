@@ -211,9 +211,13 @@ export default function Home() {
             </p>
 
             {/* Logos */}
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-              {[
-                { name: "HubSpot", file: "hubspot-1.svg" },
+            <div>
+              <p className="text-[10px] font-mono text-muted-foreground/70 uppercase tracking-widest">
+                Trusted by the teams that brought you
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
+                {[
+                  { name: "HubSpot", file: "hubspot-1.svg" },
                 { name: "Amazon", file: "amazon-1.svg" },
                 { name: "Lovable", file: "lovable-1.svg" },
                 { name: "OpenAI", file: "openai-1.svg" },
@@ -221,19 +225,20 @@ export default function Home() {
                 { name: "Airbnb", file: "airbnb-1.svg" },
                 { name: "Roblox", file: "roblox-1.svg" },
                 { name: "Etsy", file: "etsy-1.svg" },
-              ].map((logo) => (
-                <Image
-                  key={logo.name}
-                  src={`/logos/${logo.file}`}
-                  alt={logo.name}
-                  width={80}
-                  height={20}
-                  loading="lazy"
-                  className={`w-auto h-auto object-contain opacity-40 ${
-                    logo.name === "Roblox" ? "max-h-5 max-w-16" : "max-h-3.5 max-w-14"
-                  }`}
-                />
-              ))}
+                ].map((logo) => (
+                  <Image
+                    key={logo.name}
+                    src={`/logos/${logo.file}`}
+                    alt={logo.name}
+                    width={80}
+                    height={20}
+                    loading="lazy"
+                    className={`w-auto h-auto object-contain opacity-40 ${
+                      logo.name === "Roblox" ? "max-h-5 max-w-16" : "max-h-3.5 max-w-14"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* CTAs */}
