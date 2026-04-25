@@ -332,3 +332,22 @@
 }
 
 /* .expanding-callout CSS removed — now implemented as a client component in _components/ExpandingCallout.tsx */
+
+/* Logo marquee — continuous left-scroll loop. Track contains two identical
+ * logo sets; animating to -50% places the second set exactly where the first
+ * started, producing a seamless loop. */
+@keyframes logo-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-logo-marquee {
+  animation: logo-marquee 50s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-logo-marquee {
+    animation: none;
+  }
+}

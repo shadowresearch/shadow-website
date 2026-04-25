@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AgentFeed } from "./_components/AgentFeed";
 import { EconomicsTable } from "./_components/EconomicsTable";
 import { ExpandingCallout } from "./_components/ExpandingCallout";
+import { LogoMarquee } from "./_components/LogoMarquee";
 import { ProgramFeed } from "./_components/ProgramFeed";
 import { ScrollRevealList } from "./_components/ScrollRevealList";
 import { ScrollRevealRowsHorizontal } from "./_components/ScrollRevealRowsHorizontal";
@@ -211,33 +212,12 @@ export default function Home() {
             </p>
 
             {/* Logos */}
-            <div>
+            <div className="max-w-[75%]">
               <p className="text-[10px] font-mono text-muted-foreground/70 uppercase tracking-widest">
                 Trusted by the teams that brought you
               </p>
-              <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
-                {[
-                  { name: "HubSpot", file: "hubspot-1.svg" },
-                { name: "Amazon", file: "amazon-1.svg" },
-                { name: "Lovable", file: "lovable-1.svg" },
-                { name: "OpenAI", file: "openai-1.svg" },
-                { name: "Netflix", file: "netflix-1.svg" },
-                { name: "Airbnb", file: "airbnb-1.svg" },
-                { name: "Roblox", file: "roblox-1.svg" },
-                { name: "Etsy", file: "etsy-1.svg" },
-                ].map((logo) => (
-                  <Image
-                    key={logo.name}
-                    src={`/logos/${logo.file}`}
-                    alt={logo.name}
-                    width={80}
-                    height={20}
-                    loading="lazy"
-                    className={`w-auto h-auto object-contain opacity-40 ${
-                      logo.name === "Roblox" ? "max-h-5 max-w-16" : "max-h-3.5 max-w-14"
-                    }`}
-                  />
-                ))}
+              <div className="mt-4">
+                <LogoMarquee />
               </div>
             </div>
 
