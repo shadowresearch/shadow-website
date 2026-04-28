@@ -182,10 +182,6 @@ export function ProgramFeed() {
       style={{
         opacity: mountP,
         transform: `translateY(${(1 - mountP) * 8}px)`,
-        maskImage:
-          "linear-gradient(to bottom, black 78%, transparent 100%)",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, black 78%, transparent 100%)",
       }}
       aria-hidden="true"
     >
@@ -253,32 +249,15 @@ export function ProgramFeed() {
                         {item}
                       </span>
                       <span
-                        className="inline-flex items-center justify-center rounded-full shrink-0 ml-auto"
+                        className="inline-block rounded-full shrink-0 ml-auto animate-dot-pulse"
                         style={{
-                          width: 10,
-                          height: 10,
+                          width: 5,
+                          height: 5,
                           backgroundColor: "#88A374",
-                          color: "#FFFFFF",
                           opacity: checkOpacity,
                           transform: `scale(${checkScale})`,
                         }}
-                      >
-                        <svg
-                          width="7"
-                          height="7"
-                          viewBox="0 0 10 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2 5.3L4.2 7.4L8 2.8"
-                            stroke="currentColor"
-                            strokeWidth="1.8"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </span>
+                      />
                     </li>
                   );
                 })}

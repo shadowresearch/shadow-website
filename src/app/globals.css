@@ -206,6 +206,29 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes production-card-pulse {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 0.95; }
+}
+
+@keyframes terrain-ring-pulse {
+  0%, 100% { opacity: 0.05; }
+  50%      { opacity: 0.32; }
+}
+
+@keyframes hero-number-pulse {
+  0%, 100% { opacity: 0.78; }
+  50%      { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="production-card-pulse"],
+  [style*="terrain-ring-pulse"] {
+    animation: none !important;
+    opacity: 0.18 !important;
+  }
+}
+
 .hero-landscape-mark .narrative-row-label {
   opacity: 0;
   animation: narrative-label-in 0.6s ease-out forwards;
@@ -348,6 +371,39 @@
 
 @media (prefers-reduced-motion: reduce) {
   .animate-logo-marquee {
+    animation: none;
+  }
+}
+
+/* Faint always-visible scrollbar — for embedded chat/stream surfaces where the
+ * scroll affordance must be discoverable without dominating the surface. */
+.scroll-faint {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(43, 32, 22, 0.6) rgba(43, 32, 22, 0.1);
+}
+.scroll-faint::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+.scroll-faint::-webkit-scrollbar-track {
+  background: rgba(43, 32, 22, 0.1);
+}
+.scroll-faint::-webkit-scrollbar-thumb {
+  background: rgba(43, 32, 22, 0.6);
+  border-radius: 999px;
+}
+
+/* Pulsing live-indicator dot — outward ring fades from solid → transparent. */
+@keyframes dot-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(136, 163, 116, 0.55); }
+  70%  { box-shadow: 0 0 0 5px rgba(136, 163, 116, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(136, 163, 116, 0); }
+}
+.animate-dot-pulse {
+  animation: dot-pulse 1.8s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-dot-pulse {
     animation: none;
   }
 }
