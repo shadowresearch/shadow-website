@@ -3,12 +3,12 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const PROMPT =
-  "Run the Business & Markets baseline narrative report for April 2026.";
+  "Erin Walsh (CEO, Northwind) just emailed — Series C announcement in 6 weeks, looking for earned media support. Draft a first-rev positioning angle for Mike's review.";
 
 type Row = { label: string; tag: string; color: string };
 type StatBlock = { value: string; label: string };
 type Step =
-  | { kind: "thinking"; text: string; duration: string }
+  | { kind: "thinking"; text: string; phase: string }
   | { kind: "data"; title: ReactNode; details?: ReactNode[] }
   | { kind: "rows"; title: ReactNode; rows: Row[]; coda?: string }
   | {
@@ -20,6 +20,7 @@ type Step =
       findingsEyebrow: string;
       findings: ReactNode[];
       source: string;
+      workflow: { label: string; current?: boolean }[];
     };
 
 function TypedText({
@@ -69,125 +70,136 @@ function TypedText({
 const STEPS: Step[] = [
   {
     kind: "thinking",
-    text: "Parsing the brief. Frame: coverage volume × search demand × narrative lifecycle × entity hierarchy.",
-    duration: "2s",
-  },
-  {
-    kind: "thinking",
-    text: "Querying the narrative graph: how political-statement shocks propagate into market-confidence search demand.",
-    duration: "3s",
-  },
-  {
-    kind: "thinking",
-    text: "Cross-referencing Fed commentary cycles against bond-yield query velocity to isolate buyer-intent shifts.",
-    duration: "4s",
-  },
-  {
-    kind: "thinking",
-    text: "Joining tariff-policy headline volume to AI engine citation counts — checking which institutions inherit the story.",
-    duration: "3s",
+    text: "Pulling everything public on Northwind: prior announcements, leadership history, customer case studies, Erin's posts, podcast appearances. Building a primary-source picture.",
+    phase: "Researching Northwind across primary sources",
   },
   {
     kind: "data",
     title: (
       <>
-        Corpus assembled: <span className="font-medium">31,201 articles</span>{" "}
-        across the category, indexed and ready for clustering.
+        Northwind picture assembled:{" "}
+        <span className="font-medium">2 prior funding announcements</span>, 11
+        customer case studies, voice cluster pragmatic + customer-anchored.
       </>
     ),
     details: [
-      "847 sources · 142 tier-1 outlets · 14,200 AI citations · range 28d",
+      "Strongest distinguishing line across the surface area: 'we ship to operators, not buyers.'",
     ],
   },
   {
     kind: "thinking",
-    text: "Clustering coverage into structural narratives. Joining each cluster to search demand and lifecycle position to detect divergence.",
-    duration: "5s",
+    text: "Reading the narrative cycles dominating enterprise AI right now. Filtering to clusters with live reporter coverage and search demand.",
+    phase: "Scanning the enterprise AI narrative landscape",
   },
   {
     kind: "rows",
     title: (
       <>
-        8 structural narratives. Mapping each to its position on the
-        press↔search divergence axis:
+        Five dominant narrative cycles in the sector, mapped to lifecycle and
+        coverage signal:
       </>
     ),
     rows: [
-      { label: "Tariff Refund Unwind", tag: "aligned · 37.7K/mo", color: "#88A374" },
-      { label: "AI Capex Race", tag: "media leads · 0.6K/mo", color: "#977BA1" },
-      { label: "Mega-Deal Consolidation", tag: "media leads · 0.2K/mo", color: "#977BA1" },
-      { label: "Fed Policy Paralysis", tag: "market leads · 156K/mo", color: "#7489A3" },
-      { label: "Global Markets Contagion", tag: "market leads · 200K/mo", color: "#7489A3" },
-      { label: "Fuel Shortage Anxiety", tag: "peak · 374K/mo", color: "#CC764F" },
+      { label: "Workflow agents replacing tools", tag: "peak · 22K/mo · tier-1 active", color: "#88A374" },
+      { label: "AI cost reckoning", tag: "rising · 14K/mo", color: "#88A374" },
+      { label: "The operator stack", tag: "emerging · open territory", color: "#7489A3" },
+      { label: "Vertical SaaS consolidation", tag: "saturated · agency-led", color: "#B27A53" },
+      { label: "Compliance-first AI", tag: "fading · low yield", color: "#977BA1" },
     ],
-    coda: "Two press-led clusters, two buyer-led, one aligned, one outlier dominating intent. The divergence is structural — not noise.",
+    coda: "Operator stack is open. Workflow-agents cycle is at peak — Northwind needs to plant a flag this cycle, not next.",
   },
   {
     kind: "thinking",
-    text: "Reconciling entity hierarchies. Press citation rank vs. AI engine citation rank — testing whether the two construct the same map.",
-    duration: "3s",
+    text: "Mapping Northwind's six closest competitors. What each is claiming, where they're overcommitted, and what narrative real estate is still unclaimed.",
+    phase: "Mapping competitor positioning and narrative claims",
+  },
+  {
+    kind: "rows",
+    title: <>Competitor narrative map:</>,
+    rows: [
+      { label: "Cobalt", tag: "'enterprise-grade agentic AI' · saturated", color: "#B27A53" },
+      { label: "Polaris", tag: "'the AI-native enterprise stack' · crowded", color: "#B27A53" },
+      { label: "Quanta", tag: "'compliance-first AI for regulated industries' · fading", color: "#977BA1" },
+      { label: "Sequel", tag: "'AI agents that 10x your team' · commoditized", color: "#977BA1" },
+      { label: "Aperture", tag: "'AI workflows for operators' · closest, weak voice", color: "#7489A3" },
+    ],
+    coda: "Nobody owns 'operator's choice.' Aperture is closest but their voice is weak. Open territory that lines up with Northwind's existing surface.",
+  },
+  {
+    kind: "thinking",
+    text: "Synthesizing. Northwind's existing voice + the live narrative cycle + the competitive whitespace. Cross-checking against earned-media reporter beats.",
+    phase: "Synthesizing the positioning strategy",
   },
   {
     kind: "data",
     title: (
       <>
-        Amazon leads press mentions (
-        <span className="font-medium">4,487</span>); OpenAI leads AI engine
-        citations (<span className="font-medium">32 of 25 prompts</span>).
-        Hierarchies diverge.
+        Strategy locked: position Northwind as the{" "}
+        <span className="font-medium">operator&apos;s choice</span> inside the
+        workflow-agents cycle. Customer-led, not founder-led.
       </>
     ),
     details: [
-      "Press and AI engines are constructing distinct entity maps for the category.",
+      "Earned-media targets: 7 reporters with live beats, 3 with prior Northwind touchpoints. Tier-1: Reuters, Bloomberg, The Information.",
     ],
   },
   {
     kind: "thinking",
-    text: "Synthesizing. Leading with the coverage-vs-intent divergence, closing with the positioning opportunity it implies.",
-    duration: "4s",
+    text: "Strategy locked, reporter shortlist staged, voice match clean. The wood-chopping is done — the judgment calls only Mike can make are flagged.",
+    phase: "Finalizing the first rev for Mike",
   },
   {
     kind: "report",
-    eyebrow: "Business & Markets — Baseline · April 2026",
-    title: "Shadow Narrative Intelligence Report",
-    lead: "The business press is covering deals and AI spending; buyers are searching for macro risk. The two audiences are reading different markets.",
+    eyebrow: "Northwind Series C — First rev for Mike",
+    title: "Built for the operators, not the fundraisers",
+    lead:
+      "The narrative cycle dominating their sector is workflow agents replacing tools. The whitespace nobody's claimed is 'operator's choice.' This first rev plants Northwind there before Sigil can close the gap.",
     stats: [
-      { value: "31,201", label: "Articles · 28d" },
-      { value: "8", label: "Narratives" },
-      { value: "374K", label: "Peak search" },
-      { value: "2", label: "Market leads" },
+      { value: "5", label: "Narratives mapped" },
+      { value: "6", label: "Competitors analyzed" },
+      { value: "1", label: "Whitespace claimed" },
+      { value: "7", label: "Reporters lined up" },
     ],
-    findingsEyebrow: "Key findings",
+    findingsEyebrow: "What's in here",
     findings: [
       <>
-        <span className="text-foreground font-medium">Tariff Refund Unwind</span>{" "}
-        dominates at 26.6% of coverage with matching search demand (37.7K/mo).
-        The $166B refund story has both editorial and commercial gravity.
+        <span className="text-foreground font-medium">The cycle.</span>{" "}
+        Workflow agents replacing tools is at peak — 22K/mo search demand and
+        four tier-1 reporters actively covering. The window to plant a flag
+        is now, not next quarter.
       </>,
       <>
-        <span className="text-foreground font-medium">AI Capex Race</span> and{" "}
-        <span className="text-foreground font-medium">Mega-Deal Consolidation</span>{" "}
-        combine for 35.5% of coverage but only 0.8K/mo search. The press is
-        fascinated; buyers are not yet looking.
+        <span className="text-foreground font-medium">The whitespace.</span>{" "}
+        Five competitors crowd &lsquo;AI-native,&rsquo; &lsquo;enterprise
+        grade,&rsquo; and &lsquo;compliance-first.&rsquo; Nobody owns
+        &lsquo;operator&apos;s choice.&rsquo; Aperture is closest, voice is
+        weak.
       </>,
       <>
-        <span className="text-foreground font-medium">Fed Policy Paralysis</span>{" "}
-        and{" "}
-        <span className="text-foreground font-medium">Global Markets Contagion</span>{" "}
-        together: 14.5% of coverage against 356.7K monthly searches. Buyers seek
-        macro intelligence the press under-covers.
+        <span className="text-foreground font-medium">The angle.</span>{" "}
+        Position Northwind as the operator&apos;s choice — anchor in their
+        customer numbers, contrast against the &lsquo;AI for buyers&rsquo;
+        framing the rest are stuck in. Customer-led, not founder-led.
       </>,
       <>
-        <span className="text-foreground font-medium">Fuel Shortage Anxiety</span>{" "}
-        generates 374,730 monthly searches — driven by gas-price and supply
-        queries. The single largest buyer-intent signal in the category.
+        <span className="text-foreground font-medium">What&apos;s left for you.</span>{" "}
+        The customer quote, the call on the round&apos;s strategic shape, and
+        the reporter outreach order. The judgment work — yours.
       </>,
     ],
-    source: "Perigon News Intelligence · Shadow analysis · April 27, 2026",
+    source: "Drafted by Shadow · Northwind account · April 28, 2026",
+    workflow: [
+      { label: "Intake" },
+      { label: "Research" },
+      { label: "Strategy", current: true },
+      { label: "First rev" },
+      { label: "Outreach" },
+      { label: "Follow-up" },
+    ],
   },
 ];
 
-function StepRow({ step }: { step: Step }) {
+function StepRow({ step, active = false }: { step: Step; active?: boolean }) {
   const [shown, setShown] = useState(false);
   useEffect(() => {
     const r = requestAnimationFrame(() => setShown(true));
@@ -196,16 +208,30 @@ function StepRow({ step }: { step: Step }) {
   const baseClass = `relative pb-6 pl-6 transition-all duration-500 ease-out ${
     shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
   }`;
+  const isThinking = step.kind === "thinking";
+  const pulse = isThinking && active;
   return (
     <li className={baseClass}>
-      <span className="absolute left-[2px] top-[7px] w-1.5 h-1.5 rounded-full bg-foreground/40" />
+      <span
+        className={`absolute left-[2px] top-[7px] w-1.5 h-1.5 rounded-full ${
+          isThinking
+            ? `bg-[#7489A3]${pulse ? " animate-[pulse_1s_ease-in-out_infinite]" : ""}`
+            : "bg-foreground/40"
+        }`}
+      />
 
       {step.kind === "thinking" && (
-        <div className="text-[14px] italic text-muted-foreground leading-relaxed">
-          <TypedText text={step.text} speed={12} />
-          <span className="ml-2 font-mono not-italic text-[#B27A53]/80 text-[11px]">
-            {step.duration}
-          </span>
+        <div>
+          <div
+            className={`font-mono text-[13px] leading-snug text-[#7489A3] mb-1.5${
+              pulse ? " animate-[pulse_1.2s_ease-in-out_infinite]" : ""
+            }`}
+          >
+            {step.phase}
+          </div>
+          <div className="text-[14px] italic text-muted-foreground leading-relaxed">
+            <TypedText text={step.text} speed={12} />
+          </div>
         </div>
       )}
 
@@ -333,6 +359,35 @@ function ReportCard({ step }: { step: Extract<Step, { kind: "report" }> }) {
           <TypedText text={step.lead} speed={10} />
         </p>
 
+        {/* Workflow breadcrumb — locates this rev inside the longer journey */}
+        <div
+          className={`mt-3 flex items-center gap-1.5 flex-wrap text-[10px] font-mono uppercase tracking-[0.16em] transition-all duration-500 ease-out ${
+            phase >= 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+          }`}
+        >
+          {step.workflow.map((w, i) => (
+            <span key={w.label} className="flex items-center gap-1.5">
+              {i > 0 && (
+                <span aria-hidden="true" className="text-muted-foreground/40">
+                  →
+                </span>
+              )}
+              <span
+                className={
+                  w.current
+                    ? "px-1.5 py-0.5 rounded bg-foreground/8 text-foreground"
+                    : "text-muted-foreground/65"
+                }
+                style={
+                  w.current ? { backgroundColor: "rgba(43,32,22,0.08)" } : undefined
+                }
+              >
+                {w.label}
+              </span>
+            </span>
+          ))}
+        </div>
+
         {/* Stats — single inline row, never wraps */}
         <div
           className={`mt-3 pt-3 border-t border-foreground/10 flex items-baseline gap-x-3 text-[11px] whitespace-nowrap overflow-hidden transition-all duration-500 ease-out ${
@@ -395,7 +450,7 @@ function ReportCard({ step }: { step: Extract<Step, { kind: "report" }> }) {
           type="button"
           className="shrink-0 inline-flex items-center gap-1.5 rounded-md border border-foreground/15 bg-card px-3 py-1.5 text-[12px] font-medium text-foreground hover:border-foreground/30 transition-colors"
         >
-          Read full report
+          Open in editor
           <span aria-hidden="true">→</span>
         </button>
       </div>
@@ -552,8 +607,8 @@ export function ProgramAgentDemo({ start }: { start?: boolean } = {}) {
         </div>
         <div className="mt-4 pt-3 border-t border-[#fbf7ee]/15 flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.18em]">
           <span className="text-[#fbf7ee]/55">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#7489A3] mr-2 align-middle" />
-            Business &amp; Markets · April 2026
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#88A374] mr-2 align-middle" />
+            Northwind · New business · April 2026
           </span>
           <span
             className={`flex items-center gap-1.5 transition-colors ${
@@ -590,6 +645,9 @@ export function ProgramAgentDemo({ start }: { start?: boolean } = {}) {
           const report = visible.find(
             (s): s is Extract<Step, { kind: "report" }> => s.kind === "report",
           );
+          // Only the most-recently-revealed timeline step pulses, and only
+          // until a follow-on step (or the report) is revealed.
+          const activeIdx = report ? -1 : timelineSteps.length - 1;
           return (
             <>
               <ol className="mt-5 relative">
@@ -600,7 +658,7 @@ export function ProgramAgentDemo({ start }: { start?: boolean } = {}) {
                   />
                 )}
                 {timelineSteps.map((step, i) => (
-                  <StepRow key={i} step={step} />
+                  <StepRow key={i} step={step} active={i === activeIdx} />
                 ))}
               </ol>
               {report && <ReportReveal step={report} />}

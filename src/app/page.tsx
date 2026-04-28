@@ -544,30 +544,41 @@ export default function Home() {
       </section>
 
       {/* ━━━ Closing CTA ━━━ */}
-      <section className="px-4 md:px-8 pb-12 md:pb-20">
-        <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
-            <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-3xl">
-              Narrative intelligence changes what your team can see.
-            </h2>
-            <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-md">
-              When you see the full picture, you stop reacting and start
-              positioning. That&apos;s the difference.
-            </p>
-            <div className="mt-10 flex flex-row gap-3">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-[13px] font-medium text-background transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-              >
-                Get in touch
-              </Link>
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-              >
-                See who runs on Shadow
-              </Link>
-            </div>
+      <section className="bg-[#0a0908] text-[#f5f1ea] px-4 md:px-8 py-32 md:py-48">
+        <div className="max-w-[1360px] mx-auto px-8 md:px-16 flex flex-col items-center text-center">
+          <h2
+            className="font-serif font-normal max-w-[760px]"
+            style={{
+              fontSize: "clamp(40px, 5vw, 72px)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.025em",
+            }}
+          >
+            <span className="block">
+              The firms that win the next decade
+            </span>
+            <span
+              className="block font-light"
+              style={{ color: "rgba(245, 241, 234, 0.55)" }}
+            >
+              won&apos;t be the ones with more tools.
+            </span>
+          </h2>
+          <div className="mt-12 flex gap-4 items-center justify-center flex-col sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded font-medium text-[15px] no-underline transition-colors"
+              style={{ background: "#f5f1ea", color: "#2a2520" }}
+            >
+              Book a demo →
+            </Link>
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-1.5 px-2 py-3.5 font-medium text-[15px] no-underline border-b"
+              style={{ color: "#f5f1ea", borderColor: "#f5f1ea" }}
+            >
+              Read the case studies
+            </Link>
           </div>
         </div>
       </section>

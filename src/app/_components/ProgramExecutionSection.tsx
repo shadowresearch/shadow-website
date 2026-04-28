@@ -80,20 +80,23 @@ export function ProgramExecutionSection() {
                 </div>
                 <h2 className="mt-8 font-serif font-normal text-[clamp(2rem,4.4vw,3.75rem)] leading-[1.05] tracking-tight text-foreground">
                   <span className="block" style={fadeStyle(0)}>
-                    Extract positions.
+                    The work that remembers.
                   </span>
                   <span
                     className="block not-italic italic font-light text-foreground/55"
                     style={fadeStyle(0.18)}
                   >
-                    Execute programs.
+                    From signal to program.
                   </span>
                 </h2>
                 <div style={fadeStyle(0.36)}>
                   <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-md">
-                    Intelligence only matters if you act on it. Shadow turns
-                    positioning into the work — proposals, media, content,
-                    thought leadership — shipped against live signal.
+                    From mapping the narrative cycles and competitor claims
+                    crowding their sector, to developing the position only
+                    your client can defend, to building the program and
+                    executing it — the same context follows your client
+                    across the whole arc. Proposals, media, GEO, thought
+                    leadership: one voice, one memory, one team.
                   </p>
                   <Link
                     href="/program-execution"
