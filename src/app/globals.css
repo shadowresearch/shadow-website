@@ -211,6 +211,24 @@
   50%      { opacity: 0.95; }
 }
 
+@keyframes card-dense-open {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes carousel-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes terrain-ring-pulse {
   0%, 100% { opacity: 0.05; }
   50%      { opacity: 0.32; }
@@ -369,8 +387,14 @@
   will-change: transform;
 }
 
+.animate-logo-marquee-lg {
+  animation: logo-marquee 20s linear infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-logo-marquee {
+  .animate-logo-marquee,
+  .animate-logo-marquee-lg {
     animation: none;
   }
 }

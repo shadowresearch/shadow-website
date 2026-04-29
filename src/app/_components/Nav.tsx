@@ -61,7 +61,7 @@ export function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors ${
+              className={`text-xs transition-colors ${
                 pathname === link.href
                   ? "text-foreground font-medium"
                   : "text-muted-foreground hover:text-foreground"
@@ -74,7 +74,7 @@ export function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors ${
+              className={`text-xs transition-colors ${
                 pathname === link.href
                   ? "text-foreground font-medium"
                   : "text-muted-foreground hover:text-foreground"
@@ -88,7 +88,7 @@ export function Nav() {
         <div className="flex items-center gap-3">
           <a
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-foreground px-3.5 py-1.5 text-xs font-semibold text-background transition-all shrink-0"
+            className="inline-flex items-center justify-center rounded-md border border-muted-foreground px-3.5 py-1.5 text-xs font-semibold text-muted-foreground transition-all shrink-0"
           >
             Book a demo
           </a>

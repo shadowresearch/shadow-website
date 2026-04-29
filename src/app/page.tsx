@@ -6,10 +6,12 @@ import { EconomicsTable } from "./_components/EconomicsTable";
 import { ExpandingCallout } from "./_components/ExpandingCallout";
 import { LogoMarquee } from "./_components/LogoMarquee";
 import { MachineHero } from "./_components/MachineHero";
-import { ProductionLineCard } from "./_components/ProductionLineCard";
+import { ProductionLineCarousel } from "./_components/ProductionLineCarousel";
 import { ProgramExecutionSection } from "./_components/ProgramExecutionSection";
+import { RotatingWord } from "./_components/RotatingWord";
 import { ScrollRevealRowsHorizontal } from "./_components/ScrollRevealRowsHorizontal";
 import { TerrainSection } from "./_components/TerrainSection";
+import { TimelineCompressionSection } from "./_components/TimelineCompressionSection";
 
 export const metadata: Metadata = {
   title:
@@ -109,6 +111,11 @@ const PRODUCTION_LINE_CARDS = [
     ],
     headline: "Absorbed 3x inbound, no new headcount.",
     body: "Triage, intelligence, proposals, SOWs, and agreements run by a custom agent stack — junior team operates closer to senior judgment.",
+    details: {
+      runs: ["Triage", "Intelligence", "Proposals", "SOWs", "Agreements"],
+      summary:
+        "Outcast needed to handle surging new business volume without pulling senior time from active clients. With Shadow running the full intake and contracting flow, the team tripled pipeline throughput across hundreds of accounts — and junior staff started shipping work closer to senior judgment.",
+    },
   },
   {
     slug: "haymaker",
@@ -121,6 +128,11 @@ const PRODUCTION_LINE_CARDS = [
     ],
     headline: "Awards and events, halved in 30 days.",
     body: "Full lifecycle automated — research, roadmaps, briefs, and submissions. Strategists shifted from drafting to refining.",
+    details: {
+      runs: ["Awards research", "Roadmaps", "Briefs", "Submissions"],
+      summary:
+        "Haymaker was spending weeks per cycle on awards research, roadmaps, briefs, and final submissions across their client roster. Shadow automated the full lifecycle — halving production time and saving 40+ hours across awards and events workflows every week.",
+    },
   },
   {
     slug: "inworld-ai",
@@ -133,6 +145,17 @@ const PRODUCTION_LINE_CARDS = [
     ],
     headline: "A full launch playbook, built from scratch.",
     body: "Voice AI with no market precedent. Shadow analyzed thousands of articles across hundreds of journalists, then matched positioning to live keyword demand.",
+    details: {
+      runs: [
+        "Media analysis",
+        "Positioning",
+        "Keyword demand",
+        "Journalist mapping",
+        "Personalized pitches",
+      ],
+      summary:
+        "Inworld needed a data-driven launch plan for voice AI models with no precedent in the market. Shadow analyzed thousands of articles across hundreds of journalists, compounded it with keyword data to land positioning on beat for media and buyers, and built a 300+ journalist media list with personalized pitches.",
+    },
   },
 ];
 
@@ -195,8 +218,28 @@ export default function Home() {
       {/* ━━━ Machine Hero (dark, scroll-driven topographic decomposition) ━━━ */}
       <MachineHero />
 
+      {/* ━━━ Trusted-by logo band ━━━ */}
+      <section className="px-4 md:px-8 pt-12 md:pt-24 pb-12 md:pb-20">
+        <div className="max-w-[1360px] mx-auto px-8 md:px-16 flex flex-col items-center text-center">
+          <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/70 flex items-center gap-3">
+            <span className="inline-block w-7 h-px bg-muted-foreground/30" />
+            Track record
+          </div>
+          <h2 className="mt-8 font-serif font-normal text-[clamp(1.5rem,2.6vw,2.25rem)] leading-[1.15] tracking-tight text-foreground max-w-[720px]">
+            Trusted by agencies and teams{" "}
+            <span className="font-light text-foreground/55">behind</span>
+          </h2>
+          <div className="mt-8 md:mt-10 w-full max-w-[50%]">
+            <LogoMarquee size="lg" />
+          </div>
+        </div>
+      </section>
+
       {/* ━━━ Program Execution (sticky pin, scroll-driven fade) ━━━ */}
       <ProgramExecutionSection />
+
+      {/* ━━━ Same work, two timelines — compression visual ━━━ */}
+      <TimelineCompressionSection />
 
       {/* ━━━ A new era for communications work ━━━ */}
       <section
@@ -210,36 +253,37 @@ export default function Home() {
           </div>
 
           <h2 className="mt-10 md:mt-14 font-serif font-normal text-[clamp(2.25rem,6vw,5.5rem)] leading-[1.05] tracking-tight text-foreground">
-            <span className="block">
-              <em className="italic font-light text-foreground/70">For sixty years,</em>{" "}
-              <span className="relative inline-block italic font-light text-foreground/70">
-                timing was everything.
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute left-[-0.04em] right-[-0.04em] top-1/2 h-[3px] -rotate-[4deg] origin-left"
-                  style={{ backgroundColor: "#B0463A" }}
-                />
-              </span>
+            <span className="block text-[0.45em] leading-[1.1] mb-[0.3em] font-light text-foreground/55">
+              In this new era,
             </span>
             <span className="block">
-              Now{" "}
-              <em className="italic relative inline-block isolate">
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-x-[-0.08em] bottom-[0.05em] top-[0.42em] -z-10 rounded-[2px]"
-                  style={{ backgroundColor: "#E0D3AF" }}
-                />
-                <span className="relative">context</span>
-              </em>{" "}
-              is.
+              <RotatingWord
+                words={[
+                  "Context",
+                  "Narrative arc",
+                  "Modeling",
+                  "Trajectory",
+                  "Positioning",
+                  "Signal",
+                  "Pattern recognition",
+                  "Orchestration",
+                  "Execution",
+                  "Speed",
+                  "Foresight",
+                  "Augmentation",
+                  "Judgment",
+                  "Voice",
+                  "Leverage",
+                ]}
+              />
             </span>
+            <span className="block">is everything.</span>
           </h2>
 
           <p className="mt-12 md:mt-16 max-w-[640px] text-[clamp(1rem,1.4vw,1.25rem)] leading-[1.6] text-foreground/75">
-            AI made every agency fast. It made the news cycle reflex a commodity
-            overnight. The work that wins now is the work no horizontal model
-            can produce &mdash; work that knows your clients, your reporters,
-            your wins, your voice. Shadow is the only AI built to encode that.
+            Comms is changing. Shadow is built for narrative analysis, context
+            management, orchestrated execution, and the agents that do the
+            work.
           </p>
         </div>
       </section>
@@ -394,28 +438,23 @@ export default function Home() {
                 </em>
               </h2>
             </div>
-            <p className="text-[15px] leading-relaxed text-muted-foreground max-w-[420px] lg:pb-3">
-              Three of the agencies and in-house teams running on Shadow today.
-              Real numbers from real programs &mdash; not gated case studies, not
-              &quot;up to&quot; claims.
-            </p>
+            <div className="lg:pb-3 lg:justify-self-end flex flex-col items-start lg:items-end gap-5">
+              <p className="text-[15px] leading-relaxed text-muted-foreground max-w-[420px] lg:text-right">
+                Top agencies running on Shadow today.
+                <br />
+                Real numbers, not gated claims.
+              </p>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                See all case studies
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
 
-          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {PRODUCTION_LINE_CARDS.map((card, i) => (
-              <ProductionLineCard key={card.slug} {...card} index={i} />
-            ))}
-          </div>
-
-          <div className="mt-12 md:mt-14 flex justify-center">
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-[13px] font-medium text-foreground hover:bg-muted/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-            >
-              See all case studies
-              <span aria-hidden="true">→</span>
-            </Link>
-          </div>
+          <ProductionLineCarousel cards={PRODUCTION_LINE_CARDS} />
         </div>
       </section>
 

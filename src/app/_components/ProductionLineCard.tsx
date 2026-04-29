@@ -47,6 +47,11 @@ function ringPath(cx: number, cy: number, r: number, seed: number) {
   return d + "Z";
 }
 
+interface CardDetails {
+  runs: string[];
+  summary: string;
+}
+
 interface ProductionLineCardProps {
   slug: string;
   eyebrow: string;
@@ -56,6 +61,8 @@ interface ProductionLineCardProps {
   body: string;
   index: number;
   accent: string;
+  details?: CardDetails;
+  expanded?: boolean;
 }
 
 function useCountUp(target: number, revealed: boolean, delayMs: number) {
@@ -97,6 +104,8 @@ export function ProductionLineCard({
   body,
   index,
   accent,
+  details,
+  expanded,
 }: ProductionLineCardProps) {
   const ref = useRef<HTMLAnchorElement | null>(null);
   const [revealed, setRevealed] = useState(false);
@@ -185,21 +194,15 @@ export function ProductionLineCard({
     <Link
       ref={ref}
       href={`/case-studies/${slug}`}
-      className="group relative flex flex-col rounded-2xl bg-foreground/[0.018] border border-border/25 p-6 md:p-7 shadow-[0_8px_28px_-18px_rgba(20,16,12,0.18),0_2px_6px_-3px_rgba(20,16,12,0.06)] transition-all duration-300 ease-out hover:bg-foreground/[0.03] hover:-translate-y-1 hover:shadow-[0_28px_70px_-30px_rgba(20,16,12,0.4),0_8px_20px_-10px_rgba(20,16,12,0.18)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring will-change-transform"
+      className="group relative flex flex-col rounded-2xl bg-foreground/[0.018] border border-border/25 p-6 md:p-8 shadow-[0_18px_48px_-22px_rgba(20,16,12,0.28),0_4px_10px_-4px_rgba(20,16,12,0.10)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
       style={
         {
           opacity: revealed ? 1 : 0,
           transform: revealed ? "translateY(0)" : "translateY(16px)",
-          transition: `opacity 700ms ease-out ${revealDelay}, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${revealDelay}, background-color 200ms ease-out, border-color 250ms ease-out, box-shadow 300ms ease-out`,
+          transition: `opacity 700ms ease-out ${revealDelay}, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) ${revealDelay}`,
           "--accent": accent,
         } as React.CSSProperties
       }
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = `${accent}55`;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = "";
-      }}
     >
       <span
         aria-hidden="true"
@@ -232,76 +235,110 @@ export function ProductionLineCard({
           })}
         </svg>
       </span>
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -inset-px rounded-2xl motion-reduce:hidden"
-        style={{
-          boxShadow:
-            "0 0 40px -8px rgba(20, 16, 12, 0.18), inset 0 1px 0 rgba(20, 16, 12, 0.08)",
-          animation: `production-card-pulse 5s ease-in-out ${index * 1.1}s infinite`,
-        }}
-      />
-      <div className="relative flex flex-col">
-      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground/80">
-        {eyebrow}
-      </div>
+      <div className="relative grid grid-cols-1 md:grid-cols-[minmax(0,360px)_minmax(0,1fr)] gap-8 md:gap-12">
+        {/* Left column — stats */}
+        <div className="flex flex-col">
+          {(() => {
+            const [name, descriptor] = eyebrow.split(" — ");
+            return (
+              <div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground/80">
+                  {descriptor ?? "Case study"}
+                </div>
+                <div
+                  className="mt-2 font-serif text-[clamp(1.5rem,2.4vw,2rem)] leading-tight tracking-tight"
+                  style={{ color: "#B27A53" }}
+                >
+                  {name}
+                </div>
+              </div>
+            );
+          })()}
 
-      <div className="mt-6">
-        <div
-          className="flex items-baseline motion-reduce:!opacity-100"
-          aria-label={`${hero.value}${hero.suffix} ${hero.label}`}
-          style={{
-            animation: `hero-number-pulse 6s ease-in-out ${index * 1.4}s infinite`,
-          }}
-        >
-          <span className="font-serif text-[clamp(2.75rem,5vw,4rem)] leading-none tabular-nums text-foreground">
-            {heroValue}
-          </span>
-          <span className="font-serif text-[clamp(1.1rem,1.6vw,1.5rem)] leading-none ml-0.5 text-foreground/70">
-            {hero.suffix}
-          </span>
-        </div>
-        <p className="mt-2 text-[11.5px] uppercase tracking-[0.14em] font-mono text-muted-foreground/80">
-          {hero.label}
-        </p>
-      </div>
-
-      <div className="mt-5 grid grid-cols-2 gap-4">
-        {secondary.map((s, i) => (
-          <div key={s.label} aria-label={`${s.value}${s.suffix} ${s.label}`}>
-            <div className="flex items-baseline">
-              <span className="font-serif text-[clamp(1.35rem,2vw,1.75rem)] leading-none text-foreground tabular-nums">
-                {secondaryValues[i]}
+          <div className="mt-8">
+            <div
+              className="flex items-baseline motion-reduce:!opacity-100"
+              aria-label={`${hero.value}${hero.suffix} ${hero.label}`}
+              style={{
+                animation: `hero-number-pulse 6s ease-in-out ${index * 1.4}s infinite`,
+              }}
+            >
+              <span className="font-serif text-[clamp(3rem,6vw,5rem)] leading-none tabular-nums text-foreground">
+                {heroValue}
               </span>
-              <span className="font-serif text-[clamp(0.75rem,0.95vw,0.95rem)] leading-none text-foreground/70 ml-0.5">
-                {s.suffix}
+              <span className="font-serif text-[clamp(1.25rem,1.8vw,1.75rem)] leading-none ml-0.5 text-foreground/70">
+                {hero.suffix}
               </span>
             </div>
-            <p className="mt-1.5 text-[10.5px] uppercase tracking-[0.14em] font-mono text-muted-foreground/75 leading-snug">
-              {s.label}
+            <p className="mt-3 text-[11.5px] uppercase tracking-[0.14em] font-mono text-muted-foreground/80">
+              {hero.label}
             </p>
           </div>
-        ))}
-      </div>
 
-      <hr className="mt-6 border-t border-border/50" />
+          <div className="mt-8 grid grid-cols-2 gap-5">
+            {secondary.map((s, i) => (
+              <div key={s.label} aria-label={`${s.value}${s.suffix} ${s.label}`}>
+                <div className="flex items-baseline">
+                  <span className="font-serif text-[clamp(1.5rem,2.4vw,2rem)] leading-none text-foreground tabular-nums">
+                    {secondaryValues[i]}
+                  </span>
+                  <span className="font-serif text-[clamp(0.85rem,1.1vw,1.1rem)] leading-none text-foreground/70 ml-0.5">
+                    {s.suffix}
+                  </span>
+                </div>
+                <p className="mt-1.5 text-[10.5px] uppercase tracking-[0.14em] font-mono text-muted-foreground/75 leading-snug">
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-      <p className="mt-4 font-serif text-[clamp(0.95rem,1.2vw,1.1rem)] leading-snug text-foreground">
-        {headline}
-      </p>
-      <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
-        {body}
-      </p>
+        {/* Right column — narrative + dense panel */}
+        <div className="flex flex-col md:border-l md:border-border/40 md:pl-12">
+          <p className="font-serif text-[clamp(1.25rem,1.8vw,1.65rem)] leading-snug text-foreground">
+            {headline}
+          </p>
+          <p className="mt-3 text-[14px] leading-relaxed text-muted-foreground">
+            {body}
+          </p>
 
-      <span className="mt-5 inline-flex items-center gap-1.5 text-[12.5px] text-foreground/80 group-hover:text-foreground transition-colors">
-        Read case study
-        <span
-          aria-hidden="true"
-          className="transition-transform duration-200 group-hover:translate-x-1"
-        >
-          →
-        </span>
-      </span>
+          {details && expanded && (
+            <div
+              className="mt-6 pt-6 border-t border-border/45"
+              style={{
+                animation: "card-dense-open 600ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both",
+              }}
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground/80">
+                What Shadow ran
+              </p>
+              <ul className="mt-3 flex flex-wrap gap-1.5">
+                {details.runs.map((r) => (
+                  <li
+                    key={r}
+                    className="rounded-full border border-border/45 px-2.5 py-1 text-[11.5px] text-foreground/80"
+                  >
+                    {r}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-[13.5px] leading-relaxed text-muted-foreground">
+                {details.summary}
+              </p>
+            </div>
+          )}
+
+          <span className="mt-7 inline-flex items-center gap-1.5 text-[12.5px] text-foreground/80 group-hover:text-foreground transition-colors">
+            Read case study
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-200 group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </span>
+        </div>
       </div>
     </Link>
   );

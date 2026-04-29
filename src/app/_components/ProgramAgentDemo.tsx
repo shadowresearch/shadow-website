@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const PROMPT =
-  "Erin Walsh (CEO, Northwind) just emailed — Series C announcement in 6 weeks, looking for earned media support. Draft a first-rev positioning angle for Mike's review.";
+  "Series C announcement in 6 weeks — looking for earned media support. Need a first-rev positioning angle by Friday.";
 
 type Row = { label: string; tag: string; color: string };
 type StatBlock = { value: string; label: string };
@@ -199,19 +199,64 @@ const STEPS: Step[] = [
   },
 ];
 
-function StepRow({ step, active = false }: { step: Step; active?: boolean }) {
+function StepRow({
+  step,
+  active = false,
+  scrollRoot,
+}: {
+  step: Step;
+  active?: boolean;
+  scrollRoot?: HTMLElement | null;
+}) {
   const [shown, setShown] = useState(false);
+  const liRef = useRef<HTMLLIElement | null>(null);
+  // Tracks how far the row has scrolled into view inside the scroll
+  // container. 0 = fully outside the visible band, 1 = fully inside.
+  const [scrollOpacity, setScrollOpacity] = useState(0);
   useEffect(() => {
     const r = requestAnimationFrame(() => setShown(true));
     return () => cancelAnimationFrame(r);
   }, []);
-  const baseClass = `relative pb-6 pl-6 transition-all duration-500 ease-out ${
-    shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+  useEffect(() => {
+    const el = liRef.current;
+    if (!el || !scrollRoot) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setScrollOpacity(1);
+      return;
+    }
+    const thresholds = Array.from({ length: 21 }, (_, i) => i / 20);
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          // Ramp opacity with intersection ratio so the copy fades in
+          // as it scrolls into the visible band of the stream.
+          const ratio = entry.intersectionRatio;
+          const eased = Math.min(1, Math.max(0, ratio * 1.6));
+          setScrollOpacity(eased);
+        }
+      },
+      {
+        root: scrollRoot,
+        threshold: thresholds,
+        // Match the top + bottom mask zones so the fade lines up with
+        // the visual mask on the stream container.
+        rootMargin: "-48px 0px -64px 0px",
+      },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [scrollRoot]);
+  const baseClass = `relative pb-6 pl-6 transition-opacity duration-300 ease-out ${
+    shown ? "translate-y-0" : "translate-y-1"
   }`;
   const isThinking = step.kind === "thinking";
   const pulse = isThinking && active;
   return (
-    <li className={baseClass}>
+    <li
+      ref={liRef}
+      className={baseClass}
+      style={{ opacity: shown ? scrollOpacity : 0 }}
+    >
       <span
         className={`absolute left-[2px] top-[7px] w-1.5 h-1.5 rounded-full ${
           isThinking
@@ -465,6 +510,7 @@ export function ProgramAgentDemo({ start }: { start?: boolean } = {}) {
   const [running, setRunning] = useState(false);
   const [revealed, setRevealed] = useState(0);
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [scrollEl, setScrollEl] = useState<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   // External trigger takes precedence — caller controls when typing begins.
@@ -594,37 +640,56 @@ export function ProgramAgentDemo({ start }: { start?: boolean } = {}) {
       ref={containerRef}
       className="flex flex-col h-[640px]"
     >
-      {/* Prompt block — dark card; rounded top only, flat bottom */}
-      <div className="shrink-0 p-5 md:p-6 rounded-t-2xl bg-[#0a0908] text-[#fbf7ee]">
-        <div className="min-h-[3rem] text-[15px] leading-relaxed text-[#fbf7ee]">
-          {typed}
+      {/* Inbound profile card — sender header + message body */}
+      <div className="shrink-0 p-5 md:p-6">
+        <div className="flex items-start gap-3">
           <span
             aria-hidden="true"
-            className={`inline-block w-[1px] h-[1.1em] -mb-[0.15em] ml-[1px] bg-[#fbf7ee]/80 ${
-              !typingComplete ? "animate-pulse" : "opacity-0"
-            }`}
-          />
-        </div>
-        <div className="mt-4 pt-3 border-t border-[#fbf7ee]/15 flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.18em]">
-          <span className="text-[#fbf7ee]/55">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#88A374] mr-2 align-middle" />
-            Northwind · New business · April 2026
-          </span>
-          <span
-            className={`flex items-center gap-1.5 transition-colors ${
-              typingComplete ? "text-[#fbf7ee]" : "text-[#fbf7ee]/35"
-            }`}
+            className="shrink-0 w-9 h-9 rounded-full bg-[#7489A3]/15 text-[#7489A3] font-medium text-[12px] tracking-wide flex items-center justify-center"
           >
-            <span aria-hidden="true">↵</span> Run
+            EW
           </span>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-baseline justify-between gap-3">
+              <div className="min-w-0">
+                <span className="text-[14px] font-medium text-foreground">
+                  Erin Walsh
+                </span>
+                <span className="ml-2 text-[12px] text-muted-foreground">
+                  CEO · Northwind
+                </span>
+              </div>
+              <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground/80 shrink-0">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#88A374]" />
+                Inbound · Apr 28
+              </div>
+            </div>
+            <div className="mt-2 min-h-[3rem] text-[15px] leading-relaxed text-foreground">
+              {typed}
+              <span
+                aria-hidden="true"
+                className={`inline-block w-[1px] h-[1.1em] -mb-[0.15em] ml-[1px] bg-foreground/70 ${
+                  !typingComplete ? "animate-pulse" : "opacity-0"
+                }`}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Stream — bordered on sides + bottom, flat top; subtle inset shadow
-       * at the top creates a soft glow at the seam under the dark prompt. */}
+      {/* Stream — flat, no border; top + bottom fade so it dissolves into page */}
       <div
-        ref={scrollRef}
-        className="scroll-faint relative flex-1 overflow-y-auto border-x border-b border-border/65 rounded-b-2xl bg-card p-5 md:p-6 shadow-[inset_0_10px_14px_-10px_rgba(0,0,0,0.18)]"
+        ref={(el) => {
+          scrollRef.current = el;
+          setScrollEl(el);
+        }}
+        className="scroll-faint relative flex-1 overflow-y-auto p-5 md:p-6"
+        style={{
+          maskImage:
+            "linear-gradient(to bottom, transparent 0, black 48px, black calc(100% - 64px), transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0, black 48px, black calc(100% - 64px), transparent 100%)",
+        }}
       >
         <div
           className={`flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.18em] transition-opacity duration-500 ${
@@ -658,7 +723,12 @@ export function ProgramAgentDemo({ start }: { start?: boolean } = {}) {
                   />
                 )}
                 {timelineSteps.map((step, i) => (
-                  <StepRow key={i} step={step} active={i === activeIdx} />
+                  <StepRow
+                    key={i}
+                    step={step}
+                    active={i === activeIdx}
+                    scrollRoot={scrollEl}
+                  />
                 ))}
               </ol>
               {report && <ReportReveal step={report} />}

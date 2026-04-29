@@ -785,7 +785,7 @@ export function MachineHero() {
     <section
       ref={sectionRef}
       className="machine-section relative w-full bg-[#0a0908] text-[#f5f1ea]"
-      style={{ height: "180vh" }}
+      style={{ height: "140vh" }}
       id="machine-hero"
     >
       <div className="machine-stage-pin sticky top-0 w-full h-screen overflow-hidden">
@@ -874,41 +874,7 @@ export function MachineHero() {
             </a>
           </div>
         </div>
-        {/* Scroll cue */}
-        <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono uppercase flex flex-col items-center gap-2 z-[2]"
-          style={{
-            fontSize: "10px",
-            letterSpacing: "0.2em",
-            color: "rgba(245, 241, 234, 0.4)",
-          }}
-        >
-          Scroll
-          <span
-            className="block w-px h-8 machine-scroll-cue-line"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(245, 241, 234, 0.4), transparent)",
-            }}
-          />
-        </div>
       </div>
-      <style jsx>{`
-        .machine-scroll-cue-line {
-          animation: scrollCue 2s ease-in-out infinite;
-        }
-        @keyframes scrollCue {
-          0%,
-          100% {
-            opacity: 0.4;
-            transform: scaleY(1);
-          }
-          50% {
-            opacity: 0.9;
-            transform: scaleY(1.4);
-          }
-        }
-      `}</style>
     </section>
   );
 }

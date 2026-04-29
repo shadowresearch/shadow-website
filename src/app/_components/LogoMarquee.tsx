@@ -14,15 +14,31 @@ const LOGOS: Array<{ name: string; file: string }> = [
   { name: "Harness", file: "harness-1.svg" },
 ];
 
-const itemClass = (name: string) =>
-  `shrink-0 w-auto h-auto object-contain opacity-40 ${
-    name === "Roblox" ? "max-h-5 max-w-16" : "max-h-3.5 max-w-14"
-  }`;
+type Size = "sm" | "lg";
 
-function LogoSet({ ariaHidden = false }: { ariaHidden?: boolean }) {
+const itemClass = (name: string, size: Size) => {
+  if (size === "lg") {
+    return `shrink-0 w-auto object-contain opacity-50 ${
+      name === "Roblox" ? "h-9" : "h-7"
+    }`;
+  }
+  return `shrink-0 w-auto object-contain opacity-40 ${
+    name === "Roblox" ? "h-5" : "h-3.5"
+  }`;
+};
+
+function LogoSet({
+  ariaHidden = false,
+  size,
+}: {
+  ariaHidden?: boolean;
+  size: Size;
+}) {
+  const gap = size === "lg" ? "gap-x-20 pr-20" : "gap-x-12 pr-12";
+  const dim = size === "lg" ? { width: 160, height: 40 } : { width: 80, height: 20 };
   return (
     <div
-      className="flex shrink-0 items-center gap-x-12 pr-12"
+      className={`flex shrink-0 items-center ${gap}`}
       aria-hidden={ariaHidden ? "true" : undefined}
     >
       {LOGOS.map((logo) => (
@@ -30,10 +46,10 @@ function LogoSet({ ariaHidden = false }: { ariaHidden?: boolean }) {
           key={logo.name}
           src={`/logos/${logo.file}`}
           alt={ariaHidden ? "" : logo.name}
-          width={80}
-          height={20}
+          width={dim.width}
+          height={dim.height}
           loading="lazy"
-          className={itemClass(logo.name)}
+          className={itemClass(logo.name, size)}
         />
       ))}
     </div>
@@ -48,7 +64,7 @@ function LogoSet({ ariaHidden = false }: { ariaHidden?: boolean }) {
  * second set lands exactly where the first started — a seamless loop.
  * Edges fade via a CSS mask so logos slide in/out cleanly.
  */
-export function LogoMarquee() {
+export function LogoMarquee({ size = "sm" }: { size?: Size } = {}) {
   return (
     <div
       className="relative overflow-hidden"
@@ -59,9 +75,13 @@ export function LogoMarquee() {
           "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
       }}
     >
-      <div className="flex w-max animate-logo-marquee">
-        <LogoSet />
-        <LogoSet ariaHidden />
+      <div
+        className={`flex w-max ${
+          size === "lg" ? "animate-logo-marquee-lg" : "animate-logo-marquee"
+        }`}
+      >
+        <LogoSet size={size} />
+        <LogoSet ariaHidden size={size} />
       </div>
     </div>
   );
