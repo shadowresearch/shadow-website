@@ -60,7 +60,8 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, company, email, teamType, message, _hp_field, _timestamp } = body;
+    const { name, company, email, teamType, message, kind, _hp_field, _timestamp } = body;
+    const isNewsletter = kind === "newsletter";
 
     // Honeypot check — if this hidden field has a value, it's a bot
     if (_hp_field) {
@@ -68,17 +69,24 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    // Timestamp check — form must take at least 3 seconds to fill
+    // Timestamp check — newsletter is faster to fill (single field)
     if (_timestamp) {
       const elapsed = Date.now() - Number(_timestamp);
-      if (elapsed < 3000) {
-        // Too fast — likely a bot
+      const minElapsed = isNewsletter ? 1500 : 3000;
+      if (elapsed < minElapsed) {
         return NextResponse.json({ success: true });
       }
     }
 
     // Required field validation
-    if (!name || !company || !email) {
+    if (isNewsletter) {
+      if (!email) {
+        return NextResponse.json(
+          { error: "Email is required." },
+          { status: 400 }
+        );
+      }
+    } else if (!name || !company || !email) {
       return NextResponse.json(
         { error: "Name, company, and email are required." },
         { status: 400 }
@@ -86,7 +94,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Length limits
-    if (name.length > 200 || company.length > 200 || email.length > 254 || (message && message.length > 5000)) {
+    if (
+      (name && name.length > 200) ||
+      (company && company.length > 200) ||
+      email.length > 254 ||
+      (message && message.length > 5000)
+    ) {
       return NextResponse.json(
         { error: "Input too long." },
         { status: 400 }
@@ -102,7 +115,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Suspicious content check
-    const allText = `${name} ${company} ${email} ${message || ""}`;
+    const allText = `${name || ""} ${company || ""} ${email} ${message || ""}`;
     if (isSuspicious(allText)) {
       return NextResponse.json(
         { error: "Invalid input detected." },
@@ -122,24 +135,31 @@ export async function POST(request: NextRequest) {
     }
 
     // Sanitize all inputs before sending
-    const cleanName = sanitize(name);
-    const cleanCompany = sanitize(company);
+    const cleanName = name ? sanitize(name) : "";
+    const cleanCompany = company ? sanitize(company) : "";
     const cleanEmail = sanitize(email);
     const cleanTeamType = teamType ? sanitize(teamType) : "";
     const cleanMessage = message ? sanitize(message) : "";
 
     // Format form data into a structured message for Shadow
-    const formattedMessage = [
-      `New demo request from the website:`,
-      ``,
-      `Name: ${cleanName}`,
-      `Company: ${cleanCompany}`,
-      `Email: ${cleanEmail}`,
-      cleanTeamType ? `Team type: ${cleanTeamType}` : "",
-      cleanMessage ? `Message: ${cleanMessage}` : "",
-    ]
-      .filter(Boolean)
-      .join("\n");
+    const formattedMessage = isNewsletter
+      ? [
+          `New weekly reports subscription from the website.`,
+          `Please add this email to the newsletter subscriber list.`,
+          ``,
+          `Email: ${cleanEmail}`,
+        ].join("\n")
+      : [
+          `New demo request from the website:`,
+          ``,
+          `Name: ${cleanName}`,
+          `Company: ${cleanCompany}`,
+          `Email: ${cleanEmail}`,
+          cleanTeamType ? `Team type: ${cleanTeamType}` : "",
+          cleanMessage ? `Message: ${cleanMessage}` : "",
+        ]
+          .filter(Boolean)
+          .join("\n");
 
     const response = await fetch("https://embedded.shadow.inc/api/chat/initiate", {
       method: "POST",

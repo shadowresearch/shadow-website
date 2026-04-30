@@ -126,7 +126,7 @@ export default function ForEnterprisePage() {
     <div className="flex flex-col bg-card">
       {/* Hero */}
       <section className="flex items-start relative">
-        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-16 pt-24">
+        <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
           <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-4xl">
             Narrative intelligence, at enterprise scale.
           </h1>
@@ -155,7 +155,7 @@ export default function ForEnterprisePage() {
       {/* Enterprise problem */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-xl">
@@ -198,7 +198,7 @@ export default function ForEnterprisePage() {
       {/* Tracks at scale */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
@@ -233,7 +233,7 @@ export default function ForEnterprisePage() {
       {/* Integration */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 order-2 lg:order-1">
                 {integration.map((item) => (
@@ -267,7 +267,7 @@ export default function ForEnterprisePage() {
       {/* Governance */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
@@ -302,7 +302,7 @@ export default function ForEnterprisePage() {
       {/* FAQ */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
               Enterprise questions, answered.
             </h2>
@@ -325,7 +325,7 @@ export default function ForEnterprisePage() {
       {/* CTA */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-24 md:py-32">
             <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-2xl">
               Bring your portfolio. We will map it.
             </h2>

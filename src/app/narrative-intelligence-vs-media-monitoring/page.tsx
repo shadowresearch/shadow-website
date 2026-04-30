@@ -118,7 +118,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
     <div className="flex flex-col bg-card">
       {/* Hero */}
       <section className="flex items-start relative">
-        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-16 pt-24">
+        <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
           <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-4xl">
             Narrative intelligence is not media monitoring.
           </h1>
@@ -148,7 +148,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* Answer capsule */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="max-w-3xl">
               <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
                 What is the difference between media monitoring and narrative
@@ -172,7 +172,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* What media monitoring is */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-xl">
@@ -213,7 +213,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* What narrative intelligence is */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-xl">
@@ -255,7 +255,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* Comparison Table 1 */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-3xl">
               How the two layers differ on the dimensions that matter.
             </h2>
@@ -298,7 +298,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* Where each belongs */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-xl">
@@ -330,7 +330,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* Three surfaces */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-3xl">
               Where narratives are formed in 2026.
             </h2>
@@ -387,7 +387,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* Comparison Table 2 */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-3xl">
               What each system actually produces.
             </h2>
@@ -430,7 +430,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* When teams outgrow */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight max-w-xl">
@@ -469,7 +469,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* FAQ */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
               Frequently asked questions.
             </h2>
@@ -492,7 +492,7 @@ export default function NarrativeIntelligenceVsMediaMonitoringPage() {
       {/* CTA */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-24 md:py-32">
             <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-2xl">
               See your narrative before your next reporting cycle.
             </h2>

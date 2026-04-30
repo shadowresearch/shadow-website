@@ -27,7 +27,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col bg-card">
       <section className="flex items-start relative">
-        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-24 pt-24">
+        <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-24 pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight">

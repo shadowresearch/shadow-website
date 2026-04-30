@@ -44,7 +44,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
     <div className="flex flex-col bg-card">
       {/* ━━━ Hero ━━━ */}
       <section className="flex items-start relative">
-        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-12 pt-24">
+        <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-12 pt-24">
           <nav className="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-wider mb-8">
             <Link
               href="/case-studies"
@@ -67,7 +67,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* ━━━ Stats ━━━ */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-20">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-20">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-16">
               {cs.stats.map((stat) => (
                 <div key={stat.label}>
@@ -86,7 +86,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {/* ━━━ Content ━━━ */}
       <article className="px-4 md:px-8 pb-16 md:pb-24">
-        <div className="max-w-[1360px] mx-auto px-8 md:px-16">
+        <div className="max-w-[1425px] mx-auto px-8 md:px-16">
           <div className="max-w-[760px]">
             <p className="text-base text-muted-foreground leading-relaxed">
               We&apos;re putting the finishing touches on this case study. The
@@ -107,7 +107,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {otherStudies.length > 0 && (
         <section className="px-4 md:px-8 pb-12 md:pb-20">
           <div className="rounded-3xl bg-card overflow-hidden">
-            <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
               <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
                 More case studies
               </p>
@@ -139,7 +139,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* ━━━ CTA ━━━ */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-24 md:py-32">
             <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-2xl">
               Your team could be next.
             </h2>

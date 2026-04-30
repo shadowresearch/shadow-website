@@ -12,7 +12,7 @@ import { useEffect, useRef } from "react";
  * Geometry rules:
  * - The initial horizontal inset is sized off the viewport so the card is
  *   "match or slightly wider" than the rest of the page content (which uses
- *   max-w-[1360px] with px-8 md:px-16 gutters). On wide viewports the card
+ *   max-w-[1425px] with px-8 md:px-16 gutters). On wide viewports the card
  *   inset shrinks in absolute px but grows relative to the viewport edges.
  * - Top and bottom margins are asymmetric and independent of horizontal
  *   inset so the card sits at the correct vertical position without being

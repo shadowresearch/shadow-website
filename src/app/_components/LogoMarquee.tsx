@@ -15,14 +15,14 @@ const LOGOS: Array<{ name: string; file: string }> = [
 ];
 
 const itemClass = (name: string) =>
-  `shrink-0 w-auto h-auto object-contain opacity-40 ${
-    name === "Roblox" ? "max-h-5 max-w-16" : "max-h-3.5 max-w-14"
+  `shrink-0 w-auto object-contain opacity-45 ${
+    name === "Roblox" ? "h-6" : "h-4"
   }`;
 
 function LogoSet({ ariaHidden = false }: { ariaHidden?: boolean }) {
   return (
     <div
-      className="flex shrink-0 items-center gap-x-12 pr-12"
+      className="flex shrink-0 items-center gap-x-10 pr-10"
       aria-hidden={ariaHidden ? "true" : undefined}
     >
       {LOGOS.map((logo) => (
@@ -30,8 +30,8 @@ function LogoSet({ ariaHidden = false }: { ariaHidden?: boolean }) {
           key={logo.name}
           src={`/logos/${logo.file}`}
           alt={ariaHidden ? "" : logo.name}
-          width={80}
-          height={20}
+          width={140}
+          height={36}
           loading="lazy"
           className={itemClass(logo.name)}
         />

@@ -67,7 +67,7 @@ export default async function ResourceSlugPage({ params }: PageProps) {
       {related.length > 0 && (
         <section className="px-4 md:px-8 pb-12 md:pb-20">
           <div className="rounded-3xl bg-card overflow-hidden">
-            <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
               <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
                 Related Guides
               </p>

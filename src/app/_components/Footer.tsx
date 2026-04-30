@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <GlassSection>
     <footer className="border-t border-border bg-background">
-      <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-12">
+      <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-12">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           <div className="flex flex-col gap-3">
             <Link href="/" className="flex items-center gap-2.5">

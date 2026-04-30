@@ -219,7 +219,7 @@ export default function AiAgentsPage() {
             role="presentation"
           />
         </div>
-        <div className="relative z-10 w-full max-w-[1360px] mx-auto px-8 md:px-16 pb-16 pt-24">
+        <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
           <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-4xl">
             AI Agents
           </h1>
@@ -249,7 +249,7 @@ export default function AiAgentsPage() {
       {/* Framework */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
@@ -289,7 +289,7 @@ export default function AiAgentsPage() {
       {/* Reading agents */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="flex flex-col gap-10">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
@@ -307,7 +307,7 @@ export default function AiAgentsPage() {
       {/* Writing agents */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="flex flex-col gap-10">
               <div>
                 <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
@@ -325,7 +325,7 @@ export default function AiAgentsPage() {
       {/* How agents operate */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-16 md:py-24">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
               How agents operate.
             </h2>
@@ -348,7 +348,7 @@ export default function AiAgentsPage() {
       {/* Closing CTA */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1360px] mx-auto px-8 md:px-16 py-24 md:py-32">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-24 md:py-32">
             <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-3xl">
               A narrative team that never stops working.
             </h2>
