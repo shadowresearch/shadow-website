@@ -206,11 +206,20 @@ export default function Home() {
               <h2 className="font-serif text-[clamp(2rem,3.6vw,3.25rem)] text-foreground leading-[1.05] tracking-tight">
                 A new kind of communications infrastructure.
               </h2>
-              <p className="text-[clamp(0.95rem,1.2vw,1.1rem)] text-muted-foreground leading-[1.65]">
-                Shadow gives your team a live read on every landscape you
-                operate in, then helps you build the program from it.
-                Intelligence and execution in one system.
-              </p>
+              <div>
+                <p className="text-[clamp(0.95rem,1.2vw,1.1rem)] text-muted-foreground leading-[1.65]">
+                  Shadow gives your team a live read on every landscape you
+                  operate in, then helps you build the program from it.
+                  Intelligence and execution in one system.
+                </p>
+                <Link
+                  href="/reports"
+                  className="mt-6 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
+                >
+                  Read the latest reports
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
             </div>
             <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
               {PILLARS.map((p, i) => {
@@ -374,7 +383,8 @@ export default function Home() {
         <div className="rounded-3xl bg-card overflow-hidden">
           <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-24 md:py-32">
             <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-3xl">
-              Read the landscape. Run the program.
+              <span className="block">Read the landscape.</span>
+              <span className="block">Run the program.</span>
             </h2>
             <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-md">
               See it for yourself in your category.

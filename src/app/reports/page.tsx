@@ -64,6 +64,96 @@ const TOPICS: Topic[] = [
           { label: "Narratives mapped", value: "7" },
         ],
       },
+      {
+        slug: "ai-infrastructure-stack",
+        edition: "Edition 1",
+        date: "April 2026",
+        title: "AI Infrastructure Stack Narrative Report",
+        description:
+          "Seven layers of the AI stack mapped as narrative environments. Energy and chips lead application narratives by 60 to 90 days. Two propagation events are in active transit right now.",
+        stats: [
+          { label: "Stack layers", value: "7" },
+          { label: "Active signals", value: "23" },
+          { label: "Propagation lag", value: "60–90d" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "marketing-communications",
+    name: "Marketing & Communications",
+    description:
+      "Agency positioning, AI visibility, GEO, and the narratives reshaping how PR, comms, and marketing services compete.",
+    reports: [
+      {
+        slug: "pr-comms-agency",
+        edition: "Edition 1",
+        date: "April 2026",
+        title: "PR & Comms Agency Narrative Intelligence",
+        description:
+          "13,200+ articles, 60 GEO queries, and 44 keywords across the PR/comms agency category. GEO is the open lane; Edelman owns AI visibility; AI Adoption has already peaked.",
+        stats: [
+          { label: "Articles (6mo)", value: "13.2K" },
+          { label: "Narratives", value: "8" },
+          { label: "GEO queries", value: "60" },
+        ],
+      },
+      {
+        slug: "agency-sector",
+        edition: "Edition 1",
+        date: "April 2026",
+        title: "The Agency Industry Under the Microscope",
+        description:
+          "272 tier-1 articles across the agency holdco sector. WPP runs at 44.8% negative sentiment; Omnicom at 26.6%. Same forces, opposite frames. February 2026 was the inflection.",
+        stats: [
+          { label: "Tier-1 articles", value: "272" },
+          { label: "Holdcos", value: "5" },
+          { label: "Narratives", value: "5" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "consumer-brand",
+    name: "Consumer & Brand",
+    description:
+      "Retail, DTC, lifestyle, sport, and the cultural narratives that define modern brand positioning.",
+    reports: [
+      {
+        slug: "consumer-brand",
+        edition: "Baseline Edition",
+        date: "April 2026",
+        title: "Consumer & Brand Narrative Report",
+        description:
+          "28,382 articles across 6 narratives. Creator and DTC coverage dominate the press, but Tariff Brand Identity commands the highest AI engine visibility on just 10% of media volume.",
+        stats: [
+          { label: "Articles (28d)", value: "28,382" },
+          { label: "Narratives", value: "6" },
+          { label: "Peak AI mentions", value: "87" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "workforce-future-of-work",
+    name: "Workforce & Future of Work",
+    description:
+      "Labor markets, productivity, hiring, return-to-office, and AI's compounding impact on jobs.",
+    reports: [
+      {
+        slug: "workforce-future-of-work",
+        edition: "Baseline Edition",
+        date: "April 2026",
+        title:
+          "Workforce & Future of Work: Baseline Narrative Report",
+        description:
+          "21,606 articles across 5 narratives. Displacement writes 45% of the press, but the AI Productivity Paradox dominates AI engines and White Collar Compression dominates buyer CPC.",
+        stats: [
+          { label: "Articles (28d)", value: "21,606" },
+          { label: "Narratives", value: "5" },
+          { label: "Peak CPC", value: "$29.08" },
+        ],
+      },
     ],
   },
   {
@@ -95,20 +185,6 @@ const TOPICS: Topic[] = [
     reports: [],
   },
   {
-    id: "consumer-brand",
-    name: "Consumer & Brand",
-    description:
-      "Retail, DTC, lifestyle, sport, and the cultural narratives that define modern brand positioning.",
-    reports: [],
-  },
-  {
-    id: "workforce-future-of-work",
-    name: "Workforce & Future of Work",
-    description:
-      "Labor markets, productivity, hiring, return-to-office, and AI's compounding impact on jobs.",
-    reports: [],
-  },
-  {
     id: "geopolitics-security",
     name: "Geopolitics & Security",
     description:
@@ -121,9 +197,9 @@ export default function ReportsPage() {
   return (
     <div className="flex flex-col bg-card">
       {/* ━━━ Hero ━━━ */}
-      <section className="flex items-start relative">
-        <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] gap-x-10 lg:gap-x-20 gap-y-10 items-start">
+      <section className="px-6 md:px-12 lg:px-20 flex items-start relative">
+        <div className="relative z-10 w-full max-w-[1180px] mx-auto px-8 md:px-16 lg:px-24 pb-16 pt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,360px)] gap-x-10 lg:gap-x-12 gap-y-10 items-start">
             <div>
               <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight">
                 Narrative intelligence reports.
@@ -140,18 +216,18 @@ export default function ReportsPage() {
       </section>
 
       {/* ━━━ Topics ━━━ */}
-      <section className="px-4 md:px-8 pb-12 md:pb-20">
+      <section className="px-6 md:px-12 lg:px-20 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-12 md:py-16">
+          <div className="max-w-[1180px] mx-auto px-8 md:px-16 lg:px-24 py-12 md:py-16">
             <TopicList topics={TOPICS} />
           </div>
         </div>
       </section>
 
       {/* ━━━ CTA ━━━ */}
-      <section className="px-4 md:px-8 pb-12 md:pb-20">
+      <section className="px-6 md:px-12 lg:px-20 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-24 md:py-32">
+          <div className="max-w-[1180px] mx-auto px-8 md:px-16 lg:px-24 py-24 md:py-32">
             <h2 className="font-serif text-[clamp(2rem,4vw,3.5rem)] text-foreground leading-[1.04] tracking-tight max-w-2xl">
               Want this analysis for your category?
             </h2>

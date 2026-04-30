@@ -20,10 +20,10 @@ export function CategoryGrowth() {
   });
 
   const W = 800;
-  const H = 360;
+  const H = 380;
   const padL = 56;
   const padR = 32;
-  const padT = 40;
+  const padT = 64;
   const padB = 48;
   const chartW = W - padL - padR;
   const chartH = H - padT - padB;
