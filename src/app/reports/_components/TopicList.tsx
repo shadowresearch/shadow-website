@@ -52,9 +52,9 @@ export function TopicList({ topics }: { topics: Topic[] }) {
               onClick={() => toggle(topic.id)}
               aria-expanded={isOpen}
               aria-controls={`${topic.id}-panel`}
-              className="w-full text-left py-6 transition-colors hover:bg-muted/20"
+              className="w-full text-left px-8 md:px-12 py-6 transition-colors hover:bg-muted/30 focus:outline-none"
             >
-              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,240px)_minmax(0,1fr)_auto] gap-y-3 gap-x-8 items-start">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,260px)_minmax(0,1fr)_auto] gap-y-3 gap-x-10 items-start">
                 <div>
                   <p className="text-base md:text-[17px] font-heading font-semibold text-foreground leading-tight">
                     {topic.name}
@@ -63,7 +63,7 @@ export function TopicList({ topics }: { topics: Topic[] }) {
                     {countLabel}
                   </p>
                 </div>
-                <p className="text-sm md:text-[15px] text-muted-foreground leading-relaxed pt-0.5 md:justify-self-end md:max-w-[420px]">
+                <p className="text-sm md:text-[15px] text-muted-foreground leading-relaxed pt-0.5 md:max-w-[480px]">
                   {topic.description}
                 </p>
                 <span
@@ -94,17 +94,14 @@ export function TopicList({ topics }: { topics: Topic[] }) {
               }`}
             >
               <div className="overflow-hidden min-h-0">
-                <div className="pb-6 md:pb-8 pt-1">
+                <div className="px-8 md:px-12">
                   {count === 0 ? (
                     <ComingSoonInline />
                   ) : (
                     <ul className="flex flex-col">
-                      {topic.reports.map((report, i) => (
+                      {topic.reports.map((report) => (
                         <li key={report.slug}>
-                          <ReportRow
-                            report={report}
-                            isLast={i === topic.reports.length - 1}
-                          />
+                          <ReportRow report={report} />
                         </li>
                       ))}
                     </ul>
@@ -119,7 +116,7 @@ export function TopicList({ topics }: { topics: Topic[] }) {
   );
 }
 
-function ReportRow({ report, isLast }: { report: Report; isLast: boolean }) {
+function ReportRow({ report }: { report: Report }) {
   const meta = [
     report.edition,
     report.date,
@@ -129,14 +126,8 @@ function ReportRow({ report, isLast }: { report: Report; isLast: boolean }) {
   return (
     <Link
       href={`/reports/${report.slug}`}
-      className="group grid grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-x-3 py-3 -mx-2 px-2 rounded-md hover:bg-muted/30 transition-colors"
+      className="group grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 py-6 px-8 md:px-12 -mx-8 md:-mx-12 hover:bg-muted/30 transition-colors focus:outline-none"
     >
-      <span
-        aria-hidden="true"
-        className="font-mono text-[13px] leading-[1.4] text-muted-foreground/50 select-none pt-0.5"
-      >
-        {isLast ? "└─" : "├─"}
-      </span>
       <div className="min-w-0">
         <p className="text-sm md:text-[15px] font-heading font-medium text-foreground group-hover:text-primary transition-colors leading-snug">
           {report.title}
@@ -147,7 +138,7 @@ function ReportRow({ report, isLast }: { report: Report; isLast: boolean }) {
       </div>
       <span
         aria-hidden="true"
-        className="text-muted-foreground/50 group-hover:text-foreground transition-colors text-sm pt-1"
+        className="inline-flex items-center justify-center size-7 text-muted-foreground/50 group-hover:text-foreground transition-colors text-sm"
       >
         →
       </span>
@@ -157,7 +148,7 @@ function ReportRow({ report, isLast }: { report: Report; isLast: boolean }) {
 
 function ComingSoonInline() {
   return (
-    <div className="rounded-xl border border-dashed border-border/80 bg-muted/20 px-5 py-5 md:px-6 md:py-6 flex items-center justify-between gap-6 flex-wrap">
+    <div className="py-6 -mx-8 md:-mx-12 px-8 md:px-12 flex items-center justify-between gap-6 flex-wrap">
       <p className="text-sm text-muted-foreground">
         First report in production. Subscribe to read it when it ships.
       </p>

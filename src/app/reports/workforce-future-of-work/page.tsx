@@ -1,40 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CategoryGrowth } from "./_components/CategoryGrowth";
-import { AgenticOvertake } from "./_components/AgenticOvertake";
-import { NarrativeSmallMultiples } from "./_components/NarrativeSmallMultiples";
+import { CategoryLandscape } from "./_components/CategoryLandscape";
+import { DisplacementDominance } from "./_components/DisplacementDominance";
+import { AIEngineDivergence } from "./_components/AIEngineDivergence";
 import { NarrativeRanking } from "./_components/NarrativeRanking";
-import { AccelerationSlope } from "./_components/AccelerationSlope";
-import { Forecast } from "./_components/Forecast";
+import { AlignmentMatrix } from "./_components/AlignmentMatrix";
+import { CPCSpread } from "./_components/CPCSpread";
 
 export const metadata: Metadata = {
-  title: "Consumer AI Narrative Cycle Report | Shadow (April 2026)",
+  title:
+    "Workforce & Future of Work Narrative Report | Shadow (April 2026)",
   description:
-    "Agentic AI overtook generative AI in Q1 2026. Seven consumer AI narratives tracked across 39 months and 200,000+ sources, with buyer intent data, CPC analysis, and a 12-18 month forecast.",
+    "21,606 articles across 5 narratives reveal a workforce landscape where displacement dominates the press, but the AI Productivity Paradox dominates AI engines and White Collar Compression dominates buyer CPC. Baseline edition.",
   alternates: {
-    canonical: "/reports/consumer-ai-narrative-cycles",
+    canonical: "/reports/workforce-future-of-work",
   },
   openGraph: {
-    title: "Consumer AI Narrative Cycle Report | Shadow (April 2026)",
+    title:
+      "Workforce & Future of Work Narrative Report | Shadow (April 2026)",
     description:
-      "Agentic AI overtook generative AI in Q1 2026. Seven consumer AI narratives tracked across 39 months and 200,000+ sources.",
+      "Displacement writes 45% of the workforce press. The narratives buyers pay for are different ones. Baseline edition across media, search, and AI engine visibility.",
     type: "article",
     siteName: "Shadow",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Consumer AI Narrative Cycle Report | Shadow (April 2026)",
+    title:
+      "Workforce & Future of Work Narrative Report | Shadow (April 2026)",
     description:
-      "Agentic AI overtook generative AI in Q1 2026. Seven narratives tracked across 39 months and 200,000+ sources.",
+      "21,606 articles, 5 narratives, three signals: media, search, AI visibility. The narratives the press covers are not the narratives buyers price.",
   },
 };
 
 const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Agentic AI overtook generative AI in Q1 2026.",
-  datePublished: "2026-04-22",
-  dateModified: "2026-04-22",
+  headline:
+    "The workforce story the press writes is not the one buyers pay for.",
+  datePublished: "2026-04-30",
+  dateModified: "2026-04-30",
   author: {
     "@type": "Organization",
     name: "Shadow",
@@ -46,14 +50,14 @@ const articleLd = {
     url: "https://shadow.inc",
   },
   description:
-    "Shadow's Consumer AI Narrative Cycle Report, Edition 1. 39 months of continuous media volume data across 200,000+ sources, covering seven narratives from emergence to dominance.",
+    "Shadow's Workforce & Future of Work Narrative Report, Baseline Edition. 21,606 articles across 5 narratives, with monthly search demand and AI engine visibility cross-referenced.",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://shadow.inc/reports/consumer-ai-narrative-cycles",
+    "@id": "https://shadow.inc/reports/workforce-future-of-work",
   },
 };
 
-export default function ConsumerAINarrativeCyclesPage() {
+export default function WorkforceFutureOfWorkPage() {
   return (
     <div className="flex flex-col bg-card">
       <script
@@ -72,20 +76,20 @@ export default function ConsumerAINarrativeCyclesPage() {
               Reports
             </Link>
             <span className="text-border">/</span>
-            <span className="text-foreground">Edition 1</span>
+            <span className="text-foreground">Baseline Edition</span>
           </nav>
 
-
           <h1 className="mt-6 font-serif font-medium text-[clamp(2.25rem,4.5vw,3.75rem)] text-foreground leading-[1.05] tracking-tight">
-            Agentic AI overtook generative AI in Q1 2026.
+            The workforce story the press writes is not the one buyers pay for.
           </h1>
 
           <p className="mt-8 text-[clamp(0.95rem,1.3vw,1.15rem)] text-muted-foreground leading-[1.7]">
-            After two years at the top of the category, generative AI was passed
-            by agentic AI in a single quarter. The successor cycle reached peak
-            surge 33% faster than the cycle it replaced. For anyone positioning
-            a consumer AI company, the window to own the next narrative is
-            shorter than it was last time.
+            Displacement writes 45% of the press. AI engines treat the
+            productivity paradox as 12 times more important than the press
+            does. Enterprise buyers are paying $29 per click to engage with the
+            white-collar compression story on a fraction of that volume. Three
+            signals, three different answers about what the workforce
+            conversation actually is.
           </p>
 
           <p className="mt-8 text-xs font-mono text-muted-foreground uppercase tracking-wider">
@@ -94,7 +98,7 @@ export default function ConsumerAINarrativeCyclesPage() {
             <span className="mx-2">·</span>
             <span>April 2026</span>
             <span className="mx-2">·</span>
-            <span>Edition 1</span>
+            <span>Baseline Edition</span>
           </p>
         </div>
       </section>
@@ -163,10 +167,10 @@ export default function ConsumerAINarrativeCyclesPage() {
                     Five things the data is saying.
                   </h2>
                   <div className="mt-3 space-y-1 text-[14px] text-background leading-snug">
-                    <p>One cycle changed leadership.</p>
+                    <p>One narrative anchors the press.</p>
                     <p>
-                      Four more shape what positioning in consumer AI looks
-                      like next.
+                      Three more reorder the picture once you stack search and
+                      AI-engine signal on top.
                     </p>
                   </div>
 
@@ -177,14 +181,17 @@ export default function ConsumerAINarrativeCyclesPage() {
                       </span>
                       <div>
                         <h3 className="font-serif font-medium text-[clamp(1rem,1.3vw,1.15rem)] text-background leading-snug">
-                          Agentic AI passed generative AI for the first time.
+                          Displacement is the only fully aligned narrative.
                         </h3>
                         <div className="mt-1.5 space-y-0.5 text-[13.5px] md:text-[14px] text-background/95 leading-snug">
                           <p>
-                            180,822 quarterly articles in Q1 2026 &mdash; the
-                            largest narrative volume in the dataset.
+                            9,737 articles &mdash; 45% of the category &mdash;
+                            matched by 14,790 monthly searches.
                           </p>
-                          <p>The category has a new top story.</p>
+                          <p>
+                            Press and buyer intent are pointed in the same
+                            direction.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -195,14 +202,17 @@ export default function ConsumerAINarrativeCyclesPage() {
                       </span>
                       <div>
                         <h3 className="font-serif font-medium text-[clamp(1rem,1.3vw,1.15rem)] text-background leading-snug">
-                          Generative AI didn&apos;t fade. It got repurposed.
+                          AI engines treat the productivity paradox as central.
                         </h3>
                         <div className="mt-1.5 space-y-0.5 text-[13.5px] md:text-[14px] text-background/95 leading-snug">
                           <p>
-                            Q1 2026 volume exceeded the original 2023 peak by
-                            11%.
+                            52 AI-engine mentions on just 440 articles &mdash;
+                            11.8 per 100.
                           </p>
-                          <p>Same words, different editorial weight.</p>
+                          <p>
+                            An order of magnitude above the rest of the beat,
+                            and the question buyers ask first.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -213,12 +223,14 @@ export default function ConsumerAINarrativeCyclesPage() {
                       </span>
                       <div>
                         <h3 className="font-serif font-medium text-[clamp(1rem,1.3vw,1.15rem)] text-background leading-snug">
-                          Embodied AI is the fastest mover of the quarter.
+                          White Collar Compression is the highest-CPC narrative
+                          in the category.
                         </h3>
                         <div className="mt-1.5 space-y-0.5 text-[13.5px] md:text-[14px] text-background/95 leading-snug">
-                          <p>+188% QoQ, the leader in the dataset.</p>
+                          <p>$29.08 weighted CPC on 8.2% of media volume.</p>
                           <p>
-                            Structurally positioned as the next dominant cycle.
+                            The clearest enterprise positioning opportunity on
+                            the beat.
                           </p>
                         </div>
                       </div>
@@ -230,13 +242,13 @@ export default function ConsumerAINarrativeCyclesPage() {
                       </span>
                       <div>
                         <h3 className="font-serif font-medium text-[clamp(1rem,1.3vw,1.15rem)] text-background leading-snug">
-                          Cycles are compressing by roughly 33% per generation.
+                          Skills Gap dominates press but not search.
                         </h3>
                         <div className="mt-1.5 space-y-0.5 text-[13.5px] md:text-[14px] text-background/95 leading-snug">
-                          <p>The next peak arrives in 2 to 3 quarters, not 6.</p>
+                          <p>33% of coverage, only 5,500 monthly searches.</p>
                           <p>
-                            The positioning window is half what it was last
-                            cycle.
+                            The reskilling story is loud in the press and quiet
+                            in the search bar.
                           </p>
                         </div>
                       </div>
@@ -248,13 +260,15 @@ export default function ConsumerAINarrativeCyclesPage() {
                       </span>
                       <div>
                         <h3 className="font-serif font-medium text-[clamp(1rem,1.3vw,1.15rem)] text-background leading-snug">
-                          Buyer intent lags media by only 1 to 2 quarters.
+                          Gig Economy Regulation is the only narrative
+                          decelerating.
                         </h3>
                         <div className="mt-1.5 space-y-0.5 text-[13.5px] md:text-[14px] text-background/95 leading-snug">
+                          <p>&minus;15.4% velocity.</p>
                           <p>
-                            Less than half the lag seen in cloud computing.
+                            Policy attention is shifting from gig classification
+                            to AI-specific labor policy.
                           </p>
-                          <p>Press signal converts to demand quickly here.</p>
                         </div>
                       </div>
                     </li>
@@ -269,112 +283,108 @@ export default function ConsumerAINarrativeCyclesPage() {
       {/* ━━━ Body ━━━ */}
       <article className="px-8 md:px-16 pb-16 md:pb-24">
         <div className="max-w-[960px] mx-auto space-y-8 text-base leading-relaxed text-foreground">
-          {/* Stakes block */}
+          {/* Stakes */}
           <div className="border-t border-border pt-10">
             <p className="text-xs font-mono text-primary uppercase tracking-[0.18em]">
               Why it matters
             </p>
             <p className="mt-4 text-[1.05rem] leading-[1.7] text-foreground">
-              Communications teams, strategists, and founders in consumer AI
-              are being asked to pick a narrative to position against. That
-              decision used to have an 18-month window. This data says it now
-              has a 9-month window. Pick late and you are buying into a
-              crowded story. Pick wrong and you are paying enterprise CPC for
-              a consumer keyword.
+              Enterprise communications and HR tech buyers are forced to pick
+              which workforce story to attach a brand to. The default is to
+              follow press volume. This data shows that produces the worst
+              positioning math in the category &mdash; expensive to differentiate
+              against, cheap on CPC. The narratives with low press volume and
+              high buyer signal are where positioning still pays.
             </p>
           </div>
 
-          {/* Context / landscape */}
+          {/* Section 1: landscape */}
           <h2 className="font-serif text-[clamp(1.75rem,2.75vw,2.25rem)] tracking-tight mt-16 mb-2">
-            The category itself is growing, not rotating.
+            Workforce is one of the densest beats in the press.
           </h2>
           <p>
-            Thirty-nine months of continuous media data, seven narratives,
-            over 200,000 English-language news sources. Total volume in Q1
-            2026 reached its highest point on record. The standard assumption,
-            that each wave of AI coverage cannibalizes the last one, is not
-            what the data shows.
+            21,606 articles in 28 days, across five tracked narratives, on a
+            volume floor that holds even through weekends. The category has the
+            scale to support narrative-level intelligence; it&apos;s the
+            distribution of that scale across narratives that matters.
           </p>
 
           <div className="my-10">
-            <CategoryGrowth />
+            <CategoryLandscape />
           </div>
 
           <p>
-            Every new narrative adds to the aggregate. Nothing dies cleanly.
-            That matters because it changes the question from &ldquo;which
-            narrative do I ride this year&rdquo; to &ldquo;which narratives can
-            I credibly hold at once.&rdquo;
+            Volume is durable. The signal to read isn&apos;t whether the
+            workforce conversation is loud, but which strand of it the data
+            says is going to keep getting louder.
           </p>
           <p className="border-l-2 border-primary pl-4 font-serif italic text-foreground">
-            So what: positioning is a portfolio problem, not a switching
-            problem.
+            So what: scale is the table stakes; distribution is the strategy.
           </p>
 
-          {/* Tension */}
+          {/* Section 2: dominance */}
           <h2 className="font-serif text-[clamp(1.75rem,2.75vw,2.25rem)] tracking-tight mt-20 mb-2">
-            The successor arrived faster than the incumbent expected.
+            One narrative writes nearly half the workforce press.
           </h2>
           <p>
-            Agentic AI first appeared at meaningful volume in Q1 2024. It hit
-            its inflection in Q4 2024, when quarterly growth reached 201.8%.
-            By Q1 2026 it was at 180,822 articles per quarter, the single
-            largest narrative volume in the dataset. March 2026 alone produced
-            98,484 articles.
+            AI Job Displacement Wave produced 9,737 articles in the trailing
+            month &mdash; more than the other four narratives combined. It is
+            also the only narrative classified ALIGNED: media volume and search
+            demand move together at 14,790 searches a month. This is the
+            anchor.
           </p>
 
           <div className="my-10">
-            <AgenticOvertake />
+            <DisplacementDominance />
           </div>
 
           <p>
-            The acceleration was anchored by specific corporate events:
-            Salesforce Agentforce, Microsoft Copilot agents, and the broader
-            enterprise AI agent ecosystem that consolidated in late 2024. But
-            the mechanism under all of it is compression. Agentic AI covered
-            the same ground generative AI covered, one quarter shorter per
-            stage.
+            The displacement story is doing the structural work the workforce
+            beat needs done: explaining headcount cuts to a public that wants a
+            cause. Companies citing AI as the reason for layoffs pulls press
+            and search in the same direction. That is what alignment looks
+            like.
           </p>
           <p className="border-l-2 border-primary pl-4 font-serif italic text-foreground">
-            So what: the next cycle will arrive faster still.
+            So what: if the goal is reach, displacement is the only narrative with the volume to deliver it.
           </p>
 
-          {/* Exploration 1: per-narrative shapes */}
+          {/* Section 3: AI engines */}
           <h2 className="font-serif text-[clamp(1.75rem,2.75vw,2.25rem)] tracking-tight mt-20 mb-2">
-            Each narrative has its own shape, and the shape is the strategy.
+            AI engines are asking a different question than the press.
           </h2>
           <p>
-            Three narratives are surging: agentic, embodied, and personal AI.
-            Three are cyclical: generative, safety, and companion. One is
-            fading into a capability descriptor: multimodal. Laid side by
-            side, the shapes tell you how to position.
+            Per 100 articles in each narrative, AI Productivity Paradox sees
+            11.8 AI engine mentions &mdash; an order of magnitude above the
+            displacement narrative. The press treats &ldquo;does AI actually
+            work&rdquo; as a footnote; ChatGPT, Claude, Gemini, and Perplexity
+            treat it as a primary frame.
           </p>
 
           <div className="my-10">
-            <NarrativeSmallMultiples />
+            <AIEngineDivergence />
           </div>
 
           <p>
-            A sawtooth shape (AI companion) says buyers are reacting to
-            products, not narratives. A shallow wave with a reactive tail (AI
-            safety) says coverage is event-driven, not campaignable. A steep,
-            unbroken climb (embodied AI) says a corporate anchor has claimed
-            the term and the cycle is live.
+            Buyers do not start in Google anymore. They start by asking an AI
+            engine whether the AI tool they were just sold actually works. The
+            narrative the engines surface in response is the narrative the
+            buyer hears first &mdash; and that narrative is not the one running
+            on the front page.
           </p>
           <p className="border-l-2 border-primary pl-4 font-serif italic text-foreground">
-            So what: pick the shape that matches the story you can actually
-            tell.
+            So what: brands that show up in AI-engine answers on productivity will reach buyers before any press cycle does.
           </p>
 
-          {/* Exploration 2: ranking */}
+          {/* Section 4: ranking */}
           <h2 className="font-serif text-[clamp(1.75rem,2.75vw,2.25rem)] tracking-tight mt-20 mb-2">
-            Coverage is concentrating at the top.
+            Coverage concentrates at the top; the tail is where positioning is still cheap.
           </h2>
           <p>
-            Agentic AI and generative AI together accounted for 80% of all
-            narrative-tagged coverage in Q1 2026. The long tail, safety,
-            companion, embodied, personal, multimodal, split the remaining
-            20%.
+            After Displacement (45%) and Skills Gap (33%), the remaining three
+            narratives split the bottom 22% of the beat. That tail is where
+            every other signal &mdash; AI engine visibility, search-to-media
+            ratio, CPC &mdash; gets interesting.
           </p>
 
           <div className="my-10">
@@ -382,92 +392,68 @@ export default function ConsumerAINarrativeCyclesPage() {
           </div>
 
           <p>
-            Concentration at the top creates two distinct plays. Fight for
-            share of voice inside the crowded stories, where buyer intent is
-            already priced in (agentic AI SDK keywords run $20 to $136 per
-            click). Or build position in a thinner narrative before the crowd
-            arrives.
+            Two of the bottom three (Productivity Paradox, White Collar
+            Compression) are the highest-CPC narratives in the category. Low
+            press volume, high buyer intent. That is the working definition of
+            a positioning window.
           </p>
           <p className="border-l-2 border-primary pl-4 font-serif italic text-foreground">
-            So what: the tail is where differentiation is still cheap.
+            So what: the tail isn&apos;t a backwater; it&apos;s the room left to differentiate in.
           </p>
 
-          {/* Exploration 3: acceleration */}
+          {/* Section 5: alignment matrix */}
           <h2 className="font-serif text-[clamp(1.75rem,2.75vw,2.25rem)] tracking-tight mt-20 mb-2">
-            Embodied AI is the fastest mover of the quarter.
+            Search and press disagree on four of five narratives.
           </h2>
           <p>
-            Ranked by quarter-over-quarter growth, embodied AI is the
-            standout: 187.7% in Q1 2026. Personal AI is the next fastest at
-            123%. Agentic AI, despite its scale, grew at 85.5%. Growth rates
-            invert the volume ranking.
+            The alignment matrix sorts each narrative by where buyer search
+            volume sits relative to media coverage. Only displacement clears
+            both axes. Skills Gap leads on press but lags in search. Gig
+            Economy Regulation leads in search (8,280 monthly) but lags in
+            press &mdash; a market signal the editorial calendar hasn&apos;t
+            picked up yet.
           </p>
 
           <div className="my-10">
-            <AccelerationSlope />
+            <AlignmentMatrix />
           </div>
 
           <p>
-            Embodied AI has the structural pattern of a dominant cycle in
-            formation: multiple simultaneous corporate anchors (NVIDIA, the
-            Chinese government, humanoid robotics companies), a logical
-            semantic progression from generative to agentic to embodied, and
-            active sub-narrative absorption. At the equivalent lifecycle
-            stage, agentic AI was growing at roughly half this rate.
+            The two DECOUPLED narratives &mdash; Productivity Paradox and
+            White Collar Compression &mdash; sit low on both axes. That looks
+            like absence until you stack the AI engine and CPC signals on top.
+            Then it looks like the most under-reported part of the workforce
+            conversation.
           </p>
           <p className="border-l-2 border-primary pl-4 font-serif italic text-foreground">
-            So what: the next 180K-article quarter is already visible in the
-            data.
+            So what: alignment is the wrong lens by itself. Stack three signals before you decide where to plant a flag.
           </p>
 
-          {/* Exploration 4: resurgence paradox */}
+          {/* Section 6: CPC */}
           <h2 className="font-serif text-[clamp(1.75rem,2.75vw,2.25rem)] tracking-tight mt-20 mb-2">
-            Generative AI did not die. It got repurposed.
+            Enterprise buyers will pay $29 a click for the white-collar compression story.
           </h2>
           <p>
-            Q1 2026 quarterly volume for generative AI reached 138,689. That
-            exceeds the original 2023 peak of 124,440 by 11%. The standard
-            narrative-lifecycle model does not predict this. The Gartner Hype
-            Cycle does not predict this.
-          </p>
-          <p>
-            What happened is a term-level evolution. &ldquo;Generative
-            AI&rdquo; in 2023 was a novelty label attached to ChatGPT and
-            wonder. &ldquo;Generative AI&rdquo; in 2026 is an enterprise
-            deployment category. Same words, different editorial weight.
-            Coverage shifted from &ldquo;what is this&rdquo; to &ldquo;how is
-            it being implemented.&rdquo;
-          </p>
-          <p className="border-l-2 border-primary pl-4 font-serif italic text-foreground">
-            So what: no narrative needs to be abandoned, only reframed.
-          </p>
-
-          {/* Resolution / forecast */}
-          <h2 className="font-serif text-[clamp(1.75rem,2.75vw,2.25rem)] tracking-tight mt-20 mb-2">
-            The forecast: embodied peaks in late 2026.
-          </h2>
-          <p>
-            Applying the observed 33% compression pattern to the current
-            inflection point, embodied AI reaches peak surge between Q4 2026
-            and Q1 2027. Agentic AI continues its climb through mid-2026
-            before decelerating. Generative AI holds as a resurgent baseline.
+            Weighted CPC across each narrative&rsquo;s keyword set tells you
+            what enterprise buyers will actually pay to engage. White Collar
+            Compression sits at $29.08, six and a half times the displacement
+            narrative, on roughly one-fifth the media volume. AI Productivity
+            Paradox sits second at $15.37.
           </p>
 
           <div className="my-10">
-            <Forecast />
+            <CPCSpread />
           </div>
 
           <p>
-            Three things could break this forecast: a major robotics safety
-            incident that kills embodied momentum, regulatory action on
-            autonomous systems, or NVIDIA rebranding away from &ldquo;physical
-            AI.&rdquo; None look likely in the next two quarters. The
-            positioning window for embodied AI is open now and closes in Q3
-            2026.
+            The narratives the press is loudest on are the cheapest to advertise
+            against. The narratives the press underweights are the ones
+            enterprise software buyers are actively shopping. That gap is the
+            entire point of running narrative intelligence across three
+            signals instead of one.
           </p>
           <p className="border-l-2 border-primary pl-4 font-serif italic text-foreground">
-            So what: if you are waiting for embodied AI to feel obvious, the
-            window has already closed.
+            So what: comms that only watches press misses the part of the conversation that&rsquo;s actually being bought.
           </p>
         </div>
       </article>
@@ -475,13 +461,11 @@ export default function ConsumerAINarrativeCyclesPage() {
       {/* ━━━ Methodology ━━━ */}
       <section className="px-8 md:px-16 pb-16">
         <div className="max-w-[960px] mx-auto relative rounded-2xl overflow-hidden">
-          {/* Image backdrop */}
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.7]"
             style={{ backgroundImage: "url('/sandscape.png')" }}
           />
-          {/* Dot grid */}
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
@@ -491,7 +475,6 @@ export default function ConsumerAINarrativeCyclesPage() {
               backgroundSize: "5px 5px",
             }}
           />
-          {/* Outer padding — glass card fills the rest */}
           <div className="relative p-3 lg:p-5">
             <div
               className="relative rounded-2xl overflow-hidden backdrop-blur-3xl backdrop-saturate-150 bg-foreground/[0.55] isolate"
@@ -506,7 +489,6 @@ export default function ConsumerAINarrativeCyclesPage() {
                 ].join(", "),
               }}
             >
-              {/* Top-down inner sheen */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl"
@@ -515,7 +497,6 @@ export default function ConsumerAINarrativeCyclesPage() {
                     "linear-gradient(to bottom, rgba(255,255,255,0.18) 0%, transparent 100%)",
                 }}
               />
-              {/* Specular highlight on the top edge */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-x-0 top-0 h-px"
@@ -524,7 +505,6 @@ export default function ConsumerAINarrativeCyclesPage() {
                     "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.65) 50%, transparent 100%)",
                 }}
               />
-              {/* Faint bottom rim */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-x-0 bottom-0 h-px"
@@ -533,7 +513,6 @@ export default function ConsumerAINarrativeCyclesPage() {
                     "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.22) 50%, transparent 100%)",
                 }}
               />
-              {/* Content */}
               <div className="relative p-6 lg:p-8">
                 <p className="text-xs font-mono text-background/70 uppercase tracking-[0.18em]">
                   Methodology
@@ -546,58 +525,61 @@ export default function ConsumerAINarrativeCyclesPage() {
                 </p>
 
                 <dl className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-10">
-            <div>
-              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
-                Sources
-              </dt>
-              <dd className="mt-2 text-[15px] text-background leading-relaxed">
-                Perigon News Intelligence API (200,000+ English-language
-                sources); DataForSEO search volume and CPC data (US market);
-                Shadow analysis.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
-                Date range
-              </dt>
-              <dd className="mt-2 text-[15px] text-background leading-relaxed">
-                January 2023 through March 2026, 39 continuous months.
-                Quarterly aggregation.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
-                Sample
-              </dt>
-              <dd className="mt-2 text-[15px] text-background leading-relaxed">
-                Seven tracked narratives: agentic AI, generative AI, AI safety,
-                AI companion, embodied AI, personal AI, multimodal AI. Buyer
-                intent cross-referenced against 40 keywords.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
-                Exclusions
-              </dt>
-              <dd className="mt-2 text-[15px] text-background leading-relaxed">
-                Non-English press. Enterprise-only trade publications below
-                standard distribution thresholds. Paid-placement content where
-                editorially flagged.
-              </dd>
-            </div>
-            <div className="md:col-span-2">
-              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
-                Known limits
-              </dt>
-              <dd className="mt-2 text-[15px] text-background leading-relaxed">
-                Projections assume the 33% cycle-compression pattern holds and
-                no major regulatory or corporate-anchor shock. Projections are
-                drawn as dashed lines and labeled on every chart. Volume
-                tagging is keyword-based; ambiguous articles may count against
-                more than one narrative.
-              </dd>
-            </div>
-          </dl>
+                  <div>
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
+                      Sources
+                    </dt>
+                    <dd className="mt-2 text-[15px] text-background leading-relaxed">
+                      Perigon News Intelligence API (English-language press,
+                      reprints excluded); DataForSEO search volume and CPC (US
+                      market); Shadow GEO audit across ChatGPT, Claude, Gemini,
+                      and Perplexity.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
+                      Date range
+                    </dt>
+                    <dd className="mt-2 text-[15px] text-background leading-relaxed">
+                      Trailing 28 days through April 26, 2026 for media data;
+                      April 2026 monthly aggregates for search and AI engine
+                      visibility. Initialization date: April 28, 2026.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
+                      Sample
+                    </dt>
+                    <dd className="mt-2 text-[15px] text-background leading-relaxed">
+                      Five tracked narratives: AI Job Displacement Wave, AI
+                      Productivity Paradox, Skills Gap Acceleration, Gig Economy
+                      Regulation, White Collar Compression. 31 keywords cross-
+                      referenced for buyer intent.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
+                      Exclusions
+                    </dt>
+                    <dd className="mt-2 text-[15px] text-background leading-relaxed">
+                      Non-English press. Non-news and paid-news labels filtered
+                      at the source. Reprints excluded from media counts.
+                    </dd>
+                  </div>
+                  <div className="md:col-span-2">
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-background/70">
+                      Known limits
+                    </dt>
+                    <dd className="mt-2 text-[15px] text-background leading-relaxed">
+                      This is a baseline edition: 28 days of media data is
+                      enough for distribution and alignment, not enough for
+                      cycle-shape analysis. Velocity scores should be re-read
+                      after a second 28-day window. CPC is volume-weighted
+                      across each narrative&rsquo;s keyword set; ambiguous
+                      keywords may count toward more than one narrative.
+                    </dd>
+                  </div>
+                </dl>
               </div>
             </div>
           </div>

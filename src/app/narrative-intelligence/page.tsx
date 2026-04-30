@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ExpandingCallout } from "../_components/ExpandingCallout";
-
 export const metadata: Metadata = {
   title: "Narrative Intelligence | Shadow",
   description:
@@ -28,25 +26,21 @@ export const metadata: Metadata = {
 const LAYERS = [
   {
     label: "Media layer",
-    color: "#977BA1",
     body:
       "Real-time coverage tracking across 200,000+ global sources. Volume, sentiment, outlet tier, journalist activity, spokesperson mentions, competitive share of voice. Organised per client, updated continuously.",
   },
   {
     label: "Search layer",
-    color: "#7489A3",
     body:
       "Keyword demand, ranking positions, content gaps, and commercial intent signals. What audiences are actively searching for, which competitors own those positions, and where the openings are.",
   },
   {
     label: "Social layer",
-    color: "#88A374",
     body:
       "Conversation patterns across social platforms. Community sentiment, emerging narratives, audience signals. How conversations form and where they gain traction before media picks them up.",
   },
   {
     label: "AI layer",
-    color: "#CC764F",
     body:
       "LLM citation tracking across ChatGPT, Claude, Gemini, and Perplexity. Which brands appear in AI-generated responses, which prompts trigger competitive mentions, and where citation gaps exist. This is the newest channel, and most communications teams have no visibility into it at all.",
   },
@@ -139,36 +133,29 @@ export default function NarrativeIntelligencePage() {
         </div>
       </section>
 
-      {/* The Narrative Graph (dark; card → full-bleed on scroll) */}
-      <section>
-        <ExpandingCallout>
-          <div className="relative max-w-[1425px] mx-auto px-6 md:px-10 py-12 md:py-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-              {/* Left: copy */}
-              <div className="lg:sticky lg:top-28">
-                <h2 className="font-serif text-[clamp(2rem,3.6vw,3.25rem)] text-background leading-[1.08] tracking-tight">
+      {/* The Narrative Graph */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <h2 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] text-foreground leading-[1.08] tracking-tight">
                   One graph. Four narrative layers. Real-time.
                 </h2>
-                <p className="mt-6 text-base text-background/60 leading-relaxed max-w-md">
+                <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-md">
                   Shadow&apos;s narrative graph is the foundational data
                   architecture of the platform. It continuously ingests signals
                   across four layers and maps them into a unified view of how
                   narratives are forming, moving, and resolving.
                 </p>
               </div>
-
-              {/* Right: layer chips */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-8">
                 {LAYERS.map((layer) => (
-                  <div
-                    key={layer.label}
-                    className="pl-6 py-2"
-                    style={{ borderLeft: `6px solid ${layer.color}` }}
-                  >
-                    <p className="font-heading text-lg font-semibold text-background">
+                  <div key={layer.label}>
+                    <p className="font-heading text-base font-semibold text-foreground">
                       {layer.label}
                     </p>
-                    <p className="mt-2 text-sm md:text-[15px] text-background/60 leading-relaxed">
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-md">
                       {layer.body}
                     </p>
                   </div>
@@ -176,7 +163,7 @@ export default function NarrativeIntelligencePage() {
               </div>
             </div>
           </div>
-        </ExpandingCallout>
+        </div>
       </section>
 
       {/* From data to positions */}

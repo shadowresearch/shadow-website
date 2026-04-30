@@ -52,7 +52,7 @@ export function AgentWorkstream() {
           }
         }
       },
-      { threshold: 0.25 },
+      { rootMargin: "0px 0px -20% 0px", threshold: 0 },
     );
     io.observe(el);
 
