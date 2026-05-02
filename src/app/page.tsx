@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AgentWorkstream } from "./_components/AgentWorkstream";
 import { HeroLandscape } from "./_components/HeroLandscape";
 import { LogoMarquee } from "./_components/LogoMarquee";
+import { NarrativeReportPreview } from "./_components/NarrativeReportPreview";
 import { PillarTopoViz } from "./_components/PillarTopoViz";
 import { ProductionLineCarousel } from "./_components/ProductionLineCarousel";
 import { ProgramAgentDemo } from "./_components/ProgramAgentDemo";
@@ -165,8 +166,7 @@ export default function Home() {
             </h1>
 
             <p className="text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7]">
-              Purpose-built for strategic communications. Designed for the AI
-              era.
+              A narrative intelligence platform and AI workspace for communications teams.
             </p>
           </div>
 
@@ -198,8 +198,96 @@ export default function Home() {
         </div>
       </HeroLandscape>
 
-      {/* ━━━ Positioning Statement ━━━ */}
+      {/* ━━━ Capability — Read the landscape ━━━ */}
       <section className="px-4 md:px-8 pt-12 md:pt-24 pb-12 md:pb-20">
+        <div className="rounded-3xl bg-card overflow-hidden">
+          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 lg:gap-x-20 gap-y-10 items-start">
+              {/* Left column: heading + subheader + button stacked */}
+              <div className="lg:sticky lg:top-28">
+                <h2 className="font-serif text-[clamp(2rem,3.6vw,3.25rem)] text-foreground leading-[1.05] tracking-tight">
+                  Read the landscape.
+                </h2>
+                <p className="mt-6 text-[clamp(0.95rem,1.2vw,1.1rem)] text-muted-foreground leading-[1.65] max-w-md">
+                  A continuous read on every narrative shaping your category — across media, search, social, and AI.
+                </p>
+                <Link
+                  href="/narrative-intelligence"
+                  className="mt-6 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
+                >
+                  Explore narrative intelligence
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+              {/* Right column: report preview — same wrapper pattern as the
+                  program/agents sections below, just with a glass inner card */}
+              <div className="relative">
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-3 lg:-inset-5 rounded-2xl overflow-hidden"
+                >
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-[0.7]"
+                    style={{ backgroundImage: "url('/sandscape.png')" }}
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      backgroundImage:
+                        "radial-gradient(circle, color-mix(in srgb, var(--card) 50%, transparent) 0.4px, transparent 0.8px)",
+                      backgroundSize: "5px 5px",
+                    }}
+                  />
+                </div>
+                <div
+                  className="relative rounded-2xl overflow-hidden backdrop-blur-3xl backdrop-saturate-150 bg-foreground/[0.55] isolate"
+                  style={{
+                    boxShadow: [
+                      "inset 0 1px 0 0 rgba(255,255,255,0.5)",
+                      "inset 0 0 0 1px rgba(255,255,255,0.18)",
+                      "inset 0 -1px 0 0 rgba(43,32,22,0.08)",
+                      "0 1px 2px 0 rgba(43,32,22,0.04)",
+                      "0 8px 24px -8px rgba(43,32,22,0.18)",
+                      "0 24px 60px -24px rgba(43,32,22,0.22)",
+                    ].join(", "),
+                  }}
+                >
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-2xl z-10"
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, rgba(255,255,255,0.18) 0%, transparent 100%)",
+                    }}
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-px z-10"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.65) 50%, transparent 100%)",
+                    }}
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-px z-10"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.22) 50%, transparent 100%)",
+                    }}
+                  />
+                  <div className="relative">
+                    <NarrativeReportPreview />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ━━━ Positioning Statement ━━━ */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">
           <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] gap-x-10 lg:gap-x-20 gap-y-8 items-start">
