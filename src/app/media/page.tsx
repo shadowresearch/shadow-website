@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/media",
   },
+  robots: { index: false, follow: true },
   openGraph: {
     title: "Media & Outreach | Shadow",
     description:

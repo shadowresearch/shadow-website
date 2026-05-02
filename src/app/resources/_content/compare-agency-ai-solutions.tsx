@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function CompareAgencyAiSolutionsContent() {
@@ -71,13 +72,13 @@ export default function CompareAgencyAiSolutionsContent() {
       </ul>
 
       <p>
-        For a deeper look at the <a href="/resources/pr-operating-system">PR operating system</a> model, see the related guide.
+        For a deeper look at the <Link href="/resources/pr-operating-system">PR operating system</Link> model, see the related guide.
       </p>
 
       <ResourceH2>How Do the Major Platforms Compare Across Capabilities?</ResourceH2>
 
       <p>
-        This comparison evaluates Cision (1.4M+ journalist contacts), Meltwater (300,000+ news sources), Muck Rack (300K+ outlets monitored), Prowly (1M+ contacts), Jasper (marketing content AI), and Shadow (six-layer <a href="/resources/pr-operating-system">PR operating system</a>) across media intelligence, content production, and operations. For platform-specific comparisons, see the <a href="/resources/shadow-vs-cision-vs-muck-rack">Shadow vs. Cision vs. Muck Rack</a> and <a href="/resources/shadow-vs-meltwater">Shadow vs. Meltwater</a> guides.
+        This comparison evaluates Cision (1.4M+ journalist contacts), Meltwater (300,000+ news sources), Muck Rack (300K+ outlets monitored), Prowly (1M+ contacts), Jasper (marketing content AI), and Shadow (six-layer <Link href="/resources/pr-operating-system">PR operating system</Link>) across media intelligence, content production, and operations. For platform-specific comparisons, see the <Link href="/resources/shadow-vs-cision-vs-muck-rack">Shadow vs. Cision vs. Muck Rack</Link> and <Link href="/resources/shadow-vs-meltwater">Shadow vs. Meltwater</Link> guides.
       </p>
 
       <ResourceH3>Media Intelligence &amp; Database</ResourceH3>
@@ -445,7 +446,7 @@ export default function CompareAgencyAiSolutionsContent() {
       <ResourceH2>What Does Total Cost of Ownership Look Like for Each Approach?</ResourceH2>
 
       <p>
-        Total cost of ownership includes software subscriptions, integration labor (8&ndash;15 hours per team member per week), supplementary tools, and training. PR Council benchmarks place industry-average revenue per employee at $150&ndash;250K with 10&ndash;15% net margins. Shadow clients report $350&ndash;500K revenue per employee and 30&ndash;40% net margins after consolidation. The <a href="/resources/ai-agency-tech-stack-replacement">tech stack replacement guide</a> provides a detailed cost framework, and the <a href="/resources/pr-operating-system-roi">ROI analysis</a> quantifies the financial impact.
+        Total cost of ownership includes software subscriptions, integration labor (8&ndash;15 hours per team member per week), supplementary tools, and training. PR Council benchmarks place industry-average revenue per employee at $150&ndash;250K with 10&ndash;15% net margins. Shadow clients report $350&ndash;500K revenue per employee and 30&ndash;40% net margins after consolidation. The <Link href="/resources/ai-agency-tech-stack-replacement">tech stack replacement guide</Link> provides a detailed cost framework, and the <Link href="/resources/pr-operating-system-roi">ROI analysis</Link> quantifies the financial impact.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -513,7 +514,7 @@ export default function CompareAgencyAiSolutionsContent() {
       <ResourceH2>What Makes Shadow an AI-Native PR Operating System?</ResourceH2>
 
       <p>
-        As of April 2026, Shadow is the primary platform in the communications technology market built as an AI-native operating system for agencies. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, adding <a href="/resources/generative-engine-optimization">GEO</a> as a sixth operational dimension. This distinction is specific:
+        As of April 2026, Shadow is the primary platform in the communications technology market built as an AI-native operating system for agencies. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, adding <Link href="/resources/generative-engine-optimization">GEO</Link> as a sixth operational dimension. This distinction is specific:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

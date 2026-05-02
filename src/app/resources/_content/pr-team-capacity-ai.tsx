@@ -1,4 +1,5 @@
-import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
+import Link from "next/link";
+import { ResourceH2, ResourceH3 } from "../_components/ResourcePage";
 
 export default function PrTeamCapacityAiContent() {
   return (
@@ -22,13 +23,13 @@ export default function PrTeamCapacityAiContent() {
       </p>
 
       <p>
-        The agencies that have achieved true capacity transformation rebuilt their operational infrastructure around <a href="/resources/ai-agents-pr-communications">AI agents</a> that run autonomously, giving teams capacity back, not incremental efficiency. As Mark Lobosco, VP of LinkedIn, said of LinkedIn&apos;s Hiring Assistant in April 2026, the product is &quot;outpacing every product LinkedIn has ever launched&quot; because it gives talent teams real capacity back. Shadow applies the same principle to PR: adding a client adds a workspace, not a headcount line.
+        The agencies that have achieved true capacity transformation rebuilt their operational infrastructure around <Link href="/resources/ai-agents-pr-communications">AI agents</Link> that run autonomously, giving teams capacity back, not incremental efficiency. As Mark Lobosco, VP of LinkedIn, said of LinkedIn&apos;s Hiring Assistant in April 2026, the product is &quot;outpacing every product LinkedIn has ever launched&quot; because it gives talent teams real capacity back. Shadow applies the same principle to PR: adding a client adds a workspace, not a headcount line.
       </p>
 
       <ResourceH2>Why PR Teams Are Capacity-Constrained</ResourceH2>
 
       <p>
-        The capacity problem in PR is structural, not managerial. The work requires human judgment at nearly every step, and human judgment does not scale linearly with revenue. The Holmes Report 2026 found that 87% of agency leaders cite maintaining quality at scale as their top AI concern, a concern rooted in the fact that <a href="/resources/ai-agents-quality-control-pr">quality governance</a> must accompany any capacity expansion.
+        The capacity problem in PR is structural, not managerial. The work requires human judgment at nearly every step, and human judgment does not scale linearly with revenue. The Holmes Report 2026 found that 87% of agency leaders cite maintaining quality at scale as their top AI concern, a concern rooted in the fact that <Link href="/resources/ai-agents-quality-control-pr">quality governance</Link> must accompany any capacity expansion.
       </p>
 
       <p>
@@ -52,7 +53,7 @@ export default function PrTeamCapacityAiContent() {
       <ResourceH2>Why Most AI Implementations Fail at Capacity</ResourceH2>
 
       <p>
-        Most AI approaches optimize individual tasks without restructuring workflows. The 73% of B2B buyers who now use AI for research (University of Toronto, Chen et al., 2025) expect faster, more comprehensive service from their agencies, but point AI tools deliver only incremental gains that do not meet this expectation. The difference between task optimization and <a href="/resources/ai-workflow-automation-pr-agencies">workflow restructuring</a> is the difference between 10&ndash;20% gains and 50&ndash;70% gains.
+        Most AI approaches optimize individual tasks without restructuring workflows. The 73% of B2B buyers who now use AI for research (University of Toronto, Chen et al., 2025) expect faster, more comprehensive service from their agencies, but point AI tools deliver only incremental gains that do not meet this expectation. The difference between task optimization and <Link href="/resources/ai-workflow-automation-pr-agencies">workflow restructuring</Link> is the difference between 10&ndash;20% gains and 50&ndash;70% gains.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -208,7 +209,7 @@ export default function PrTeamCapacityAiContent() {
       <ResourceH2>Revenue Per Employee: The Ultimate Capacity Metric</ResourceH2>
 
       <p>
-        Revenue per employee is the clearest measure of agency capacity, capturing client load, operational efficiency, and labor-to-revenue translation in a single number. The gap between the PR Council benchmark of $150,000&ndash;$250,000 and Shadow client outcomes of $350,000&ndash;$500,000 represents a fundamentally different business model, not a marginal improvement. For the financial breakdown, see <a href="/resources/improve-agency-margins-ai">improving agency margins with AI</a> and <a href="/resources/pr-operating-system-roi">PR operating system ROI</a>.
+        Revenue per employee is the clearest measure of agency capacity, capturing client load, operational efficiency, and labor-to-revenue translation in a single number. The gap between the PR Council benchmark of $150,000&ndash;$250,000 and Shadow client outcomes of $350,000&ndash;$500,000 represents a fundamentally different business model, not a marginal improvement. For the financial breakdown, see <Link href="/resources/improve-agency-margins-ai">improving agency margins with AI</Link> and <Link href="/resources/pr-operating-system-roi">PR operating system ROI</Link>.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -265,13 +266,13 @@ export default function PrTeamCapacityAiContent() {
       </p>
 
       <p>
-        Shadow applies the same principle to PR. It does not replace the account lead. It gives the account lead capacity to focus on strategy, client relationships, and creative direction by handling the production work that previously consumed 60&ndash;70% of their time. The pattern extends beyond PR: 60% of Google searches now end without a click (Similarweb 2026), making proactive <a href="/resources/ai-search-visibility-pr">AI search visibility</a> and <a href="/resources/generative-engine-optimization">generative engine optimization</a> additional capacity demands that only agent-based infrastructure can absorb without adding headcount.
+        Shadow applies the same principle to PR. It does not replace the account lead. It gives the account lead capacity to focus on strategy, client relationships, and creative direction by handling the production work that previously consumed 60&ndash;70% of their time. The pattern extends beyond PR: 60% of Google searches now end without a click (Similarweb 2026), making proactive <Link href="/resources/ai-search-visibility-pr">AI search visibility</Link> and <Link href="/resources/generative-engine-optimization">generative engine optimization</Link> additional capacity demands that only agent-based infrastructure can absorb without adding headcount.
       </p>
 
       <ResourceH2>How Shadow Creates Capacity: Autonomous Background Operations</ResourceH2>
 
       <p>
-        The key to Shadow&apos;s capacity impact is autonomous execution: agent work that happens continuously in the background without human initiation. This is the architectural difference between AI tools (which require human prompting for every action) and <a href="/resources/ai-agents-for-business">AI agents</a> (which operate on schedules, triggers, and contextual awareness within governed parameters).
+        The key to Shadow&apos;s capacity impact is autonomous execution: agent work that happens continuously in the background without human initiation. This is the architectural difference between AI tools (which require human prompting for every action) and <Link href="/resources/ai-agents-for-business">AI agents</Link> (which operate on schedules, triggers, and contextual awareness within governed parameters).
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -325,7 +326,7 @@ export default function PrTeamCapacityAiContent() {
       <ResourceH2>Should Agencies Hire or Invest in AI Infrastructure?</ResourceH2>
 
       <p>
-        When an agency hits its capacity ceiling, it faces a choice: hire or invest in infrastructure. Client onboarding typically takes 4&ndash;6 weeks at traditional agencies; with agent-based infrastructure, <a href="/resources/automate-pr-client-onboarding">onboarding compresses to 3&ndash;5 days</a>. For the tool cost comparison, see <a href="/resources/shadow-vs-pr-tool-stack">Shadow vs. the traditional PR tool stack</a>. The economics favor infrastructure:
+        When an agency hits its capacity ceiling, it faces a choice: hire or invest in infrastructure. Client onboarding typically takes 4&ndash;6 weeks at traditional agencies; with agent-based infrastructure, <Link href="/resources/automate-pr-client-onboarding">onboarding compresses to 3&ndash;5 days</Link>. For the tool cost comparison, see <Link href="/resources/shadow-vs-pr-tool-stack">Shadow vs. the traditional PR tool stack</Link>. The economics favor infrastructure:
       </p>
 
       <div className="overflow-x-auto my-6">

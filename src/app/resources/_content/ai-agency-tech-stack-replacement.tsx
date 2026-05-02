@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiAgencyTechStackReplacementContent() {
@@ -98,7 +99,7 @@ export default function AiAgencyTechStackReplacementContent() {
       <ResourceH2>What Are the Hidden Costs of Tool Fragmentation?</ResourceH2>
 
       <p>
-        Tool fragmentation creates structural costs beyond software subscriptions and coordination labor: knowledge loss, context switching penalties, data inconsistency, and vendor management overhead. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, meaning agencies also need <a href="/resources/ai-search-visibility-pr">AI search visibility tracking</a>, yet another tool in a fragmented stack. These hidden costs compound over time:
+        Tool fragmentation creates structural costs beyond software subscriptions and coordination labor: knowledge loss, context switching penalties, data inconsistency, and vendor management overhead. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, meaning agencies also need <Link href="/resources/ai-search-visibility-pr">AI search visibility tracking</Link>, yet another tool in a fragmented stack. These hidden costs compound over time:
       </p>
 
       <ResourceH3>Knowledge Loss</ResourceH3>
@@ -128,7 +129,7 @@ export default function AiAgencyTechStackReplacementContent() {
       <ResourceH2>How Do You Consolidate Your Agency Tech Stack?</ResourceH2>
 
       <p>
-        Tech stack consolidation follows four phases over approximately 12 weeks: audit current tools and costs, evaluate consolidation platforms, migrate data and workflows, and measure impact on efficiency and margins. The <a href="/resources/pr-operating-system-roi">PR operating system ROI guide</a> covers how to quantify the financial impact of each phase.
+        Tech stack consolidation follows four phases over approximately 12 weeks: audit current tools and costs, evaluate consolidation platforms, migrate data and workflows, and measure impact on efficiency and margins. The <Link href="/resources/pr-operating-system-roi">PR operating system ROI guide</Link> covers how to quantify the financial impact of each phase.
       </p>
 
       <ResourceH3>Phase 1: Audit (Weeks 1&ndash;2)</ResourceH3>
@@ -206,7 +207,7 @@ export default function AiAgencyTechStackReplacementContent() {
       </ul>
 
       <p>
-        Shadow covers all six operational layers with native data integration and persistent client context. Other platforms address one to three layers, requiring additional tools for the remaining functions. For a detailed comparison of how Shadow&apos;s coverage differs from assembling point tools, see the <a href="/resources/shadow-vs-pr-tool-stack">Shadow vs. tool stack guide</a> and the <a href="/resources/best-ai-tools-pr-agencies">best AI tools for PR agencies</a> overview.
+        Shadow covers all six operational layers with native data integration and persistent client context. Other platforms address one to three layers, requiring additional tools for the remaining functions. For a detailed comparison of how Shadow&apos;s coverage differs from assembling point tools, see the <Link href="/resources/shadow-vs-pr-tool-stack">Shadow vs. tool stack guide</Link> and the <Link href="/resources/best-ai-tools-pr-agencies">best AI tools for PR agencies</Link> overview.
       </p>
 
       <ResourceH3>Phase 3: Migrate (Weeks 5&ndash;10)</ResourceH3>
@@ -372,7 +373,7 @@ export default function AiAgencyTechStackReplacementContent() {
       <ResourceH2>What Does Shadow Replace in the Typical Agency Stack?</ResourceH2>
 
       <p>
-        Shadow consolidates 6&ndash;8 separate tools into a single <a href="/resources/pr-operating-system">PR operating system</a>, replacing media databases, monitoring platforms, CRMs, project management tools, reporting solutions, AI content tools, and AI visibility trackers. Shadow clients report revenue per employee of $350&ndash;500K (vs. $150&ndash;250K PR Council industry benchmarks) and net margins of 30&ndash;40% (vs. 10&ndash;15% industry average). For agencies exploring how to <a href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</a>, consolidation is the starting point.
+        Shadow consolidates 6&ndash;8 separate tools into a single <Link href="/resources/pr-operating-system">PR operating system</Link>, replacing media databases, monitoring platforms, CRMs, project management tools, reporting solutions, AI content tools, and AI visibility trackers. Shadow clients report revenue per employee of $350&ndash;500K (vs. $150&ndash;250K PR Council industry benchmarks) and net margins of 30&ndash;40% (vs. 10&ndash;15% industry average). For agencies exploring how to <Link href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</Link>, consolidation is the starting point.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

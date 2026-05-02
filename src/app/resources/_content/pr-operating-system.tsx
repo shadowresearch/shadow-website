@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function PrOperatingSystemContent() {
@@ -238,7 +239,7 @@ export default function PrOperatingSystemContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (<a href="/">Shadow</a>). Shadow is the PR operating system for communications agencies.
+        Published by Shadow (<Link href="/">Shadow</Link>). Shadow is the PR operating system for communications agencies.
       </p>
     </>
   );

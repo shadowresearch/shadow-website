@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiAgentMediaMonitoringContent() {
@@ -20,7 +21,7 @@ export default function AiAgentMediaMonitoringContent() {
       </p>
 
       <p>
-        AI agents transform this model. Instead of a dashboard you have to check, you get a teammate who briefs you every morning. Instead of keyword alerts that require interpretation, you get contextualized insights that explain why something matters. Instead of <a href="/resources/automate-monthly-pr-reporting">monthly report compilation</a> consuming 8&ndash;15 hours per client, you get auto-generated coverage reports that land in your inbox without anyone building them.
+        AI agents transform this model. Instead of a dashboard you have to check, you get a teammate who briefs you every morning. Instead of keyword alerts that require interpretation, you get contextualized insights that explain why something matters. Instead of <Link href="/resources/automate-monthly-pr-reporting">monthly report compilation</Link> consuming 8&ndash;15 hours per client, you get auto-generated coverage reports that land in your inbox without anyone building them.
       </p>
 
       <ResourceH2>What Traditional Monitoring Actually Does</ResourceH2>
@@ -44,7 +45,7 @@ export default function AiAgentMediaMonitoringContent() {
       <ResourceH2>How AI Agents Transform Each Layer</ResourceH2>
 
       <p>
-        Agent-based intelligence replaces each layer of the traditional monitoring model (setup, collection, triage, analysis, and reporting) with autonomous execution governed by client context rather than keyword queries. The integration tax alone (8&ndash;15 hours per team member per week moving data between tools, per PR Council 2025) is eliminated when monitoring, analysis, and reporting share a single data layer within a <a href="/resources/pr-operating-system">PR operating system</a>.
+        Agent-based intelligence replaces each layer of the traditional monitoring model (setup, collection, triage, analysis, and reporting) with autonomous execution governed by client context rather than keyword queries. The integration tax alone (8&ndash;15 hours per team member per week moving data between tools, per PR Council 2025) is eliminated when monitoring, analysis, and reporting share a single data layer within a <Link href="/resources/pr-operating-system">PR operating system</Link>.
       </p>
 
       <ResourceH3>Setup: Self-Configuring Monitoring</ResourceH3>
@@ -192,7 +193,7 @@ export default function AiAgentMediaMonitoringContent() {
       <ResourceH2>How Does Agent-Based Coverage Reporting Work?</ResourceH2>
 
       <p>
-        Monthly PR reporting consumes 8&ndash;15 hours per client per month at traditional agencies, making it the single largest time sink in agency operations. Agent-based reporting eliminates the assembly problem by generating reports from continuously updated data, reducing human involvement to 15&ndash;20 minutes of senior review per client. For a detailed breakdown, see <a href="/resources/automate-monthly-pr-reporting">how to automate monthly PR reporting</a>.
+        Monthly PR reporting consumes 8&ndash;15 hours per client per month at traditional agencies, making it the single largest time sink in agency operations. Agent-based reporting eliminates the assembly problem by generating reports from continuously updated data, reducing human involvement to 15&ndash;20 minutes of senior review per client. For a detailed breakdown, see <Link href="/resources/automate-monthly-pr-reporting">how to automate monthly PR reporting</Link>.
       </p>
 
       <p>
@@ -215,7 +216,7 @@ export default function AiAgentMediaMonitoringContent() {
       <ResourceH2>How Do Teams Transition from Monitoring Tools to Intelligence Agents?</ResourceH2>
 
       <p>
-        The transition from traditional monitoring to agent-based intelligence follows a four-week parallel operation process that eliminates transition risk. Agencies typically spend $2,000&ndash;5,000 per month per employee on their existing tool stack (PR Council 2025); the migration path consolidates monitoring, analysis, and reporting into a single platform while maintaining legacy tools as backup during cutover. See also: <a href="/resources/ai-agents-replace-pr-tools">how AI agents replace the PR tool stack</a>.
+        The transition from traditional monitoring to agent-based intelligence follows a four-week parallel operation process that eliminates transition risk. Agencies typically spend $2,000&ndash;5,000 per month per employee on their existing tool stack (PR Council 2025); the migration path consolidates monitoring, analysis, and reporting into a single platform while maintaining legacy tools as backup during cutover. See also: <Link href="/resources/ai-agents-replace-pr-tools">how AI agents replace the PR tool stack</Link>.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

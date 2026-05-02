@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiToolsCommunicationsAgenciesContent() {
@@ -20,13 +21,13 @@ export default function AiToolsCommunicationsAgenciesContent() {
       <ResourceH2>What Does the AI Tool Landscape Look Like by Function?</ResourceH2>
 
       <p>
-        Communications agency operations span six core functions: research and intelligence, media relations, content creation, measurement and reporting, workflow automation, and client management. Each function has specialized AI tools, but the <a href="/resources/ai-agency-tech-stack-replacement">integration tax</a> (8&ndash;15 hours per team member per week spent moving data between tools) often negates individual tool gains. For how the <a href="/resources/pr-operating-system">PR operating system</a> model addresses this, see the related guide.
+        Communications agency operations span six core functions: research and intelligence, media relations, content creation, measurement and reporting, workflow automation, and client management. Each function has specialized AI tools, but the <Link href="/resources/ai-agency-tech-stack-replacement">integration tax</Link> (8&ndash;15 hours per team member per week spent moving data between tools) often negates individual tool gains. For how the <Link href="/resources/pr-operating-system">PR operating system</Link> model addresses this, see the related guide.
       </p>
 
       <ResourceH3>1. Research &amp; Intelligence</ResourceH3>
 
       <p>
-        Research and intelligence tools automate competitive analysis, industry monitoring, journalist profiling, and trend detection. Meltwater tracks 300,000+ sources; Cision maintains 1.4M+ journalist contacts. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, making <a href="/resources/ai-search-visibility-pr">AI search visibility</a> tracking an emerging intelligence function.
+        Research and intelligence tools automate competitive analysis, industry monitoring, journalist profiling, and trend detection. Meltwater tracks 300,000+ sources; Cision maintains 1.4M+ journalist contacts. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, making <Link href="/resources/ai-search-visibility-pr">AI search visibility</Link> tracking an emerging intelligence function.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -316,7 +317,7 @@ export default function AiToolsCommunicationsAgenciesContent() {
       <ResourceH2>Why Do More Tools Not Equal Better Operations?</ResourceH2>
 
       <p>
-        The average communications agency runs 8&ndash;12 separate tools (PR Council 2025). Each tool adds value individually, but the combination creates significant overhead. PR Council benchmarks show industry-average revenue per employee of $150&ndash;250K with net margins of 10&ndash;15%. Shadow clients operating on a consolidated platform report $350&ndash;500K revenue per employee and 30&ndash;40% net margins. The <a href="/resources/improve-agency-margins-ai">margins guide</a> details how consolidation drives these improvements:
+        The average communications agency runs 8&ndash;12 separate tools (PR Council 2025). Each tool adds value individually, but the combination creates significant overhead. PR Council benchmarks show industry-average revenue per employee of $150&ndash;250K with net margins of 10&ndash;15%. Shadow clients operating on a consolidated platform report $350&ndash;500K revenue per employee and 30&ndash;40% net margins. The <Link href="/resources/improve-agency-margins-ai">margins guide</Link> details how consolidation drives these improvements:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -330,7 +331,7 @@ export default function AiToolsCommunicationsAgenciesContent() {
       <ResourceH2>How Does Shadow Serve as a Single-Platform Alternative?</ResourceH2>
 
       <p>
-        Shadow spans all six functional categories as a <a href="/resources/pr-operating-system">PR operating system</a>, replacing the 8&ndash;12 tool stack with a single platform. Instead of assembling separate tools for each function, agencies using Shadow operate from a single system where:
+        Shadow spans all six functional categories as a <Link href="/resources/pr-operating-system">PR operating system</Link>, replacing the 8&ndash;12 tool stack with a single platform. Instead of assembling separate tools for each function, agencies using Shadow operate from a single system where:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -349,7 +350,7 @@ export default function AiToolsCommunicationsAgenciesContent() {
       <ResourceH2>How Should You Audit Your Current AI Tool Stack?</ResourceH2>
 
       <p>
-        Before adding or replacing tools, agencies should audit their current stack using the framework from the <a href="/resources/ai-agency-tech-stack-replacement">tech stack replacement guide</a>. The University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research, adding <a href="/resources/generative-engine-optimization">GEO</a> as another function to evaluate. Key audit steps:
+        Before adding or replacing tools, agencies should audit their current stack using the framework from the <Link href="/resources/ai-agency-tech-stack-replacement">tech stack replacement guide</Link>. The University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research, adding <Link href="/resources/generative-engine-optimization">GEO</Link> as another function to evaluate. Key audit steps:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

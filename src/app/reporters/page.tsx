@@ -316,6 +316,39 @@ export default function ReportersPage() {
         </div>
       </section>
 
+      {/* The cycle restarts */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="max-w-[1425px] mx-auto px-8 md:px-16 border-t border-foreground/10 pt-12 md:pt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] gap-x-10 lg:gap-x-20 gap-y-6 items-start">
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              The cycle restarts
+            </p>
+            <div>
+              <h3 className="font-serif text-[clamp(1.5rem,2.4vw,2rem)] text-foreground leading-[1.1] tracking-tight">
+                <Link
+                  href="/researchers"
+                  className="hover:text-foreground/70 transition-colors"
+                >
+                  Researchers.
+                </Link>
+              </h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-md">
+                What the Reporter learns flows back to the Researcher. The
+                landscape keeps moving. Researchers gather the next round of
+                signal and the loop runs again, smarter than before.
+              </p>
+              <Link
+                href="/researchers"
+                className="mt-6 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
+              >
+                Back to Researchers
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">

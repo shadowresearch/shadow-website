@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiAgentsPressReleasesPitchesContent() {
@@ -16,7 +17,7 @@ export default function AiAgentsPressReleasesPitchesContent() {
       </p>
 
       <p>
-        Every communications professional has tried the generic approach. You open ChatGPT, paste in a client brief, and ask for a press release draft. The output looks like a press release. It has a headline, a dateline, quotes, and a boilerplate. But it is not your press release. It doesn&apos;t follow your team&apos;s SOP. It doesn&apos;t match the client&apos;s voice. The quotes sound generic. The 2026 Cision/PRWeek survey found that 76% of PR professionals use generative AI, yet the PRSA 2026 survey shows only 13% report &quot;highly integrated&quot; operations, largely because generic tools lack the persistent context that <a href="/resources/maintain-brand-voice-ai-pr">voice-consistent production</a> requires.
+        Every communications professional has tried the generic approach. You open ChatGPT, paste in a client brief, and ask for a press release draft. The output looks like a press release. It has a headline, a dateline, quotes, and a boilerplate. But it is not your press release. It doesn&apos;t follow your team&apos;s SOP. It doesn&apos;t match the client&apos;s voice. The quotes sound generic. The 2026 Cision/PRWeek survey found that 76% of PR professionals use generative AI, yet the PRSA 2026 survey shows only 13% report &quot;highly integrated&quot; operations, largely because generic tools lack the persistent context that <Link href="/resources/maintain-brand-voice-ai-pr">voice-consistent production</Link> requires.
       </p>
 
       <p>
@@ -34,7 +35,7 @@ export default function AiAgentsPressReleasesPitchesContent() {
       <ResourceH2>How AI Agents Handle Press Release Writing Differently</ResourceH2>
 
       <p>
-        The difference between prompt-based writing and agent-based production is architectural, not incremental. A content agent operates within encoded SOPs, pulls persistent client context, and produces documents that follow agency methodology from a single instruction. The average PR agency spends $2,000&ndash;5,000 per month per employee on disconnected tools (PR Council 2025); content agents consolidate writing, context, and <a href="/resources/ai-agents-quality-control-pr">quality control</a> into one governed workflow.
+        The difference between prompt-based writing and agent-based production is architectural, not incremental. A content agent operates within encoded SOPs, pulls persistent client context, and produces documents that follow agency methodology from a single instruction. The average PR agency spends $2,000&ndash;5,000 per month per employee on disconnected tools (PR Council 2025); content agents consolidate writing, context, and <Link href="/resources/ai-agents-quality-control-pr">quality control</Link> into one governed workflow.
       </p>
 
       <ResourceH3>The Shadow Workflow: Brief to Draft in Minutes</ResourceH3>
@@ -232,13 +233,13 @@ export default function AiAgentsPressReleasesPitchesContent() {
       </ul>
 
       <p>
-        Shadow&apos;s content agents sit within a complete <a href="/resources/pr-operating-system">PR operating system</a>. The intelligence that informs a pitch comes from the same platform that monitors coverage, tracks journalist responses, and generates reports. Every document is part of a connected workflow, not a standalone text generation exercise. For agencies evaluating content tools, see <a href="/resources/best-ai-tools-pr-agencies">the best AI tools for PR agencies</a>.
+        Shadow&apos;s content agents sit within a complete <Link href="/resources/pr-operating-system">PR operating system</Link>. The intelligence that informs a pitch comes from the same platform that monitors coverage, tracks journalist responses, and generates reports. Every document is part of a connected workflow, not a standalone text generation exercise. For agencies evaluating content tools, see <Link href="/resources/best-ai-tools-pr-agencies">the best AI tools for PR agencies</Link>.
       </p>
 
       <ResourceH2>How Do Teams Transition from ChatGPT to Agent-Based Production?</ResourceH2>
 
       <p>
-        The transition from prompt-based writing to agent-based production follows a predictable four-week path. Client onboarding typically takes 4&ndash;6 weeks at traditional agencies; with agent-based systems, <a href="/resources/automate-pr-client-onboarding">onboarding compresses to 3&ndash;5 days</a> because SOPs, voice profiles, and competitive context configure concurrently rather than sequentially.
+        The transition from prompt-based writing to agent-based production follows a predictable four-week path. Client onboarding typically takes 4&ndash;6 weeks at traditional agencies; with agent-based systems, <Link href="/resources/automate-pr-client-onboarding">onboarding compresses to 3&ndash;5 days</Link> because SOPs, voice profiles, and competitive context configure concurrently rather than sequentially.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

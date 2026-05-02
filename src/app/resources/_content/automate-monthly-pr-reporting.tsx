@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AutomateMonthlyPrReportingContent() {
@@ -14,7 +15,7 @@ export default function AutomateMonthlyPrReportingContent() {
       </p>
 
       <p>
-        Monthly reporting is the single biggest time sink in PR agency operations. The average PR agency runs 8&ndash;12 disconnected tools (PR Council 2025), and reporting is where fragmentation costs the most: pulling data from Meltwater, reformatting charts from CoverageBook, and writing the same coverage summary for the fifteenth time. The 2026 Cision/PRWeek survey found that 76% of PR professionals use generative AI, yet reporting remains largely manual because generic AI tools lack access to the underlying data systems. Reporting is the tax agencies pay for using <a href="/resources/shadow-vs-pr-tool-stack">fragmented tool stacks</a>.
+        Monthly reporting is the single biggest time sink in PR agency operations. The average PR agency runs 8&ndash;12 disconnected tools (PR Council 2025), and reporting is where fragmentation costs the most: pulling data from Meltwater, reformatting charts from CoverageBook, and writing the same coverage summary for the fifteenth time. The 2026 Cision/PRWeek survey found that 76% of PR professionals use generative AI, yet reporting remains largely manual because generic AI tools lack access to the underlying data systems. Reporting is the tax agencies pay for using <Link href="/resources/shadow-vs-pr-tool-stack">fragmented tool stacks</Link>.
       </p>
 
       <p>
@@ -24,7 +25,7 @@ export default function AutomateMonthlyPrReportingContent() {
       <ResourceH2>What Goes Into a PR Report</ResourceH2>
 
       <p>
-        A comprehensive monthly PR report includes six core sections: coverage summary, share of voice, sentiment analysis, competitive benchmarks, activity recap, and recommendations. Each requires data from different sources and different levels of analysis. This is why reporting in a <a href="/resources/pr-operating-system">PR operating system</a> that unifies these data sources is fundamentally different from reporting across disconnected tools.
+        A comprehensive monthly PR report includes six core sections: coverage summary, share of voice, sentiment analysis, competitive benchmarks, activity recap, and recommendations. Each requires data from different sources and different levels of analysis. This is why reporting in a <Link href="/resources/pr-operating-system">PR operating system</Link> that unifies these data sources is fundamentally different from reporting across disconnected tools.
       </p>
 
       <ResourceH3>1. Coverage Summary</ResourceH3>
@@ -175,7 +176,7 @@ export default function AutomateMonthlyPrReportingContent() {
       <ResourceH2>How Much Capacity Does Reporting Automation Recover?</ResourceH2>
 
       <p>
-        Reporting automation recovers 135&ndash;195 hours per month for a 15-client agency, the equivalent of a full-time employee whose entire job was building reports. PR Council benchmarks show industry average revenue per employee of $150&ndash;250K; Shadow clients report $350&ndash;500K, with reporting automation as a significant contributor to the <a href="/resources/pr-team-capacity-ai">capacity multiplication</a> that drives the gap.
+        Reporting automation recovers 135&ndash;195 hours per month for a 15-client agency, the equivalent of a full-time employee whose entire job was building reports. PR Council benchmarks show industry average revenue per employee of $150&ndash;250K; Shadow clients report $350&ndash;500K, with reporting automation as a significant contributor to the <Link href="/resources/pr-team-capacity-ai">capacity multiplication</Link> that drives the gap.
       </p>
 
       <p>
@@ -207,7 +208,7 @@ export default function AutomateMonthlyPrReportingContent() {
       <ResourceH2>Why Can Point Tools Not Solve the Reporting Problem?</ResourceH2>
 
       <p>
-        Point tools improve individual aspects of reporting but cannot solve the core problem: data fragmentation across 8&ndash;12 disconnected platforms (PR Council 2025). CoverageBook sees clips but not competitive data. Meltwater tracks mentions but not pitch activity. The integration tax (8&ndash;15 hours per team member per week spent moving data between tools) persists because the data lives in separate systems. See <a href="/resources/ai-agents-replace-pr-tools">how AI agents replace the PR tool stack</a> for the architectural alternative.
+        Point tools improve individual aspects of reporting but cannot solve the core problem: data fragmentation across 8&ndash;12 disconnected platforms (PR Council 2025). CoverageBook sees clips but not competitive data. Meltwater tracks mentions but not pitch activity. The integration tax (8&ndash;15 hours per team member per week spent moving data between tools) persists because the data lives in separate systems. See <Link href="/resources/ai-agents-replace-pr-tools">how AI agents replace the PR tool stack</Link> for the architectural alternative.
       </p>
 
       <p>

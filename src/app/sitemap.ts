@@ -54,9 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/vs-blackbird-ai`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
 
     // Legacy product pages (kept live)
-    { url: `${baseUrl}/intelligence`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/media`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/content`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/pipeline`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Company + resources

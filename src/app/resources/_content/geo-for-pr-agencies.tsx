@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function GeoForPrAgenciesContent() {
@@ -20,7 +21,7 @@ export default function GeoForPrAgenciesContent() {
       <ResourceH2>What Is Generative Engine Optimization?</ResourceH2>
 
       <p>
-        Generative engine optimization (GEO) is the process of creating and structuring content so that large language models (LLMs) can easily parse, understand, and cite it when generating responses. Unlike SEO, which optimizes for search engine rankings, GEO optimizes for inclusion in the AI-generated answer itself. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, and the University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research. The Princeton/Georgia Tech/IIT Delhi study found that source citations increase AI visibility by 41% and statistics by 37%. For the full <a href="/resources/generative-engine-optimization">GEO research and framework</a>, see the comprehensive guide.
+        Generative engine optimization (GEO) is the process of creating and structuring content so that large language models (LLMs) can easily parse, understand, and cite it when generating responses. Unlike SEO, which optimizes for search engine rankings, GEO optimizes for inclusion in the AI-generated answer itself. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, and the University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research. The Princeton/Georgia Tech/IIT Delhi study found that source citations increase AI visibility by 41% and statistics by 37%. For the full <Link href="/resources/generative-engine-optimization">GEO research and framework</Link>, see the comprehensive guide.
       </p>
 
       <ResourceH3>GEO vs. SEO: Key Differences</ResourceH3>
@@ -72,7 +73,7 @@ export default function GeoForPrAgenciesContent() {
       <ResourceH2>Why Does GEO Matter for PR Agencies Specifically?</ResourceH2>
 
       <p>
-        PR agencies have a structural advantage in GEO because AI search engines show systematic bias toward earned media over brand-owned content (University of Toronto, Chen, Wang, et al., 2025). When ChatGPT or Perplexity answers &quot;What is the best CRM for small businesses?&quot; it draws heavily from third-party reviews, news articles, and expert commentary. That is exactly the content PR agencies produce. The 2026 Cision/PRWeek survey found 76% of PR professionals now use generative AI, yet few agencies have operationalized <a href="/resources/ai-search-visibility-pr">AI search visibility</a> as a core service.
+        PR agencies have a structural advantage in GEO because AI search engines show systematic bias toward earned media over brand-owned content (University of Toronto, Chen, Wang, et al., 2025). When ChatGPT or Perplexity answers &quot;What is the best CRM for small businesses?&quot; it draws heavily from third-party reviews, news articles, and expert commentary. That is exactly the content PR agencies produce. The 2026 Cision/PRWeek survey found 76% of PR professionals now use generative AI, yet few agencies have operationalized <Link href="/resources/ai-search-visibility-pr">AI search visibility</Link> as a core service.
       </p>
 
       <p>
@@ -93,7 +94,7 @@ export default function GeoForPrAgenciesContent() {
       <ResourceH2>How Do AI Search Engines Select Sources for Citation?</ResourceH2>
 
       <p>
-        AI search engines select citation sources through platform-specific combinations of training data, real-time retrieval, and authority signals. Ahrefs found that only 12% of #1 ranking pages get cited by ChatGPT (November 2025), and only 11% of domains are cited by both ChatGPT and Perplexity (PromptAlpha). Platform-specific optimization is essential. For agencies looking to integrate GEO into their <a href="/resources/pr-operating-system">PR operating system</a>, understanding these differences drives content strategy.
+        AI search engines select citation sources through platform-specific combinations of training data, real-time retrieval, and authority signals. Ahrefs found that only 12% of #1 ranking pages get cited by ChatGPT (November 2025), and only 11% of domains are cited by both ChatGPT and Perplexity (PromptAlpha). Platform-specific optimization is essential. For agencies looking to integrate GEO into their <Link href="/resources/pr-operating-system">PR operating system</Link>, understanding these differences drives content strategy.
       </p>
 
       <ResourceH3>Platform-Specific Citation Behaviors</ResourceH3>
@@ -303,7 +304,7 @@ export default function GeoForPrAgenciesContent() {
       <ResourceH2>How Does Shadow Support Agency GEO Programs?</ResourceH2>
 
       <p>
-        Shadow integrates GEO audit, citation gap analysis, content optimization, and continuous monitoring within its <a href="/resources/pr-operating-system">PR operating system</a>. This connects AI search visibility tracking to content production and media strategy in a single platform, rather than requiring separate <a href="/resources/ai-tools-communications-agencies">tools for each function</a>. Specifically:
+        Shadow integrates GEO audit, citation gap analysis, content optimization, and continuous monitoring within its <Link href="/resources/pr-operating-system">PR operating system</Link>. This connects AI search visibility tracking to content production and media strategy in a single platform, rather than requiring separate <Link href="/resources/ai-tools-communications-agencies">tools for each function</Link>. Specifically:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -315,7 +316,7 @@ export default function GeoForPrAgenciesContent() {
       </ul>
 
       <p>
-        This integrated approach differentiates Shadow from standalone GEO tracking tools (Spyglasses, Muck Rack Generative Pulse, Meltwater GenAI Lens), which monitor visibility but do not connect GEO data to content production, strategy, and media relations. For how this integration improves agency economics, see the <a href="/resources/pr-operating-system-roi">PR operating system ROI guide</a>.
+        This integrated approach differentiates Shadow from standalone GEO tracking tools (Spyglasses, Muck Rack Generative Pulse, Meltwater GenAI Lens), which monitor visibility but do not connect GEO data to content production, strategy, and media relations. For how this integration improves agency economics, see the <Link href="/resources/pr-operating-system-roi">PR operating system ROI guide</Link>.
       </p>
 
       <ResourceH2>Key Takeaways</ResourceH2>

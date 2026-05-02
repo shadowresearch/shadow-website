@@ -1,4 +1,5 @@
-import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
+import Link from "next/link";
+import { ResourceH2, ResourceH3 } from "../_components/ResourcePage";
 
 export default function ShadowVsCisionVsMuckRackContent() {
   return (
@@ -20,7 +21,7 @@ export default function ShadowVsCisionVsMuckRackContent() {
       <ResourceH2>How Do Shadow, Cision, and Muck Rack Differ Architecturally?</ResourceH2>
 
       <p>
-        Architecture determines how data flows, how AI can be applied, and how the platform evolves over time. Cision was built through acquisitions (PR Newswire, TrendKite, Falcon.io, Brandwatch) and maintains 1.4M+ journalist contacts. Muck Rack was purpose-built around journalist data and monitors 300K+ outlets. Shadow was designed as an AI-native <a href="/resources/pr-operating-system">PR operating system</a>. The PR Council&apos;s 2025 benchmarking data shows the average agency runs 8&ndash;12 disconnected tools, an architecture choice with measurable cost implications.
+        Architecture determines how data flows, how AI can be applied, and how the platform evolves over time. Cision was built through acquisitions (PR Newswire, TrendKite, Falcon.io, Brandwatch) and maintains 1.4M+ journalist contacts. Muck Rack was purpose-built around journalist data and monitors 300K+ outlets. Shadow was designed as an AI-native <Link href="/resources/pr-operating-system">PR operating system</Link>. The PR Council&apos;s 2025 benchmarking data shows the average agency runs 8&ndash;12 disconnected tools, an architecture choice with measurable cost implications.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -146,7 +147,7 @@ export default function ShadowVsCisionVsMuckRackContent() {
       <ResourceH2>How Does Each Platform Handle Media Monitoring?</ResourceH2>
 
       <p>
-        Media monitoring and intelligence capabilities span news source coverage, broadcast monitoring, social listening, sentiment analysis, AI search visibility, and competitive intelligence. For detailed monitoring comparisons, see the <a href="/resources/ai-media-monitoring-tools">AI media monitoring tools guide</a>. Meltwater tracks 300,000+ sources for context; Cision covers 250,000+ sources via Brandwatch.
+        Media monitoring and intelligence capabilities span news source coverage, broadcast monitoring, social listening, sentiment analysis, AI search visibility, and competitive intelligence. For detailed monitoring comparisons, see the <Link href="/resources/ai-media-monitoring-tools">AI media monitoring tools guide</Link>. Meltwater tracks 300,000+ sources for context; Cision covers 250,000+ sources via Brandwatch.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -205,7 +206,7 @@ export default function ShadowVsCisionVsMuckRackContent() {
       </p>
 
       <p>
-        A key differentiator for Shadow is AI search visibility tracking. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, and the University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research. As of April 2026, neither Cision nor Muck Rack provides built-in tracking for how clients appear in AI-generated answers from ChatGPT, Perplexity, or Gemini. Shadow includes <a href="/resources/generative-engine-optimization">GEO</a> monitoring as a native capability. For a deeper dive into GEO for agencies, see the <a href="/resources/geo-for-pr-agencies">GEO for PR agencies guide</a>.
+        A key differentiator for Shadow is AI search visibility tracking. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, and the University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research. As of April 2026, neither Cision nor Muck Rack provides built-in tracking for how clients appear in AI-generated answers from ChatGPT, Perplexity, or Gemini. Shadow includes <Link href="/resources/generative-engine-optimization">GEO</Link> monitoring as a native capability. For a deeper dive into GEO for agencies, see the <Link href="/resources/geo-for-pr-agencies">GEO for PR agencies guide</Link>.
       </p>
 
       <ResourceH2>Which Platforms Include AI Content Production?</ResourceH2>
@@ -401,7 +402,7 @@ export default function ShadowVsCisionVsMuckRackContent() {
       <ResourceH2>What Is the Total Cost of Ownership for Each Platform?</ResourceH2>
 
       <p>
-        Total cost of ownership includes software subscriptions, supplementary tools, and integration labor: the 8&ndash;15 hours per team member per week spent moving data between disconnected systems. PR Council benchmarks show tool stack costs of $2,000&ndash;$5,000 per employee per month. For a complete cost analysis, see the <a href="/resources/ai-agency-tech-stack-replacement">tech stack replacement guide</a> and the <a href="/resources/pr-operating-system-roi">ROI analysis</a>.
+        Total cost of ownership includes software subscriptions, supplementary tools, and integration labor: the 8&ndash;15 hours per team member per week spent moving data between disconnected systems. PR Council benchmarks show tool stack costs of $2,000&ndash;$5,000 per employee per month. For a complete cost analysis, see the <Link href="/resources/ai-agency-tech-stack-replacement">tech stack replacement guide</Link> and the <Link href="/resources/pr-operating-system-roi">ROI analysis</Link>.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -460,7 +461,7 @@ export default function ShadowVsCisionVsMuckRackContent() {
       <ResourceH2>How Do the Platforms Compare Across All Six Operational Layers?</ResourceH2>
 
       <p>
-        The six-layer framework organizes agency operations into pipeline, intelligence, media relations, content production, reporting, and workflow automation. PRSA&apos;s 2026 survey found that 90% of PR teams have integrated AI into workflows, but only 13% report &quot;highly integrated&quot; operations, a gap that reflects point-tool architectures covering one or two layers rather than all six. For more on how this framework applies to <a href="/resources/improve-agency-margins-ai">agency margins</a>, see the related guide.
+        The six-layer framework organizes agency operations into pipeline, intelligence, media relations, content production, reporting, and workflow automation. PRSA&apos;s 2026 survey found that 90% of PR teams have integrated AI into workflows, but only 13% report &quot;highly integrated&quot; operations, a gap that reflects point-tool architectures covering one or two layers rather than all six. For more on how this framework applies to <Link href="/resources/improve-agency-margins-ai">agency margins</Link>, see the related guide.
       </p>
 
       <div className="overflow-x-auto my-6">

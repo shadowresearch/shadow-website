@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/intelligence",
   },
+  robots: { index: false, follow: true },
   openGraph: {
     title: "Research & Intelligence | Shadow",
     description:

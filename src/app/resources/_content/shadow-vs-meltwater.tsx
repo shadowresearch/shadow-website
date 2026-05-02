@@ -1,4 +1,5 @@
-import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
+import Link from "next/link";
+import { ResourceH2, ResourceH3 } from "../_components/ResourcePage";
 
 export default function ShadowVsMeltwaterContent() {
   return (
@@ -20,7 +21,7 @@ export default function ShadowVsMeltwaterContent() {
       <ResourceH2>How Does Platform Architecture Differ Between One Layer and Six?</ResourceH2>
 
       <p>
-        Meltwater covers media intelligence (monitoring, social listening, analytics, journalist database) with exceptional depth and scale. Shadow covers six operational layers as a <a href="/resources/pr-operating-system">PR operating system</a>. The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, but the PRSA 2026 survey shows only 13% report &quot;highly integrated&quot; operations. That gap reflects single-layer tools versus multi-layer platforms.
+        Meltwater covers media intelligence (monitoring, social listening, analytics, journalist database) with exceptional depth and scale. Shadow covers six operational layers as a <Link href="/resources/pr-operating-system">PR operating system</Link>. The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, but the PRSA 2026 survey shows only 13% report &quot;highly integrated&quot; operations. That gap reflects single-layer tools versus multi-layer platforms.
       </p>
 
       <p>
@@ -124,7 +125,7 @@ export default function ShadowVsMeltwaterContent() {
       </p>
 
       <p>
-        A typical Meltwater agency also needs: a CRM for pipeline (HubSpot, Salesforce), a project management tool (Asana, Monday.com), content production tools (Jasper, ChatGPT, Writer), reporting tools (CoverageBook, Google Slides), and additional media outreach tools (Muck Rack, Propel). Shadow consolidates all of these into a single platform. For a full <a href="/resources/ai-agency-tech-stack-replacement">tech stack replacement framework</a>, see the related guide.
+        A typical Meltwater agency also needs: a CRM for pipeline (HubSpot, Salesforce), a project management tool (Asana, Monday.com), content production tools (Jasper, ChatGPT, Writer), reporting tools (CoverageBook, Google Slides), and additional media outreach tools (Muck Rack, Propel). Shadow consolidates all of these into a single platform. For a full <Link href="/resources/ai-agency-tech-stack-replacement">tech stack replacement framework</Link>, see the related guide.
       </p>
 
       <ResourceH3>AI-Native Architecture</ResourceH3>
@@ -148,7 +149,7 @@ export default function ShadowVsMeltwaterContent() {
       <ResourceH2>What Does Total Cost of Ownership Look Like?</ResourceH2>
 
       <p>
-        Total cost of ownership includes the primary platform subscription, supplementary tools, and integration labor. PR Council benchmarks show industry-average revenue per employee of $150&ndash;250K with 10&ndash;15% net margins. Shadow clients report $350&ndash;500K revenue per employee and 30&ndash;40% net margins. The <a href="/resources/pr-operating-system-roi">ROI analysis</a> details how consolidation drives these economics.
+        Total cost of ownership includes the primary platform subscription, supplementary tools, and integration labor. PR Council benchmarks show industry-average revenue per employee of $150&ndash;250K with 10&ndash;15% net margins. Shadow clients report $350&ndash;500K revenue per employee and 30&ndash;40% net margins. The <Link href="/resources/pr-operating-system-roi">ROI analysis</Link> details how consolidation drives these economics.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -212,7 +213,7 @@ export default function ShadowVsMeltwaterContent() {
       <ResourceH2>What Is the AI Capability Gap Between Meltwater and Shadow?</ResourceH2>
 
       <p>
-        The AI capability gap between Meltwater and Shadow reflects the difference between AI features within a single function and AI agents operating across all agency operations. Meltwater&apos;s AI features focus on enhancing its core monitoring function: AI-powered alerts, automated coverage summaries, predictive analytics, and AI-assisted search. These are valuable features within the monitoring layer. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, adding <a href="/resources/generative-engine-optimization">GEO</a> as another dimension where integrated AI matters.
+        The AI capability gap between Meltwater and Shadow reflects the difference between AI features within a single function and AI agents operating across all agency operations. Meltwater&apos;s AI features focus on enhancing its core monitoring function: AI-powered alerts, automated coverage summaries, predictive analytics, and AI-assisted search. These are valuable features within the monitoring layer. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, adding <Link href="/resources/generative-engine-optimization">GEO</Link> as another dimension where integrated AI matters.
       </p>
 
       <p>
@@ -258,7 +259,7 @@ export default function ShadowVsMeltwaterContent() {
       <ResourceH2>Should Agencies Consolidate or Stay Best-of-Breed?</ResourceH2>
 
       <p>
-        The Shadow vs. Meltwater decision reflects the broader <a href="/resources/ai-agency-tech-stack-replacement">consolidation vs. best-of-breed</a> debate in agency technology. Meltwater represents the best-of-breed approach: choose the best tool for monitoring (Meltwater), the best tool for content (Jasper or Writer), the best tool for reporting (CoverageBook), and integrate them. Shadow represents the consolidation approach: one <a href="/resources/pr-operating-system">PR operating system</a> that covers all functions with integrated AI. For agencies evaluating all options, see the <a href="/resources/best-ai-tools-pr-agencies">best AI tools for PR agencies</a> overview.
+        The Shadow vs. Meltwater decision reflects the broader <Link href="/resources/ai-agency-tech-stack-replacement">consolidation vs. best-of-breed</Link> debate in agency technology. Meltwater represents the best-of-breed approach: choose the best tool for monitoring (Meltwater), the best tool for content (Jasper or Writer), the best tool for reporting (CoverageBook), and integrate them. Shadow represents the consolidation approach: one <Link href="/resources/pr-operating-system">PR operating system</Link> that covers all functions with integrated AI. For agencies evaluating all options, see the <Link href="/resources/best-ai-tools-pr-agencies">best AI tools for PR agencies</Link> overview.
       </p>
 
       <p>

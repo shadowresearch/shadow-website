@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function MaintainBrandVoiceAiPrContent() {
@@ -18,7 +19,7 @@ export default function MaintainBrandVoiceAiPrContent() {
       </p>
 
       <p>
-        The problem is not that AI cannot learn voice. The problem is that most AI tools were not designed to maintain it. They have no persistent memory, no client context, and no style governance. Every interaction starts from zero. This is why everyone is using AI, but few have successfully integrated it into client-facing work. For how this fits into broader <a href="/resources/ai-workflow-automation-pr-agencies">workflow automation</a>, see <a href="/resources/ai-agents-quality-control-pr">quality control for AI in PR</a>.
+        The problem is not that AI cannot learn voice. The problem is that most AI tools were not designed to maintain it. They have no persistent memory, no client context, and no style governance. Every interaction starts from zero. This is why everyone is using AI, but few have successfully integrated it into client-facing work. For how this fits into broader <Link href="/resources/ai-workflow-automation-pr-agencies">workflow automation</Link>, see <Link href="/resources/ai-agents-quality-control-pr">quality control for AI in PR</Link>.
       </p>
 
       <p>
@@ -182,7 +183,7 @@ export default function MaintainBrandVoiceAiPrContent() {
       <ResourceH2>Why Is Voice Consistency Harder for Agencies Than In-House Teams?</ResourceH2>
 
       <p>
-        Voice consistency is exponentially harder for agencies than for in-house teams because agencies serve multiple clients simultaneously. An in-house team manages one voice; an agency manages ten, fifteen, or twenty. The tool stack cost of $2,000&ndash;5,000 per month per employee (PR Council 2025) compounds the problem because voice data is fragmented across <a href="/resources/shadow-vs-pr-tool-stack">8&ndash;12 disconnected platforms</a>.
+        Voice consistency is exponentially harder for agencies than for in-house teams because agencies serve multiple clients simultaneously. An in-house team manages one voice; an agency manages ten, fifteen, or twenty. The tool stack cost of $2,000&ndash;5,000 per month per employee (PR Council 2025) compounds the problem because voice data is fragmented across <Link href="/resources/shadow-vs-pr-tool-stack">8&ndash;12 disconnected platforms</Link>.
       </p>
 
       <p>
@@ -254,7 +255,7 @@ export default function MaintainBrandVoiceAiPrContent() {
       </p>
 
       <p>
-        Shadow agencies report that voice accuracy improves as they scale rather than degrades. Each new client workspace is configured with the same rigor as the first. Voice profiles compound in accuracy over time. SOP governance applies uniformly. The 25th client gets the same voice attention as the 5th, because the system, not individual team member capacity, governs consistency. For the <a href="/resources/pr-team-capacity-ai">capacity implications</a> of voice-consistent production at scale, see also <a href="/resources/resources-scale-agency-without-headcount">scaling an agency without headcount</a>.
+        Shadow agencies report that voice accuracy improves as they scale rather than degrades. Each new client workspace is configured with the same rigor as the first. Voice profiles compound in accuracy over time. SOP governance applies uniformly. The 25th client gets the same voice attention as the 5th, because the system, not individual team member capacity, governs consistency. For the <Link href="/resources/pr-team-capacity-ai">capacity implications</Link> of voice-consistent production at scale, see also <Link href="/resources/resources-scale-agency-without-headcount">scaling an agency without headcount</Link>.
       </p>
 
       <p>

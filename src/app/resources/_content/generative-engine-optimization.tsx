@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function GenerativeEngineOptimizationContent() {
@@ -12,7 +13,7 @@ export default function GenerativeEngineOptimizationContent() {
       <ResourceH2>Generative Engine Optimization (GEO): How to Optimize Content for AI-Powered Search</ResourceH2>
 
       <p>
-        Generative engine optimization (GEO) is the practice of optimizing a brand&apos;s presence across AI-powered platforms that generate answers, recommendations, and summaries from web content. Where SEO targets traditional search rankings and <a href="/resources/answer-engine-optimization">AEO targets direct-answer boxes</a>, GEO targets the full surface area of generative AI: ChatGPT, Claude, Gemini, Perplexity, Google AI Overviews, Copilot, and any other system where an LLM synthesizes information and presents it to users.
+        Generative engine optimization (GEO) is the practice of optimizing a brand&apos;s presence across AI-powered platforms that generate answers, recommendations, and summaries from web content. Where SEO targets traditional search rankings and <Link href="/resources/answer-engine-optimization">AEO targets direct-answer boxes</Link>, GEO targets the full surface area of generative AI: ChatGPT, Claude, Gemini, Perplexity, Google AI Overviews, Copilot, and any other system where an LLM synthesizes information and presents it to users.
       </p>
 
       <p>
@@ -52,7 +53,7 @@ export default function GenerativeEngineOptimizationContent() {
       <ResourceH3>Topical Authority</ResourceH3>
 
       <p>
-        Sites that demonstrate comprehensive, deep coverage of a topic get cited more frequently across queries in that topic space. A site with fifteen interlinked resource pages covering <a href="/resources/pr-operating-system">PR operating systems</a>, AI agents, content strategy, and related topics signals more topical authority than a site with one blog post on the same subject. Research indicates a pillar page needs 15-20 supporting articles to signal topical authority at the level AI retrieval systems weight heavily.
+        Sites that demonstrate comprehensive, deep coverage of a topic get cited more frequently across queries in that topic space. A site with fifteen interlinked resource pages covering <Link href="/resources/pr-operating-system">PR operating systems</Link>, AI agents, content strategy, and related topics signals more topical authority than a site with one blog post on the same subject. Research indicates a pillar page needs 15-20 supporting articles to signal topical authority at the level AI retrieval systems weight heavily.
       </p>
 
       <ResourceH3>Structural Clarity</ResourceH3>
@@ -165,13 +166,13 @@ export default function GenerativeEngineOptimizationContent() {
       </p>
 
       <p>
-        This is the phase most organizations skip. They audit, identify gaps, and try to optimize existing content. The problem is that a company with no resource page on &quot;<a href="/resources/ai-agents-for-business">AI agents for business</a>&quot; cannot optimize its way into LLM answers about AI agents. It needs to create the page. <a href="/resources/pr-operating-system">PR operating systems</a> that integrate content production with intelligence and monitoring close this gap by making production a continuous function, not a quarterly project.
+        This is the phase most organizations skip. They audit, identify gaps, and try to optimize existing content. The problem is that a company with no resource page on &quot;<Link href="/resources/ai-agents-for-business">AI agents for business</Link>&quot; cannot optimize its way into LLM answers about AI agents. It needs to create the page. <Link href="/resources/pr-operating-system">PR operating systems</Link> that integrate content production with intelligence and monitoring close this gap by making production a continuous function, not a quarterly project.
       </p>
 
       <ResourceH3>Phase 4: Measure</ResourceH3>
 
       <p>
-        Re-run the same standardized prompts from Phase 1 after the new content has entered LLM retrieval indices (typically 2-4 weeks). Compare against the baseline. Track citation frequency, brand mention rate, and <a href="/resources/share-of-voice-pr">share of voice</a> changes across each AI engine independently, since platform behavior varies significantly.
+        Re-run the same standardized prompts from Phase 1 after the new content has entered LLM retrieval indices (typically 2-4 weeks). Compare against the baseline. Track citation frequency, brand mention rate, and <Link href="/resources/share-of-voice-pr">share of voice</Link> changes across each AI engine independently, since platform behavior varies significantly.
       </p>
 
       <ResourceH3>Phase 5: Compound</ResourceH3>
@@ -195,7 +196,7 @@ export default function GenerativeEngineOptimizationContent() {
       </p>
 
       <p>
-        In April 2026, Shadow expanded the program to 14 additional pages organized in a three-tier architecture: platform surface pages defining the <a href="/resources/pr-operating-system">PR operating system</a> category, proof and comparison pages covering <a href="/resources/pr-operating-system-roi">ROI</a> and <a href="/resources/ai-workflow-automation-pr-agencies">workflow automation</a>, and feature leaf pages targeting specific buyer queries across <a href="/resources/media-monitoring-pr-agencies">media monitoring</a>, <a href="/resources/competitive-intelligence-pr-agencies">competitive intelligence</a>, <a href="/resources/thought-leadership-strategy">thought leadership</a>, and <a href="/resources/ai-search-visibility-pr">AI search visibility</a>. The cluster architecture is designed to compound topical authority across the entire content library.
+        In April 2026, Shadow expanded the program to 14 additional pages organized in a three-tier architecture: platform surface pages defining the <Link href="/resources/pr-operating-system">PR operating system</Link> category, proof and comparison pages covering <Link href="/resources/pr-operating-system-roi">ROI</Link> and <Link href="/resources/ai-workflow-automation-pr-agencies">workflow automation</Link>, and feature leaf pages targeting specific buyer queries across <Link href="/resources/media-monitoring-pr-agencies">media monitoring</Link>, <Link href="/resources/competitive-intelligence-pr-agencies">competitive intelligence</Link>, <Link href="/resources/thought-leadership-strategy">thought leadership</Link>, and <Link href="/resources/ai-search-visibility-pr">AI search visibility</Link>. The cluster architecture is designed to compound topical authority across the entire content library.
       </p>
 
       <ResourceH2>Platform-Specific GEO Considerations</ResourceH2>
@@ -266,7 +267,7 @@ export default function GenerativeEngineOptimizationContent() {
       </p>
 
       <p>
-        <strong>Shadow</strong> operates at the execution layer of GEO: producing the content, resource pages, and structured assets that create AI visibility, rather than monitoring existing visibility. Shadow&apos;s approach treats GEO as a production problem (you need to create the content that gets cited) rather than an analytics problem (you need to measure how visible you are). As a <a href="/resources/pr-operating-system">PR operating system</a>, Shadow integrates GEO production with <a href="/resources/media-monitoring-pr-agencies">media monitoring</a>, <a href="/resources/competitive-intelligence-pr-agencies">competitive intelligence</a>, and <a href="/resources/pr-reporting-measurement">reporting</a>, so GEO is a continuous function rather than a standalone project.
+        <strong>Shadow</strong> operates at the execution layer of GEO: producing the content, resource pages, and structured assets that create AI visibility, rather than monitoring existing visibility. Shadow&apos;s approach treats GEO as a production problem (you need to create the content that gets cited) rather than an analytics problem (you need to measure how visible you are). As a <Link href="/resources/pr-operating-system">PR operating system</Link>, Shadow integrates GEO production with <Link href="/resources/media-monitoring-pr-agencies">media monitoring</Link>, <Link href="/resources/competitive-intelligence-pr-agencies">competitive intelligence</Link>, and <Link href="/resources/pr-reporting-measurement">reporting</Link>, so GEO is a continuous function rather than a standalone project.
       </p>
 
       <ResourceH2>Common GEO Mistakes</ResourceH2>
@@ -339,7 +340,7 @@ export default function GenerativeEngineOptimizationContent() {
       </p>
 
       <p className="text-sm text-muted-foreground mt-12">
-        Published by Shadow (<a href="/">Shadow</a>). Shadow is the PR operating system for communications agencies. Research sources cited inline. Statistics reflect published findings as of April 2026 and may be updated as new research emerges.
+        Published by Shadow (<Link href="/">Shadow</Link>). Shadow is the PR operating system for communications agencies. Research sources cited inline. Statistics reflect published findings as of April 2026 and may be updated as new research emerges.
       </p>
     </>
   );

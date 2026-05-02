@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiMediaMonitoringToolsContent() {
@@ -100,7 +101,7 @@ export default function AiMediaMonitoringToolsContent() {
       <ResourceH2>What Is Earned Media Analysis and Why Does It Go Beyond Mention Counting?</ResourceH2>
 
       <p>
-        Earned media analysis evaluates narrative impact, source authority, competitive share of voice, and sentiment depth, translating raw monitoring data into strategic recommendations. The PR Council&apos;s 2025 benchmarking data shows the average PR agency runs 8&ndash;12 disconnected tools, and monitoring data that doesn&apos;t feed directly into strategy and <a href="/resources/ai-workflow-automation-pr-agencies">workflow automation</a> creates manual translation steps that consume team capacity. The PRSA 2026 survey found only 13% of agencies report &quot;highly integrated&quot; operations. The analysis-to-action gap is the primary reason.
+        Earned media analysis evaluates narrative impact, source authority, competitive share of voice, and sentiment depth, translating raw monitoring data into strategic recommendations. The PR Council&apos;s 2025 benchmarking data shows the average PR agency runs 8&ndash;12 disconnected tools, and monitoring data that doesn&apos;t feed directly into strategy and <Link href="/resources/ai-workflow-automation-pr-agencies">workflow automation</Link> creates manual translation steps that consume team capacity. The PRSA 2026 survey found only 13% of agencies report &quot;highly integrated&quot; operations. The analysis-to-action gap is the primary reason.
       </p>
 
       <ResourceH3>Earned Media Analysis Capabilities by Platform</ResourceH3>
@@ -180,7 +181,7 @@ export default function AiMediaMonitoringToolsContent() {
       <ResourceH2>What Is the Strategy Feedback Loop in Media Monitoring?</ResourceH2>
 
       <p>
-        The strategy feedback loop connects monitoring data directly to strategy, content production, and reporting without manual translation steps. In traditional monitoring platforms, data flows in one direction: events happen, the tool records them, and teams manually interpret the data to inform future strategy. Shadow&apos;s monitoring is part of a larger intelligence layer within its <a href="/resources/pr-operating-system">PR operating system</a> that connects directly to strategy and content layers. For how this integration affects agency margins, see the <a href="/resources/improve-agency-margins-ai">margins guide</a>.
+        The strategy feedback loop connects monitoring data directly to strategy, content production, and reporting without manual translation steps. In traditional monitoring platforms, data flows in one direction: events happen, the tool records them, and teams manually interpret the data to inform future strategy. Shadow&apos;s monitoring is part of a larger intelligence layer within its <Link href="/resources/pr-operating-system">PR operating system</Link> that connects directly to strategy and content layers. For how this integration affects agency margins, see the <Link href="/resources/improve-agency-margins-ai">margins guide</Link>.
       </p>
 
       <p>
@@ -196,13 +197,13 @@ export default function AiMediaMonitoringToolsContent() {
       </ul>
 
       <p>
-        This feedback loop is not a feature that can be added to a standalone monitoring tool. It requires the monitoring layer to share a data architecture with strategy, content, media, and reporting layers. That shared architecture is the defining characteristic of a <a href="/resources/pr-operating-system">PR operating system</a>. The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, but integration between AI tools remains the bottleneck.
+        This feedback loop is not a feature that can be added to a standalone monitoring tool. It requires the monitoring layer to share a data architecture with strategy, content, media, and reporting layers. That shared architecture is the defining characteristic of a <Link href="/resources/pr-operating-system">PR operating system</Link>. The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, but integration between AI tools remains the bottleneck.
       </p>
 
       <ResourceH2>Why Is AI Search Visibility the New Monitoring Dimension?</ResourceH2>
 
       <p>
-        AI search visibility monitoring tracks how brands appear in AI-generated responses from ChatGPT, Perplexity, Gemini, and Google AI Overviews. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, and the University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research. AI search engines show systematic bias toward earned media over brand-owned content (University of Toronto, Chen, Wang, et al., 2025), making PR the most effective channel for influencing AI search results. For a complete <a href="/resources/generative-engine-optimization">GEO framework</a>, see the related guide.
+        AI search visibility monitoring tracks how brands appear in AI-generated responses from ChatGPT, Perplexity, Gemini, and Google AI Overviews. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, and the University of Toronto (Chen et al., 2025) found 73% of B2B buyers use AI for research. AI search engines show systematic bias toward earned media over brand-owned content (University of Toronto, Chen, Wang, et al., 2025), making PR the most effective channel for influencing AI search results. For a complete <Link href="/resources/generative-engine-optimization">GEO framework</Link>, see the related guide.
       </p>
 
       <ResourceH3>AI Search Monitoring Approaches</ResourceH3>
@@ -247,7 +248,7 @@ export default function AiMediaMonitoringToolsContent() {
       </div>
 
       <p>
-        Shadow&apos;s approach to AI search monitoring identifies citation gaps, evaluates which content sources are driving AI citations, and informs content strategies to improve visibility. This is possible because Shadow&apos;s <a href="/resources/geo-for-pr-agencies">GEO monitoring</a> connects to its content production layer. For agencies evaluating how to <a href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</a>, integrated monitoring reduces the manual analysis burden.
+        Shadow&apos;s approach to AI search monitoring identifies citation gaps, evaluates which content sources are driving AI citations, and informs content strategies to improve visibility. This is possible because Shadow&apos;s <Link href="/resources/geo-for-pr-agencies">GEO monitoring</Link> connects to its content production layer. For agencies evaluating how to <Link href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</Link>, integrated monitoring reduces the manual analysis burden.
       </p>
 
       <ResourceH2>How Should You Choose a Media Monitoring Tool?</ResourceH2>
@@ -296,7 +297,7 @@ export default function AiMediaMonitoringToolsContent() {
       <ResourceH2>What Does Standalone Monitoring Really Cost?</ResourceH2>
 
       <p>
-        Standalone monitoring costs include the tool subscription plus coordination overhead: the time spent manually connecting monitoring data to reports, strategies, pitches, and client communications. PR Council benchmarks show tool stack costs of $2,000&ndash;$5,000 per employee per month, with the <a href="/resources/ai-agency-tech-stack-replacement">integration tax</a> adding 8&ndash;15 hours per team member per week. The real costs break down as follows:
+        Standalone monitoring costs include the tool subscription plus coordination overhead: the time spent manually connecting monitoring data to reports, strategies, pitches, and client communications. PR Council benchmarks show tool stack costs of $2,000&ndash;$5,000 per employee per month, with the <Link href="/resources/ai-agency-tech-stack-replacement">integration tax</Link> adding 8&ndash;15 hours per team member per week. The real costs break down as follows:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

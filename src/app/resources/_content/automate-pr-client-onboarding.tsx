@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AutomatePrClientOnboardingContent() {
@@ -22,7 +23,7 @@ export default function AutomatePrClientOnboardingContent() {
       </p>
 
       <p>
-        The real cost of slow onboarding is not time. It is the constraint it places on growth. Agencies turn down work not because they lack capability but because they lack capacity. The onboarding bottleneck is the primary reason most PR agencies plateau between 10 and 15 clients. Generic AI tools (ChatGPT, Jasper, Claude) can accelerate individual tasks, but they cannot execute the multi-step, context-dependent workflow that onboarding requires. A <a href="/resources/pr-operating-system">PR operating system</a> approaches onboarding differently: adding a client adds a workspace, not a headcount line.
+        The real cost of slow onboarding is not time. It is the constraint it places on growth. Agencies turn down work not because they lack capability but because they lack capacity. The onboarding bottleneck is the primary reason most PR agencies plateau between 10 and 15 clients. Generic AI tools (ChatGPT, Jasper, Claude) can accelerate individual tasks, but they cannot execute the multi-step, context-dependent workflow that onboarding requires. A <Link href="/resources/pr-operating-system">PR operating system</Link> approaches onboarding differently: adding a client adds a workspace, not a headcount line.
       </p>
 
       <ResourceH2>What Does the Traditional PR Onboarding Workflow Look Like?</ResourceH2>
@@ -171,7 +172,7 @@ export default function AutomatePrClientOnboardingContent() {
       <ResourceH2>How Does Automated Onboarding Remove Growth Constraints?</ResourceH2>
 
       <p>
-        Compressed onboarding removes the capacity ceiling that limits agency growth. PR Council benchmarks show industry average revenue per employee of $150&ndash;250K; Shadow clients report $350&ndash;500K, with faster onboarding as a primary driver. When adding a client takes days instead of weeks, the agency&apos;s relationship with growth fundamentally changes. For the broader <a href="/resources/pr-team-capacity-ai">capacity case</a>, see how AI extends team capacity without adding headcount.
+        Compressed onboarding removes the capacity ceiling that limits agency growth. PR Council benchmarks show industry average revenue per employee of $150&ndash;250K; Shadow clients report $350&ndash;500K, with faster onboarding as a primary driver. When adding a client takes days instead of weeks, the agency&apos;s relationship with growth fundamentally changes. For the broader <Link href="/resources/pr-team-capacity-ai">capacity case</Link>, see how AI extends team capacity without adding headcount.
       </p>
 
       <p>
@@ -185,7 +186,7 @@ export default function AutomatePrClientOnboardingContent() {
       <ResourceH2>Why Does Generic AI Fail at Client Onboarding?</ResourceH2>
 
       <p>
-        The 2026 Cision/PRWeek survey found that 76% of PR professionals use generative AI, yet onboarding remains largely manual at most agencies. Generic AI tools can speed individual tasks but fail at the systemic challenge because they lack persistent memory, integrated data, and methodology governance, the three architectural requirements for <a href="/resources/ai-workflow-automation-pr-agencies">workflow automation</a>.
+        The 2026 Cision/PRWeek survey found that 76% of PR professionals use generative AI, yet onboarding remains largely manual at most agencies. Generic AI tools can speed individual tasks but fail at the systemic challenge because they lack persistent memory, integrated data, and methodology governance, the three architectural requirements for <Link href="/resources/ai-workflow-automation-pr-agencies">workflow automation</Link>.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -226,7 +227,7 @@ export default function AutomatePrClientOnboardingContent() {
       </p>
 
       <p>
-        Shadow clients report revenue per employee ranging from $350,000 to $500,000, compared to the PR Council benchmark of $150,000&ndash;$250,000. Net margins reach 30&ndash;40% versus the industry average of 10&ndash;15%. Faster onboarding is one of the primary drivers of this gap. Agencies that can <a href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</a> fundamentally change their economics. For a full financial analysis, see <a href="/resources/improve-agency-margins-ai">improving agency margins with AI</a>.
+        Shadow clients report revenue per employee ranging from $350,000 to $500,000, compared to the PR Council benchmark of $150,000&ndash;$250,000. Net margins reach 30&ndash;40% versus the industry average of 10&ndash;15%. Faster onboarding is one of the primary drivers of this gap. Agencies that can <Link href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</Link> fundamentally change their economics. For a full financial analysis, see <Link href="/resources/improve-agency-margins-ai">improving agency margins with AI</Link>.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

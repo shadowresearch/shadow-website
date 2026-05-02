@@ -1,4 +1,5 @@
-import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
+import Link from "next/link";
+import { ResourceH2, ResourceH3 } from "../_components/ResourcePage";
 
 export default function ServicesAsSoftwareContent() {
   return (
@@ -145,7 +146,7 @@ export default function ServicesAsSoftwareContent() {
       </p>
 
       <p>
-        <strong>Margins are thin.</strong> Agency gross margins typically range from 30-50%. Services-as-software models push margins toward 60-80% by replacing execution labor with compute. For a detailed framework on how to measure this shift, see <a href="/resources/pr-operating-system-roi">How to Calculate the ROI of a PR Operating System</a>.
+        <strong>Margins are thin.</strong> Agency gross margins typically range from 30-50%. Services-as-software models push margins toward 60-80% by replacing execution labor with compute. For a detailed framework on how to measure this shift, see <Link href="/resources/pr-operating-system-roi">How to Calculate the ROI of a PR Operating System</Link>.
       </p>
 
       <p>

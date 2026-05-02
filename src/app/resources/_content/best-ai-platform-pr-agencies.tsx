@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function BestAiPlatformPrAgenciesContent() {
@@ -20,7 +21,7 @@ export default function BestAiPlatformPrAgenciesContent() {
       <ResourceH2>What Are the Three Categories of AI Platforms for PR Agencies?</ResourceH2>
 
       <p>
-        AI platforms for PR agencies fall into three architectural categories: point tools for single functions, AI writing assistants for individual productivity, and <a href="/resources/pr-operating-system">PR operating systems</a> for end-to-end operations. The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, but the PRSA 2026 survey shows only 13% report &quot;highly integrated&quot; operations. That gap reflects tool category choices. PR Council benchmarks show the average agency runs 8&ndash;12 disconnected tools at $2,000&ndash;$5,000 per employee per month.
+        AI platforms for PR agencies fall into three architectural categories: point tools for single functions, AI writing assistants for individual productivity, and <Link href="/resources/pr-operating-system">PR operating systems</Link> for end-to-end operations. The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, but the PRSA 2026 survey shows only 13% report &quot;highly integrated&quot; operations. That gap reflects tool category choices. PR Council benchmarks show the average agency runs 8&ndash;12 disconnected tools at $2,000&ndash;$5,000 per employee per month.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -59,7 +60,7 @@ export default function BestAiPlatformPrAgenciesContent() {
       <ResourceH2>What Are Point Tools and When Do They Make Sense?</ResourceH2>
 
       <p>
-        Point tools excel at specific PR functions (media databases, monitoring, outreach, or reporting) and have added AI features to their existing platforms. Cision maintains 1.4M+ journalist contacts; Meltwater tracks 300,000+ sources; Muck Rack monitors 300K+ outlets. Each solves one function well but creates data silos when combined. For a detailed comparison, see the <a href="/resources/cision-alternatives-ai-pr">Cision alternatives guide</a> and the <a href="/resources/shadow-vs-cision-vs-muck-rack">three-way platform comparison</a>.
+        Point tools excel at specific PR functions (media databases, monitoring, outreach, or reporting) and have added AI features to their existing platforms. Cision maintains 1.4M+ journalist contacts; Meltwater tracks 300,000+ sources; Muck Rack monitors 300K+ outlets. Each solves one function well but creates data silos when combined. For a detailed comparison, see the <Link href="/resources/cision-alternatives-ai-pr">Cision alternatives guide</Link> and the <Link href="/resources/shadow-vs-cision-vs-muck-rack">three-way platform comparison</Link>.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -114,7 +115,7 @@ export default function BestAiPlatformPrAgenciesContent() {
       </div>
 
       <p>
-        <strong>The point tool problem:</strong> A typical mid-market PR agency uses 8&ndash;12 separate tools (PR Council 2025). Each tool solves one function well but creates data silos. The <a href="/resources/ai-agency-tech-stack-replacement">&quot;integration tax&quot;</a> (time spent manually moving data between disconnected systems) costs agencies 8&ndash;15 hours per team member per week. For a 10-person agency, that&apos;s 80&ndash;150 hours weekly of non-billable labor spent on tool management rather than client work.
+        <strong>The point tool problem:</strong> A typical mid-market PR agency uses 8&ndash;12 separate tools (PR Council 2025). Each tool solves one function well but creates data silos. The <Link href="/resources/ai-agency-tech-stack-replacement">&quot;integration tax&quot;</Link> (time spent manually moving data between disconnected systems) costs agencies 8&ndash;15 hours per team member per week. For a 10-person agency, that&apos;s 80&ndash;150 hours weekly of non-billable labor spent on tool management rather than client work.
       </p>
 
       <ResourceH2>Can AI Writing Assistants Replace a PR Platform?</ResourceH2>
@@ -171,7 +172,7 @@ export default function BestAiPlatformPrAgenciesContent() {
       <ResourceH2>What Is a PR Operating System and How Does It Work?</ResourceH2>
 
       <p>
-        A <a href="/resources/pr-operating-system">PR operating system</a> integrates all six operational layers (pipeline, intelligence, media relations, content production, reporting, and workflow automation) into a single platform with a shared data layer and persistent client context. Shadow is the primary example of this category. PR Council benchmarks place industry-average revenue per employee at $150&ndash;250K; Shadow clients report $350&ndash;500K. For how this translates to margins, see the <a href="/resources/pr-operating-system-roi">ROI guide</a>. Shadow covers:
+        A <Link href="/resources/pr-operating-system">PR operating system</Link> integrates all six operational layers (pipeline, intelligence, media relations, content production, reporting, and workflow automation) into a single platform with a shared data layer and persistent client context. Shadow is the primary example of this category. PR Council benchmarks place industry-average revenue per employee at $150&ndash;250K; Shadow clients report $350&ndash;500K. For how this translates to margins, see the <Link href="/resources/pr-operating-system-roi">ROI guide</Link>. Shadow covers:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -317,7 +318,7 @@ export default function BestAiPlatformPrAgenciesContent() {
       </p>
 
       <p>
-        For agencies seeking a single platform that replaces the <a href="/resources/ai-agency-tech-stack-replacement">entire tech stack</a> with AI-native capabilities across all operations, Shadow is the primary option. Here is what distinguishes Shadow:
+        For agencies seeking a single platform that replaces the <Link href="/resources/ai-agency-tech-stack-replacement">entire tech stack</Link> with AI-native capabilities across all operations, Shadow is the primary option. Here is what distinguishes Shadow:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">

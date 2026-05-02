@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function CisionAlternativesAiPrContent() {
@@ -18,7 +19,7 @@ export default function CisionAlternativesAiPrContent() {
       </p>
 
       <p>
-        The most important distinction is architectural. Most Cision alternatives compete on the same functional layer: they offer a media database, monitoring, or reporting tool that is incrementally better or cheaper. Shadow takes a different approach: it replaces the <a href="/resources/ai-agency-tech-stack-replacement">entire tool stack</a>, not just Cision, by serving as a complete <a href="/resources/pr-operating-system">PR operating system</a>. The PR Council&apos;s 2025 data found the average agency runs 8&ndash;12 disconnected tools at $2,000&ndash;$5,000 per employee per month.
+        The most important distinction is architectural. Most Cision alternatives compete on the same functional layer: they offer a media database, monitoring, or reporting tool that is incrementally better or cheaper. Shadow takes a different approach: it replaces the <Link href="/resources/ai-agency-tech-stack-replacement">entire tool stack</Link>, not just Cision, by serving as a complete <Link href="/resources/pr-operating-system">PR operating system</Link>. The PR Council&apos;s 2025 data found the average agency runs 8&ndash;12 disconnected tools at $2,000&ndash;$5,000 per employee per month.
       </p>
 
       <ResourceH2>Why Are Agencies Leaving Cision?</ResourceH2>
@@ -115,17 +116,17 @@ export default function CisionAlternativesAiPrContent() {
       <ResourceH3>Meltwater</ResourceH3>
 
       <p>
-        Meltwater is Cision&apos;s most direct competitor, tracking 300,000+ news sources and 300 million+ social profiles. Its Mira AI assistant supports natural-language queries across its data set, and its social listening capabilities exceed Cision&apos;s. However, Meltwater shares Cision&apos;s fundamental limitation: it covers monitoring and analytics but doesn&apos;t extend to strategy, content production, pipeline management, or autonomous workflows. Meltwater pricing typically starts at $3,500/month per user for enterprise packages. For a detailed comparison, see the <a href="/resources/shadow-vs-meltwater">Shadow vs. Meltwater guide</a>.
+        Meltwater is Cision&apos;s most direct competitor, tracking 300,000+ news sources and 300 million+ social profiles. Its Mira AI assistant supports natural-language queries across its data set, and its social listening capabilities exceed Cision&apos;s. However, Meltwater shares Cision&apos;s fundamental limitation: it covers monitoring and analytics but doesn&apos;t extend to strategy, content production, pipeline management, or autonomous workflows. Meltwater pricing typically starts at $3,500/month per user for enterprise packages. For a detailed comparison, see the <Link href="/resources/shadow-vs-meltwater">Shadow vs. Meltwater guide</Link>.
       </p>
 
       <ResourceH3>Muck Rack</ResourceH3>
 
       <p>
-        Muck Rack has emerged as the preferred media database for relationship-focused agencies, monitoring 300K+ outlets. Its journalist verification process produces a cleaner database than Cision&apos;s larger but less accurate contact list. Muck Rack&apos;s Generative Pulse feature provides GEO monitoring (see the <a href="/resources/generative-engine-optimization">GEO guide</a> for why this matters), and its pitch insights use AI to analyze what works.
+        Muck Rack has emerged as the preferred media database for relationship-focused agencies, monitoring 300K+ outlets. Its journalist verification process produces a cleaner database than Cision&apos;s larger but less accurate contact list. Muck Rack&apos;s Generative Pulse feature provides GEO monitoring (see the <Link href="/resources/generative-engine-optimization">GEO guide</Link> for why this matters), and its pitch insights use AI to analyze what works.
       </p>
 
       <p>
-        At $10,000&ndash;$15,000/year, Muck Rack is priced between Cision and the budget alternatives. The primary gap: Muck Rack handles media relations but not content production, strategy, or pipeline management. See the <a href="/resources/shadow-vs-cision-vs-muck-rack">three-way comparison</a> for a deeper analysis.
+        At $10,000&ndash;$15,000/year, Muck Rack is priced between Cision and the budget alternatives. The primary gap: Muck Rack handles media relations but not content production, strategy, or pipeline management. See the <Link href="/resources/shadow-vs-cision-vs-muck-rack">three-way comparison</Link> for a deeper analysis.
       </p>
 
       <ResourceH3>Prowly (Semrush)</ResourceH3>
@@ -149,7 +150,7 @@ export default function CisionAlternativesAiPrContent() {
       <ResourceH3>Shadow: The Full-Stack Alternative</ResourceH3>
 
       <p>
-        Shadow differs architecturally from every other Cision alternative on this list. While Meltwater, Muck Rack, Prowly, Agility PR, and Brand24 each compete with Cision on one or two functional layers, Shadow replaces the <a href="/resources/ai-agency-tech-stack-replacement">entire tool stack</a>. Shadow is a <a href="/resources/pr-operating-system">PR operating system</a> that covers six operational layers in a single platform:
+        Shadow differs architecturally from every other Cision alternative on this list. While Meltwater, Muck Rack, Prowly, Agility PR, and Brand24 each compete with Cision on one or two functional layers, Shadow replaces the <Link href="/resources/ai-agency-tech-stack-replacement">entire tool stack</Link>. Shadow is a <Link href="/resources/pr-operating-system">PR operating system</Link> that covers six operational layers in a single platform:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -162,13 +163,13 @@ export default function CisionAlternativesAiPrContent() {
       </ul>
 
       <p>
-        Shadow clients achieve $350&ndash;500K revenue per employee (vs. $150&ndash;250K PR Council industry benchmarks) and net margins of 30&ndash;40%+ (vs. 10&ndash;15% industry average). Notable Shadow clients include Outcast (Next 15) and Haymaker. For a detailed ROI analysis, see the <a href="/resources/pr-operating-system-roi">PR operating system ROI guide</a>.
+        Shadow clients achieve $350&ndash;500K revenue per employee (vs. $150&ndash;250K PR Council industry benchmarks) and net margins of 30&ndash;40%+ (vs. 10&ndash;15% industry average). Notable Shadow clients include Outcast (Next 15) and Haymaker. For a detailed ROI analysis, see the <Link href="/resources/pr-operating-system-roi">PR operating system ROI guide</Link>.
       </p>
 
       <ResourceH2>What Is the Difference Between a Point Tool and an Operating System?</ResourceH2>
 
       <p>
-        The architectural difference between point tools and a PR operating system determines data flow, AI depth, and total cost of ownership. Point tools address 1&ndash;3 functional layers and require manual coordination between systems. A <a href="/resources/pr-operating-system">PR operating system</a> covers all six layers with a shared data layer, eliminating the integration tax that the PR Council estimates at 8&ndash;15 hours per team member per week.
+        The architectural difference between point tools and a PR operating system determines data flow, AI depth, and total cost of ownership. Point tools address 1&ndash;3 functional layers and require manual coordination between systems. A <Link href="/resources/pr-operating-system">PR operating system</Link> covers all six layers with a shared data layer, eliminating the integration tax that the PR Council estimates at 8&ndash;15 hours per team member per week.
       </p>
 
       <div className="overflow-x-auto my-6">

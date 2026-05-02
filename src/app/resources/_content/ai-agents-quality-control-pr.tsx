@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiAgentsQualityControlPrContent() {
@@ -22,13 +23,13 @@ export default function AiAgentsQualityControlPrContent() {
       </p>
 
       <p>
-        The path forward is not full automation or manual resistance. It is a structured approach that matches autonomy to risk. Shadow&apos;s architecture embodies this principle: humans set direction, agents handle production, and everything passes through configured review checkpoints. The goal is to put humans where they add the most value (strategy, judgment, and relationships) while agents handle research, drafting, <a href="/resources/ai-agent-media-monitoring">monitoring</a>, and <a href="/resources/automate-monthly-pr-reporting">reporting</a>.
+        The path forward is not full automation or manual resistance. It is a structured approach that matches autonomy to risk. Shadow&apos;s architecture embodies this principle: humans set direction, agents handle production, and everything passes through configured review checkpoints. The goal is to put humans where they add the most value (strategy, judgment, and relationships) while agents handle research, drafting, <Link href="/resources/ai-agent-media-monitoring">monitoring</Link>, and <Link href="/resources/automate-monthly-pr-reporting">reporting</Link>.
       </p>
 
       <ResourceH2>What Are the Different Levels of AI Autonomy in PR?</ResourceH2>
 
       <p>
-        Effective quality control requires four distinct autonomy levels (fully manual, AI-assisted, AI-drafted/human-reviewed, and fully autonomous) applied to different task categories based on risk. The average PR agency spends $2,000&ndash;5,000 per month per employee on tools (PR Council 2025), but without a unified <a href="/resources/pr-operating-system">operating system</a>, quality governance fragments across those tools.
+        Effective quality control requires four distinct autonomy levels (fully manual, AI-assisted, AI-drafted/human-reviewed, and fully autonomous) applied to different task categories based on risk. The average PR agency spends $2,000&ndash;5,000 per month per employee on tools (PR Council 2025), but without a unified <Link href="/resources/pr-operating-system">operating system</Link>, quality governance fragments across those tools.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -282,11 +283,11 @@ export default function AiAgentsQualityControlPrContent() {
       <ResourceH2>How Are Quality Control and Capacity Connected?</ResourceH2>
 
       <p>
-        Quality control and capacity are complementary, not opposing. When quality governance is systematic, the time spent on review decreases as the system matures, creating capacity that can be reinvested into strategic work. Shadow clients report revenue per employee of $350&ndash;500K versus the PR Council benchmark of $150&ndash;250K, with net margins of 30&ndash;40% versus the industry average of 10&ndash;15%. For the full capacity analysis, see <a href="/resources/pr-team-capacity-ai">how AI extends PR team capacity</a>.
+        Quality control and capacity are complementary, not opposing. When quality governance is systematic, the time spent on review decreases as the system matures, creating capacity that can be reinvested into strategic work. Shadow clients report revenue per employee of $350&ndash;500K versus the PR Council benchmark of $150&ndash;250K, with net margins of 30&ndash;40% versus the industry average of 10&ndash;15%. For the full capacity analysis, see <Link href="/resources/pr-team-capacity-ai">how AI extends PR team capacity</Link>.
       </p>
 
       <p>
-        Shadow clients report that the fear of quality loss is the primary hesitation before adoption, and that quality improvement is the primary surprise after adoption. The structured governance that Shadow requires forces agencies to formalize standards that were previously informal, inconsistent, and person-dependent. The result is not just AI-assisted production at scale, but more consistent quality across all agency output. For how <a href="/resources/maintain-brand-voice-ai-pr">voice consistency</a> fits into quality control, see the companion guide on brand voice governance.
+        Shadow clients report that the fear of quality loss is the primary hesitation before adoption, and that quality improvement is the primary surprise after adoption. The structured governance that Shadow requires forces agencies to formalize standards that were previously informal, inconsistent, and person-dependent. The result is not just AI-assisted production at scale, but more consistent quality across all agency output. For how <Link href="/resources/maintain-brand-voice-ai-pr">voice consistency</Link> fits into quality control, see the companion guide on brand voice governance.
       </p>
 
       <ResourceH2>Frequently Asked Questions</ResourceH2>

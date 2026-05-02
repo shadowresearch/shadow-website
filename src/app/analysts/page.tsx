@@ -307,6 +307,39 @@ export default function AnalystsPage() {
         </div>
       </section>
 
+      {/* Up next in the workflow */}
+      <section className="px-4 md:px-8 pb-12 md:pb-20">
+        <div className="max-w-[1425px] mx-auto px-8 md:px-16 border-t border-foreground/10 pt-12 md:pt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] gap-x-10 lg:gap-x-20 gap-y-6 items-start">
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              Up next in the workflow
+            </p>
+            <div>
+              <h3 className="font-serif text-[clamp(1.5rem,2.4vw,2rem)] text-foreground leading-[1.1] tracking-tight">
+                <Link
+                  href="/strategists"
+                  className="hover:text-foreground/70 transition-colors"
+                >
+                  Strategists.
+                </Link>
+              </h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-md">
+                Strategists score positioning options against the Analyst&apos;s
+                read of the landscape and return a ranked recommendation the
+                client can defensibly own.
+              </p>
+              <Link
+                href="/strategists"
+                className="mt-6 inline-flex items-center gap-2 text-sm text-foreground hover:text-foreground/70 transition-colors border-b border-foreground/30 hover:border-foreground/60 pb-1 w-fit"
+              >
+                Continue to Strategists
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
         <div className="rounded-3xl bg-card overflow-hidden">

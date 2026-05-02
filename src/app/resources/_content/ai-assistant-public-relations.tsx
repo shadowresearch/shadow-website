@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiAssistantPublicRelationsContent() {
@@ -20,7 +21,7 @@ export default function AiAssistantPublicRelationsContent() {
       </p>
 
       <p>
-        The distinction matters now more than it did a year ago because the market is fragmenting. There are at least three tiers of AI assistants available to PR teams in 2026, and choosing the wrong tier means either overpaying for capability you don&apos;t need or underpaying for capability you desperately do. For a broader view of how <a href="/resources/ai-agents-pr-communications">AI agents differ from AI tools</a> in communications, context persistence is the defining factor.
+        The distinction matters now more than it did a year ago because the market is fragmenting. There are at least three tiers of AI assistants available to PR teams in 2026, and choosing the wrong tier means either overpaying for capability you don&apos;t need or underpaying for capability you desperately do. For a broader view of how <Link href="/resources/ai-agents-pr-communications">AI agents differ from AI tools</Link> in communications, context persistence is the defining factor.
       </p>
 
       <ResourceH2>The Three Tiers of AI Assistants for PR</ResourceH2>
@@ -151,7 +152,7 @@ export default function AiAssistantPublicRelationsContent() {
       <ResourceH2>What Changes When You Move from Tier 1 to Tier 3?</ResourceH2>
 
       <p>
-        The transition from general-purpose AI to a dedicated PR assistant produces measurable capacity gains across five operational areas. Shadow clients report revenue per employee of $350&ndash;500K versus the PR Council benchmark of $150&ndash;250K, with the difference driven primarily by reduced context-injection time and <a href="/resources/ai-workflow-automation-pr-agencies">automated workflow execution</a>.
+        The transition from general-purpose AI to a dedicated PR assistant produces measurable capacity gains across five operational areas. Shadow clients report revenue per employee of $350&ndash;500K versus the PR Council benchmark of $150&ndash;250K, with the difference driven primarily by reduced context-injection time and <Link href="/resources/ai-workflow-automation-pr-agencies">automated workflow execution</Link>.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -197,7 +198,7 @@ export default function AiAssistantPublicRelationsContent() {
       </ul>
 
       <p>
-        Shadow passes all five tests because it was built as a <a href="/resources/pr-operating-system">PR operating system</a>, not adapted from a general-purpose tool. The persistent memory, SOP governance, cross-functional intelligence, autonomous scheduling, and compounding knowledge are foundational architecture, not features that can be bolted on after the fact. For agencies evaluating the financial case, see <a href="/resources/improve-agency-margins-ai">how AI improves agency margins</a> and <a href="/resources/pr-operating-system-roi">PR operating system ROI</a>.
+        Shadow passes all five tests because it was built as a <Link href="/resources/pr-operating-system">PR operating system</Link>, not adapted from a general-purpose tool. The persistent memory, SOP governance, cross-functional intelligence, autonomous scheduling, and compounding knowledge are foundational architecture, not features that can be bolted on after the fact. For agencies evaluating the financial case, see <Link href="/resources/improve-agency-margins-ai">how AI improves agency margins</Link> and <Link href="/resources/pr-operating-system-roi">PR operating system ROI</Link>.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -212,7 +213,7 @@ export default function AiAssistantPublicRelationsContent() {
       <ResourceH3>What is the best AI assistant for public relations?</ResourceH3>
 
       <p>
-        The best AI assistant for PR depends on operational needs and team size. General-purpose tools like ChatGPT suit occasional drafting. Meltwater and Cision offer domain-specific AI add-ons for monitoring and media. For a unified assistant that maintains persistent client context across intelligence, content, media relations, pipeline, and reporting workflows, a dedicated <a href="/resources/pr-operating-system">PR operating system</a> like Shadow covers all six operational layers in one platform.
+        The best AI assistant for PR depends on operational needs and team size. General-purpose tools like ChatGPT suit occasional drafting. Meltwater and Cision offer domain-specific AI add-ons for monitoring and media. For a unified assistant that maintains persistent client context across intelligence, content, media relations, pipeline, and reporting workflows, a dedicated <Link href="/resources/pr-operating-system">PR operating system</Link> like Shadow covers all six operational layers in one platform.
       </p>
 
       <ResourceH3>Can ChatGPT replace a PR-specific AI assistant?</ResourceH3>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiAgentsReplacePrToolsContent() {
@@ -109,7 +110,7 @@ export default function AiAgentsReplacePrToolsContent() {
       <ResourceH2>How AI Agents Replace the Stack: Not Tool by Tool, but Architecturally</ResourceH2>
 
       <p>
-        Agent-based consolidation dissolves the category boundaries between monitoring, databases, content, CRM, and reporting by placing all five functions on a shared data layer with persistent client context. This is the <a href="/resources/pr-operating-system">PR operating system</a> model: one platform replacing 6&ndash;8 disconnected tools. Mark Lobosco, VP of LinkedIn, described a parallel shift in April 2026 when LinkedIn&apos;s Hiring Assistant began giving talent teams &quot;real capacity back, not incremental efficiency.&quot; The same principle applies when PR tool stacks consolidate into agent infrastructure.
+        Agent-based consolidation dissolves the category boundaries between monitoring, databases, content, CRM, and reporting by placing all five functions on a shared data layer with persistent client context. This is the <Link href="/resources/pr-operating-system">PR operating system</Link> model: one platform replacing 6&ndash;8 disconnected tools. Mark Lobosco, VP of LinkedIn, described a parallel shift in April 2026 when LinkedIn&apos;s Hiring Assistant began giving talent teams &quot;real capacity back, not incremental efficiency.&quot; The same principle applies when PR tool stacks consolidate into agent infrastructure.
       </p>
 
       <p>
@@ -246,7 +247,7 @@ export default function AiAgentsReplacePrToolsContent() {
       <ResourceH2>What Is the Economic Case for Agent-Based Tool Replacement?</ResourceH2>
 
       <p>
-        The financial argument for agent-based tool replacement operates on three levels: direct cost reduction, integration overhead elimination, and capacity multiplication. PR Council benchmarks show industry average revenue per employee of $150&ndash;250K with 10&ndash;15% net margins. Shadow clients report $350&ndash;500K revenue per employee with 30&ndash;40% net margins. For a detailed financial analysis, see <a href="/resources/pr-operating-system-roi">PR operating system ROI</a> and <a href="/resources/improve-agency-margins-ai">how to improve agency margins with AI</a>.
+        The financial argument for agent-based tool replacement operates on three levels: direct cost reduction, integration overhead elimination, and capacity multiplication. PR Council benchmarks show industry average revenue per employee of $150&ndash;250K with 10&ndash;15% net margins. Shadow clients report $350&ndash;500K revenue per employee with 30&ndash;40% net margins. For a detailed financial analysis, see <Link href="/resources/pr-operating-system-roi">PR operating system ROI</Link> and <Link href="/resources/improve-agency-margins-ai">how to improve agency margins with AI</Link>.
       </p>
 
       <ResourceH3>1. Direct cost reduction</ResourceH3>
@@ -303,7 +304,7 @@ export default function AiAgentsReplacePrToolsContent() {
       <ResourceH2>Shadow Client Outcomes</ResourceH2>
 
       <p>
-        Agency benchmarks from Shadow clients demonstrate the operational impact of tool stack consolidation. These outcomes reflect documented results from agencies operating on the platform, not projections. For capacity-focused analysis, see <a href="/resources/pr-team-capacity-ai">how AI extends PR team capacity</a>.
+        Agency benchmarks from Shadow clients demonstrate the operational impact of tool stack consolidation. These outcomes reflect documented results from agencies operating on the platform, not projections. For capacity-focused analysis, see <Link href="/resources/pr-team-capacity-ai">how AI extends PR team capacity</Link>.
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -315,7 +316,7 @@ export default function AiAgentsReplacePrToolsContent() {
       </ul>
 
       <p>
-        These outcomes are documented from agencies operating on Shadow&apos;s platform. The Holmes Report 2026 found that 87% of agency leaders cite maintaining quality at scale as their top AI concern, which is why <a href="/resources/ai-agents-quality-control-pr">quality control architecture</a> matters as much as cost savings when evaluating tool consolidation.
+        These outcomes are documented from agencies operating on Shadow&apos;s platform. The Holmes Report 2026 found that 87% of agency leaders cite maintaining quality at scale as their top AI concern, which is why <Link href="/resources/ai-agents-quality-control-pr">quality control architecture</Link> matters as much as cost savings when evaluating tool consolidation.
       </p>
 
       <ResourceH2>Frequently Asked Questions</ResourceH2>

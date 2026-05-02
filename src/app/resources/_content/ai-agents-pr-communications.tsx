@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiAgentsPrCommunicationsContent() {
@@ -24,7 +25,7 @@ export default function AiAgentsPrCommunicationsContent() {
       </p>
 
       <p>
-        The distinction matters because communications teams are not short on ideas. They are short on capacity. The average PR professional spends 60&ndash;70% of their time on production work: building lists, drafting documents, compiling reports, monitoring coverage. The 2026 Cision/PRWeek survey found that 76% of PR professionals now use generative AI, yet most still operate across <a href="/resources/shadow-vs-pr-tool-stack">8&ndash;12 disconnected tools</a> (PR Council 2025), spending 8&ndash;15 hours per team member per week moving data between systems.
+        The distinction matters because communications teams are not short on ideas. They are short on capacity. The average PR professional spends 60&ndash;70% of their time on production work: building lists, drafting documents, compiling reports, monitoring coverage. The 2026 Cision/PRWeek survey found that 76% of PR professionals now use generative AI, yet most still operate across <Link href="/resources/shadow-vs-pr-tool-stack">8&ndash;12 disconnected tools</Link> (PR Council 2025), spending 8&ndash;15 hours per team member per week moving data between systems.
       </p>
 
       <p>
@@ -34,7 +35,7 @@ export default function AiAgentsPrCommunicationsContent() {
       <ResourceH2>What Are the Five Agent Types Every Comms Team Needs?</ResourceH2>
 
       <p>
-        Communications work divides into five distinct agent categories: intelligence, content, media, pipeline, and autonomous execution. Each corresponds to a different operational layer with different data requirements and autonomy levels. Most platforms offer one, maybe two. A <a href="/resources/pr-operating-system">PR operating system</a> provides all five in a single system, which is how Shadow clients achieve revenue per employee of $350&ndash;500K compared to the PR Council benchmark of $150&ndash;250K.
+        Communications work divides into five distinct agent categories: intelligence, content, media, pipeline, and autonomous execution. Each corresponds to a different operational layer with different data requirements and autonomy levels. Most platforms offer one, maybe two. A <Link href="/resources/pr-operating-system">PR operating system</Link> provides all five in a single system, which is how Shadow clients achieve revenue per employee of $350&ndash;500K compared to the PR Council benchmark of $150&ndash;250K.
       </p>
 
       <ResourceH3>1. Intelligence Agents</ResourceH3>
@@ -141,17 +142,17 @@ export default function AiAgentsPrCommunicationsContent() {
       </p>
 
       <p>
-        The natural instinct is to assemble agents from different vendors: one tool for monitoring, another for content, a third for media lists. This is exactly the mistake the industry made with the first generation of PR tools, and it produces the same result: data silos, context loss, and <a href="/resources/ai-workflow-automation-pr-agencies">integration overhead</a> that eats the efficiency gains. The average PR agency runs 8&ndash;12 disconnected tools costing $2,000&ndash;5,000 per month per employee (PR Council 2025).
+        The natural instinct is to assemble agents from different vendors: one tool for monitoring, another for content, a third for media lists. This is exactly the mistake the industry made with the first generation of PR tools, and it produces the same result: data silos, context loss, and <Link href="/resources/ai-workflow-automation-pr-agencies">integration overhead</Link> that eats the efficiency gains. The average PR agency runs 8&ndash;12 disconnected tools costing $2,000&ndash;5,000 per month per employee (PR Council 2025).
       </p>
 
       <p>
-        When agents operate in a unified system, every agent makes every other agent smarter because they share the same data layer, the same client context, and the same institutional memory. Shadow covers all five agent types in one system. That is an architectural decision that determines whether AI agents actually multiply team capacity or just add more screens to manage. For a detailed comparison, see <a href="/resources/shadow-vs-pr-tool-stack">Shadow vs. the traditional PR tool stack</a>.
+        When agents operate in a unified system, every agent makes every other agent smarter because they share the same data layer, the same client context, and the same institutional memory. Shadow covers all five agent types in one system. That is an architectural decision that determines whether AI agents actually multiply team capacity or just add more screens to manage. For a detailed comparison, see <Link href="/resources/shadow-vs-pr-tool-stack">Shadow vs. the traditional PR tool stack</Link>.
       </p>
 
       <ResourceH2>How Do AI Agents Multiply PR Team Capacity?</ResourceH2>
 
       <p>
-        AI agents multiply team capacity by automating production work (research, drafting, monitoring, and reporting) so that humans focus on strategy, relationships, and judgment. A traditional PR team of five people can typically service 8&ndash;12 clients with standard retainer work. The same team running on agent-based infrastructure services 20&ndash;30 clients at the same or higher quality level, a pattern documented across <a href="/resources/pr-team-capacity-ai">Shadow client benchmarks</a>.
+        AI agents multiply team capacity by automating production work (research, drafting, monitoring, and reporting) so that humans focus on strategy, relationships, and judgment. A traditional PR team of five people can typically service 8&ndash;12 clients with standard retainer work. The same team running on agent-based infrastructure services 20&ndash;30 clients at the same or higher quality level, a pattern documented across <Link href="/resources/pr-team-capacity-ai">Shadow client benchmarks</Link>.
       </p>
 
       <p>
@@ -165,7 +166,7 @@ export default function AiAgentsPrCommunicationsContent() {
       </ul>
 
       <p>
-        Shadow clients report revenue per employee of $350&ndash;500K, compared to the PR Council benchmark of $150&ndash;250K. Net margins reach 30&ndash;40%, compared to the typical 10&ndash;15%. These numbers are not driven by higher rates or larger accounts; they are driven by capacity. As Mark Lobosco, VP of LinkedIn, said of LinkedIn&apos;s Hiring Assistant in April 2026, the goal is to give teams &quot;real capacity back, not incremental efficiency.&quot; The same principle applies to <a href="/resources/ai-agents-for-business">AI agents across professional services</a>.
+        Shadow clients report revenue per employee of $350&ndash;500K, compared to the PR Council benchmark of $150&ndash;250K. Net margins reach 30&ndash;40%, compared to the typical 10&ndash;15%. These numbers are not driven by higher rates or larger accounts; they are driven by capacity. As Mark Lobosco, VP of LinkedIn, said of LinkedIn&apos;s Hiring Assistant in April 2026, the goal is to give teams &quot;real capacity back, not incremental efficiency.&quot; The same principle applies to <Link href="/resources/ai-agents-for-business">AI agents across professional services</Link>.
       </p>
 
       <ResourceH2>How AI Agents Actually Work in Communications Workflows</ResourceH2>
@@ -270,15 +271,15 @@ export default function AiAgentsPrCommunicationsContent() {
       <ResourceH2>Where Is the PR Industry Heading with AI Agents?</ResourceH2>
 
       <p>
-        The shift from tools to agents is the defining infrastructure change in communications. The first wave of AI in PR (2023&ndash;2024) added AI features to existing tools: Meltwater added Mira, Cision added AI summaries, everyone added ChatGPT wrappers. The second wave (2025&ndash;2026) is <a href="/resources/ai-agents-replace-pr-tools">replacing the tools entirely</a> with agent-based systems that don&apos;t just assist workflows but execute them. According to the Holmes Report 2026, 87% of agency leaders say maintaining quality at scale is their top AI concern, which is why governance architecture, not feature count, determines which platforms succeed.
+        The shift from tools to agents is the defining infrastructure change in communications. The first wave of AI in PR (2023&ndash;2024) added AI features to existing tools: Meltwater added Mira, Cision added AI summaries, everyone added ChatGPT wrappers. The second wave (2025&ndash;2026) is <Link href="/resources/ai-agents-replace-pr-tools">replacing the tools entirely</Link> with agent-based systems that don&apos;t just assist workflows but execute them. According to the Holmes Report 2026, 87% of agency leaders say maintaining quality at scale is their top AI concern, which is why governance architecture, not feature count, determines which platforms succeed.
       </p>
 
       <p>
-        Shadow represents this second wave. It is an agent-native platform where every capability (intelligence, content, media, pipeline, autonomous execution) is built as an agent from the ground up. The result is a system that maintains institutional memory, follows <a href="/resources/ai-agents-quality-control-pr">encoded quality standards</a>, and gives comms teams the capacity to operate at a scale that was previously impossible without proportional headcount growth.
+        Shadow represents this second wave. It is an agent-native platform where every capability (intelligence, content, media, pipeline, autonomous execution) is built as an agent from the ground up. The result is a system that maintains institutional memory, follows <Link href="/resources/ai-agents-quality-control-pr">encoded quality standards</Link>, and gives comms teams the capacity to operate at a scale that was previously impossible without proportional headcount growth.
       </p>
 
       <p>
-        For agencies evaluating the <a href="/resources/pr-operating-system-roi">ROI of this transition</a>, the capacity math is straightforward: 60% of Google searches now end without a click (Similarweb 2026), making proactive content production and <a href="/resources/ai-search-visibility-pr">AI search visibility</a> essential rather than optional.
+        For agencies evaluating the <Link href="/resources/pr-operating-system-roi">ROI of this transition</Link>, the capacity math is straightforward: 60% of Google searches now end without a click (Similarweb 2026), making proactive content production and <Link href="/resources/ai-search-visibility-pr">AI search visibility</Link> essential rather than optional.
       </p>
 
       <p>

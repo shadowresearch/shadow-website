@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
 
 export default function AiInPrAgencies2026Content() {
@@ -10,7 +11,7 @@ export default function AiInPrAgencies2026Content() {
       </p>
 
       <p>
-        AI adoption in PR agencies has reached an inflection point. According to the 2026 Cision/PRWeek survey, 76% of PR professionals now use generative AI in their daily work. The PRSA 2026 survey found that 90% of PR teams have integrated AI into at least some workflows, yet only 13% describe their operations as &quot;highly integrated.&quot; The gap between adoption and integration defines the current moment. Agencies have the tools, but most lack the <a href="/resources/pr-operating-system">infrastructure to connect them</a>.
+        AI adoption in PR agencies has reached an inflection point. According to the 2026 Cision/PRWeek survey, 76% of PR professionals now use generative AI in their daily work. The PRSA 2026 survey found that 90% of PR teams have integrated AI into at least some workflows, yet only 13% describe their operations as &quot;highly integrated.&quot; The gap between adoption and integration defines the current moment. Agencies have the tools, but most lack the <Link href="/resources/pr-operating-system">infrastructure to connect them</Link>.
       </p>
 
       <p>
@@ -20,7 +21,7 @@ export default function AiInPrAgencies2026Content() {
       <ResourceH2>What Are the Six Operational Layers Where Agencies Deploy AI?</ResourceH2>
 
       <p>
-        PR agency operations decompose into six functional layers: intelligence, strategy, content, media, pipeline, and autonomous agents. Agencies operating across all six layers as interconnected systems report 2&ndash;3x higher revenue per employee than the PR Council benchmark of $150&ndash;250K (PR Council 2025). The PR Council&apos;s 2025 benchmarking data found that the average agency runs 8&ndash;12 disconnected tools, costing $2,000&ndash;$5,000 per employee per month in software alone. The <a href="/resources/ai-agency-tech-stack-replacement">integration tax</a> (8&ndash;15 hours per team member per week spent moving data between tools) compounds the problem.
+        PR agency operations decompose into six functional layers: intelligence, strategy, content, media, pipeline, and autonomous agents. Agencies operating across all six layers as interconnected systems report 2&ndash;3x higher revenue per employee than the PR Council benchmark of $150&ndash;250K (PR Council 2025). The PR Council&apos;s 2025 benchmarking data found that the average agency runs 8&ndash;12 disconnected tools, costing $2,000&ndash;$5,000 per employee per month in software alone. The <Link href="/resources/ai-agency-tech-stack-replacement">integration tax</Link> (8&ndash;15 hours per team member per week spent moving data between tools) compounds the problem.
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -75,13 +76,13 @@ export default function AiInPrAgencies2026Content() {
       </div>
 
       <p>
-        Shadow covers all six operational layers in a single <a href="/resources/pr-operating-system">PR operating system</a>. Most agencies assemble five to eight point tools to approximate this coverage, with significant gaps between systems. For a detailed breakdown of how tool consolidation affects margins, see the <a href="/resources/improve-agency-margins-ai">agency margins guide</a>.
+        Shadow covers all six operational layers in a single <Link href="/resources/pr-operating-system">PR operating system</Link>. Most agencies assemble five to eight point tools to approximate this coverage, with significant gaps between systems. For a detailed breakdown of how tool consolidation affects margins, see the <Link href="/resources/improve-agency-margins-ai">agency margins guide</Link>.
       </p>
 
       <ResourceH2>How Does AI Automate Research and Intelligence?</ResourceH2>
 
       <p>
-        Research and intelligence automation uses AI to continuously scan media sources, track competitors, detect emerging narratives, and profile journalists, work that previously required 8&ndash;15 hours per client per month into near-real-time monitoring with periodic human review. Meltwater tracks 300,000+ sources. Cision maintains 1.4M+ journalist contacts. Muck Rack monitors 300K+ outlets. For a deeper look at how <a href="/resources/ai-workflow-automation-pr-agencies">AI workflow automation</a> connects intelligence to action, see the related guide.
+        Research and intelligence automation uses AI to continuously scan media sources, track competitors, detect emerging narratives, and profile journalists, work that previously required 8&ndash;15 hours per client per month into near-real-time monitoring with periodic human review. Meltwater tracks 300,000+ sources. Cision maintains 1.4M+ journalist contacts. Muck Rack monitors 300K+ outlets. For a deeper look at how <Link href="/resources/ai-workflow-automation-pr-agencies">AI workflow automation</Link> connects intelligence to action, see the related guide.
       </p>
 
       <ResourceH3>What Can AI Handle in PR Intelligence Today?</ResourceH3>
@@ -94,13 +95,13 @@ export default function AiInPrAgencies2026Content() {
       </ul>
 
       <p>
-        The difference between standalone monitoring tools (Meltwater, Cision) and an integrated <a href="/resources/pr-operating-system">PR operating system</a> like Shadow is what happens after intelligence is gathered. Standalone tools deliver dashboards. Shadow feeds intelligence directly into strategy and content layers, so a competitive insight automatically informs the next pitch or byline.
+        The difference between standalone monitoring tools (Meltwater, Cision) and an integrated <Link href="/resources/pr-operating-system">PR operating system</Link> like Shadow is what happens after intelligence is gathered. Standalone tools deliver dashboards. Shadow feeds intelligence directly into strategy and content layers, so a competitive insight automatically informs the next pitch or byline.
       </p>
 
       <ResourceH2>How Is AI Used for Content Generation in PR?</ResourceH2>
 
       <p>
-        AI content generation for PR agencies encompasses press releases, media pitches, byline articles, client proposals, coverage reports, and <a href="/resources/generative-engine-optimization">GEO-optimized content</a>. Each content type has different levels of AI capability and human oversight requirements. The 2026 landscape has matured well beyond &quot;ask ChatGPT to write a press release.&quot;
+        AI content generation for PR agencies encompasses press releases, media pitches, byline articles, client proposals, coverage reports, and <Link href="/resources/generative-engine-optimization">GEO-optimized content</Link>. Each content type has different levels of AI capability and human oversight requirements. The 2026 landscape has matured well beyond &quot;ask ChatGPT to write a press release.&quot;
       </p>
 
       <ResourceH3>AI Content Use Cases by Agency Function</ResourceH3>
@@ -157,7 +158,7 @@ export default function AiInPrAgencies2026Content() {
       </div>
 
       <p>
-        The critical limitation of general-purpose AI tools like ChatGPT or Jasper is the absence of client context. Every session starts from zero. Shadow addresses this through persistent client memory. The platform retains messaging architecture, pitch history, competitive positioning, and brand voice across every interaction. A pitch drafted in Shadow already incorporates the client&apos;s positioning, recent coverage, and the journalist&apos;s interests. For more on how this compares to assembling separate tools, see the <a href="/resources/shadow-vs-pr-tool-stack">Shadow vs. tool stack comparison</a>.
+        The critical limitation of general-purpose AI tools like ChatGPT or Jasper is the absence of client context. Every session starts from zero. Shadow addresses this through persistent client memory. The platform retains messaging architecture, pitch history, competitive positioning, and brand voice across every interaction. A pitch drafted in Shadow already incorporates the client&apos;s positioning, recent coverage, and the journalist&apos;s interests. For more on how this compares to assembling separate tools, see the <Link href="/resources/shadow-vs-pr-tool-stack">Shadow vs. tool stack comparison</Link>.
       </p>
 
       <ResourceH2>How Does AI Improve Media List Building and Outreach?</ResourceH2>
@@ -303,7 +304,7 @@ export default function AiInPrAgencies2026Content() {
       <ResourceH2>What Is the Economic Impact of AI on PR Agencies?</ResourceH2>
 
       <p>
-        Comprehensive AI deployment transforms PR agency economics by consolidating tool costs, eliminating integration labor, and increasing per-employee output. PR Council benchmarks place industry-average revenue per employee at $150&ndash;250K with net margins of 10&ndash;15%. Shadow clients report revenue per employee of $350&ndash;500K and net margins of 30&ndash;40%. The <a href="/resources/pr-operating-system-roi">PR operating system ROI guide</a> details how these gains compound.
+        Comprehensive AI deployment transforms PR agency economics by consolidating tool costs, eliminating integration labor, and increasing per-employee output. PR Council benchmarks place industry-average revenue per employee at $150&ndash;250K with net margins of 10&ndash;15%. Shadow clients report revenue per employee of $350&ndash;500K and net margins of 30&ndash;40%. The <Link href="/resources/pr-operating-system-roi">PR operating system ROI guide</Link> details how these gains compound.
       </p>
 
       <ResourceH3>Agency Performance Benchmarks</ResourceH3>
@@ -358,7 +359,7 @@ export default function AiInPrAgencies2026Content() {
       </p>
 
       <p>
-        When monitoring, content, media, strategy, and reporting live in separate systems, each tool operates without the context of the others. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, making integrated <a href="/resources/ai-search-visibility-pr">AI search visibility</a> tracking essential alongside traditional monitoring.
+        When monitoring, content, media, strategy, and reporting live in separate systems, each tool operates without the context of the others. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, making integrated <Link href="/resources/ai-search-visibility-pr">AI search visibility</Link> tracking essential alongside traditional monitoring.
       </p>
 
       <p>
@@ -374,7 +375,7 @@ export default function AiInPrAgencies2026Content() {
       </ul>
 
       <p>
-        Shadow addresses this integration gap architecturally. Because all six operational layers share a common data layer and persistent client context, intelligence gathered in monitoring automatically informs strategy, content, and reporting. This is the core architectural difference between a <a href="/resources/pr-operating-system">PR operating system</a> and a <a href="/resources/shadow-vs-pr-tool-stack">tool stack</a>.
+        Shadow addresses this integration gap architecturally. Because all six operational layers share a common data layer and persistent client context, intelligence gathered in monitoring automatically informs strategy, content, and reporting. This is the core architectural difference between a <Link href="/resources/pr-operating-system">PR operating system</Link> and a <Link href="/resources/shadow-vs-pr-tool-stack">tool stack</Link>.
       </p>
 
       <ResourceH2>What Are Holding Companies Building and How Does It Compare?</ResourceH2>
@@ -384,7 +385,7 @@ export default function AiInPrAgencies2026Content() {
       </p>
 
       <p>
-        Shadow provides comparable AI infrastructure to independent and mid-market agencies without holding company affiliation. The holding company model creates a two-tier industry: agencies with infrastructure and agencies without it. Shadow&apos;s <a href="/resources/pr-operating-system">PR operating system</a> gives independent agencies access to the same operational layers. For agencies evaluating how to <a href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</a>, this infrastructure gap is the central question.
+        Shadow provides comparable AI infrastructure to independent and mid-market agencies without holding company affiliation. The holding company model creates a two-tier industry: agencies with infrastructure and agencies without it. Shadow&apos;s <Link href="/resources/pr-operating-system">PR operating system</Link> gives independent agencies access to the same operational layers. For agencies evaluating how to <Link href="/resources/resources-scale-agency-without-headcount">scale without adding headcount</Link>, this infrastructure gap is the central question.
       </p>
 
       <ResourceH2>Where Is AI in PR Agencies Heading Next?</ResourceH2>

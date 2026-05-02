@@ -1,4 +1,5 @@
-import { ResourceH2, ResourceH3, ResourceBlockquote } from "../_components/ResourcePage";
+import Link from "next/link";
+import { ResourceH2, ResourceH3 } from "../_components/ResourcePage";
 
 export default function ShadowVsSolaraimpactContent() {
   return (
@@ -18,7 +19,7 @@ export default function ShadowVsSolaraimpactContent() {
       </p>
 
       <p>
-        The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, and the PRSA 2026 survey shows 90% of PR teams have integrated AI into workflows, yet only 13% report &quot;highly integrated&quot; operations. Both platforms attempt to close the gap between AI adoption and operational integration, though through different architectural approaches. For agencies evaluating the broader AI tool landscape, see the <a href="/resources/best-ai-tools-pr-agencies">best AI tools for PR agencies</a> guide.
+        The 2026 Cision/PRWeek survey found 76% of PR professionals use generative AI, and the PRSA 2026 survey shows 90% of PR teams have integrated AI into workflows, yet only 13% report &quot;highly integrated&quot; operations. Both platforms attempt to close the gap between AI adoption and operational integration, though through different architectural approaches. For agencies evaluating the broader AI tool landscape, see the <Link href="/resources/best-ai-tools-pr-agencies">best AI tools for PR agencies</Link> guide.
       </p>
 
       <ResourceH2>Platform Overview</ResourceH2>
@@ -68,7 +69,7 @@ export default function ShadowVsSolaraimpactContent() {
       </div>
 
       <p>
-        The fundamental difference between Shadow and SolaraIMPACT is scope and specificity. Shadow was built exclusively for communications agencies and covers the complete operational surface area of a PR firm, what the <a href="/resources/pr-operating-system">PR operating system</a> model describes. SolaraIMPACT takes a broader approach, serving multiple types of agencies with AI workflow automation that can be configured across various agency models. PR Council benchmarks show tool stack costs of $2,000&ndash;$5,000 per employee per month across 8&ndash;12 disconnected tools; the consolidation approach each platform takes affects these costs differently.
+        The fundamental difference between Shadow and SolaraIMPACT is scope and specificity. Shadow was built exclusively for communications agencies and covers the complete operational surface area of a PR firm, what the <Link href="/resources/pr-operating-system">PR operating system</Link> model describes. SolaraIMPACT takes a broader approach, serving multiple types of agencies with AI workflow automation that can be configured across various agency models. PR Council benchmarks show tool stack costs of $2,000&ndash;$5,000 per employee per month across 8&ndash;12 disconnected tools; the consolidation approach each platform takes affects these costs differently.
       </p>
 
       <ResourceH2>How Do the Core Capabilities Compare?</ResourceH2>
@@ -76,7 +77,7 @@ export default function ShadowVsSolaraimpactContent() {
       <ResourceH3>Shadow&apos;s Six Operational Layers</ResourceH3>
 
       <p>
-        Shadow organizes agency operations into six integrated layers, each powered by AI that shares context with all other layers. PR Council industry benchmarks place average revenue per employee at $150&ndash;250K; Shadow clients report $350&ndash;500K. For a detailed breakdown of the six-layer model, see the <a href="/resources/pr-operating-system">PR operating system guide</a>. The six layers are:
+        Shadow organizes agency operations into six integrated layers, each powered by AI that shares context with all other layers. PR Council industry benchmarks place average revenue per employee at $150&ndash;250K; Shadow clients report $350&ndash;500K. For a detailed breakdown of the six-layer model, see the <Link href="/resources/pr-operating-system">PR operating system guide</Link>. The six layers are:
       </p>
 
       <ul className="list-disc pl-6 space-y-2">
@@ -169,7 +170,7 @@ export default function ShadowVsSolaraimpactContent() {
       </div>
 
       <p>
-        Shadow&apos;s advantage is depth in communications-specific capabilities. Shadow includes a built-in media database, monitoring infrastructure, competitive intelligence, and <a href="/resources/ai-search-visibility-pr">AI search visibility tracking</a> that SolaraIMPACT relies on integrations to access. SolaraIMPACT&apos;s advantage is workflow flexibility. Because it isn&apos;t locked to one agency type, it can serve marketing, creative, and digital agencies alongside PR firms. Meltwater tracks 300,000+ sources and Cision maintains 1.4M+ journalist contacts; neither SolaraIMPACT nor Shadow matches these numbers in isolation, but Shadow&apos;s 200K+ sources and 230K+ journalist profiles are integrated with <a href="/resources/ai-workflow-automation-pr-agencies">workflow automation</a>.
+        Shadow&apos;s advantage is depth in communications-specific capabilities. Shadow includes a built-in media database, monitoring infrastructure, competitive intelligence, and <Link href="/resources/ai-search-visibility-pr">AI search visibility tracking</Link> that SolaraIMPACT relies on integrations to access. SolaraIMPACT&apos;s advantage is workflow flexibility. Because it isn&apos;t locked to one agency type, it can serve marketing, creative, and digital agencies alongside PR firms. Meltwater tracks 300,000+ sources and Cision maintains 1.4M+ journalist contacts; neither SolaraIMPACT nor Shadow matches these numbers in isolation, but Shadow&apos;s 200K+ sources and 230K+ journalist profiles are integrated with <Link href="/resources/ai-workflow-automation-pr-agencies">workflow automation</Link>.
       </p>
 
       <ResourceH2>How Do the AI Capabilities Differ in Depth and Breadth?</ResourceH2>
@@ -344,7 +345,7 @@ export default function ShadowVsSolaraimpactContent() {
       <ResourceH2>Should Agencies Consolidate or Orchestrate Their Tools?</ResourceH2>
 
       <p>
-        The consolidation vs. orchestration decision reflects the broader <a href="/resources/ai-agency-tech-stack-replacement">tech stack replacement</a> question facing agencies in 2026. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, adding <a href="/resources/generative-engine-optimization">GEO</a> as yet another function that needs integration. Is it better to consolidate operations into a single AI-native platform, or to orchestrate existing tools through an AI middleware layer?
+        The consolidation vs. orchestration decision reflects the broader <Link href="/resources/ai-agency-tech-stack-replacement">tech stack replacement</Link> question facing agencies in 2026. Similarweb&apos;s 2026 data shows 60% of Google searches now end without a click, adding <Link href="/resources/generative-engine-optimization">GEO</Link> as yet another function that needs integration. Is it better to consolidate operations into a single AI-native platform, or to orchestrate existing tools through an AI middleware layer?
       </p>
 
       <p>
