@@ -111,21 +111,18 @@ export default function PricingPage() {
         </div>
         <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
           <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-2xl">
-            Shadow pricing for communications teams.
+            Flexible pricing for every team.
           </h1>
           <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-md">
-            One price, every capability. Pricing decreases as you add clients.
-            Annual plans save 15%.
+            Per-client and pay-per-use plans that fit your needs.
           </p>
         </div>
       </section>
 
-      {/* Tiers */}
+      {/* Tiers — each card is its own glass tile with a marble texture */}
       <section className="px-4 md:px-8 pb-12 md:pb-20">
-        <div className="rounded-3xl bg-card overflow-hidden">
-          <div className="max-w-[1425px] mx-auto px-8 md:px-16 py-16 md:py-24">
-            <PricingTiers />
-          </div>
+        <div className="max-w-[1425px] mx-auto">
+          <PricingTiers />
         </div>
       </section>
 
