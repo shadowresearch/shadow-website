@@ -157,18 +157,28 @@ export function NarrativeReportPreview() {
   }, []);
 
   // Once armed, alternate between frame 1 (overview) and frame 2 (recs) on
-  // a loop. Each frame dwells for `dwellMs` before scrolling.
+  // a loop. The very first transition is snappy so the recs land just after
+  // the chart finishes drawing; subsequent dwells are longer so each frame
+  // has time to read.
   useEffect(() => {
     if (!armed) return;
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReduced) return;
-    const dwellMs = 2200;
-    const interval = window.setInterval(() => {
+    const firstDwellMs = 2200;
+    const loopDwellMs = 4000;
+    let intervalId: number | undefined;
+    const timeoutId = window.setTimeout(() => {
       setScrolled((prev) => !prev);
-    }, dwellMs);
-    return () => window.clearInterval(interval);
+      intervalId = window.setInterval(() => {
+        setScrolled((prev) => !prev);
+      }, loopDwellMs);
+    }, firstDwellMs);
+    return () => {
+      window.clearTimeout(timeoutId);
+      if (intervalId !== undefined) window.clearInterval(intervalId);
+    };
   }, [armed]);
 
   return (
