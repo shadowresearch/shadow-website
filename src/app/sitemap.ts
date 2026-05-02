@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { caseStudies } from "./case-studies/_data";
 import { resources } from "./resources/_data/resources";
 
 const baseUrl = "https://shadow.inc";
@@ -11,6 +12,15 @@ const blogSlugs = [
   "the-business-model-crisis",
   "what-ai-actually-changes",
   "what-comes-next",
+];
+
+const reportSlugs = [
+  "consumer-ai-narrative-cycles",
+  "agency-sector",
+  "ai-infrastructure-stack",
+  "consumer-brand",
+  "pr-comms-agency",
+  "workforce-future-of-work",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -56,9 +66,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/resources`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/reports`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/reports/consumer-ai-narrative-cycles`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
   ];
+
+  // Report pages
+  const reportPages: MetadataRoute.Sitemap = reportSlugs.map((slug) => ({
+    url: `${baseUrl}/reports/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  // Case study pages
+  const caseStudyPages: MetadataRoute.Sitemap = caseStudies.map((c) => ({
+    url: `${baseUrl}/case-studies/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
 
   // Blog posts
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
@@ -76,5 +101,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...mainPages, ...blogPages, ...resourcePages];
+  return [
+    ...mainPages,
+    ...reportPages,
+    ...caseStudyPages,
+    ...blogPages,
+    ...resourcePages,
+  ];
 }

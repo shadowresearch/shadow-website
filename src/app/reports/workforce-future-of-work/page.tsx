@@ -32,6 +32,31 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://shadow.inc/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Reports",
+      item: "https://shadow.inc/reports",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "The workforce story the press writes is not the one buyers pay for.",
+      item: "https://shadow.inc/reports/workforce-future-of-work",
+    },
+  ],
+};
+
 const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -60,6 +85,10 @@ const articleLd = {
 export default function WorkforceFutureOfWorkPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}

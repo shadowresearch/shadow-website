@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "The Trust Shift: Why Credibility Now Follows Proximity, Not Prestige — Shadow Blog",
   description:
     "How trust reorganized around proximity and experience rather than institutional prestige. Part 2 of The Structural Crisis in PR.",
+  alternates: { canonical: "https://shadow.inc/blog/the-trust-shift" },
+  openGraph: {
+    type: "article",
+    siteName: "Shadow",
+    title: "The Trust Shift: Why Credibility Now Follows Proximity, Not Prestige — Shadow Blog",
+    description:
+      "How trust reorganized around proximity and experience rather than institutional prestige. Part 2 of The Structural Crisis in PR.",
+    url: "https://shadow.inc/blog/the-trust-shift",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Trust Shift: Why Credibility Now Follows Proximity, Not Prestige — Shadow Blog",
+    description:
+      "How trust reorganized around proximity and experience rather than institutional prestige. Part 2 of The Structural Crisis in PR.",
+  },
 };
 
 const relatedPosts = [
@@ -26,6 +41,7 @@ export default function TheTrustShiftPage() {
       title="The Trust Shift: Why Credibility Now Follows Proximity, Not Prestige"
       author="Jessen Gibbs, CEO, Shadow"
       date="January 15, 2026"
+      slug="the-trust-shift"
       series={{ name: "The Structural Crisis in PR", part: 2, total: 6 }}
       relatedPosts={relatedPosts}
     >

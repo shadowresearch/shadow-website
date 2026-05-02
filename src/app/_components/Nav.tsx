@@ -18,13 +18,8 @@ const productLinks: { href: string; label: string; description: string }[] = [
   },
   {
     href: "/ai-agents",
-    label: "AI Agents",
+    label: "AI Workforce",
     description: "Run a specialized agent team",
-  },
-  {
-    href: "/operate",
-    label: "Operate",
-    description: "Run the agency end to end",
   },
 ];
 

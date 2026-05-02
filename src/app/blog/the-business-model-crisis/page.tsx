@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "The Business Model Crisis: Why the PR Agency Model Is Breaking — Shadow Blog",
   description:
     "Why the headcount-based agency model is hitting a structural ceiling, and what it means for the industry. Part 4 of The Structural Crisis in PR.",
+  alternates: { canonical: "https://shadow.inc/blog/the-business-model-crisis" },
+  openGraph: {
+    type: "article",
+    siteName: "Shadow",
+    title: "The Business Model Crisis: Why the PR Agency Model Is Breaking — Shadow Blog",
+    description:
+      "Why the headcount-based agency model is hitting a structural ceiling, and what it means for the industry. Part 4 of The Structural Crisis in PR.",
+    url: "https://shadow.inc/blog/the-business-model-crisis",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Business Model Crisis: Why the PR Agency Model Is Breaking — Shadow Blog",
+    description:
+      "Why the headcount-based agency model is hitting a structural ceiling, and what it means for the industry. Part 4 of The Structural Crisis in PR.",
+  },
 };
 
 const relatedPosts = [
@@ -26,6 +41,7 @@ export default function TheBusinessModelCrisisPage() {
       title="The Business Model Crisis: Why the PR Agency Model Is Breaking"
       author="Jessen Gibbs, CEO, Shadow"
       date="February 28, 2026"
+      slug="the-business-model-crisis"
       series={{ name: "The Structural Crisis in PR", part: 4, total: 6 }}
       relatedPosts={relatedPosts}
     >

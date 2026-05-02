@@ -11,6 +11,7 @@ interface BlogPostProps {
   subtitle?: string;
   author: string;
   date: string;
+  slug?: string;
   series?: {
     name: string;
     part: number;
@@ -25,12 +26,42 @@ export function BlogPost({
   subtitle,
   author,
   date,
+  slug,
   series,
   relatedPosts,
   children,
 }: BlogPostProps) {
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://shadow.inc/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://shadow.inc/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: slug ? `https://shadow.inc/blog/${slug}` : "https://shadow.inc/blog",
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

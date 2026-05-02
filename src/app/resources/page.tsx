@@ -7,14 +7,14 @@ import {
 } from "./_data/resources";
 
 export const metadata: Metadata = {
-  title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
+  title: "Resources | Guides & frameworks for communications teams",
   description:
     "Comprehensive guides on PR operating systems, AI workflow automation, media monitoring, competitive intelligence, reporting, and more for communications teams.",
   alternates: {
     canonical: "/resources",
   },
   openGraph: {
-    title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
+    title: "Resources | Guides & frameworks for communications teams",
     description:
       "Comprehensive guides on PR operating systems, AI workflow automation, media monitoring, competitive intelligence, reporting, and more for communications teams.",
     type: "website",
@@ -22,20 +22,44 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shadow Resources | Guides, Frameworks, and Analysis for PR and Communications Teams",
+    title: "Resources | Guides & frameworks for communications teams",
     description:
       "Comprehensive guides on PR operating systems, AI workflow automation, media monitoring, competitive intelligence, reporting, and more for communications teams.",
   },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://shadow.inc/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Resources",
+      item: "https://shadow.inc/resources",
+    },
+  ],
+};
+
 export default function ResourcesPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       {/* ━━━ Hero ━━━ */}
       <section className="flex items-start relative">
         <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
           <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-4xl">
-            Built for communications teams.
+            PR & communications resources.
           </h1>
           <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-xl">
             Guides, frameworks, and analysis for PR and communications

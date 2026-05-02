@@ -4,16 +4,14 @@ import { SubscribeForm } from "./_components/SubscribeForm";
 import { TopicList } from "./_components/TopicList";
 
 export const metadata: Metadata = {
-  title:
-    "Shadow Reports | Narrative Intelligence Across the Beats Comms Teams Cover",
+  title: "Narrative Intelligence Reports | Shadow",
   description:
     "Weekly narrative intelligence reports across the categories communications and media teams track most: technology and AI, business and markets, policy, energy, health, consumer, workforce, and geopolitics.",
   alternates: {
     canonical: "/reports",
   },
   openGraph: {
-    title:
-      "Shadow Reports | Narrative Intelligence Across the Beats Comms Teams Cover",
+    title: "Narrative Intelligence Reports | Shadow",
     description:
       "Weekly narrative intelligence reports across the categories communications and media teams track most: technology and AI, business and markets, policy, energy, health, consumer, workforce, and geopolitics.",
     type: "website",
@@ -21,11 +19,29 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Shadow Reports | Narrative Intelligence Across the Beats Comms Teams Cover",
+    title: "Narrative Intelligence Reports | Shadow",
     description:
       "Weekly narrative intelligence reports across the categories communications and media teams track most.",
   },
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://shadow.inc/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Reports",
+      item: "https://shadow.inc/reports",
+    },
+  ],
 };
 
 interface Report {
@@ -196,6 +212,11 @@ const TOPICS: Topic[] = [
 export default function ReportsPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       {/* ━━━ Hero ━━━ */}
       <section className="px-6 md:px-12 lg:px-20 flex items-start relative">
         <div className="relative z-10 w-full max-w-[1180px] mx-auto px-8 md:px-16 lg:px-24 pb-16 pt-24">

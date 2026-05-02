@@ -4,14 +4,14 @@ import { Fragment } from "react";
 import { caseStudies } from "./_data";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Shadow",
+  title: "Case Studies | How communications teams use Shadow",
   description:
     "See how communications teams are using Shadow to transform the way they research, produce, and deliver their work.",
   alternates: {
     canonical: "/case-studies",
   },
   openGraph: {
-    title: "Case Studies | Shadow",
+    title: "Case Studies | How communications teams use Shadow",
     description:
       "See how communications teams are using Shadow to transform the way they research, produce, and deliver their work.",
     type: "website",
@@ -19,20 +19,44 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Case Studies | Shadow",
+    title: "Case Studies | How communications teams use Shadow",
     description:
       "See how communications teams are using Shadow to transform the way they research, produce, and deliver their work.",
   },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://shadow.inc/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Case Studies",
+      item: "https://shadow.inc/case-studies",
+    },
+  ],
+};
+
 export default function CaseStudiesPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       {/* ━━━ Hero ━━━ */}
       <section className="flex items-start relative">
         <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
           <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-4xl">
-            Case Studies
+            How communications teams use Shadow.
           </h1>
           <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-xl">
             See how communications teams are using Shadow to transform the way

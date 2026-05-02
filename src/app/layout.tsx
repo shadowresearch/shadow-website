@@ -40,11 +40,13 @@ const delight = localFont({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
+  display: "swap",
 });
 
 
@@ -73,7 +75,7 @@ export const metadata: Metadata = {
   creator: "Shadow",
   publisher: "Shadow",
   alternates: {
-    canonical: "/",
+    canonical: "https://shadow.inc/",
   },
   icons: {
     icon: "/logo2.svg",

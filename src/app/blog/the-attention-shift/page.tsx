@@ -11,6 +11,21 @@ export const metadata: Metadata = {
   title: "The Attention Shift: How Public Discourse Decentralized — Shadow Blog",
   description:
     "How public discourse decentralized, and why PR lost its home-field advantage. Part 1 of The Structural Crisis in PR.",
+  alternates: { canonical: "https://shadow.inc/blog/the-attention-shift" },
+  openGraph: {
+    type: "article",
+    siteName: "Shadow",
+    title: "The Attention Shift: How Public Discourse Decentralized — Shadow Blog",
+    description:
+      "How public discourse decentralized, and why PR lost its home-field advantage. Part 1 of The Structural Crisis in PR.",
+    url: "https://shadow.inc/blog/the-attention-shift",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Attention Shift: How Public Discourse Decentralized — Shadow Blog",
+    description:
+      "How public discourse decentralized, and why PR lost its home-field advantage. Part 1 of The Structural Crisis in PR.",
+  },
 };
 
 const relatedPosts = [
@@ -28,6 +43,7 @@ export default function TheAttentionShiftPage() {
       subtitle="How Public Discourse Decentralized, and Why PR Lost Its Home-Field Advantage"
       author="Jessen Gibbs, CEO, Shadow"
       date="January 15, 2026"
+      slug="the-attention-shift"
       series={{ name: "The Structural Crisis in PR", part: 1, total: 6 }}
       relatedPosts={relatedPosts}
     >

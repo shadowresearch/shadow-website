@@ -5,6 +5,21 @@ export const metadata: Metadata = {
   title: "The Future of Communications Belongs to Judgment, Not Access — Shadow Blog",
   description:
     "Part 6 of The Structural Crisis in PR. Coming soon.",
+  alternates: { canonical: "https://shadow.inc/blog/what-comes-next" },
+  openGraph: {
+    type: "article",
+    siteName: "Shadow",
+    title: "The Future of Communications Belongs to Judgment, Not Access — Shadow Blog",
+    description:
+      "Part 6 of The Structural Crisis in PR. Coming soon.",
+    url: "https://shadow.inc/blog/what-comes-next",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Future of Communications Belongs to Judgment, Not Access — Shadow Blog",
+    description:
+      "Part 6 of The Structural Crisis in PR. Coming soon.",
+  },
 };
 
 const relatedPosts = [
@@ -21,6 +36,7 @@ export default function WhatComesNextPage() {
       title="The Future of Communications Belongs to Judgment, Not Access"
       author="Jessen Gibbs, CEO, Shadow"
       date="February 28, 2026"
+      slug="what-comes-next"
       series={{ name: "The Structural Crisis in PR", part: 6, total: 6 }}
       relatedPosts={relatedPosts}
     >

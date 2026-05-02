@@ -23,9 +23,21 @@ export const metadata: Metadata = {
   },
 };
 
+const contactPageLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  url: "https://shadow.inc/contact",
+  name: "Contact Shadow",
+  mainEntity: { "@id": "https://shadow.inc/#organization" },
+};
+
 export default function ContactPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageLd) }}
+      />
       <section className="flex items-start relative">
         <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-24 pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

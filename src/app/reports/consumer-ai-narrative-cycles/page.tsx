@@ -29,6 +29,31 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://shadow.inc/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Reports",
+      item: "https://shadow.inc/reports",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Agentic AI overtook generative AI in Q1 2026.",
+      item: "https://shadow.inc/reports/consumer-ai-narrative-cycles",
+    },
+  ],
+};
+
 const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -56,6 +81,10 @@ const articleLd = {
 export default function ConsumerAINarrativeCyclesPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}

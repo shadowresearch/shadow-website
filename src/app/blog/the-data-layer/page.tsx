@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "The Data Layer — Shadow Blog",
   description:
     "Every communications engagement in the history of the discipline has started from the same place: someone's best guess.",
+  alternates: { canonical: "https://shadow.inc/blog/the-data-layer" },
+  openGraph: {
+    type: "article",
+    siteName: "Shadow",
+    title: "The Data Layer — Shadow Blog",
+    description:
+      "Every communications engagement in the history of the discipline has started from the same place: someone's best guess.",
+    url: "https://shadow.inc/blog/the-data-layer",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Data Layer — Shadow Blog",
+    description:
+      "Every communications engagement in the history of the discipline has started from the same place: someone's best guess.",
+  },
 };
 
 export default function TheDataLayerPage() {
@@ -18,6 +33,7 @@ export default function TheDataLayerPage() {
       title="The Data Layer"
       author="Jessen Gibbs, CEO, Shadow"
       date="March 16, 2026"
+      slug="the-data-layer"
     >
       <p>
         Every communications engagement in the history of the discipline has

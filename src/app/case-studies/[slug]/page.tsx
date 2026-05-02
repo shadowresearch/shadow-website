@@ -40,8 +40,38 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
   const otherStudies = caseStudies.filter((s) => s.slug !== cs.slug).slice(0, 3);
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://shadow.inc/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Case Studies",
+        item: "https://shadow.inc/case-studies",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: cs.headline,
+        item: `https://shadow.inc/case-studies/${cs.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       {/* ━━━ Hero ━━━ */}
       <section className="flex items-start relative">
         <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-12 pt-24">

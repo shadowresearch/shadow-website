@@ -4,14 +4,14 @@ import Link from "next/link";
 import { PricingTiers } from "./_components/PricingTiers";
 
 export const metadata: Metadata = {
-  title: "Pricing | Shadow",
+  title: "Pricing | Shadow narrative intelligence platform",
   description:
     "Per-client pricing that scales with your team. $750/client/month, with volume discounts for agencies and a 15% annual discount.",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
-    title: "Pricing | Shadow",
+    title: "Pricing | Shadow narrative intelligence platform",
     description:
       "Per-client pricing that scales with your team. $750/client/month, with volume discounts for agencies and a 15% annual discount.",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing | Shadow",
+    title: "Pricing | Shadow narrative intelligence platform",
     description:
       "Per-client pricing that scales with your team. Volume discounts for agencies.",
   },
@@ -77,9 +77,26 @@ const FAQ = [
   },
 ];
 
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 export default function PricingPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       {/* Hero */}
       <section className="flex items-start relative">
         <div className="absolute inset-0 -z-0" aria-hidden="true">
@@ -94,7 +111,7 @@ export default function PricingPage() {
         </div>
         <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">
           <h1 className="font-serif font-medium text-[clamp(2rem,4vw,3.75rem)] text-foreground leading-[1.05] tracking-tight max-w-2xl">
-            Flexible pricing for every team.
+            Shadow pricing for communications teams.
           </h1>
           <p className="mt-6 text-[clamp(0.95rem,1.3vw,1.1rem)] text-muted-foreground leading-[1.7] max-w-md">
             One price, every capability. Pricing decreases as you add clients.

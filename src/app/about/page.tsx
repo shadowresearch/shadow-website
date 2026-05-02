@@ -23,9 +23,21 @@ export const metadata: Metadata = {
   },
 };
 
+const aboutPageLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  url: "https://shadow.inc/about",
+  name: "About Shadow",
+  mainEntity: { "@id": "https://shadow.inc/#organization" },
+};
+
 export default function AboutPage() {
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageLd) }}
+      />
       {/* Hero */}
       <section className="flex items-start relative">
         <div className="relative z-10 w-full max-w-[1425px] mx-auto px-8 md:px-16 pb-16 pt-24">

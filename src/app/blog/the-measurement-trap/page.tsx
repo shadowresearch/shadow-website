@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "The Measurement Trap: Why PR Can't Prove ROI in a Metrics-Driven Culture — Shadow Blog",
   description:
     "How quantification culture collided with PR's qualitative value, and why the available metrics don't actually help. Part 3 of The Structural Crisis in PR.",
+  alternates: { canonical: "https://shadow.inc/blog/the-measurement-trap" },
+  openGraph: {
+    type: "article",
+    siteName: "Shadow",
+    title: "The Measurement Trap: Why PR Can't Prove ROI in a Metrics-Driven Culture — Shadow Blog",
+    description:
+      "How quantification culture collided with PR's qualitative value, and why the available metrics don't actually help. Part 3 of The Structural Crisis in PR.",
+    url: "https://shadow.inc/blog/the-measurement-trap",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Measurement Trap: Why PR Can't Prove ROI in a Metrics-Driven Culture — Shadow Blog",
+    description:
+      "How quantification culture collided with PR's qualitative value, and why the available metrics don't actually help. Part 3 of The Structural Crisis in PR.",
+  },
 };
 
 const relatedPosts = [
@@ -27,6 +42,7 @@ export default function TheMeasurementTrapPage() {
       subtitle="How Quantification Culture Collided with PR's Qualitative Value"
       author="Jessen Gibbs, CEO, Shadow"
       date="January 15, 2026"
+      slug="the-measurement-trap"
       series={{ name: "The Structural Crisis in PR", part: 3, total: 6 }}
       relatedPosts={relatedPosts}
     >

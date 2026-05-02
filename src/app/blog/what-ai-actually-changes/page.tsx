@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "What AI Actually Changes in Communications: Operations, Not Creativity — Shadow Blog",
   description:
     "The PR industry's AI moment is about operations, not creativity. How AI is actually being adopted and what it does and doesn't change. Part 5 of The Structural Crisis in PR.",
+  alternates: { canonical: "https://shadow.inc/blog/what-ai-actually-changes" },
+  openGraph: {
+    type: "article",
+    siteName: "Shadow",
+    title: "What AI Actually Changes in Communications: Operations, Not Creativity — Shadow Blog",
+    description:
+      "The PR industry's AI moment is about operations, not creativity. How AI is actually being adopted and what it does and doesn't change. Part 5 of The Structural Crisis in PR.",
+    url: "https://shadow.inc/blog/what-ai-actually-changes",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "What AI Actually Changes in Communications: Operations, Not Creativity — Shadow Blog",
+    description:
+      "The PR industry's AI moment is about operations, not creativity. How AI is actually being adopted and what it does and doesn't change. Part 5 of The Structural Crisis in PR.",
+  },
 };
 
 const relatedPosts = [
@@ -27,6 +42,7 @@ export default function WhatAiActuallyChangesPage() {
       subtitle="The PR Industry's AI Moment Is About Operations, Not Creativity"
       author="Jessen Gibbs, CEO, Shadow"
       date="February 28, 2026"
+      slug="what-ai-actually-changes"
       series={{ name: "The Structural Crisis in PR", part: 5, total: 6 }}
       relatedPosts={relatedPosts}
     >

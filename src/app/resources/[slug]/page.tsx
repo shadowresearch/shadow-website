@@ -18,10 +18,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const resource = getResourceBySlug(slug);
   if (!resource) return {};
+  const canonical = `https://shadow.inc/resources/${resource.slug}`;
   return {
     title: `${resource.title} | Shadow`,
     description: resource.description,
+    alternates: { canonical },
     openGraph: {
+      type: "article",
+      siteName: "Shadow",
+      title: resource.title,
+      description: resource.description,
+      url: canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
       title: resource.title,
       description: resource.description,
     },
@@ -40,8 +50,38 @@ export default async function ResourceSlugPage({ params }: PageProps) {
     .map((s) => getResourceBySlug(s))
     .filter((r): r is NonNullable<typeof r> => r != null);
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://shadow.inc/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Resources",
+        item: "https://shadow.inc/resources",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: resource.title,
+        item: `https://shadow.inc/resources/${resource.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       {/* Breadcrumb */}
       <div className="w-full max-w-[960px] mx-auto px-8 md:px-16 pt-16">
         <nav className="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-wider">
